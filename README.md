@@ -17,8 +17,7 @@ Unity6 12th TeamProject Team Gwangpibara
 ### 📁 Asset Management
 아래 폴더는 무시됩니다.
 
-- `DownLoadAssets/`  
-- `TestScene/`
+- `TestAssets/`  
 
 ---
 
