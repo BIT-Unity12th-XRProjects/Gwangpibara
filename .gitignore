@@ -83,3 +83,13 @@ crashlytics-build.properties
 /[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta
 /[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers
 /[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers.meta
+
+# 모든 하위 디렉토리의 Resource 폴더 무시
+**/Resource/
+Assets/[Tt]est[Aa]ssets/**
+!Assets/[Tt]est[Aa]ssets/.keep
+
+**/TextMesh Pro/
+**/FONT/
+
+
