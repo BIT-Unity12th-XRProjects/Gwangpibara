@@ -28,3 +28,5 @@ Unity6 12th TeamProject Team Gwangpibara
    - Unity 라이프사이클 함수 순서 (`Awake → OnEnable/Reset → Start`)  
    - 직관적인 네이밍 및 컴포넌트 접근 방식 준수
 
+안녕하세요
+
