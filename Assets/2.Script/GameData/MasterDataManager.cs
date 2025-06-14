@@ -6,7 +6,12 @@ using UnityEngine;
 public class MasterDataManager : MonoBehaviour
 {
     public static MasterDataManager Instance;
-    private Dictionary<int, StepData> masterStepDataDictionary;
+
+    private string _stepDataPath = "Assets/4.Data/StepData.csv";
+    private Dictionary<int, StepData> _masterStepDataDictionary;
+
+    private string _itemDataPath = "Assets/4.Data/ItemDataTable.csv";
+    private Dictionary<int, ItemData> _masterItemDataDictionary;
 
     private void Awake()
     {
@@ -21,10 +26,32 @@ public class MasterDataManager : MonoBehaviour
         }
     }
 
+    public StepData GetMasterStepData(int stepID)
+    {
+        return _masterStepDataDictionary[stepID];
+    }
+
+    public ItemData GetMasterItemData(int itemID)
+    {
+        return _masterItemDataDictionary[itemID];
+    }
+
     private void MakeMasterData()
     {
-        masterStepDataDictionary = new();
-        string[] lines = File.ReadAllLines("Assets/4.Data/StepData.csv");
+        _masterStepDataDictionary = MakeMasterData<StepData>(_stepDataPath,
+                                value => new StepData(value),
+                                dataClass => dataClass.ID);
+
+        _masterItemDataDictionary = MakeMasterData<ItemData>(_itemDataPath,
+                                stringValues => new ItemData(stringValues),
+                                dataClass => dataClass.ID);
+    }
+
+    private Dictionary<int, T> MakeMasterData<T>(string path, Func<string[], T> constructor, Func<T, int> getKey)
+        where T : class
+    {
+        Dictionary<int, T> dictionary = new();
+        string[] lines = File.ReadAllLines(path);
         foreach (string line in lines)
         {
             string[] values = line.Split(',');
@@ -33,19 +60,11 @@ public class MasterDataManager : MonoBehaviour
                 continue;
             }
 
-            StepData parseItem = new StepData(values);
-           // Debug.Log($"파싱한데이터 {parseItem.ID} _ {parseItem.PrintText}");
-            masterStepDataDictionary.Add(parseItem.ID, parseItem);
+            T f = constructor(values);
+            dictionary.Add(getKey(f), f);
+           // Debug.Log(getKey(f) + " 데이터 생성");
         }
+        return dictionary;
     }
 
-    public Dictionary<int, StepData> GetMasterStepDataDic()
-    {
-        return masterStepDataDictionary;
-    }
-
-    public StepData GetMasterStepData(int stepID)
-    {
-        return masterStepDataDictionary[stepID];
-    }
 }
