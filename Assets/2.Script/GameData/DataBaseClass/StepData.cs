@@ -1,10 +1,8 @@
 ﻿
 
-using NUnit.Framework.Internal;
+
 using System;
-using System.Reflection;
-using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
+
 
 public enum ClearType
 {
@@ -38,17 +36,11 @@ public class StepData
         ID = int.Parse(parseData[pidIdx]);
         PrintText = parseData[printTextIdx];
         Hint = parseData[hintIdx];
-        ClearType = ParseEnum<ClearType>(parseData[ClearTypeIdx]);
+        ClearType = EnumParser.ParseEnum<ClearType>(parseData[ClearTypeIdx]);
         SuccessCode = parseData[successCodeIdx];
         PreStep = int.Parse(parseData[preStepIdx]);
         NextStep = int.Parse(parseData[nextStepIdx]);
         FailStep = (int.Parse(parseData[failStepIdx]));
-    }
-
-    private T ParseEnum<T>(string inEnumStr) where T : Enum
-    {
-        T parseEnum = (T)Enum.Parse(typeof(T), inEnumStr);
-        return parseEnum;
     }
 
     // 복사 생성자
