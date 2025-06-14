@@ -10,7 +10,7 @@ public class MasterDataManager : MonoBehaviour
     private string _stepDataPath = "Assets/4.Data/StepData.csv";
     private Dictionary<int, StepData> _masterStepDataDictionary;
 
-    private string _itemDataPath = "Assets/4.Data/ItemData.csv";
+    private string _itemDataPath = "Assets/4.Data/ItemDataTable.csv";
     private Dictionary<int, ItemData> _masterItemDataDictionary;
 
     private void Awake()
@@ -38,19 +38,19 @@ public class MasterDataManager : MonoBehaviour
 
     private void MakeMasterData()
     {
-        MakeMasterData<StepData>(_masterStepDataDictionary, _stepDataPath,
+        _masterStepDataDictionary = MakeMasterData<StepData>(_stepDataPath,
                                 value => new StepData(value),
                                 dataClass => dataClass.ID);
 
-        MakeMasterData<ItemData>(_masterItemDataDictionary, _itemDataPath,
+        _masterItemDataDictionary = MakeMasterData<ItemData>(_itemDataPath,
                                 stringValues => new ItemData(stringValues),
                                 dataClass => dataClass.ID);
     }
 
-    private void MakeMasterData<T>(Dictionary<int, T> dictionary, string path, Func<string[], T> constructor, Func<T, int> getKey)
+    private Dictionary<int, T> MakeMasterData<T>(string path, Func<string[], T> constructor, Func<T, int> getKey)
         where T : class
     {
-        dictionary = new();
+        Dictionary<int, T> dictionary = new();
         string[] lines = File.ReadAllLines(path);
         foreach (string line in lines)
         {
@@ -62,7 +62,9 @@ public class MasterDataManager : MonoBehaviour
 
             T f = constructor(values);
             dictionary.Add(getKey(f), f);
+           // Debug.Log(getKey(f) + " 데이터 생성");
         }
+        return dictionary;
     }
 
 }
