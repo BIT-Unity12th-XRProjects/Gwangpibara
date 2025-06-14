@@ -1,10 +1,8 @@
 ﻿
 
-using NUnit.Framework.Internal;
+
 using System;
-using System.Reflection;
-using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
+
 
 public enum ClearType
 {
