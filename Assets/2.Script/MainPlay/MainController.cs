@@ -4,18 +4,18 @@ using UnityEngine.InputSystem;
 public class MainController : MonoBehaviour
 {
     /// <summary>
-    /// °ÔÀÓ ÁøÇàÀÇ ¸ŞÀÎ È­¸é
+    /// ê²Œì„ ì§„í–‰ì˜ ë©”ì¸ í™”ë©´
     /// </summary>
     StepData _curStepData;
 
     void Start()
     {
-        SetStep(MasterDataManager.Instance.GetMasterStepData(10101)); //1¹ø ÁÖÁ¦·Î ½ÃÀÛ
+        SetStep(MasterDataManager.Instance.GetMasterStepData(10101)); //1ë²ˆ ì£¼ì œë¡œ ì‹œì‘
     }
 
     private void Update()
     {
-        //UI ÀÔ·ÂÀ» ´ë½ÅÇÒ Å×½ºÆ® ÀÔ·Â ºÎºĞ
+        //UI ì…ë ¥ì„ ëŒ€ì‹ í•  í…ŒìŠ¤íŠ¸ ì…ë ¥ ë¶€ë¶„
         if (Keyboard.current.f5Key.wasPressedThisFrame)
         {
             ClickNextButton();
@@ -35,7 +35,7 @@ public class MainController : MonoBehaviour
         int nextStepId = _curStepData.NextStep;
         if(nextStepId == StepData.INVALID_NUMBER)
         {
-            Debug.Log("°ÔÀÓ Á¾·á");
+            Debug.Log("ê²Œì„ ì¢…ë£Œ");
             return;
         }
         StepData nextStep = MasterDataManager.Instance.GetMasterStepData(nextStepId);
@@ -45,7 +45,7 @@ public class MainController : MonoBehaviour
 
     private void SetStep(StepData stepData)
     {
-        //ÇöÀç ´Ü°è¸¦ stepData·Î ¸ÂÃß±â
-        Debug.Log(stepData.PrintText); //µğ¹ö±×¿ë
+        //í˜„ì¬ ë‹¨ê³„ë¥¼ stepDataë¡œ ë§ì¶”ê¸°
+        Debug.Log(stepData.PrintText); //ë””ë²„ê·¸ìš©
     }
 }
