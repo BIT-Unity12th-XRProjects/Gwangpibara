@@ -8,11 +8,11 @@ public class MainController : MonoBehaviour
     /// 게임 진행의 메인 화면
     /// </summary>
     private StepData _curStepData;
-    private List<ItemData> _haveItemList;
+    private ItemInventory _itemInventory;
 
     void Start()
     {
-        _haveItemList = new();
+        _itemInventory = new();
         SetStep(MasterDataManager.Instance.GetMasterStepData(10101)); //1번 주제로 시작
     }
 
@@ -24,14 +24,6 @@ public class MainController : MonoBehaviour
             ClickNextButton(); //다음 단계 버튼 누르기
             SubmitAnswer("박광호"); //정답 텍스트 입력하기
             AcquireItem(MasterDataManager.Instance.GetMasterItemData(10101)); //10101 아이템 전달받기
-        }
-    }
-
-    private void ClickNextButton()
-    {
-        if (_curStepData.ClearType.Equals(ClearType.Click))
-        {
-            GoNextStep();
         }
     }
 
@@ -54,6 +46,15 @@ public class MainController : MonoBehaviour
         _curStepData = stepData;
         Debug.Log(stepData.PrintText); //디버그용
     }
+
+    private void ClickNextButton()
+    {
+        if (_curStepData.ClearType.Equals(ClearType.Click))
+        {
+            GoNextStep();
+        }
+    }
+
 
     public void SubmitAnswer(string answer)
     {
@@ -79,10 +80,14 @@ public class MainController : MonoBehaviour
         }
         //습득가능하면
         AddItem(itemData);
-        Debug.Log("습득");
+        Debug.Log($"{itemData.Name} 습득");
         if (_curStepData.ClearType == ClearType.Collect)
         {
-            CheckAnswer(itemData.ID.ToString());//수집한 단서 ID를 습득했다고 전달 
+            bool isCorrect = CheckAnswer(itemData.ID.ToString());//수집한 단서 ID를 습득했다고 전달 
+            if (isCorrect)
+            {
+                GoNextStep();
+            }
         }
 
         return true;
@@ -91,18 +96,24 @@ public class MainController : MonoBehaviour
     private bool CheckAcquireItemCondition(ItemData itemData)
     {
         //습득하려는 아이템이 습득가능한 상태인지
-        if (itemData.AquireStep < _curStepData.ID)
+        if ( _curStepData.ID < itemData.AquireStep)
         {
-            //진행한 단계가 습득단계 이상일 때 습득가능
-            return true;
+            //진행한 단계가 습득단계 아래면 습득 불가
+            return false;
         }
 
-        return false;
+        //중복 아이템인지
+        if(_itemInventory.GetItemAmount(itemData) != 0)
+        {
+            return false;
+        }
+
+        return true;
     }
 
     private void AddItem(ItemData itemData)
     {
-        _haveItemList.Add(itemData);
+       _itemInventory.AddItem(itemData);
     }
 
     private bool CheckAnswer(string answer)
