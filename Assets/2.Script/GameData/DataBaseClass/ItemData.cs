@@ -1,5 +1,5 @@
-﻿
-using System;
+﻿using System;
+using UnityEngine;
 
 public enum ItemType
 {
@@ -15,6 +15,7 @@ public class ItemData
     public string Description;
     public int AquireStep; //단서를 얻을 수 있는 단계 - 현재 플레이 단계보다 이상이면 습득
     public int DeleteStep; //단서가 삭제 될 단계 - 현재 플레이 단계보다 이하이면 삭제
+    public GameObject? cachedObject; //단서 3D Object
 
     public ItemData(string[] parseData)
     {
@@ -31,6 +32,7 @@ public class ItemData
         Description = parseData[descriptionIdx];
         AquireStep = int.Parse(parseData[acquireStepIdx]);
         DeleteStep = int.Parse(parseData[deleteStepIdx]);
+        
     }
 
     public ItemData(ItemData origin)
@@ -41,6 +43,7 @@ public class ItemData
         Description = origin.Description;
         AquireStep = origin.AquireStep;
         DeleteStep = origin.DeleteStep;
+        cachedObject = origin.cachedObject;
     }
 
 }
