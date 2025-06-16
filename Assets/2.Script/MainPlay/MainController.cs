@@ -45,6 +45,13 @@ public class MainController : MonoBehaviour
         //현재 단계를 stepData로 맞추기
         _curStepData = stepData;
         Debug.Log(stepData.PrintText); //디버그용
+
+        //세팅된 단계의 클리어 조건이 아이템 수집인경우, 이미 수집했는지 체크
+        if(stepData.ClearType == ClearType.Collect)
+        {
+            CheckInventoryCondition();
+        }
+        
     }
 
     private void ClickNextButton()
@@ -114,6 +121,18 @@ public class MainController : MonoBehaviour
     private void AddItem(ItemData itemData)
     {
        _itemInventory.AddItem(itemData);
+    }
+
+    private void CheckInventoryCondition()
+    {
+        //단계가 바뀌었을 때 현재 단계의 클리어 조건이 아이템 보유고, 이미 해당 아이템을 갖고 있는지 체크
+        int needItemID = int.Parse(_curStepData.SuccessCode);
+        int haveAmount = _itemInventory.GetItemAmount(needItemID);
+        if(haveAmount >= 1)
+        {
+            Debug.Log("이미 보유한 아이템 조건 다음 스텝으로");
+            GoNextStep();
+        }
     }
 
     private bool CheckAnswer(string answer)
