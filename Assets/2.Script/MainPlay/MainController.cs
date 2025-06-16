@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,20 +7,23 @@ public class MainController : MonoBehaviour
     /// <summary>
     /// 게임 진행의 메인 화면
     /// </summary>
-    StepData _curStepData;
+    private StepData _curStepData;
+    private List<ItemData> _haveItemList;
 
     void Start()
     {
+        _haveItemList = new();
         SetStep(MasterDataManager.Instance.GetMasterStepData(10101)); //1번 주제로 시작
     }
 
     private void Update()
     {
-        //UI 입력을 대신할 테스트 입력 부분
+        //테스트 입력 부분 - 추후 UI, 다른 클래스로부터 호출 될 녀석들
         if (Keyboard.current.f5Key.wasPressedThisFrame)
         {
-            ClickNextButton();
-            SubmitAnswer("박광호");
+            ClickNextButton(); //다음 단계 버튼 누르기
+            SubmitAnswer("박광호"); //정답 텍스트 입력하기
+            AcquireItem(MasterDataManager.Instance.GetMasterItemData(10101)); //10101 아이템 전달받기
         }
     }
 
@@ -34,14 +38,14 @@ public class MainController : MonoBehaviour
     private void GoNextStep()
     {
         int nextStepId = _curStepData.NextStep;
-        if(nextStepId == StepData.INVALID_NUMBER)
+        if (nextStepId == StepData.INVALID_NUMBER)
         {
             Debug.Log("게임 종료");
             return;
         }
         StepData nextStep = MasterDataManager.Instance.GetMasterStepData(nextStepId);
         SetStep(nextStep);
-        
+
     }
 
     private void SetStep(StepData stepData)
@@ -54,7 +58,7 @@ public class MainController : MonoBehaviour
     public void SubmitAnswer(string answer)
     {
         Debug.Log($"{answer} 입력 받음 현재 단계 정답 코드 {_curStepData.SuccessCode} 정답인가 {answer == _curStepData.SuccessCode}");
-        if(_curStepData.ClearType == ClearType.Answer)
+        if (_curStepData.ClearType == ClearType.Answer)
         {
             bool isCorrect = CheckAnswer(answer);
             if (isCorrect)
@@ -62,6 +66,43 @@ public class MainController : MonoBehaviour
                 GoNextStep();
             }
         }
+    }
+
+    public bool AcquireItem(ItemData itemData)
+    {
+        Debug.Log($"ID:{itemData.ID}, 이름:{itemData.Name} 아이템 발견");
+        if (CheckAcquireItemCondition(itemData) == false)
+        {
+            //습득불가능한 아이템
+            Debug.Log("습득 불가");
+            return false;
+        }
+        //습득가능하면
+        AddItem(itemData);
+        Debug.Log("습득");
+        if (_curStepData.ClearType == ClearType.Collect)
+        {
+            CheckAnswer(itemData.ID.ToString());//수집한 단서 ID를 습득했다고 전달 
+        }
+
+        return true;
+    }
+
+    private bool CheckAcquireItemCondition(ItemData itemData)
+    {
+        //습득하려는 아이템이 습득가능한 상태인지
+        if (itemData.AquireStep < _curStepData.ID)
+        {
+            //진행한 단계가 습득단계 이상일 때 습득가능
+            return true;
+        }
+
+        return false;
+    }
+
+    private void AddItem(ItemData itemData)
+    {
+        _haveItemList.Add(itemData);
     }
 
     private bool CheckAnswer(string answer)
