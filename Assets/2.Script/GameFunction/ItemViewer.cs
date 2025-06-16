@@ -54,18 +54,23 @@ public class ItemViewer : MonoBehaviour
 
             else if (_canSpawn == false)
             {
-                if (_isDragging && _rotationInput != Vector2.zero)
-                {
-                    float dx = _rotationInput.x;
-                    float dy = _rotationInput.y;
-
-                    // 좌우 회전 
-                    _itemObject.transform.Rotate(Vector3.up, -dx * _rotationSpeed, Space.World);
-
-                    // 상하 회전 
-                    _itemObject.transform.Rotate(Vector3.right, dy * _rotationSpeed, Space.World);
-                }
+                RotateObject();
             }
+        }
+    }
+
+    private void RotateObject()
+    {
+        if (_isDragging && _rotationInput != Vector2.zero)
+        {
+            float dx = _rotationInput.x;
+            float dy = _rotationInput.y;
+
+            // 좌우 회전 
+            _itemObject.transform.Rotate(Vector3.up, -dx * _rotationSpeed, Space.World);
+
+            // 상하 회전 
+            _itemObject.transform.Rotate(Vector3.right, dy * _rotationSpeed, Space.World);
         }
     }
 
