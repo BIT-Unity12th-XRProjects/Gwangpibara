@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class MasterDataManager : MonoBehaviour
 {
@@ -19,6 +23,7 @@ public class MasterDataManager : MonoBehaviour
         {
             Instance = this;
             MakeMasterData();
+            StartCoroutine(LoadAllPrefabs());
         }
         else
         {
@@ -64,9 +69,46 @@ public class MasterDataManager : MonoBehaviour
 
             T f = constructor(values);
             dictionary.Add(getKey(f), f);
-           // Debug.Log(getKey(f) + " 데이터 생성");
+            // Debug.Log(getKey(f) + " 데이터 생성");
         }
         return dictionary;
     }
 
+    private IEnumerator LoadAllPrefabs()
+    {
+        foreach (var item in _masterItemDataDictionary.Values)
+        {
+            var a = Addressables.ResourceLocators;
+
+            //어드레서블에 해당 id의 오브젝트 키가 있는지 체크 - keyException 방지
+            if (IsKeyValid(item.ID.ToString()) == false)
+            {
+                item.cachedObject = Resources.Load<GameObject>("TestItemPrefab");
+                continue;
+            }
+
+            var handle = Addressables.LoadAssetAsync<GameObject>(item.ID.ToString());
+            yield return handle;
+            if (handle.Status == AsyncOperationStatus.Succeeded)
+            {
+                item.cachedObject = handle.Result;
+            }
+            else
+            {
+                // Debug.LogError($"Prefab Load Fail: {item.ID}");
+                item.cachedObject = Resources.Load<GameObject>("TestItemPrefab");
+            }
+
+        }
+    }
+
+    bool IsKeyValid(string key)
+    {
+        foreach (var locator in Addressables.ResourceLocators)
+        {
+            if (locator.Keys.Contains(key))
+                return true;
+        }
+        return false;
+    }
 }
