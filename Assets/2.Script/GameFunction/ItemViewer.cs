@@ -43,28 +43,36 @@ public class ItemViewer : MonoBehaviour
 
     private void Update()
     {
-        if(_testPrefab != null)
+        if (_testPrefab != null)
         {
-            if(Keyboard.current.gKey.wasPressedThisFrame && _canSpawn)
+            if (Keyboard.current.gKey.wasPressedThisFrame && _canSpawn)
             {
                 _canSpawn = false;
-                CheckItemTest(null);
+                ViewItem(null);
+                return;
             }
 
-            else if(_canSpawn == false)
+            else if (_canSpawn == false)
             {
                 if (_isDragging && _rotationInput != Vector2.zero)
                 {
-                    _itemObject.transform.Rotate(Vector3.up, -_rotationInput.x * _rotationSpeed, Space.World);
+                    float dx = _rotationInput.x;
+                    float dy = _rotationInput.y;
+
+                    // 좌우 회전 
+                    _itemObject.transform.Rotate(Vector3.up, -dx * _rotationSpeed, Space.World);
+
+                    // 상하 회전 
+                    _itemObject.transform.Rotate(Vector3.right, dy * _rotationSpeed, Space.World);
                 }
             }
         }
     }
 
-    public void CheckItemTest(ItemData itemData)
+    public void ViewItem(ItemData itemData)
     {
         //_name = itemData.Name;
-        _itemObject = Instantiate(_testPrefab, new Vector3(0,0,0), Quaternion.identity);
+        _itemObject = Instantiate(_testPrefab, new Vector3(0, 0, 0), Quaternion.identity);
     }
 
     private void OnLookPerformed(InputAction.CallbackContext context)
