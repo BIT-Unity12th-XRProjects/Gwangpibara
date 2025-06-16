@@ -8,7 +8,7 @@ public class MainController : MonoBehaviour
     /// 게임 진행의 메인 화면
     /// </summary>
     private StepData _curStepData;
-    private ItemInventory _itemInventory;
+    [SerializeField] private ItemInventory _itemInventory;
 
     void Start()
     {
@@ -62,7 +62,6 @@ public class MainController : MonoBehaviour
         }
     }
 
-
     public void SubmitAnswer(string answer)
     {
         Debug.Log($"{answer} 입력 받음 현재 단계 정답 코드 {_curStepData.SuccessCode} 정답인가 {answer == _curStepData.SuccessCode}");
@@ -79,15 +78,15 @@ public class MainController : MonoBehaviour
     public bool AcquireItem(ItemData itemData)
     {
         Debug.Log($"ID:{itemData.ID}, 이름:{itemData.Name} 아이템 발견");
-        if (CheckAcquireItemCondition(itemData) == false)
+        if (_itemInventory.CheckAcquireItemCondition(itemData, _curStepData.ID) == false)
         {
             //습득불가능한 아이템
-            Debug.Log("습득 불가");
+           // Debug.Log("습득 불가");
             return false;
         }
         //습득가능하면
-        AddItem(itemData);
-        Debug.Log($"{itemData.Name} 습득");
+        _itemInventory.AddItem(itemData);
+       // Debug.Log($"{itemData.Name} 습득");
         if (_curStepData.ClearType == ClearType.Collect)
         {
             bool isCorrect = CheckAnswer(itemData.ID.ToString());//수집한 단서 ID를 습득했다고 전달 
@@ -98,29 +97,6 @@ public class MainController : MonoBehaviour
         }
 
         return true;
-    }
-
-    private bool CheckAcquireItemCondition(ItemData itemData)
-    {
-        //습득하려는 아이템이 습득가능한 상태인지
-        if ( _curStepData.ID < itemData.AquireStep)
-        {
-            //진행한 단계가 습득단계 아래면 습득 불가
-            return false;
-        }
-
-        //중복 아이템인지
-        if(_itemInventory.GetItemAmount(itemData) != 0)
-        {
-            return false;
-        }
-
-        return true;
-    }
-
-    private void AddItem(ItemData itemData)
-    {
-       _itemInventory.AddItem(itemData);
     }
 
     private void CheckInventoryCondition()
