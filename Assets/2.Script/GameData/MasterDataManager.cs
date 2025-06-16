@@ -28,12 +28,14 @@ public class MasterDataManager : MonoBehaviour
 
     public StepData GetMasterStepData(int stepID)
     {
-        return _masterStepDataDictionary[stepID];
+        StepData copyData = new StepData(_masterStepDataDictionary[stepID]);
+        return copyData;
     }
 
     public ItemData GetMasterItemData(int itemID)
     {
-        return _masterItemDataDictionary[itemID];
+        ItemData copyItem = new ItemData(_masterItemDataDictionary[itemID]);
+        return copyItem;
     }
 
     private void MakeMasterData()
