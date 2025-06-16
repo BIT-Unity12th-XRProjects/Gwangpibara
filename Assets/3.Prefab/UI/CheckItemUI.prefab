@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 5340460318963785051}
   - component: {fileID: 7136887723268289502}
   - component: {fileID: 7529012674923292786}
+  - component: {fileID: 9034545421671463797}
   m_Layer: 5
   m_Name: CheckItemUI
   m_TagString: Untagged
@@ -178,6 +179,21 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &9034545421671463797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7060231823463277801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f128d753dab40c40b72d7b8e269265c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _textPrefab: {fileID: 2335993910622774706, guid: f969516bba6e8be4f9425cb4e3826379,
+    type: 3}
+  _name: 
 --- !u!1 &8240367859030316606
 GameObject:
   m_ObjectHideFlags: 0
