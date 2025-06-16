@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CheckItem : MonoBehaviour
+public class ItemViewer : MonoBehaviour
 {
     [SerializeField] private GameObject _textPrefab;
     [SerializeField] private string _name;
