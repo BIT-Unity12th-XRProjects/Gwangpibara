@@ -1,8 +1,12 @@
 ﻿
+using System;
+
 public enum ItemType
 {
     Clue, Mixture
 }
+
+[Serializable]
 public class ItemData
 {
     public int ID;
