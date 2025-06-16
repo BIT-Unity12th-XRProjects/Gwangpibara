@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f128d753dab40c40b72d7b8e269265c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textPrefab: {fileID: 2335993910622774706, guid: f969516bba6e8be4f9425cb4e3826379,
+  _testPrefab: {fileID: 2335993910622774706, guid: f969516bba6e8be4f9425cb4e3826379,
     type: 3}
   _name: 
+  _rotationSpeed: 0.2
