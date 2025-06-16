@@ -28,5 +28,19 @@ public class ItemInventory
 
         return haveAmount;
     }
+
+    public int GetItemAmount(int findID)
+    {
+        int haveAmount = 0;
+        for (int i = 0; i < _haveItemList.Count; i++)
+        {
+            if (_haveItemList[i].ID == findID)
+            {
+                haveAmount += 1;
+            }
+        }
+
+        return haveAmount;
+    }
 }
 
