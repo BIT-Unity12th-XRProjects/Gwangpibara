@@ -81,16 +81,12 @@ public class MasterDataManager : MonoBehaviour
             var a = Addressables.ResourceLocators;
 
             //어드레서블에 해당 id의 오브젝트 키가 있는지 체크 - keyException 방지
-            if (IsKeyValid(item.ID.ToString()) == false)
-            {
-                item.cachedObject = Resources.Load<GameObject>("TestItemPrefab");
-                continue;
-            }
 
-            var handle = Addressables.LoadAssetAsync<GameObject>(item.ID.ToString());
+            var handle = Addressables.LoadAssetAsync<GameObject>("ItemPrefab"+item.ID.ToString());
             yield return handle;
             if (handle.Status == AsyncOperationStatus.Succeeded)
             {
+              //  Debug.Log(item.ID + " 프리팹 로드");
                 item.cachedObject = handle.Result;
             }
             else
@@ -102,13 +98,4 @@ public class MasterDataManager : MonoBehaviour
         }
     }
 
-    bool IsKeyValid(string key)
-    {
-        foreach (var locator in Addressables.ResourceLocators)
-        {
-            if (locator.Keys.Contains(key))
-                return true;
-        }
-        return false;
-    }
 }
