@@ -1,15 +1,12 @@
-﻿using UnityEditor.IMGUI.Controls;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 public class ItemViewer : MonoBehaviour
 {
     [Header("Prefab & Spawn")]
     [SerializeField] private GameObject _testPrefab;
-    [SerializeField] private Button _testButton;
     [SerializeField] private string _name;
-    private bool _canSpawn = true;
+
     private GameObject _itemObject;
 
     [Header("Rotation Settings")]
@@ -21,7 +18,7 @@ public class ItemViewer : MonoBehaviour
     [Header("Zoom Settings")]
     [SerializeField] private float _zoomSpeed = 0.01f;
     [SerializeField] private float _minZoom = 0.5f;
-    [SerializeField] private float _maxZoom = 2f; 
+    [SerializeField] private float _maxZoom = 2f;
     private float _prevPinchDistance = 0f;
 
     private void Awake()
@@ -51,37 +48,11 @@ public class ItemViewer : MonoBehaviour
         _inputActions.Player.Disable();
     }
 
-    private void Start()
-    {
-        _testButton.onClick.AddListener(InisiateTest);
-    }
-
-    private void InisiateTest()
-    {
-        if (_canSpawn)
-        {
-            _canSpawn = false;
-            ViewItem(null);
-        }
-    }
 
     private void Update()
     {
-        if (_testPrefab != null)
-        {
-            if (Keyboard.current.gKey.wasPressedThisFrame && _canSpawn)
-            {
-                _canSpawn = false;
-                ViewItem(null);
-                return;
-            }
-
-            else if (_canSpawn == false)
-            {
-                RotateObject();
-                Zoom();
-            }
-        }
+        RotateObject();
+        Zoom();
     }
 
     private void Zoom()
@@ -166,7 +137,7 @@ public class ItemViewer : MonoBehaviour
     {
         //_name = itemData.Name;
         GameObject targetObject = itemViewData.itemPrefab;
-        if(targetObject == null)
+        if (targetObject == null)
         {
             targetObject = _testPrefab;
         }

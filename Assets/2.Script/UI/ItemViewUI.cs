@@ -9,8 +9,9 @@ public class ItemViewUI : BaseUI
     [SerializeField] private Button _exitButton = null;
     [SerializeField] private ItemViewer _itemViewer;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         _exitButton.onClick.AddListener(OnClickedExitButton);
     }
 

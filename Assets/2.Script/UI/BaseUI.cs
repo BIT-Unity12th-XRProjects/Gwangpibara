@@ -17,8 +17,18 @@ public class BaseUI : MonoBehaviour
     private Action m_OnShow;
     private Action m_OnClose;
 
+    protected virtual void Awake()
+    {
+        Canvas canvas = GetComponentInParent<Canvas>();
+        if (canvas != null)
+        {
+            canvas.worldCamera = Camera.main;
+        }
+    }
+
     public virtual void Init(Transform anchor)
     {
+
         m_OnShow = null;
         m_OnClose = null;
 
