@@ -1,9 +1,7 @@
-﻿using NUnit.Framework;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -48,9 +46,9 @@ public class MasterDataManager : MonoBehaviour
         return GetCopyData(_masterItemDataDictionary, itemID, origin => new ItemData(origin));
     }
 
-    public ThemeData GetMasterThemeData(int themeNumber)
+    public Dictionary<int, ThemeData> GetMasterThemeDataDic()
     {
-        return GetCopyData(_masterThemeDataDictionary, themeNumber, origin => new ThemeData(origin));
+        return _masterThemeDataDictionary;
     }
 
     //문제 넘버에 맞는 맵 반환
