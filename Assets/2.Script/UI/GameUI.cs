@@ -28,8 +28,9 @@ public class GameUI : BaseUI
 
     private GameUIData m_gameUIData;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         _inventoryButton.onClick.AddListener(OnClickedInventoryButton);
         _aRButton.onClick.AddListener(OnClickedARButton);
         _beforeButton.onClick.AddListener(OnClickedBeforeButton);
