@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 2566139106272670793}
   - component: {fileID: 5438081347815044194}
   m_Layer: 5
-  m_Name: CheckItemUI
+  m_Name: ItemViewUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -367,6 +367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_isAnimPlay: 0
   ExitButton: {fileID: 4254665324051019334}
+  _itemViewer: {fileID: 735954539445858529}
 --- !u!1 &8954912891927827849
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,8 +31,15 @@ public class BaseUI : MonoBehaviour
         rectTransform.offsetMax = Vector3.zero;
 
     }
-    public virtual void SetInfo(BaseUIData uiData)
+
+
+    public virtual void SetInfo(BaseUIData uiData = null)
     {
+        if(uiData == null)
+        {
+            return;
+        }
+
         m_isAnimPlay = uiData.isAnimPlay;
 
         m_OnShow = uiData.OnShow;
