@@ -16,6 +16,39 @@ public class UIManager : Singleton<UIManager>
         OpenUI<StartUI>(new StartUIData());
     }
 
+    public void OpenUI<T>()
+    {
+        Type uiType = typeof(T);
+        bool isAlreadyOpen = false;
+        var ui = GetUI<T>(out isAlreadyOpen);
+
+        if (isAlreadyOpen == true)
+        {
+            return;
+        }
+
+        if (ui == null)
+        {
+            //Logger.LogError($"{uiType} prefab doesn't exist in Resources");
+            return;
+        }
+
+        var siblingIndex = UICanvasTrs.childCount;
+        ui.Init(UICanvasTrs);
+        ui.transform.SetSiblingIndex(siblingIndex);
+        ui.gameObject.SetActive(true);
+        ui.SetInfo();
+        ui.ShowUI();
+
+        //기존에 있던거 닫기
+        if (_openUI != null)
+        {
+            CloseUI(_openUI);
+        }
+
+        _openUI = ui;
+    }
+
     //실제로 여는 함수
     public void OpenUI<T>(BaseUIData uiData)
     {
