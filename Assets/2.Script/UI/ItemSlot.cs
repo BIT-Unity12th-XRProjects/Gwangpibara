@@ -23,17 +23,25 @@ public class ItemSlot : MonoBehaviour
     private void Awake()
     {
         _slotButton.onClick.AddListener(OnClickSlot);
+
+        //테스트로 셋슬랏 - 인벤토리 UI에서 해야할일
+        SetSlot(null);
     }
 
     public void SetSlot(ItemData itemData)
     {
         _item = itemData;
-        _itemViewData = new ItemViewData(_item);
+        //_itemViewData = new ItemViewData(_item);
+
+
+        //테스트용 
+        ItemData data = MasterDataManager.Instance.GetMasterItemData(10101);
+        _itemViewData = new ItemViewData(data);
     }
 
     private void OnClickSlot()
     {
-        UIManager.Instance.OpenUI<ItemViewer>(_itemViewData);
+        UIManager.Instance.OpenUI<ItemViewUI>(_itemViewData);
     }
 
 }
