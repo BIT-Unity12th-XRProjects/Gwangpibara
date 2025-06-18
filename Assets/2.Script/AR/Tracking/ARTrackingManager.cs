@@ -36,6 +36,7 @@ public class ARTrackingManager : MonoBehaviour
         _imagePrefab = prefab;
         
         StartSampling();
+
         
     }
 
@@ -55,8 +56,11 @@ public class ARTrackingManager : MonoBehaviour
 
         _positionSamples.Clear();
         _rotationSamples.Clear();
-
         StartCoroutine(CoSampling(3f));
+        _countDownUI.StartCountdown(() =>
+        {
+            
+        });
     }
 
     // 아직 샘플링 중이면 이미지에 프리팹이 따라다니도록
@@ -74,14 +78,14 @@ public class ARTrackingManager : MonoBehaviour
         Vector3 avgPos =GetAveragePosition();
         Quaternion avgRot =GetAverageRotation();
 
-        _originCorrector.CorrectOrigin(avgPos, _currentTrackedImage.transform.position);
-        _originCorrector.FixImageTransform(_imagePrefab, avgPos, avgRot);
+        //_originCorrector.CorrectOrigin(avgPos, _currentTrackedImage.transform.position);
+         Transform iamgeTransform= _originCorrector.FixImageTransform(_imagePrefab, avgPos, avgRot);
         
         // TODO : 트래킹에 실패한 경우 다시 하도록 설정해야함
         Debug.Log($"이미지 위치 평균값 : {_currentTrackedImage.transform.position}");
         
-        _searchPosition.SetTrackedImagePosition(_currentTrackedImage.transform);
-        _markerLoader.LoadAndSpawnMarkers(_currentTrackedImage.transform, _imagePrefab);
+        _searchPosition.SetTrackedImagePosition(iamgeTransform);
+        _markerLoader.LoadAndSpawnMarkers(iamgeTransform);
         Debug.Log("[AR] 원점 보정 완료 및 마커 고정");
     }
 

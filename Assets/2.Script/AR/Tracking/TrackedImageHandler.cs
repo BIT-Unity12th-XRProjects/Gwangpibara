@@ -15,11 +15,20 @@ public class TrackedImageHandler : MonoBehaviour
     public delegate void TrackingStartedHandler(ARTrackedImage image, GameObject prefab);
     public event TrackingStartedHandler OnTrackingStarted;
     
-    [SerializeField] private TMP_Text _debugPositionText;
     [SerializeField] SearchPosition _searchPosition;
     [SerializeField] MarkerLoader _markerLoader;
+    [SerializeField] TMP_Text _debugText;
     
     [SerializeField] ARTrackingManager _arTrackingManager;
+    
+    Dictionary<TrackableId, int> _trackingCounts = new();
+
+    private bool isSampling;
+
+    private void Awake()
+    {
+        isSampling = false;
+    }
 
     private void OnEnable()
     {
@@ -33,63 +42,47 @@ public class TrackedImageHandler : MonoBehaviour
 
     private void OnTrackablesChanged(ARTrackablesChangedEventArgs<ARTrackedImage> changedArgs)
     {
-        
         foreach (ARTrackedImage image in changedArgs.added)
         {
             if (_placeMarkers.TryGetValue(image.trackableId, out var placeMarker) == false)
             {
-                _placeMarkers.Add(image.trackableId, Instantiate(_placePrefab));
+                _placeMarkers.Add(image.trackableId, Instantiate(_placePrefab, image.pose.position, image.pose.rotation));
             }
+
             _placeMarkers[image.trackableId].transform.position = image.pose.position;
             _placeMarkers[image.trackableId].transform.rotation = image.pose.rotation;
-            OnTrackingStarted?.Invoke(image, _placeMarkers[image.trackableId]);
+            
         }
         
         foreach (ARTrackedImage image in changedArgs.updated)
         {
-            if (image.referenceImage.name == "ImageTracker")
+            if (image.trackingState != TrackingState.Tracking)
             {
-                continue;
+                continue;    
+            }
+
+            if (_trackingCounts.ContainsKey(image.trackableId) == false)
+            {
+                _trackingCounts[image.trackableId] = 0;
             }
             
-            
-            if (_placeMarkers.TryGetValue(image.trackableId, out var placeMarker) == false)
+            _trackingCounts[image.trackableId]++;
+
+            if (image.referenceImage.name == "ImageTracker" && _trackingCounts[image.trackableId] == 3)
             {
-                _placeMarkers.Add(image.trackableId, Instantiate(_placePrefab));
+                _debugText.text = $"[AR] 상태: {image.trackingState}, 이름: {image.referenceImage.name}, 위치: {image.transform.position}";
+                if (isSampling)
+                {
+                    return;
+                }
+                OnTrackingStarted?.Invoke(image, _placeMarkers[image.trackableId]);
+                isSampling = true;
             }
-            _placeMarkers[image.trackableId].transform.position = image.pose.position;
-            _placeMarkers[image.trackableId].transform.rotation = image.pose.rotation;
         }
 
         foreach (KeyValuePair<TrackableId, ARTrackedImage> image in changedArgs.removed)
         {
-            // 딕셔너리에 있으면 삭제 , 없으면 --
+            
         }
-
-        /*
-        foreach (var image in changedArgs.added)
-        {
-            if (_placeMarkers.TryGetValue(image.trackableId, out var placeMarker) == false)
-            {
-                var imageMarker = Instantiate(_placePrefab);
-                _placeMarkers.Add(image.trackableId, Instantiate(imageMarker));
-                OnTrackingStarted?.Invoke(image, imageMarker);
-            }
-
-            _placeMarkers[image.trackableId].transform.position = image.pose.position;
-            _placeMarkers[image.trackableId].transform.rotation = image.pose.rotation;
-        }
-
-        foreach (var image in changedArgs.updated)
-        {
-            if (_placeMarkers.TryGetValue(image.trackableId, out var placeMarker) == false)
-            {
-                _placeMarkers.Add(image.trackableId, Instantiate(_placePrefab));
-            }
-            _placeMarkers[image.trackableId].transform.position = image.pose.position;
-            _placeMarkers[image.trackableId].transform.rotation = image.pose.rotation;
-
-        }
-        */
     }
 }

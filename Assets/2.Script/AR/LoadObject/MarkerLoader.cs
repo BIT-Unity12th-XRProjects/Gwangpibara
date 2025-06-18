@@ -19,7 +19,7 @@ public class MarkerLoader : MonoBehaviour
     private List<GameObject> spawnedMarkers = new List<GameObject>();
 
     
-    public void LoadAndSpawnMarkers(Transform imageTransform, GameObject imagePrefab)
+    public void LoadAndSpawnMarkers(Transform imageTransform)
     {
         if (_isSpawned)
         {
@@ -40,7 +40,7 @@ public class MarkerLoader : MonoBehaviour
             Quaternion worldRot = imageTransform.rotation * data.rotation;
 
             
-            GameObject marker = Instantiate(markerPrefab, worldPos, worldRot, imagePrefab.transform);
+            GameObject marker = Instantiate(markerPrefab, worldPos, worldRot, imageTransform);
             marker.name = data.objectName;
 
             var idHolder = marker.GetComponent<MarkerIDHolder>();
