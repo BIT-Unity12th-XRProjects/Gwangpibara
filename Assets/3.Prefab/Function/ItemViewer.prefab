@@ -48,7 +48,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f128d753dab40c40b72d7b8e269265c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _testPrefab: {fileID: 2335993910622774706, guid: f969516bba6e8be4f9425cb4e3826379,
+  _testPrefab: {fileID: 8072060896458383035, guid: dcbfd4f989a6f1040b5d8b3fcba4917d,
     type: 3}
+  _testButton: {fileID: 0}
   _name: 
   _rotationSpeed: 0.2
+  _zoomSpeed: 0.01
+  _minZoom: 0.5
+  _maxZoom: 2

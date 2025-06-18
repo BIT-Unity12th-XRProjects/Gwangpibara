@@ -270,3 +270,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3473ba1cdbce7de429cf5b8b93f2c082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _slotButton: {fileID: 5837519506931147359}
+  _item:
+    ID: 0
+    ItemType: 0
+    Name: 
+    Description: 
+    AquireStep: 0
+    DeleteStep: 0
+    cachedObject: {fileID: 0}
