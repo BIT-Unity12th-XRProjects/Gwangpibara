@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StartUIData : BaseUIData
 {
@@ -14,20 +15,21 @@ public class StartUI : BaseUI
     public TextMeshProUGUI DescText;
 
     private StartUIData m_startUIData;
-    private Action m_onStartGameBtnclicked;
+    [SerializeField] private Button _startButton;
 
-    public override void SetInfo(BaseUIData uiData)
+    private void Start()
     {
-        base.SetInfo(uiData);
+        _startButton.onClick.AddListener(OnClickedStartBtn);
+    }
 
-        m_startUIData = uiData as StartUIData;
+    public override void SetInfo(BaseUIData uIData)
+    {
+       //스타트 매니저의 데이터를 가져 와서 할거 
 
-        DescText.text = m_startUIData.DescriptionText;
-        m_onStartGameBtnclicked = m_startUIData.onStartGameBtnClicked;
     }
 
     public void OnClickedStartBtn()
     {
-        m_onStartGameBtnclicked?.Invoke();
+        UIManager.Instance.OpenUI<GameUI>();
     }
 }

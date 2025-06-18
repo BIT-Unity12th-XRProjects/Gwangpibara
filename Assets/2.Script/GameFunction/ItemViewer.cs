@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEditor.IMGUI.Controls;
+using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -161,10 +162,16 @@ public class ItemViewer : MonoBehaviour
         }
     }
 
-    public void ViewItem(ItemData itemData)
+    public void ViewItem(ItemViewData itemViewData)
     {
         //_name = itemData.Name;
-        _itemObject = Instantiate(_testPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+        GameObject targetObject = itemViewData.itemPrefab;
+        if(targetObject == null)
+        {
+            targetObject = _testPrefab;
+        }
+
+        _itemObject = Instantiate(targetObject, new Vector3(0, 0, 0), Quaternion.identity);
     }
 
     private void OnLookPerformed(InputAction.CallbackContext context)
