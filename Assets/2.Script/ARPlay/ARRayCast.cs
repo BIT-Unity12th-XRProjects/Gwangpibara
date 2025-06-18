@@ -14,6 +14,12 @@ public class ARRayCast : MonoBehaviour
             Debug.Log("Ray hit object: " + hit.collider.gameObject.name);
 
             // TODO : 오브젝트 상호작용
+
+            ARMarkerObject arObject = hit.collider.gameObject.GetComponent<ARMarkerObject>();
+            if (arObject != null)
+            {
+                arObject.TakeRayHit();
+            }
         }
     }
 }
