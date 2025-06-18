@@ -2275,6 +2275,7 @@ GameObject:
   - component: {fileID: 6933837034174988688}
   - component: {fileID: 6677725660879245424}
   - component: {fileID: 7755718995992509424}
+  - component: {fileID: 3053132958314434650}
   m_Layer: 5
   m_Name: GameUI
   m_TagString: Untagged
@@ -2367,3 +2368,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3053132958314434650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8728726735013985970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f958c573f607ab468b72677eee7b68c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_isAnimPlay: 0
+  QuestText: {fileID: 4988414480582062477}
+  AnswerInputField: {fileID: 1379692181599206547}
