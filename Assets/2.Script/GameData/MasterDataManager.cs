@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -17,6 +18,9 @@ public class MasterDataManager : MonoBehaviour
     private string _itemDataPath = "Assets/4.Data/ItemDataTable.csv";
     private Dictionary<int, ItemData> _masterItemDataDictionary;
 
+    private string _themeDataPath = "Assets/4.Data/themeData.csv";
+    private Dictionary<int, ThemeData> _masterThemeDataDictionary;
+
     private Dictionary<int, MapData> _masterMapDataDictionary;
 
     private void Awake()
@@ -24,7 +28,7 @@ public class MasterDataManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            MakeMasterData();
+            MakeMasterData(); //단계, 주제, 아이템
             MakeMapData();
             StartCoroutine(LoadAllPrefabs());
         }
@@ -36,21 +40,34 @@ public class MasterDataManager : MonoBehaviour
 
     public StepData GetMasterStepData(int stepID)
     {
-        StepData copyData = new StepData(_masterStepDataDictionary[stepID]);
-        return copyData;
+       return GetCopyData(_masterStepDataDictionary, stepID, origin => new StepData(origin));
     }
 
     public ItemData GetMasterItemData(int itemID)
     {
-        ItemData copyItem = new ItemData(_masterItemDataDictionary[itemID]);
-        return copyItem;
+        return GetCopyData(_masterItemDataDictionary, itemID, origin => new ItemData(origin));
+    }
+
+    public ThemeData GetMasterThemeData(int themeNumber)
+    {
+        return GetCopyData(_masterThemeDataDictionary, themeNumber, origin => new ThemeData(origin));
     }
 
     //문제 넘버에 맞는 맵 반환
     public MapData GetMasterMapData(int mapID)
     {
         MapData copyMap = new MapData(_masterMapDataDictionary[mapID]);
+        
         return copyMap;
+    }
+
+    private T GetCopyData<T>(Dictionary<int, T> dictionary, int key, Func<T, T> copyConstructor) where T : class
+    {
+        if (dictionary.TryGetValue(key, out T value))
+        {
+            return copyConstructor(value);
+        }
+        return null;
     }
 
     private void MakeMasterData()
@@ -62,6 +79,10 @@ public class MasterDataManager : MonoBehaviour
         _masterItemDataDictionary = MakeMasterData<ItemData>(_itemDataPath,
                                 stringValues => new ItemData(stringValues),
                                 dataClass => dataClass.ID);
+
+        _masterThemeDataDictionary = MakeMasterData<ThemeData>(_themeDataPath,
+                                parseValues => new ThemeData(parseValues),
+                                dataclss => dataclss.themeNumber);
     }
 
     private void MakeMapData()
@@ -73,6 +94,7 @@ public class MasterDataManager : MonoBehaviour
         _masterMapDataDictionary.Add(1, mapData);
     }
 
+  
     private Dictionary<int, T> MakeMasterData<T>(string path, Func<string[], T> constructor, Func<T, int> getKey)
         where T : class
     {
