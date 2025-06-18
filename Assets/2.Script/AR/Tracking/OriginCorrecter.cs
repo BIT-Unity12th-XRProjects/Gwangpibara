@@ -13,9 +13,11 @@ public class OriginCorrecter : MonoBehaviour
     }
 
     // 이미지 좌표를 평균 위치/회전으로 고정
-    public void FixImageTransform(GameObject marker, Vector3 averagePosition, Quaternion averageRotation)
+    public Transform FixImageTransform(GameObject imagePrefab, Vector3 averagePosition, Quaternion averageRotation)
     {
-        marker.transform.position = averagePosition;
-        marker.transform.rotation = averageRotation;
+        imagePrefab.transform.position = averagePosition;
+        imagePrefab.transform.rotation = averageRotation;
+        
+        return imagePrefab.transform;
     }
 }
