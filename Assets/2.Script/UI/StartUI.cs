@@ -22,7 +22,7 @@ public class StartUI : BaseUI
         _startButton.onClick.AddListener(OnClickedStartBtn);
     }
 
-    public override void SetInfo()
+    public override void SetInfo(BaseUIData uIData)
     {
        //스타트 매니저의 데이터를 가져 와서 할거 
 

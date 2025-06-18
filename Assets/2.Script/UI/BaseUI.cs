@@ -32,12 +32,8 @@ public class BaseUI : MonoBehaviour
 
     }
 
-    public virtual void SetInfo()
-    {
 
-    }
-
-    public virtual void SetInfo(BaseUIData uiData)
+    public virtual void SetInfo(BaseUIData uiData = null)
     {
         m_isAnimPlay = uiData.isAnimPlay;
 

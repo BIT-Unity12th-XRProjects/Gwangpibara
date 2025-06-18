@@ -37,7 +37,7 @@ public class GameUI : BaseUI
         _submitButton.onClick.AddListener(OnClickSubmitButton);
     }
 
-    public override void SetInfo()
+    public override void SetInfo(BaseUIData uiData)
     {
         //게임 컨틀로러의 게임데이터 가져와서 세팅하기, 구독하기
         

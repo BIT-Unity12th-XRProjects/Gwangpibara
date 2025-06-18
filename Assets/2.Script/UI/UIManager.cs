@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class UIManager : Singleton<UIManager>
 {
@@ -16,41 +17,7 @@ public class UIManager : Singleton<UIManager>
         OpenUI<StartUI>(new StartUIData());
     }
 
-    public void OpenUI<T>()
-    {
-        Type uiType = typeof(T);
-        bool isAlreadyOpen = false;
-        var ui = GetUI<T>(out isAlreadyOpen);
-
-        if (isAlreadyOpen == true)
-        {
-            return;
-        }
-
-        if (ui == null)
-        {
-            //Logger.LogError($"{uiType} prefab doesn't exist in Resources");
-            return;
-        }
-
-        var siblingIndex = UICanvasTrs.childCount;
-        ui.Init(UICanvasTrs);
-        ui.transform.SetSiblingIndex(siblingIndex);
-        ui.gameObject.SetActive(true);
-        ui.SetInfo();
-        ui.ShowUI();
-
-        //기존에 있던거 닫기
-        if (_openUI != null)
-        {
-            CloseUI(_openUI);
-        }
-
-        _openUI = ui;
-    }
-
-    //실제로 여는 함수
-    public void OpenUI<T>(BaseUIData uiData)
+    public void OpenUI<T>(BaseUIData uiData = null)
     {
         Type uiType = typeof(T);
         bool isAlreadyOpen = false;
@@ -74,12 +41,13 @@ public class UIManager : Singleton<UIManager>
         ui.SetInfo(uiData);
         ui.ShowUI();
 
-        if(_openUI != null)
+        if (_openUI != null)
         {
             CloseUI(_openUI);
         }
 
         _openUI = ui;
+
     }
 
     private BaseUI GetUI<T>(out bool isAlreadyOpen)
@@ -114,7 +82,7 @@ public class UIManager : Singleton<UIManager>
         Type uiType = ui.GetType();
 
         ui.gameObject.SetActive(false);
-          _closedUIPool[uiType] = ui.gameObject;
+        _closedUIPool[uiType] = ui.gameObject;
         ui.transform.SetParent(CloseUITrs);
     }
 
