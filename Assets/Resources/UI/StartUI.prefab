@@ -195,6 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_isAnimPlay: 0
   DescText: {fileID: 8490448625407090103}
+  _startButton: {fileID: 9139296809408755741}
 --- !u!1 &2620934638398102973
 GameObject:
   m_ObjectHideFlags: 0
