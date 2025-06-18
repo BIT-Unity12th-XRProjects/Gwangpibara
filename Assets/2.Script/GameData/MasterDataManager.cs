@@ -17,12 +17,15 @@ public class MasterDataManager : MonoBehaviour
     private string _itemDataPath = "Assets/4.Data/ItemDataTable.csv";
     private Dictionary<int, ItemData> _masterItemDataDictionary;
 
+    private Dictionary<int, MapData> _masterMapDataDictionary;
+
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
             MakeMasterData();
+            MakeMapData();
             StartCoroutine(LoadAllPrefabs());
         }
         else
@@ -43,6 +46,13 @@ public class MasterDataManager : MonoBehaviour
         return copyItem;
     }
 
+    //문제 넘버에 맞는 맵 반환
+    public MapData GetMasterMapData(int mapID)
+    {
+        MapData copyMap = new MapData(_masterMapDataDictionary[mapID]);
+        return copyMap;
+    }
+
     private void MakeMasterData()
     {
         _masterStepDataDictionary = MakeMasterData<StepData>(_stepDataPath,
@@ -52,6 +62,15 @@ public class MasterDataManager : MonoBehaviour
         _masterItemDataDictionary = MakeMasterData<ItemData>(_itemDataPath,
                                 stringValues => new ItemData(stringValues),
                                 dataClass => dataClass.ID);
+    }
+
+    private void MakeMapData()
+    {
+        _masterMapDataDictionary = new();
+        
+        //임시로 1단계 맵 데이터 만들어넣기
+        MapData mapData = new();
+        _masterMapDataDictionary.Add(1, mapData);
     }
 
     private Dictionary<int, T> MakeMasterData<T>(string path, Func<string[], T> constructor, Func<T, int> getKey)
@@ -78,10 +97,7 @@ public class MasterDataManager : MonoBehaviour
     {
         foreach (var item in _masterItemDataDictionary.Values)
         {
-            var a = Addressables.ResourceLocators;
-
-            //어드레서블에 해당 id의 오브젝트 키가 있는지 체크 - keyException 방지
-
+       
             var handle = Addressables.LoadAssetAsync<GameObject>("ItemPrefab"+item.ID.ToString());
             yield return handle;
             if (handle.Status == AsyncOperationStatus.Succeeded)
@@ -95,6 +111,27 @@ public class MasterDataManager : MonoBehaviour
                 item.cachedObject = Resources.Load<GameObject>("TestItemPrefab");
             }
 
+        }
+
+        foreach(var item in _masterMapDataDictionary)
+        {
+            for (int i = 0; i < item.Value.markerList.Count; i++)
+            {
+                GameMarkerData markerData = item.Value.markerList[i];
+                var handle = Addressables.LoadAssetAsync<GameObject>("MarkPrefab" 
+                                                    + markerData.markId.ToString());
+                yield return handle;
+                if (handle.Status == AsyncOperationStatus.Succeeded)
+                {
+                    //  Debug.Log(item.ID + " 프리팹 로드");
+                    markerData.markerGameObject = handle.Result;
+                }
+                else
+                {
+                    // Debug.LogError($"Prefab Load Fail: {item.ID}");
+                    markerData.markerGameObject = Resources.Load<GameObject>("TestItemPrefab");
+                }
+            }
         }
     }
 
