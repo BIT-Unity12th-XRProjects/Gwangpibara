@@ -7,7 +7,7 @@ public class CheckItemUIData : BaseUIData
     public Action onExitBtnClicked;
 }
 
-public class CheckItemUI : BaseUI
+public class ItemViewUI : BaseUI
 {
     public Button ExitButton = null;
 
