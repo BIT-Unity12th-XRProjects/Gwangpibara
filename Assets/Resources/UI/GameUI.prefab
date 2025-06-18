@@ -2383,3 +2383,8 @@ MonoBehaviour:
   m_isAnimPlay: 0
   QuestText: {fileID: 4988414480582062477}
   AnswerInputField: {fileID: 1379692181599206547}
+  _inventoryButton: {fileID: 3257540798076077823}
+  _aRButton: {fileID: 976894258832564939}
+  _beforeButton: {fileID: 7543943803167276396}
+  _nextButton: {fileID: 8006981064633598554}
+  _submitButton: {fileID: 3554862756159626687}
