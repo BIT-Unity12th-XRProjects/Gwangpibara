@@ -19,7 +19,7 @@ public class SearchPosition : MonoBehaviour
     [SerializeField] private InputActionReference tapPosition;
     [SerializeField] private InputActionReference tapPress;
     
-    [SerializeField] private RenameObjectUI _renameObjectUI;
+    [SerializeField] private UpdateMarkerDataUI updateMarkerDataUI;
     [SerializeField] private MarkerEraser _markerEraser;
     
     
@@ -81,7 +81,7 @@ public class SearchPosition : MonoBehaviour
                 {
                     return;
                 }
-                _renameObjectUI.Open(_selectedObject);
+                updateMarkerDataUI.Open(_selectedObject);
             }
         }
     }

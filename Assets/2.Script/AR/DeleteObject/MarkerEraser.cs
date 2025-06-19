@@ -10,7 +10,7 @@ namespace AREditor.DeleteObject
     public class MarkerEraser : MonoBehaviour
     {
         [SerializeField] private Camera _arCamera;
-        [SerializeField] private SavePosition _savePosition;
+        [SerializeField] private SaveMarker saveMarker;
         [SerializeField] private ARMarkerSpawner _arMarkerSpawner;
         [SerializeField] private Image _eraserImage;
         [SerializeField] private Image _markerImage;
@@ -65,7 +65,7 @@ namespace AREditor.DeleteObject
                     if (idHolder != null)
                     {
                         string markerId = idHolder.markerId;
-                        _savePosition.RemoveMarkerData(markerId);
+                        saveMarker.RemoveMarkerData(markerId);
                         Destroy(hitObj);
                         Debug.Log($"오브젝트 {markerId} 삭제됨");
                     }

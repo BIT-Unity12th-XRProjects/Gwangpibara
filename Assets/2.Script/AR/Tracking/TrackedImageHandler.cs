@@ -82,7 +82,7 @@ public class TrackedImageHandler : MonoBehaviour
 
         foreach (KeyValuePair<TrackableId, ARTrackedImage> image in changedArgs.removed)
         {
-            
+            _placeMarkers.Remove(image.Key);
         }
     }
 }
