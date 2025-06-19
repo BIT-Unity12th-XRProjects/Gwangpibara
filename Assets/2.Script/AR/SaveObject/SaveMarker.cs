@@ -76,6 +76,7 @@ public class SaveMarker : MonoBehaviour
             if (existing != null)
             {
                 existing.name = marker.name;
+                existing.dropItemID = marker.dropItemID;
                 existing.rotation = marker.rotation;
                 existing.position = marker.position;
                 existing.spawnStep = marker.spawnStep;
