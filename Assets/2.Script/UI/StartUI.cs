@@ -14,11 +14,13 @@ public class StartUI : BaseUI
 {
     public TextMeshProUGUI DescText;
 
-    private StartUIData m_startUIData;
+    private StartUIData _startUIData;
+    private GameStartManager _startManager;
     [SerializeField] private Button _startButton;
 
     private void Start()
     {
+        _startManager = FindAnyObjectByType<GameStartManager>();
         _startButton.onClick.AddListener(OnClickedStartBtn);
     }
 
@@ -30,6 +32,6 @@ public class StartUI : BaseUI
 
     public void OnClickedStartBtn()
     {
-        UIManager.Instance.OpenUI<GameUI>();
+        _startManager.StartGame();
     }
 }
