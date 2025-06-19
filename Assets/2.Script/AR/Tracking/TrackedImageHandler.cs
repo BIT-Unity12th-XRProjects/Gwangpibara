@@ -9,59 +9,80 @@ using UnityEngine.XR.ARSubsystems;
 public class TrackedImageHandler : MonoBehaviour
 {
     [SerializeField] ARTrackedImageManager _arTrackedImageManager;
-    [SerializeField] XROrigin _xROrigin;
     [SerializeField] GameObject _placePrefab;
-    
-    [SerializeField] MarkerLoader _markerLoader;
-    [SerializeField] private SearchPosition _searchPosition;
-    
+
     private Dictionary<TrackableId, GameObject> _placeMarkers = new Dictionary<TrackableId, GameObject>();
+    public delegate void TrackingStartedHandler(ARTrackedImage image, GameObject prefab);
+    public event TrackingStartedHandler OnTrackingStarted;
     
-    private bool _isLoadObject = false;
+    [SerializeField] SearchPosition _searchPosition;
+    [SerializeField] MarkerLoader _markerLoader;
+    [SerializeField] TMP_Text _debugText;
     
-    private void Start()
+    [SerializeField] ARTrackingManager _arTrackingManager;
+    
+    Dictionary<TrackableId, int> _trackingCounts = new();
+
+    private bool isSampling;
+
+    private void Awake()
+    {
+        isSampling = false;
+    }
+
+    private void OnEnable()
     {
         _arTrackedImageManager.trackablesChanged.AddListener(OnTrackablesChanged);
-        _isLoadObject = false;
     }
-    
+
     private void OnDisable()
     {
         _arTrackedImageManager.trackablesChanged.RemoveListener(OnTrackablesChanged);
     }
-    
+
     private void OnTrackablesChanged(ARTrackablesChangedEventArgs<ARTrackedImage> changedArgs)
     {
         foreach (ARTrackedImage image in changedArgs.added)
         {
             if (_placeMarkers.TryGetValue(image.trackableId, out var placeMarker) == false)
             {
-                _placeMarkers.Add(image.trackableId, Instantiate(_placePrefab));
+                _placeMarkers.Add(image.trackableId, Instantiate(_placePrefab, image.pose.position, image.pose.rotation));
             }
+
             _placeMarkers[image.trackableId].transform.position = image.pose.position;
             _placeMarkers[image.trackableId].transform.rotation = image.pose.rotation;
-
-            if (_isLoadObject == true)
-            {
-                return;
-            }
-
-            _searchPosition.SetTrackedImagePosition(image.transform);
-            _markerLoader.LoadAndSpawnMarkers(image.transform);
-            _isLoadObject = true;
+            
         }
         
         foreach (ARTrackedImage image in changedArgs.updated)
         {
-            if (_placeMarkers.TryGetValue(image.trackableId, out var placeMarker) == false)
+            if (image.trackingState != TrackingState.Tracking)
             {
-                _placeMarkers.Add(image.trackableId, Instantiate(_placePrefab));
+                continue;    
             }
-            _placeMarkers[image.trackableId].transform.position = image.pose.position;
-            _placeMarkers[image.trackableId].transform.rotation = image.pose.rotation;
+
+            if (_trackingCounts.ContainsKey(image.trackableId) == false)
+            {
+                _trackingCounts[image.trackableId] = 0;
+            }
+            
+            _trackingCounts[image.trackableId]++;
+
+            if (image.referenceImage.name == "ImageTracker" && _trackingCounts[image.trackableId] == 3)
+            {
+                _debugText.text = $"[AR] 상태: {image.trackingState}, 이름: {image.referenceImage.name}, 위치: {image.transform.position}";
+                if (isSampling)
+                {
+                    return;
+                }
+                OnTrackingStarted?.Invoke(image, _placeMarkers[image.trackableId]);
+                isSampling = true;
+            }
         }
-        
 
+        foreach (KeyValuePair<TrackableId, ARTrackedImage> image in changedArgs.removed)
+        {
+            
+        }
     }
-
 }
