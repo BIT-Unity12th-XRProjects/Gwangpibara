@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,6 +21,7 @@ public class GameStartManager : MonoBehaviour
     {
         _selectThemNumber = INVALID_NUMBER;
         SetThemeList();
+        SelectTheme(1); //테스트로 1번 문제 지정
     }
 
     public void SelectTheme(int themeNumber)
@@ -34,10 +36,17 @@ public class GameStartManager : MonoBehaviour
             return;
         }
 
-        //MapMaker에서 선택한 주제의 맵 데이터로 맵 세팅
+        //MapMaker에서 선택한 주제의 맵 데이터로 맵 세팅 3초 UI GameUI 으로 전환 ->
         //MainController의 SetStep에 주제의 1번 문제로 단계 세팅
-        //UI GameUI 으로 전환
+        //
+        StartCoroutine(CoLoadGame());
+    }
 
+    IEnumerator CoLoadGame()
+    {
+        yield return new WaitForSeconds(0.5f); //맵 만드는 작업을 호출하고 맵 완성을 기다릴것
+        _mainController.StartStep(10101);
+        UIManager.Instance.OpenUI<GameUI>();
     }
 
     private void SetThemeList()
