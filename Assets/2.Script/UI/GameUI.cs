@@ -20,52 +20,54 @@ public class GameUI : BaseUI
     public TextMeshProUGUI QuestText;
     public TMP_InputField AnswerInputField;
 
-    // public Button InventoryBtn;
-    // public Button ARModeBtn;
-    // public Button BeforeBtn;
-    // public Button NextBtn;
-    // public Button SubmitBtn;
-
-    private Action m_onInventoryBtnClicked;
-    private Action m_onARBtnClicked;
-    private Action m_onBeforeBtnClicked;
-    private Action m_onNextBtnClicked;
-    private Action m_onSubmitBtnClicked;
+    [SerializeField] private Button _inventoryButton;
+    [SerializeField] private Button _aRButton;
+    [SerializeField] private Button _beforeButton;
+    [SerializeField] private Button _nextButton;
+    [SerializeField] private Button _submitButton;
 
     private GameUIData m_gameUIData;
 
+    protected override void Awake()
+    {
+        base.Awake();
+        _inventoryButton.onClick.AddListener(OnClickedInventoryButton);
+        _aRButton.onClick.AddListener(OnClickedARButton);
+        _beforeButton.onClick.AddListener(OnClickedBeforeButton);
+        _nextButton.onClick.AddListener(OnClickedNextButton);
+        _submitButton.onClick.AddListener(OnClickSubmitButton);
+    }
+
     public override void SetInfo(BaseUIData uiData)
     {
-        base.SetInfo(uiData);
+        //게임 컨틀로러의 게임데이터 가져와서 세팅하기, 구독하기
+        
 
-        m_gameUIData = uiData as GameUIData;
-
-        m_onInventoryBtnClicked = m_gameUIData.onInventoryBtnClicked;
-        m_onARBtnClicked = m_gameUIData.onARBtnClicked;
-        m_onBeforeBtnClicked = m_gameUIData.onBeforeBtnClicked;
-        m_onNextBtnClicked = m_gameUIData.onNextBtnClicked;
-        m_onSubmitBtnClicked = m_gameUIData.onSubmitBtnClicked;
 
     }
 
-    public void OnClickedInventoryBtn()
+    private void OnClickedInventoryButton()
     {
-        m_onInventoryBtnClicked?.Invoke();
+        UIManager.Instance.OpenUI<InventoryUI>();
     }
-    public void OnClickedARBtn()
+
+    private void OnClickedARButton()
     {
-        m_onARBtnClicked?.Invoke();
+
     }
-    public void OnClickedBeforeBtn()
+
+    private void OnClickedBeforeButton()
     {
-        m_onBeforeBtnClicked?.Invoke();
+
     }
-    public void OnClickedNextBtn()
+
+    private void OnClickedNextButton()
     {
-        m_onNextBtnClicked?.Invoke();
+
     }
-    public void OnClickedConfirmBtn()
+
+    private void OnClickSubmitButton()
     {
-        m_onSubmitBtnClicked?.Invoke();
+
     }
 }

@@ -17,8 +17,18 @@ public class BaseUI : MonoBehaviour
     private Action m_OnShow;
     private Action m_OnClose;
 
+    protected virtual void Awake()
+    {
+        Canvas canvas = GetComponentInParent<Canvas>();
+        if (canvas != null)
+        {
+            canvas.worldCamera = Camera.main;
+        }
+    }
+
     public virtual void Init(Transform anchor)
     {
+
         m_OnShow = null;
         m_OnClose = null;
 
@@ -31,8 +41,15 @@ public class BaseUI : MonoBehaviour
         rectTransform.offsetMax = Vector3.zero;
 
     }
-    public virtual void SetInfo(BaseUIData uiData)
+
+
+    public virtual void SetInfo(BaseUIData uiData = null)
     {
+        if(uiData == null)
+        {
+            return;
+        }
+
         m_isAnimPlay = uiData.isAnimPlay;
 
         m_OnShow = uiData.OnShow;
