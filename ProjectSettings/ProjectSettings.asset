@@ -924,11 +924,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: 9815d500-5a0e-4776-8dbd-2a0ff647236d
+  cloudProjectId: 9a532c10-9507-4d08-b22e-b9039c02330d
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: Gwangpibara
-  organizationId: tealima
+  organizationId: hwlsjin
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
