@@ -22,7 +22,7 @@ public class UIManager : Singleton<UIManager>
         }
 
         // CloseUI용 빈 오브젝트 생성
-        if (CloseUITrs)
+        if (CloseUITrs == null)
         {
             GameObject closeUIObj = new GameObject("CloseUIRoot");
             CloseUITrs = closeUIObj.transform;
