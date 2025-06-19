@@ -14,6 +14,21 @@ public class UIManager : Singleton<UIManager>
 
     private void Start()
     {
+        // UICanvas용 빈 오브젝트 생성
+        if(UICanvasTrs == null)
+        {
+            GameObject uiCanvasObj = new GameObject("UICanvasRoot");
+            UICanvasTrs = uiCanvasObj.transform;
+        }
+
+        // CloseUI용 빈 오브젝트 생성
+        if (CloseUITrs)
+        {
+            GameObject closeUIObj = new GameObject("CloseUIRoot");
+            CloseUITrs = closeUIObj.transform;
+        }
+        
+
         OpenUI<StartUI>(new StartUIData());
     }
 
