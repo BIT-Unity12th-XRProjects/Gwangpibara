@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Default Local Group
   m_EditorClassIdentifier: 
   m_GroupName: Default Local Group
-  m_GUID: 17c4feb919517e84da41b053692fdfff
+  m_GUID: d97db972bf1baac46bec257b8c3f41ae
   m_SerializeEntries:
   - m_GUID: 0efc21ff559d1b9438596ae35cc7dbcd
     m_Address: MarkPrefab10101
