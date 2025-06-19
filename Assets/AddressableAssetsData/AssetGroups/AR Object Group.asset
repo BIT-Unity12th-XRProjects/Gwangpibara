@@ -18,7 +18,8 @@ MonoBehaviour:
   - m_GUID: 432a9114aad134344a0e5b1f0e8887fd
     m_Address: Assets/4.Data/GameObjectData.asset
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - AR
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 7e9a53ae6723c824ea21acc297407c53, type: 2}
