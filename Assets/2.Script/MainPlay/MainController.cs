@@ -13,7 +13,6 @@ public class MainController : MonoBehaviour
     void Start()
     {
         _itemInventory = new();
-        SetStep(MasterDataManager.Instance.GetMasterStepData(10101)); //1번 주제로 시작
     }
 
     private void Update()
@@ -25,6 +24,11 @@ public class MainController : MonoBehaviour
             SubmitAnswer("박광호"); //정답 텍스트 입력하기
             AcquireItem(MasterDataManager.Instance.GetMasterItemData(10101)); //10101 아이템 전달받기
         }
+    }
+
+    public void StartStep(int stepValue)
+    {
+        SetStep(MasterDataManager.Instance.GetMasterStepData(stepValue));
     }
 
     private void GoNextStep()
