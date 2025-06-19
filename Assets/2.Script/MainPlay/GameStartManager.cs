@@ -20,6 +20,7 @@ public class GameStartManager : MonoBehaviour
     private void Start()
     {
         _selectThemNumber = INVALID_NUMBER;
+        _mainController = FindAnyObjectByType<MainController>();
         SetThemeList();
         SelectTheme(1); //테스트로 1번 문제 지정
     }
@@ -44,6 +45,7 @@ public class GameStartManager : MonoBehaviour
 
     IEnumerator CoLoadGame()
     {
+        Debug.Log("맵 만들기 시작");
         yield return StartCoroutine(MapGenerator.Instance.C_CallGenerator(1)); //맵 만드는 작업을 호출하고 맵 완성을 기다릴것
         _mainController.StartStep(10101);
         UIManager.Instance.OpenUI<GameUI>();
