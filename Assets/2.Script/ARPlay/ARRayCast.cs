@@ -7,7 +7,7 @@ public class ARRayCast : MonoBehaviour
     [SerializeField] private float _rayDistance = 1.0f; // 레이 길이
 
     private PlayerInputActions _inputActions;
-    private GameObject _lastCheckPrefab = null;
+    private GameObject _lastCheckObject = null;
     private bool _hasFinding = false;
 
     private void Awake()
@@ -38,27 +38,25 @@ public class ARRayCast : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit, _rayDistance))
         {
-            if (_lastCheckPrefab != hit.collider.gameObject) // 마지막 확인된 오브젝트인지 확인
+            GameObject hitObject = hit.collider.gameObject;
+
+            if (_hasFinding == false || _lastCheckObject != hitObject)
             {
-                Debug.Log("Ray hit object: " + hit.collider.gameObject.name);
+                _lastCheckObject = hitObject;
 
-                // TODO : 오브젝트 상호작용
+                ARMarkerObject markerObject = hitObject.GetComponent<ARMarkerObject>();
 
-                ARMarkerObject markerObject = hit.collider.gameObject.GetComponent<ARMarkerObject>();
                 if (markerObject != null)
                 {
-                    markerObject.TakeRayHit();
+                    markerObject.TakeRayHit(); // 한 번만 실행됨
                     _hasFinding = true;
                 }
             }
-            else
-            {
-                if (_hasFinding && _lastCheckPrefab != null)
-                {
-                    _lastCheckPrefab = null;
-                    _hasFinding = false;
-                }
-            }
+        }
+        else
+        {
+            _lastCheckObject = null;
+            _hasFinding = false;
         }
     }
 
@@ -77,6 +75,7 @@ public class ARRayCast : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
             ARMarkerObject markerObject = hit.collider.GetComponent<ARMarkerObject>();
+
             if (markerObject != null)
             {
                 markerObject.TakeClick();
