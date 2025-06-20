@@ -41,7 +41,7 @@ public class MarkerLoader : MonoBehaviour
             Quaternion worldRot = imageTransform.rotation * data.rotation;
             
             GameObject marker = Instantiate(markerPrefab, worldPos, worldRot, imageTransform);
-            marker.name = data.name;
+            marker.name = data.prefabID.ToString();
 
             var markerDataComponent = marker.GetComponent<MarkerDataComponent>();
             if (markerDataComponent != null)

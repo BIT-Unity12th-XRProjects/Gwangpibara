@@ -78,6 +78,10 @@ public class TrackedImageHandler : MonoBehaviour
                 OnTrackingStarted?.Invoke(image, _placeMarkers[image.trackableId]);
                 isSampling = true;
             }
+            
+            
+            
+            
         }
 
         foreach (KeyValuePair<TrackableId, ARTrackedImage> image in changedArgs.removed)

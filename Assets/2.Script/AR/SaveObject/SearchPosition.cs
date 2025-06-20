@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets;
 
 public class SearchPosition : MonoBehaviour
@@ -22,6 +23,7 @@ public class SearchPosition : MonoBehaviour
     [SerializeField] private UpdateMarkerDataUI _updateMarkerDataUI;
     [SerializeField] private ARMarkerSpawner _arMarkerSpawner;
     [SerializeField] private MarkerEraser _markerEraser;
+    [SerializeField] private MarkerMover _markerMover;
     
     
     private Transform _trackedImageTransform;
@@ -73,6 +75,7 @@ public class SearchPosition : MonoBehaviour
                 _objectPositionText.text = "MarkerPosition" + hit.collider.gameObject.transform.position.ToString();
                 _selectedObject = hit.collider.gameObject;
                 
+                
                 if (_markerEraser.isDeleteMode == true)
                 {
                     return;
@@ -80,6 +83,12 @@ public class SearchPosition : MonoBehaviour
                 
                 if (EventSystem.current.IsPointerOverGameObject())
                 {
+                    return;
+                }
+
+                if (_markerMover.isMoveMode)
+                {
+                    _markerMover.ShowArrowUI(_selectedObject);
                     return;
                 }
 

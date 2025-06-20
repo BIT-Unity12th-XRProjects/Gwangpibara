@@ -5,7 +5,7 @@ using System;
 public class MarkerData
 {
     public string id;
-    public string name;
+    public int prefabID;
     public int dropItemID;
     public int acquireStep;
     public int removeStep;
@@ -15,7 +15,7 @@ public class MarkerData
     public MarkerType markerType = MarkerType.DropItem; 
     
     public MarkerData(string id, 
-        string name, 
+        int prefabID, 
         int dropItemID, 
         int acquireStep,
         int removeStep,
@@ -25,7 +25,7 @@ public class MarkerData
         MarkerType markerType = MarkerType.DropItem)
     {
         this.id = id;
-        this.name = name;
+        this.prefabID = prefabID;
         this.dropItemID = dropItemID;
         this.markerSpawnType = markerSpawnType;
         this.markerType = markerType;
