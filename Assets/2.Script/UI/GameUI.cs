@@ -5,14 +5,13 @@ using UnityEngine.UI;
 
 public class GameUIData : BaseUIData
 {
-    public Action onInventoryBtnClicked = null;
-    public Action onARBtnClicked = null;
-    public Action onBeforeBtnClicked = null;
-    public Action onNextBtnClicked = null;
-    public Action onSubmitBtnClicked = null;
-
     public string QuestText;
     public string AnswerText;
+
+    public void SetData(StepData stepData)
+    {
+        QuestText = stepData.PrintText;
+    }
 }
 
 public class GameUI : BaseUI
@@ -26,6 +25,7 @@ public class GameUI : BaseUI
     [SerializeField] private Button _nextButton;
     [SerializeField] private Button _submitButton;
 
+    private MainController _mainController;
     private GameUIData m_gameUIData;
 
     protected override void Awake()
@@ -38,11 +38,21 @@ public class GameUI : BaseUI
         _submitButton.onClick.AddListener(OnClickSubmitButton);
     }
 
+    private void Start()
+    {
+        _mainController = FindAnyObjectByType<MainController>();
+        _mainController.onChangeStepData += SetInfo;
+    }
+
     public override void SetInfo(BaseUIData uiData)
     {
-        //게임 컨틀로러의 게임데이터 가져와서 세팅하기, 구독하기
-        
+        if(uiData == null)
+        {
+            return;
+        }
 
+        //게임 컨틀로러의 게임데이터 가져와서 세팅하기, 구독하기
+        QuestText.text = ((GameUIData)uiData).QuestText;
 
     }
 
@@ -58,16 +68,16 @@ public class GameUI : BaseUI
 
     private void OnClickedBeforeButton()
     {
-
+        _mainController.ClickBeforeButton();
     }
 
     private void OnClickedNextButton()
     {
-
+        _mainController.ClickNextButton();
     }
 
     private void OnClickSubmitButton()
     {
-
+        _mainController.SubmitAnswer(AnswerInputField.text);
     }
 }
