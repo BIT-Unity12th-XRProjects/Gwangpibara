@@ -23,6 +23,8 @@ public class ARMarkerObject : MonoBehaviour, IDetect
 
     public void TakeRayHit()
     {
+        Debug.Log("aaaaa");
+
         MarkerType thisMarkerType = _markerData.markerType;
 
         switch(thisMarkerType)
@@ -47,7 +49,13 @@ public class ARMarkerObject : MonoBehaviour, IDetect
     {
         if (_isCreate == false)
         {
-            ItemData item = MasterDataManager.Instance.GetMasterItemData(10101);
+            ItemData item = MasterDataManager.Instance.GetMasterItemData(_markerData.dropItemId);
+
+            // 존재하지 않는 아이템 ID를 받으면 NULL 반환되어서 함수 스킵
+            if(item == null)
+            {
+                return;
+            }
 
             GameObject gameObject = Instantiate(item.cachedObject, transform.position + Vector3.up, Quaternion.identity);
             
