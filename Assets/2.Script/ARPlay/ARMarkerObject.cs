@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class ARMarkerObject : MonoBehaviour
+public class ARMarkerObject : MonoBehaviour, IDetect
 {
     private GameMarkerData _markerData;
 
@@ -18,7 +18,7 @@ public class ARMarkerObject : MonoBehaviour
             Debug.LogError($"[{name}] ARMarkerObject 가 초기화되지 않았습니다. 반드시 Setting(marker) 를 호출하세요.", this);
         }
 
-        Debug.Log($"_markId : {_markerData.markId}, _markerType : {_markerData.markerSpawnType}");
+        Debug.Log($"_markId : {_markerData.markId}, _markerType : {_markerData.markerType}");
     }
 
     public void TakeRayHit()
@@ -47,9 +47,17 @@ public class ARMarkerObject : MonoBehaviour
     {
         if (_isCreate == false)
         {
-            ItemData item = MasterDataManager.Instance.GetMasterItemData(10101);
+            ItemData item = MasterDataManager.Instance.GetMasterItemData(_markerData.dropItemId);
 
-            Instantiate(item.cachedObject, transform.position + Vector3.up, Quaternion.identity);
+            // 존재하지 않는 아이템 ID를 받으면 NULL 반환되어서 함수 스킵
+            if(item == null)
+            {
+                return;
+            }
+
+            GameObject gameObject = Instantiate(item.cachedObject, transform.position + Vector3.up, Quaternion.identity);
+            
+            gameObject.AddComponent<ARItemObject>().Setting(item);
 
             _isCreate = true;
         }
@@ -63,7 +71,6 @@ public class ARMarkerObject : MonoBehaviour
     public void Setting(GameMarkerData markerData)
     {
         _markerData = markerData;
-        _markerData.markerGameObject = gameObject;
 
         _initialized = true;
     }

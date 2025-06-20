@@ -44,11 +44,11 @@ public class ARRayCast : MonoBehaviour
             {
                 _lastCheckObject = hitObject;
 
-                ARMarkerObject markerObject = hitObject.GetComponent<ARMarkerObject>();
+                IDetect ARObject = hitObject.GetComponent<IDetect>();
 
-                if (markerObject != null)
+                if (ARObject != null)
                 {
-                    markerObject.TakeRayHit(); // 한 번만 실행됨
+                    ARObject.TakeRayHit(); // 한 번만 실행됨
                     _hasFinding = true;
                 }
             }
@@ -74,11 +74,11 @@ public class ARRayCast : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
-            ARMarkerObject markerObject = hit.collider.GetComponent<ARMarkerObject>();
+            IDetect ARObject = hit.collider.gameObject.GetComponent<IDetect>();
 
-            if (markerObject != null)
+            if (ARObject != null)
             {
-                markerObject.TakeClick();
+                ARObject.TakeClick();
             }
         }
     }
