@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using AREditor.LoadObject;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
@@ -42,14 +43,14 @@ public class MarkerLoader : MonoBehaviour
             GameObject marker = Instantiate(markerPrefab, worldPos, worldRot, imageTransform);
             marker.name = data.name;
 
-            var idHolder = marker.GetComponent<MarkerIDHolder>();
-            if (idHolder != null)
+            var markerDataComponent = marker.GetComponent<MarkerDataComponent>();
+            if (markerDataComponent != null)
             {
-                idHolder.markerId = data.id;
+                markerDataComponent.markerData = data;
 
             }
-            saveMarker.markerDatas.Add(data);
             
+            saveMarker.markerDatas.Add(data);
             spawnedMarkers.Add(marker);
         }
         

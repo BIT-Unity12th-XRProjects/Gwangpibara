@@ -25,7 +25,7 @@ namespace AREditor.DeleteObject
         public void OnclickEraserButton()
         {
             isDeleteMode = true;
-            _arMarkerSpawner.isButtonClick = false;
+            _arMarkerSpawner.isSpawning = false;
             _eraserImage.gameObject.SetActive(true);
             _markerImage.gameObject.SetActive(false);
         }
@@ -61,10 +61,10 @@ namespace AREditor.DeleteObject
                 GameObject hitObj = hit.collider.gameObject;
                 if (hitObj.CompareTag("ObjectPosition"))
                 {
-                    var idHolder = hitObj.GetComponentInParent<MarkerIDHolder>();
-                    if (idHolder != null)
+                    var markerDataComponent = hitObj.GetComponentInParent<MarkerDataComponent>();
+                    if (markerDataComponent != null)
                     {
-                        string markerId = idHolder.markerId;
+                        string markerId = markerDataComponent.markerData.id;
                         saveMarker.RemoveMarkerData(markerId);
                         Destroy(hitObj);
                         Debug.Log($"오브젝트 {markerId} 삭제됨");

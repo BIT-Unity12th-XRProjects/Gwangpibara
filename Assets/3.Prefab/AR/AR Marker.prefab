@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 4181027171868550}
   - component: {fileID: 2604822066817944559}
   m_Layer: 30
-  m_Name: AR Placed Sphere
+  m_Name: AR Marker
   m_TagString: ObjectPosition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
