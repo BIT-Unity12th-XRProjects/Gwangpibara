@@ -45,6 +45,7 @@ public class ItemData
         AquireStep = origin.AquireStep;
         DeleteStep = origin.DeleteStep;
         cachedObject = origin.cachedObject;
+        itemImage = origin.itemImage;
     }
 
 }
