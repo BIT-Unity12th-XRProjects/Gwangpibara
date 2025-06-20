@@ -10,6 +10,7 @@ public class ARMarkerObject : MonoBehaviour, IDetect
 
     // 아이템이 한번 생성되면 이후에 생성 되지 않게 하기위한 변수
     private bool _isCreate = false;
+    private bool _isRenderOn = false; 
 
     void Start()
     {
@@ -19,28 +20,21 @@ public class ARMarkerObject : MonoBehaviour, IDetect
         }
 
         Debug.Log($"_markId : {_markerData.markId}, _markerType : {_markerData.markerType}");
+
+        OnCloseTypeSetting();
+    }
+
+    private void OnCloseTypeSetting()
+    {
+        if (_markerData.markerSpawnType == MarkerSpawnType.OnClose)
+        {
+            gameObject.GetComponent<Renderer>().enabled = false;
+        }
     }
 
     public void TakeRayHit()
     {
-        MarkerType thisMarkerType = _markerData.markerType;
-
-        switch(thisMarkerType)
-        {
-            case MarkerType.DropItem:
-                CreateItemPefab();
-                break;
-            case MarkerType.Clue:
-                break;
-            case MarkerType.SelfClue:
-                break;
-            case MarkerType.Decoration:
-                break;
-            case MarkerType.Trap:
-                break;
-            default:
-                break;
-        }
+        CheckTypes();
     }
 
     private void CreateItemPefab()
@@ -73,5 +67,56 @@ public class ARMarkerObject : MonoBehaviour, IDetect
         _markerData = markerData;
 
         _initialized = true;
+    }
+
+    public void TakeCloseOverlap()
+    {
+        Debug.Log("OverLap");
+        CheckTypes();
+    }
+
+    private void OnSurprize()
+    {
+        if (_isRenderOn == false)
+        {
+            gameObject.GetComponent<Renderer>().enabled = true;
+
+            _isRenderOn = true;
+        }
+    }
+
+    private void CheckTypes()
+    {
+        MarkerType thisMarkerType = _markerData.markerType;
+
+        switch (thisMarkerType)
+        {
+            case MarkerType.DropItem:
+                CreateItemPefab();
+                break;
+            case MarkerType.Clue:
+                break;
+            case MarkerType.SelfClue:
+                break;
+            case MarkerType.Decoration:
+                break;
+            case MarkerType.Trap:
+                break;
+            default:
+                break;
+        }
+
+        MarkerSpawnType thisMarkerSpawnType = _markerData.markerSpawnType;
+
+        switch (thisMarkerSpawnType)
+        {
+            case MarkerSpawnType.Base:
+                break;
+            case MarkerSpawnType.OnClose:
+                OnSurprize();
+                break;
+            default:
+                break;
+        }
     }
 }

@@ -3,8 +3,13 @@ using UnityEngine.InputSystem;
 
 public class ARRayCast : MonoBehaviour
 {
-    [SerializeField] private Camera _arCamera; // AR ƒ´∏ﬁ∂Û (Main Camera ø¨∞·)
-    [SerializeField] private float _rayDistance = 1.0f; // ∑π¿Ã ±Ê¿Ã
+    [SerializeField] private Camera _arCamera; // AR Ïπ¥Î©îÎùº (Main Camera Ïó∞Í≤∞)
+    [SerializeField] private float _rayDistance = 1.0f; // Î†àÏù¥ Í∏∏Ïù¥
+
+    [Header("OverlapSpere")]
+    [SerializeField] private float _viewRadius = 1f;
+    // [SerializeField, Range(0, 360)] private float viewAngle = 60f;
+    [SerializeField] private LayerMask _targetLayer;
 
     private PlayerInputActions _inputActions;
     private GameObject _lastCheckObject = null;
@@ -30,6 +35,29 @@ public class ARRayCast : MonoBehaviour
     void Update()
     {
         CheckRay();
+        CheckCloseOverlap();
+    }
+
+    private void CheckCloseOverlap()
+    {
+        if (_arCamera == null)
+        {
+            return;
+        }
+
+        Vector3 origin = _arCamera.transform.position;
+
+        Collider[] hits = Physics.OverlapSphere(origin, _viewRadius, _targetLayer);
+
+        foreach (Collider hit in hits)
+        {
+            IDetect ARObject = hit.GetComponent<IDetect>();
+
+            if (ARObject != null)
+            {
+                ARObject.TakeCloseOverlap();
+            }
+        }
     }
 
     private void CheckRay()
@@ -48,7 +76,7 @@ public class ARRayCast : MonoBehaviour
 
                 if (ARObject != null)
                 {
-                    ARObject.TakeRayHit(); // «— π¯∏∏ Ω««‡µ 
+                    ARObject.TakeRayHit(); // Ìïú Î≤àÎßå Ïã§ÌñâÎê®
                     _hasFinding = true;
                 }
             }

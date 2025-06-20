@@ -59,4 +59,9 @@ public class ARItemObject : MonoBehaviour, IDetect
 
         _initialized = true;
     }
+
+    public void TakeCloseOverlap()
+    {
+        Debug.Log("OverLap");
+    }
 }
