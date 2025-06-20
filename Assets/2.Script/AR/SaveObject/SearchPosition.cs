@@ -33,7 +33,11 @@ public class SearchPosition : MonoBehaviour
     private bool isGameStart;
     
     private GameObject _selectedObject;
-
+    private GameObject _previousSelectedObject;
+    private Material _previousSelectedMaterial;
+    private Color _originalColor;
+    private Color _selectedColor = Color.green;
+    
     private void Start()
     {
         isGameStart = false;
@@ -63,6 +67,11 @@ public class SearchPosition : MonoBehaviour
 
     private void CheckPosition(Vector2 screenPosition)
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        
         _imagePositionText.text = null;
         _objectPositionText.text = null;
         
@@ -75,13 +84,9 @@ public class SearchPosition : MonoBehaviour
                 _objectPositionText.text = "MarkerPosition" + hit.collider.gameObject.transform.position.ToString();
                 _selectedObject = hit.collider.gameObject;
                 
+                SetSelectedObject(_selectedObject);
                 
                 if (_markerEraser.isDeleteMode == true)
-                {
-                    return;
-                }
-                
-                if (EventSystem.current.IsPointerOverGameObject())
                 {
                     return;
                 }
@@ -101,4 +106,36 @@ public class SearchPosition : MonoBehaviour
         }
     }
 
+    private void SetSelectedObject(GameObject newSelected)
+    {
+        if (_previousSelectedObject != null)
+        {
+            var renderer = _previousSelectedObject.GetComponent<Renderer>();
+            if (renderer != null)
+            {
+                renderer.material.color = _originalColor;
+            }
+        }
+        _previousSelectedObject = newSelected;
+    
+        var newRenderer = newSelected.GetComponent<Renderer>();
+        if (newRenderer != null)
+        {
+            _originalColor = newRenderer.material.color;
+            newRenderer.material.color = _selectedColor;
+        }
+
+        _selectedObject = newSelected;
+    }
+    
+    public void EnableMoveMode()
+    {
+        _markerMover.OnMoveModeButtonPressed();
+
+        if (_selectedObject != null)
+        {
+            _markerMover.SetSelectedMarker(_selectedObject);
+        }
+    }
+    
 }

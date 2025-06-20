@@ -4770,9 +4770,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 301774931}
-        m_TargetAssemblyTypeName: MarkerMover, Assembly-CSharp
-        m_MethodName: OnMoveModeButtonPressed
+      - m_Target: {fileID: 1047073162}
+        m_TargetAssemblyTypeName: SearchPosition, Assembly-CSharp
+        m_MethodName: EnableMoveMode
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

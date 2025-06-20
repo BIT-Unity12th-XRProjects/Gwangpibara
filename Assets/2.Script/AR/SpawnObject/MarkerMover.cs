@@ -9,6 +9,11 @@ public class MarkerMover : MonoBehaviour
     private Transform directionUITransform;
     [SerializeField] private GameObject _markerUpdateDataUI;
     
+    public void SetSelectedMarker(GameObject marker)
+    {
+        selectedMarker = marker;
+    }
+    
     public void OnMoveModeButtonPressed()
     {
         isMoveMode = true;
@@ -36,7 +41,10 @@ public class MarkerMover : MonoBehaviour
 
     public void MoveSelectedMarker(Vector3 direction)
     {
-        if (selectedMarker == null) return;
+        if (selectedMarker == null)
+        {
+            return;
+        }
 
         float moveAmount = 0.05f;
         selectedMarker.transform.position += direction * moveAmount;

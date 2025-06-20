@@ -32,6 +32,8 @@ public class SaveMarker : MonoBehaviour
                 existing.removeStep = marker.removeStep;
                 existing.markerSpawnType = marker.markerSpawnType;
                 existing.markerType = marker.markerType;
+                existing.position = marker.position;
+                existing.rotation = marker.rotation;
             }
             else
             {
@@ -57,6 +59,9 @@ public class SaveMarker : MonoBehaviour
         
         updatedData.position = localPos;
         updatedData.rotation = localRot;
+
+        Debug.Log(localPos);
+        Debug.Log(localRot);
         
         for (int i = 0; i < markerDatas.Count; i++)
         {
@@ -66,10 +71,6 @@ public class SaveMarker : MonoBehaviour
                 return;
             }
         }
-        
-        Debug.Log(localPos);
-        Debug.Log(localRot);
-        
         markerDatas.Add(updatedData);
     }
     
