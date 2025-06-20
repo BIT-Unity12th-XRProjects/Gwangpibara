@@ -53,7 +53,11 @@ public class UIManager : Singleton<UIManager>
         ui.Init(UICanvasTrs);
         ui.transform.SetSiblingIndex(siblingIndex);
         ui.gameObject.SetActive(true);
-        ui.SetInfo(uiData);
+        if(uiData != null)
+        {
+            ui.SetInfo(uiData);
+        }
+        
         ui.ShowUI();
 
         if (_openUI != null)
