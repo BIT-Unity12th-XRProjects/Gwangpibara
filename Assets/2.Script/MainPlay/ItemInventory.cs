@@ -64,5 +64,10 @@ public class ItemInventory
 
         return haveAmount;
     }
+
+    public List<ItemData> GetItemList()
+    {
+        return _haveItemList;
+    }
 }
 
