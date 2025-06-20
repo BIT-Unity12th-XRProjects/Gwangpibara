@@ -86,10 +86,20 @@ public class MasterDataManager : MonoBehaviour
     private void MakeMapData()
     {
         _masterMapDataDictionary = new();
-        
+
+        SaveMarkerData loadMarkerData = new();
+
+
+        List<MarkerData> loadData = loadMarkerData.LoadMarkerList();
+
         //임시로 1단계 맵 데이터 만들어넣기
-        MapData mapData = new();
-        _masterMapDataDictionary.Add(1, mapData);
+        MapData map = new MapData();
+        if(loadData.Count != 0)
+        {
+            map = new(loadData);
+        }
+        Debug.Log(map.ToString());
+        _masterMapDataDictionary.Add(1, map);
     }
 
   

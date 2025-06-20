@@ -18,7 +18,7 @@ public class ARMarkerObject : MonoBehaviour
             Debug.LogError($"[{name}] ARMarkerObject 가 초기화되지 않았습니다. 반드시 Setting(marker) 를 호출하세요.", this);
         }
 
-        Debug.Log($"_markId : {_markerData.markId}, _markerType : {_markerData.markerSapwnType}");
+        Debug.Log($"_markId : {_markerData.markId}, _markerType : {_markerData.markerSpawnType}");
     }
 
     public void TakeRayHit()
