@@ -80,6 +80,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _arCamera: {fileID: 6102637021895560088}
   _rayDistance: 1
+  _viewRadius: 1
+  _targetLayer:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!1 &3598648379201105519
 GameObject:
   m_ObjectHideFlags: 0
