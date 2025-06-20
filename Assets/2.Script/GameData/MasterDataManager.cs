@@ -10,13 +10,13 @@ public class MasterDataManager : MonoBehaviour
 {
     public static MasterDataManager Instance;
 
-    private string _stepDataPath = "Assets/4.Data/StepData.csv";
+    private string _stepDataPath = "StepData";
     private Dictionary<int, StepData> _masterStepDataDictionary;
 
-    private string _itemDataPath = "Assets/4.Data/ItemDataTable.csv";
+    private string _itemDataPath = "ItemDataTable";
     private Dictionary<int, ItemData> _masterItemDataDictionary;
 
-    private string _themeDataPath = "Assets/4.Data/themeData.csv";
+    private string _themeDataPath = "ThemeData";
     private Dictionary<int, ThemeData> _masterThemeDataDictionary;
 
     private Dictionary<int, MapData> _masterMapDataDictionary;
@@ -93,23 +93,29 @@ public class MasterDataManager : MonoBehaviour
     }
 
   
-    private Dictionary<int, T> MakeMasterData<T>(string path, Func<string[], T> constructor, Func<T, int> getKey)
+    private Dictionary<int, T> MakeMasterData<T>(string fileName, Func<string[], T> constructor, Func<T, int> getKey)
         where T : class
     {
         Dictionary<int, T> dictionary = new();
-        string[] lines = File.ReadAllLines(path);
-        foreach (string line in lines)
+        TextAsset csvFile = Resources.Load<TextAsset>("DataTable/"+ fileName);
+        if (csvFile != null)
         {
-            string[] values = line.Split(',');
-            if (values[0][0] == '#')
-            {
-                continue;
-            }
+            string[] lines = csvFile.text.Split(new[] { '\r', '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
 
-            T f = constructor(values);
-            dictionary.Add(getKey(f), f);
-            // Debug.Log(getKey(f) + " 데이터 생성");
+            foreach (string line in lines)
+            {
+                string[] values = line.Split(',');
+                if (values[0][0] == '#')
+                {
+                    continue;
+                }
+
+                T f = constructor(values);
+                dictionary.Add(getKey(f), f);
+               // Debug.Log(getKey(f) + " 데이터 생성");
+            }
         }
+       
         return dictionary;
     }
 
