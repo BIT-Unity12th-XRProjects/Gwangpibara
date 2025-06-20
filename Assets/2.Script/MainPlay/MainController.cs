@@ -96,6 +96,11 @@ public class MainController : Singleton<MainController>
         return _gameUIData;
     }
 
+    public ItemInventory GetItemInventory()
+    {
+        return _itemInventory;
+    }
+
     private void SetStep(int stepID)
     {
         //현재 단계를 stepData로 맞추기
@@ -104,8 +109,6 @@ public class MainController : Singleton<MainController>
 
         _gameUIData.SetData(_curStepData);
         onChangeStepData?.Invoke(_gameUIData);
-        UIManager.Instance.OpenUI<GameUI>(_gameUIData);
-
         RenewProgress();
     }
 
