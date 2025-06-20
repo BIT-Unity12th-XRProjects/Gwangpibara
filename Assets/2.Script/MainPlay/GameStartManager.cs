@@ -48,7 +48,7 @@ public class GameStartManager : MonoBehaviour
         Debug.Log("맵 만들기 시작");
         yield return StartCoroutine(MapGenerator.Instance.C_CallGenerator(1)); //맵 만드는 작업을 호출하고 맵 완성을 기다릴것
         _mainController.StartGame(10101); //로드할 단계로 게임 시작 호출, 테스트값  10101
-        
+        UIManager.Instance.OpenUI<GameUI>();
     }
 
     private void SetThemeList()
