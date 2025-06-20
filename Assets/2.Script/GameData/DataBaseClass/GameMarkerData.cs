@@ -2,7 +2,6 @@
 
 using System;
 using UnityEngine;
-
 public enum MarkerType
 {
     DropItem, Clue, SelfClue, Decoration, Trap 
@@ -56,6 +55,7 @@ public class GameMarkerData
         markId = origin.markId;
         markerSpawnType = origin.markerSpawnType;
         markerType = origin.markerType;
+        dropItemId = origin.dropItemId;
         name = origin.name;
         spawnStep = origin.spawnStep;
         deleteStep = origin.deleteStep;
