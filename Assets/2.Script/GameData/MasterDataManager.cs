@@ -148,16 +148,16 @@ public class MasterDataManager : MonoBehaviour
             }
 
             var imageHandle = Addressables.LoadAssetAsync<Sprite>("ItemImage" + item.ID.ToString());
-            yield return handle;
-            if (handle.Status == AsyncOperationStatus.Succeeded)
+            yield return imageHandle;
+            if (imageHandle.Status == AsyncOperationStatus.Succeeded)
             {
-               // Debug.Log(item.ID + "이미지 로드");
+              //  Debug.Log(item.ID + "이미지 로드");
                 item.itemImage = imageHandle.Result;
             }
             else
             {
-                // Debug.LogError($"Prefab Load Fail: {item.ID}");
-                item.itemImage = Resources.Load<Sprite>("TestItemImage");
+              //  Debug.LogError($"Image Load Fail: {item.ID}");
+                item.itemImage = Resources.Load<Sprite>("Image/TestItemImage");
             }
 
         }
@@ -178,7 +178,7 @@ public class MasterDataManager : MonoBehaviour
                 else
                 {
                     Debug.LogError($"스프라이트: 디펄트");
-                    markerData.markerGameObject = Resources.Load<GameObject>("Image/TestItemPrefab");
+                    markerData.markerGameObject = Resources.Load<GameObject>("TestItemPrefab");
                 }
             }
         }
