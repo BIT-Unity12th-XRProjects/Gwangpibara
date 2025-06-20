@@ -22,6 +22,16 @@ public class MapData
         
     }
 
+    public MapData(List<MarkerData> loadDataList)
+    {
+        markerList = new();
+        for (int i = 0; i < loadDataList.Count; i++)
+        {
+            GameMarkerData loadData = new GameMarkerData(loadDataList[i]);
+            markerList.Add(loadData);
+        }
+    }
+
     public MapData(MapData origin)
     {
         markerList = new List<GameMarkerData>();
@@ -30,6 +40,21 @@ public class MapData
             GameMarkerData copyMarkerData = new GameMarkerData(origin.markerList[i]);
             markerList.Add(copyMarkerData);
         }
+    }
+
+    public override string ToString()
+    {
+        if (markerList == null || markerList.Count == 0)
+            return "No markers.";
+
+        System.Text.StringBuilder sb = new System.Text.StringBuilder();
+
+        foreach (var marker in markerList)
+        {
+            sb.AppendLine($"[Name: {marker.name}, SpawnType: {marker.markerSpawnType}, DropItemId: {marker.dropItemId}]");
+        }
+
+        return sb.ToString();
     }
 }
 
