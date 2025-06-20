@@ -16,6 +16,7 @@ public class ItemData
     public int AquireStep; //단서를 얻을 수 있는 단계 - 현재 플레이 단계보다 이상이면 습득
     public int DeleteStep; //단서가 삭제 될 단계 - 현재 플레이 단계보다 이하이면 삭제
     public GameObject cachedObject; //단서 3D Object
+    public Sprite itemImage;
 
     public ItemData(string[] parseData)
     {
