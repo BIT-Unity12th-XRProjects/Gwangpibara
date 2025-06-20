@@ -23,8 +23,6 @@ public class ARMarkerObject : MonoBehaviour, IDetect
 
     public void TakeRayHit()
     {
-        Debug.Log("aaaaa");
-
         MarkerType thisMarkerType = _markerData.markerType;
 
         switch(thisMarkerType)
@@ -73,7 +71,6 @@ public class ARMarkerObject : MonoBehaviour, IDetect
     public void Setting(GameMarkerData markerData)
     {
         _markerData = markerData;
-        _markerData.markerGameObject = gameObject;
 
         _initialized = true;
     }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MainController : MonoBehaviour
+public class MainController : Singleton<MainController>
 {
     /// <summary>
     /// 게임 진행의 메인 화면

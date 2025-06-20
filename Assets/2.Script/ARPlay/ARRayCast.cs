@@ -74,11 +74,11 @@ public class ARRayCast : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
-            ARMarkerObject markerObject = hit.collider.GetComponent<ARMarkerObject>();
+            IDetect ARObject = hit.collider.gameObject.GetComponent<IDetect>();
 
-            if (markerObject != null)
+            if (ARObject != null)
             {
-                markerObject.TakeClick();
+                ARObject.TakeClick();
             }
         }
     }
