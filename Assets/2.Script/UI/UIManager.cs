@@ -15,7 +15,7 @@ public class UIManager : Singleton<UIManager>
     private void Start()
     {
         // UICanvas용 빈 오브젝트 생성
-        if(UICanvasTrs == null)
+        if (UICanvasTrs == null)
         {
             GameObject uiCanvasObj = new GameObject("UICanvasRoot");
             UICanvasTrs = uiCanvasObj.transform;
@@ -27,9 +27,9 @@ public class UIManager : Singleton<UIManager>
             GameObject closeUIObj = new GameObject("CloseUIRoot");
             CloseUITrs = closeUIObj.transform;
         }
-        
 
-        OpenUI<StartUI>(new StartUIData());
+
+        OpenUI<StartUI>();
     }
 
     public void OpenUI<T>(BaseUIData uiData = null)
@@ -53,11 +53,10 @@ public class UIManager : Singleton<UIManager>
         ui.Init(UICanvasTrs);
         ui.transform.SetSiblingIndex(siblingIndex);
         ui.gameObject.SetActive(true);
-        if(uiData != null)
-        {
-            ui.SetInfo(uiData);
-        }
-        
+
+        ui.SetInfo(uiData);
+
+
         ui.ShowUI();
 
         if (_openUI != null)
@@ -74,8 +73,8 @@ public class UIManager : Singleton<UIManager>
         Type uiType = typeof(T);
         BaseUI ui = null;
         isAlreadyOpen = false;
-        
-        if(_openUI != null && _openUI.GetType() == uiType)
+
+        if (_openUI != null && _openUI.GetType() == uiType)
         {
             isAlreadyOpen = true;
         }
