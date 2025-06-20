@@ -35,6 +35,11 @@ public class GameMarkerData
         position = spawnPosition;
     }
 
+    public GameMarkerData(MarkerData markerData)
+    {
+
+    }
+
     public GameMarkerData(GameMarkerData origin)
     {
         markId = origin.markId;

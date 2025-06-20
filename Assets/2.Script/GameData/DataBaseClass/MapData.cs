@@ -22,6 +22,15 @@ public class MapData
         
     }
 
+    public MapData(List<MarkerData> loadDataList)
+    {
+        markerList = new();
+        for (int i = 0; i < loadDataList.Count; i++)
+        {
+            GameMarkerData testData = new GameMarkerData(loadDataList[i]);
+        }
+    }
+
     public MapData(MapData origin)
     {
         markerList = new List<GameMarkerData>();
