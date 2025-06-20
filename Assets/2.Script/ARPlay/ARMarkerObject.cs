@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class ARMarkerObject : MonoBehaviour
+public class ARMarkerObject : MonoBehaviour, IDetect
 {
     private GameMarkerData _markerData;
 
@@ -17,8 +17,8 @@ public class ARMarkerObject : MonoBehaviour
         {
             Debug.LogError($"[{name}] ARMarkerObject �� �ʱ�ȭ���� �ʾҽ��ϴ�. �ݵ�� Setting(marker) �� ȣ���ϼ���.", this);
         }
+        Debug.Log($"_markId : {_markerData.markId}, _markerType : {_markerData.markerType}");
 
-        Debug.Log($"_markId : {_markerData.markId}, _markerType : {_markerData.markerSpawnType}");
     }
 
     public void TakeRayHit()
@@ -47,9 +47,17 @@ public class ARMarkerObject : MonoBehaviour
     {
         if (_isCreate == false)
         {
-            ItemData item = MasterDataManager.Instance.GetMasterItemData(10101);
+            ItemData item = MasterDataManager.Instance.GetMasterItemData(_markerData.dropItemId);
 
-            Instantiate(item.cachedObject, transform.position + Vector3.up, Quaternion.identity);
+            // �������� �ʴ� ������ ID�� ������ NULL ��ȯ�Ǿ �Լ� ��ŵ
+            if(item == null)
+            {
+                return;
+            }
+
+            GameObject gameObject = Instantiate(item.cachedObject, transform.position + Vector3.up, Quaternion.identity);
+            
+            gameObject.AddComponent<ARItemObject>().Setting(item);
 
             _isCreate = true;
         }
@@ -63,7 +71,6 @@ public class ARMarkerObject : MonoBehaviour
     public void Setting(GameMarkerData markerData)
     {
         _markerData = markerData;
-        _markerData.markerGameObject = gameObject;
 
         _initialized = true;
     }

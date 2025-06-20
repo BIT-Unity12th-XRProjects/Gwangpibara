@@ -86,10 +86,18 @@ public class MasterDataManager : MonoBehaviour
     private void MakeMapData()
     {
         _masterMapDataDictionary = new();
-        
+
+        SaveMarkerData loadMarkerData = new();
+        List<MarkerData> loadData = loadMarkerData.LoadResourceJson("markerdatas");
+
         //임시로 1단계 맵 데이터 만들어넣기
-        MapData mapData = new();
-        _masterMapDataDictionary.Add(1, mapData);
+        MapData map = new MapData();
+        if(loadData.Count != 0)
+        {
+            map = new(loadData);
+        }
+        Debug.Log(map.ToString());
+        _masterMapDataDictionary.Add(1, map);
     }
 
   
@@ -137,6 +145,19 @@ public class MasterDataManager : MonoBehaviour
                 item.cachedObject = Resources.Load<GameObject>("TestItemPrefab");
             }
 
+            var imageHandle = Addressables.LoadAssetAsync<Sprite>("ItemImage" + item.ID.ToString());
+            yield return imageHandle;
+            if (imageHandle.Status == AsyncOperationStatus.Succeeded)
+            {
+              //  Debug.Log(item.ID + "이미지 로드");
+                item.itemImage = imageHandle.Result;
+            }
+            else
+            {
+              //  Debug.LogError($"Image Load Fail: {item.ID}");
+                item.itemImage = Resources.Load<Sprite>("Image/TestItemImage");
+            }
+
         }
 
         foreach(var item in _masterMapDataDictionary)
@@ -154,7 +175,7 @@ public class MasterDataManager : MonoBehaviour
                 }
                 else
                 {
-                    // Debug.LogError($"Prefab Load Fail: {item.ID}");
+                    Debug.LogError($"스프라이트: 디펄트");
                     markerData.markerGameObject = Resources.Load<GameObject>("TestItemPrefab");
                 }
             }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MainController : MonoBehaviour
+public class MainController : Singleton<MainController>
 {
     /// <summary>
     /// 게임 진행의 메인 화면
@@ -96,6 +96,11 @@ public class MainController : MonoBehaviour
         return _gameUIData;
     }
 
+    public ItemInventory GetItemInventory()
+    {
+        return _itemInventory;
+    }
+
     private void SetStep(int stepID)
     {
         //현재 단계를 stepData로 맞추기
@@ -104,8 +109,6 @@ public class MainController : MonoBehaviour
 
         _gameUIData.SetData(_curStepData);
         onChangeStepData?.Invoke(_gameUIData);
-        UIManager.Instance.OpenUI<GameUI>(_gameUIData);
-
         RenewProgress();
     }
 
