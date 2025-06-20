@@ -66,6 +66,11 @@ public class ARRayCast : MonoBehaviour
     {
         if (!context.performed) return;
 
+        if(Touchscreen.current == null)
+        {
+            return;
+        }
+
         Vector2 screenPos = Touchscreen.current.primaryTouch.position.ReadValue();
         Ray ray = _arCamera.ScreenPointToRay(screenPos);
 
