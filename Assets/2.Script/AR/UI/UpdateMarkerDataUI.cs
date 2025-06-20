@@ -14,16 +14,14 @@ public class UpdateMarkerDataUI : MonoBehaviour
     [SerializeField] private TMP_Dropdown _changeMarkerSpawnType;
     [SerializeField] private TMP_Dropdown _changeMarkerType;
     
-    [SerializeField] private Button _applyButton;
     [SerializeField] private GameObject _panel;
     
     [SerializeField] private SaveMarker _saveMarker;
      
     private GameObject targetObject;
     
-    private void Awake()
+    private void Awake() 
     {
-        _applyButton.onClick.AddListener(ChangeMarkerData);
         _panel.SetActive(false);
         
         InitDropdown<MarkerSpawnType>(_changeMarkerSpawnType);
@@ -37,7 +35,7 @@ public class UpdateMarkerDataUI : MonoBehaviour
         
         MarkerData targetMarkerData = targetObject.GetComponentInParent<MarkerDataComponent>().markerData;
         
-        _markerName.text = targetMarkerData.name;
+        _markerName.text = targetMarkerData.prefabID.ToString();
         _changeDropId.text = targetMarkerData.dropItemID.ToString();
         _changeAcquireStep.text = targetMarkerData.acquireStep.ToString();
         _changeremoveStep.text = targetMarkerData.removeStep.ToString();
@@ -45,12 +43,12 @@ public class UpdateMarkerDataUI : MonoBehaviour
         _changeMarkerType.value = (int)targetMarkerData.markerType;
     }
 
-    private void ChangeMarkerData()
+    public void ChangeMarkerData()
     {
         var targetMarkerData = targetObject.GetComponentInParent<MarkerDataComponent>();
         MarkerData data = targetMarkerData.markerData;
 
-        data.name = _markerName.text;
+        data.prefabID = Convert.ToInt32(_markerName.text);
 
         if (int.TryParse(_changeDropId.text, out var dropId))
         {
@@ -69,6 +67,10 @@ public class UpdateMarkerDataUI : MonoBehaviour
 
         data.markerSpawnType = (MarkerSpawnType)_changeMarkerSpawnType.value;
         data.markerType = (MarkerType)_changeMarkerType.value;
+        
+        data.position = targetObject.transform.position;
+        data.rotation = targetObject.transform.rotation;
+
         
         _saveMarker.UpdateMarkerDataInList(data);
     }
