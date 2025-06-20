@@ -31,7 +31,6 @@ public class MainController : MonoBehaviour
         _itemInventory = new();
         _gameUIData = new();
         SetStep(stepID);
-        UIManager.Instance.OpenUI<GameUI>(_gameUIData);
     }
 
     public void ClickNextButton()
@@ -92,7 +91,10 @@ public class MainController : MonoBehaviour
         return true;
     }
 
-
+    public GameUIData GetGameUIData()
+    {
+        return _gameUIData;
+    }
 
     private void SetStep(int stepID)
     {
@@ -102,6 +104,7 @@ public class MainController : MonoBehaviour
 
         _gameUIData.SetData(_curStepData);
         onChangeStepData?.Invoke(_gameUIData);
+        UIManager.Instance.OpenUI<GameUI>(_gameUIData);
 
         RenewProgress();
     }
