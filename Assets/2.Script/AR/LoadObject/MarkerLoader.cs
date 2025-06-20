@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using AREditor.LoadObject;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
@@ -7,7 +8,7 @@ public class MarkerLoader : MonoBehaviour
 { 
     [SerializeField] private GameObject markerPrefab;
     private SaveMarkerData _saveMarkerData;
-    [SerializeField] private SavePosition savePosition;
+    [SerializeField] private SaveMarker saveMarker;
     
     private bool _isSpawned = false;
 
@@ -38,19 +39,18 @@ public class MarkerLoader : MonoBehaviour
         {
             Vector3 worldPos = imageTransform.TransformPoint(data.position);
             Quaternion worldRot = imageTransform.rotation * data.rotation;
-
             
             GameObject marker = Instantiate(markerPrefab, worldPos, worldRot, imageTransform);
-            marker.name = data.objectName;
+            marker.name = data.name;
 
-            var idHolder = marker.GetComponent<MarkerIDHolder>();
-            if (idHolder != null)
+            var markerDataComponent = marker.GetComponent<MarkerDataComponent>();
+            if (markerDataComponent != null)
             {
-                idHolder.markerId = data.id;
+                markerDataComponent.markerData = data;
 
             }
-            savePosition.markerDatas.Add(data);
             
+            saveMarker.markerDatas.Add(data);
             spawnedMarkers.Add(marker);
         }
         

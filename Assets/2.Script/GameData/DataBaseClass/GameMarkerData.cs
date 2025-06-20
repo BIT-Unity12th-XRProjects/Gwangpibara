@@ -17,7 +17,7 @@ public enum MarkerSpawnType
 public class GameMarkerData
 {
     public int markId; 
-    public MarkerSpawnType markerSapwnType = MarkerSpawnType.Base;
+    public MarkerSpawnType markerSpawnType = MarkerSpawnType.Base;
     public MarkerType markerType = MarkerType.DropItem;
     public string name;
     public int spawnStep;
@@ -43,7 +43,7 @@ public class GameMarkerData
     public GameMarkerData(GameMarkerData origin)
     {
         markId = origin.markId;
-        markerSapwnType = origin.markerSapwnType;
+        markerSpawnType = origin.markerSpawnType;
         markerType = origin.markerType;
         name = origin.name;
         spawnStep = origin.spawnStep;
