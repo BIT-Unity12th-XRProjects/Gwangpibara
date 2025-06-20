@@ -47,6 +47,10 @@ public class GameUI : BaseUI
 
     public override void SetInfo(BaseUIData uiData)
     {
+        if(uiData == null)
+        {
+            return;
+        }
         //게임 컨틀로러의 게임데이터 가져와서 세팅하기, 구독하기
         QuestText.text = ((GameUIData)uiData).QuestText;
     }
