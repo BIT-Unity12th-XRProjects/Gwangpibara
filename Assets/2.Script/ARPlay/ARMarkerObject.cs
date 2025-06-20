@@ -49,7 +49,9 @@ public class ARMarkerObject : MonoBehaviour, IDetect
         {
             ItemData item = MasterDataManager.Instance.GetMasterItemData(10101);
 
-            Instantiate(item.cachedObject, transform.position + Vector3.up, Quaternion.identity);
+            GameObject gameObject = Instantiate(item.cachedObject, transform.position + Vector3.up, Quaternion.identity);
+            
+            gameObject.AddComponent<ARItemObject>().Setting(item);
 
             _isCreate = true;
         }
