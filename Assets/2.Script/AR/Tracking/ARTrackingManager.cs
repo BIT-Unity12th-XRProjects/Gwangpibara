@@ -8,7 +8,6 @@ using UnityEngine.XR.ARSubsystems;
 public class ARTrackingManager : MonoBehaviour
 {
     [SerializeField] TrackedImageHandler _trackedImageHandler;
-    [SerializeField] OriginCorrecter _originCorrector;
     [SerializeField] SearchPosition _searchPosition;
     [SerializeField] MarkerLoader _markerLoader;
     [SerializeField] private CountDownUI _countDownUI;
@@ -78,11 +77,7 @@ public class ARTrackingManager : MonoBehaviour
         Vector3 avgPos =GetAveragePosition();
         Quaternion avgRot =GetAverageRotation();
 
-        //_originCorrector.CorrectOrigin(avgPos, _currentTrackedImage.transform.position);
-         Transform iamgeTransform= _originCorrector.FixImageTransform(_imagePrefab, avgPos, avgRot);
-        
-        // TODO : 트래킹에 실패한 경우 다시 하도록 설정해야함
-        Debug.Log($"이미지 위치 평균값 : {_currentTrackedImage.transform.position}");
+         Transform iamgeTransform= FixImageTransform(_imagePrefab, avgPos, avgRot);
         
         _searchPosition.SetTrackedImagePosition(iamgeTransform);
         _markerLoader.LoadAndSpawnMarkers(iamgeTransform);
@@ -130,5 +125,13 @@ public class ARTrackingManager : MonoBehaviour
             elapsed += Time.deltaTime;
         }
         OnSamplingComplete();
+    }
+    
+    public Transform FixImageTransform(GameObject imagePrefab, Vector3 averagePosition, Quaternion averageRotation)
+    {
+        imagePrefab.transform.position = averagePosition;
+        imagePrefab.transform.rotation = averageRotation;
+        
+        return imagePrefab.transform;
     }
 }

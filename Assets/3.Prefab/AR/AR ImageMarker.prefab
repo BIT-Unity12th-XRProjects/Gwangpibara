@@ -118,7 +118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4181027171868550}
   m_Layer: 0
-  m_Name: AR Placed Cube
+  m_Name: AR ImageMarker
   m_TagString: ImagePosition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
