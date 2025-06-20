@@ -25,9 +25,10 @@ public class MapGenerator : Singleton<MapGenerator>
     /// <param name="mapData"></param>
     private void Generate(MapData mapData)
     {
-        foreach (GameMarkerData marker in mapData.markerList)
+        foreach (GameMarkerData markerData in mapData.markerList)
         {
-            Instantiate(marker.markerGameObject, marker.position, marker.rotation, gameObject.transform);
+            GameObject newARMarkerObject = Instantiate(markerData.markerGameObject, markerData.position, markerData.rotation, gameObject.transform);
+            newARMarkerObject.AddComponent<ARMarkerObject>().Setting(markerData);
         }
     }
 }
