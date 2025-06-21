@@ -17,6 +17,8 @@ public class ARMarkerSpawner : MonoBehaviour
     
     public bool isSpawning = false;
 
+    private List<GameObject> _createdMarkers = new List<GameObject>();
+    
     private void OnEnable()
     {
         TouchInputManager.OnTouchPerformed += HandleTouch;
@@ -72,7 +74,19 @@ public class ARMarkerSpawner : MonoBehaviour
             {
                 newMarker.markerData = data;
             }
+            
+            _createdMarkers.Add(marker);
         }
+    }
+    
+    // 현재 생성된 마커 전부 삭제하는 버튼
+    public void ResetCreatedMarkers()
+    {
+        foreach (var marker in _createdMarkers)
+        {
+            Destroy(marker);
+        }
+        _createdMarkers.Clear();
     }
 }
     

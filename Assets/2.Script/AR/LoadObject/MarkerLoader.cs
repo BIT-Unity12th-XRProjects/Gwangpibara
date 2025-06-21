@@ -7,33 +7,33 @@ using UnityEngine.XR.ARFoundation;
 public class MarkerLoader : MonoBehaviour
 { 
     [SerializeField] private GameObject markerPrefab;
-    private SaveMarkerData _saveMarkerData;
     [SerializeField] private SaveMarker saveMarker;
-    
-    private bool _isSpawned = false;
+    private SaveMarkerData _saveMarkerData;
+    private List<GameObject> spawnedMarkers = new List<GameObject>();
+    private string _lastLoadedFileName = null;
 
     private void Awake()
     {
         _saveMarkerData = new SaveMarkerData();
     }
     
-    private List<GameObject> spawnedMarkers = new List<GameObject>();
-
-    
-    public void LoadAndSpawnMarkers(Transform imageTransform)
+    public void LoadAndSpawnMarkers(Transform imageTransform, string fileName)
     {
-        if (_isSpawned)
+        if (_lastLoadedFileName == fileName)
         {
             return;
-        }
+        } 
+        
+        Debug.Log(fileName +"이 로드됨");
         
         foreach (var obj in spawnedMarkers)
         {
             Destroy(obj);
         }
         spawnedMarkers.Clear();
+        saveMarker.markerDatas.Clear();
     
-        List<MarkerData> markerDatas = _saveMarkerData.LoadMarkerList();
+        List<MarkerData> markerDatas = _saveMarkerData.LoadMarkerList(fileName);
         
         foreach (var data in markerDatas)
         {
@@ -53,7 +53,20 @@ public class MarkerLoader : MonoBehaviour
             saveMarker.markerDatas.Add(data);
             spawnedMarkers.Add(marker);
         }
-        
-        _isSpawned = true;
+        _lastLoadedFileName = fileName;
     }
+    
+    // 불러오기된 마커 전부 삭제하는 버튼
+    public void ResetAllMarkers()
+    {
+        foreach (var marker in spawnedMarkers)
+        {
+            Destroy(marker);
+        }
+        spawnedMarkers.Clear();
+        saveMarker.markerDatas.Clear();
+    
+        _lastLoadedFileName = null;
+    }
+    
 } 

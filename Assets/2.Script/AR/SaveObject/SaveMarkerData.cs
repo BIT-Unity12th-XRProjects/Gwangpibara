@@ -4,21 +4,39 @@ using System.IO;
 
 public class SaveMarkerData
 {
-    string path = Application.persistentDataPath + "/markerdatas.json";
-    
+    private string GetPath(string fileName)
+    {
+        return Path.Combine(Application.persistentDataPath, fileName + ".json");
+    }
+    /*
+    // 기본 저장 (기존 방식 유지)
     public void SaveMarkerList(List<MarkerData> markerDatas)
+    {
+        SaveMarkerList(markerDatas, "markerdatas");
+    }
+
+    // 기본 불러오기 (기존 방식 유지)
+    public List<MarkerData> LoadMarkerList()
+    {
+        return LoadMarkerList("markerdatas");
+    }
+    */
+    
+    public void SaveMarkerList(List<MarkerData> markerDatas, string fileName)
     {
         MarkerListWrapper wrapper = new MarkerListWrapper();
         wrapper.markerDatas = markerDatas;
 
         string json = JsonUtility.ToJson(wrapper);
+        string path = GetPath(fileName);
         File.WriteAllText(path, json);
 
         Debug.Log("저장 완료: " + path);
     }
     
-    public List<MarkerData> LoadMarkerList()
+    public List<MarkerData> LoadMarkerList(string fileName)
     {
+        string path = GetPath(fileName);
         if (!File.Exists(path))
         {
             return new List<MarkerData>();
