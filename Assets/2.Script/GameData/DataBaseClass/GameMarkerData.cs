@@ -38,7 +38,7 @@ public class GameMarkerData
     public GameMarkerData(MarkerData markerData)
     {
         //MarkderData의 name은 GamMarkerData에서 ID
-        markId = markerData.prefabID;
+        markId = markerData.prefabID; // 프리팹 껍데기 ID
        
         dropItemId = markerData.dropItemID;
         markerSpawnType = markerData.markerSpawnType;
