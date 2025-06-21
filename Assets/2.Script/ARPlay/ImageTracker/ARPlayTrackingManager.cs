@@ -1,36 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
-using UnityEngine.XR.ARSubsystems;
 
-public class ARTrackingManager : MonoBehaviour
+public class ARPlayTrackingManager : MonoBehaviour
 {
-    [SerializeField] TrackedImageHandler _trackedImageHandler;
-    [SerializeField] SearchPosition _searchPosition;
-    [SerializeField] MarkerLoader _markerLoader;
-    [SerializeField] private CountDownUI _countDownUI;
-    private GameObject _imagePrefab;
+    [SerializeField] ARPlayImageTracker _arPlayImageTracker;
+    
     private ARTrackedImage _currentTrackedImage;
-
+    private GameObject _imagePrefab;
+    private Transform _trackedImageTransform;
+    
     private List<Vector3> _positionSamples = new List<Vector3>();
     private List<Quaternion> _rotationSamples = new List<Quaternion>();
     public bool isSampling = false;
     
-    private Transform _trackedImageTransform;
+    // 트래킹 후 원점 좌표값
+    public Transform GetTrackedImageTransform() => _trackedImageTransform;
     
     private void OnEnable()
     {
-        _trackedImageHandler.OnTrackingStarted += HandleTrackingStarted;
+        _arPlayImageTracker.OnTrackingStarted += HandleTrackingStarted;
     }
 
     private void OnDisable()
     {
-        _trackedImageHandler.OnTrackingStarted -= HandleTrackingStarted;
+        _arPlayImageTracker.OnTrackingStarted -= HandleTrackingStarted;
     }
-
-    // 이미지 인식 후 샘플링 시작
+    
     private void HandleTrackingStarted(ARTrackedImage image, GameObject prefab)
     {
         _currentTrackedImage = image;
@@ -58,10 +55,6 @@ public class ARTrackingManager : MonoBehaviour
         _positionSamples.Clear();
         _rotationSamples.Clear();
         StartCoroutine(CoSampling(3f));
-        _countDownUI.StartCountdown(() =>
-        {
-            
-        });
     }
 
     // 아직 샘플링 중이면 이미지에 프리팹이 따라다니도록
@@ -81,9 +74,6 @@ public class ARTrackingManager : MonoBehaviour
 
         _trackedImageTransform = FixImageTransform(_imagePrefab, avgPos, avgRot);
         
-        _searchPosition.SetTrackedImagePosition(_trackedImageTransform);
-        
-        Debug.Log("[AR] 원점 보정 완료 및 마커 고정");
     }
 
     public void AddSample(Vector3 position, Quaternion rotation)
@@ -135,16 +125,5 @@ public class ARTrackingManager : MonoBehaviour
         imagePrefab.transform.rotation = averageRotation;
         
         return imagePrefab.transform;
-    }
-    
-    // 마커 불러오기
-    public void LoadMarkers(string fileName)
-    {
-        if (_trackedImageTransform == null || _imagePrefab == null)
-        {           
-            return;
-        }
-
-        _markerLoader.LoadAndSpawnMarkers(_trackedImageTransform, fileName);
     }
 }

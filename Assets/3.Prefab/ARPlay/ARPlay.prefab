@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8651526235620978577}
   - component: {fileID: 5151030161933351272}
   - component: {fileID: 3042518192985693497}
+  - component: {fileID: 6354600845688187881}
   m_Layer: 0
   m_Name: XR Origin (AR Rig)
   m_TagString: Untagged
@@ -81,9 +82,28 @@ MonoBehaviour:
   _arCamera: {fileID: 6102637021895560088}
   _rayDistance: 1
   _viewRadius: 1
+  viewAngle: 20
   _targetLayer:
     serializedVersion: 2
     m_Bits: 1
+--- !u!114 &6354600845688187881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223288323603211078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dea56a9eaadd1c439095de4f9a371cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <trackablesChanged>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SerializedLibrary: {fileID: 0}
+  m_MaxNumberOfMovingImages: 0
+  m_TrackedImagePrefab: {fileID: 0}
 --- !u!1 &3598648379201105519
 GameObject:
   m_ObjectHideFlags: 0
