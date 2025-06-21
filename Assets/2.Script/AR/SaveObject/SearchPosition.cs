@@ -76,7 +76,6 @@ public class SearchPosition : MonoBehaviour
         _objectPositionText.text = null;
         
         Ray ray = arCamera.ScreenPointToRay(screenPosition);
-        Debug.DrawRay(ray.origin, ray.direction * 10f, Color.red, 5f);
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
             if (hit.collider != null && hit.collider.CompareTag("ObjectPosition"))
