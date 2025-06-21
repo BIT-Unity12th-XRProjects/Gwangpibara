@@ -11,10 +11,10 @@ public class SaveMarker : MonoBehaviour
     [SerializeField] private SearchPosition _searchPosition;
     
     // 마커 데이터 저장 (저장버튼)
-    public void SaveMarkerPosition()
+    public void SaveMarkerPosition(string fileName)
     {
         SaveMarkerData markerDataHandler = new SaveMarkerData();
-        List<MarkerData> loadMarkerList = markerDataHandler.LoadMarkerList();
+        List<MarkerData> loadMarkerList = markerDataHandler.LoadMarkerList(fileName);
 
         var currentIds = new HashSet<string>(markerDatas.Select(m => m.id));
 
@@ -41,7 +41,7 @@ public class SaveMarker : MonoBehaviour
             }
         }
 
-        markerDataHandler.SaveMarkerList(loadMarkerList);
+        markerDataHandler.SaveMarkerList(loadMarkerList, fileName);
         Debug.Log(loadMarkerList.Count);
     }
     

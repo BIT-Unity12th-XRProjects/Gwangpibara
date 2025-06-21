@@ -18,6 +18,8 @@ public class ARTrackingManager : MonoBehaviour
     private List<Quaternion> _rotationSamples = new List<Quaternion>();
     public bool IsSampling = false;
     
+    private Transform _trackedImageTransform;
+    
     private void OnEnable()
     {
         _trackedImageHandler.OnTrackingStarted += HandleTrackingStarted;
@@ -77,10 +79,10 @@ public class ARTrackingManager : MonoBehaviour
         Vector3 avgPos =GetAveragePosition();
         Quaternion avgRot =GetAverageRotation();
 
-         Transform iamgeTransform= FixImageTransform(_imagePrefab, avgPos, avgRot);
+        _trackedImageTransform = FixImageTransform(_imagePrefab, avgPos, avgRot);
         
-        _searchPosition.SetTrackedImagePosition(iamgeTransform);
-        _markerLoader.LoadAndSpawnMarkers(iamgeTransform);
+        _searchPosition.SetTrackedImagePosition(_trackedImageTransform);
+        
         Debug.Log("[AR] 원점 보정 완료 및 마커 고정");
     }
 
@@ -133,5 +135,16 @@ public class ARTrackingManager : MonoBehaviour
         imagePrefab.transform.rotation = averageRotation;
         
         return imagePrefab.transform;
+    }
+    
+    // 마커 불러오기
+    public void LoadMarkers(string fileName)
+    {
+        if (_trackedImageTransform == null || _imagePrefab == null)
+        {           
+            return;
+        }
+
+        _markerLoader.LoadAndSpawnMarkers(_trackedImageTransform, fileName);
     }
 }
