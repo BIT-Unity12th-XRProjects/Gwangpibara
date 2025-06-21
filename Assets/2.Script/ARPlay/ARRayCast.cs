@@ -8,7 +8,7 @@ public class ARRayCast : MonoBehaviour
 
     [Header("OverlapSpere")]
     [SerializeField] private float _viewRadius = 1f;
-    // [SerializeField, Range(0, 360)] private float viewAngle = 60f;
+    [SerializeField, Range(0, 360)] private float viewAngle = 20f;
     [SerializeField] private LayerMask _targetLayer;
 
     private PlayerInputActions _inputActions;
@@ -46,6 +46,7 @@ public class ARRayCast : MonoBehaviour
         }
 
         Vector3 origin = _arCamera.transform.position;
+        Vector3 forward = _arCamera.transform.forward;
 
         Collider[] hits = Physics.OverlapSphere(origin, _viewRadius, _targetLayer);
 
@@ -55,7 +56,13 @@ public class ARRayCast : MonoBehaviour
 
             if (ARObject != null)
             {
-                ARObject.TakeCloseOverlap();
+                Vector3 dirToTarget = (hit.transform.position - origin).normalized;
+                float angle = Vector3.Angle(forward, dirToTarget);
+
+                if(angle < viewAngle * 0.5f)
+                {
+                    ARObject.TakeCloseOverlap();
+                }
             }
         }
     }
