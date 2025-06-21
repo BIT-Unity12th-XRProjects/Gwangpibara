@@ -57,7 +57,7 @@ public class ARMarkerSpawner : MonoBehaviour
 
             MarkerData data = new MarkerData(
                 Guid.NewGuid().ToString(),
-                "Spawned Marker",
+                10001,
                 1,
                 0,
                 0,

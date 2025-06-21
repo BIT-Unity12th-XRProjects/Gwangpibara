@@ -5,36 +5,42 @@ public class ARMarkerObject : MonoBehaviour, IDetect
 {
     private GameMarkerData _markerData;
 
-    // ÃÊ±âÈ­¸¦ ´Ü¼ÓÇÏ±â À§ÇÑ º¯¼ö
+    // ï¿½Ê±ï¿½È­ï¿½ï¿½ ï¿½Ü¼ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     private bool _initialized = false;
 
-    // ¾ÆÀÌÅÛÀÌ ÇÑ¹ø »ý¼ºµÇ¸é ÀÌÈÄ¿¡ »ý¼º µÇÁö ¾Ê°Ô ÇÏ±âÀ§ÇÑ º¯¼ö
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½Ä¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½ ï¿½Ï±ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     private bool _isCreate = false;
-    private bool _isRenderOn = false; 
 
     void Start()
     {
         if (!_initialized)
         {
-            Debug.LogError($"[{name}] ARMarkerObject °¡ ÃÊ±âÈ­µÇÁö ¾Ê¾Ò½À´Ï´Ù. ¹Ýµå½Ã Setting(marker) ¸¦ È£ÃâÇÏ¼¼¿ä.", this);
+            Debug.LogError($"[{name}] ARMarkerObject ï¿½ï¿½ ï¿½Ê±ï¿½È­ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Ò½ï¿½ï¿½Ï´ï¿½. ï¿½Ýµï¿½ï¿½ Setting(marker) ï¿½ï¿½ È£ï¿½ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.", this);
         }
-
         Debug.Log($"_markId : {_markerData.markId}, _markerType : {_markerData.markerType}");
 
-        OnCloseTypeSetting();
-    }
-
-    private void OnCloseTypeSetting()
-    {
-        if (_markerData.markerSpawnType == MarkerSpawnType.OnClose)
-        {
-            gameObject.GetComponent<Renderer>().enabled = false;
-        }
     }
 
     public void TakeRayHit()
     {
-        CheckTypes();
+        MarkerType thisMarkerType = _markerData.markerType;
+
+        switch(thisMarkerType)
+        {
+            case MarkerType.DropItem:
+                CreateItemPefab();
+                break;
+            case MarkerType.Clue:
+                break;
+            case MarkerType.SelfClue:
+                break;
+            case MarkerType.Decoration:
+                break;
+            case MarkerType.Trap:
+                break;
+            default:
+                break;
+        }
     }
 
     private void CreateItemPefab()
@@ -43,7 +49,7 @@ public class ARMarkerObject : MonoBehaviour, IDetect
         {
             ItemData item = MasterDataManager.Instance.GetMasterItemData(_markerData.dropItemId);
 
-            // Á¸ÀçÇÏÁö ¾Ê´Â ¾ÆÀÌÅÛ ID¸¦ ¹ÞÀ¸¸é NULL ¹ÝÈ¯µÇ¾î¼­ ÇÔ¼ö ½ºÅµ
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ IDï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ NULL ï¿½ï¿½È¯ï¿½Ç¾î¼­ ï¿½Ô¼ï¿½ ï¿½ï¿½Åµ
             if(item == null)
             {
                 return;
@@ -67,56 +73,5 @@ public class ARMarkerObject : MonoBehaviour, IDetect
         _markerData = markerData;
 
         _initialized = true;
-    }
-
-    public void TakeCloseOverlap()
-    {
-        Debug.Log("OverLap");
-        CheckTypes();
-    }
-
-    private void OnSurprize()
-    {
-        if (_isRenderOn == false)
-        {
-            gameObject.GetComponent<Renderer>().enabled = true;
-
-            _isRenderOn = true;
-        }
-    }
-
-    private void CheckTypes()
-    {
-        MarkerType thisMarkerType = _markerData.markerType;
-
-        switch (thisMarkerType)
-        {
-            case MarkerType.DropItem:
-                CreateItemPefab();
-                break;
-            case MarkerType.Clue:
-                break;
-            case MarkerType.SelfClue:
-                break;
-            case MarkerType.Decoration:
-                break;
-            case MarkerType.Trap:
-                break;
-            default:
-                break;
-        }
-
-        MarkerSpawnType thisMarkerSpawnType = _markerData.markerSpawnType;
-
-        switch (thisMarkerSpawnType)
-        {
-            case MarkerSpawnType.Base:
-                break;
-            case MarkerSpawnType.OnClose:
-                OnSurprize();
-                break;
-            default:
-                break;
-        }
     }
 }

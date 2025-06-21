@@ -153,4 +153,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7dee83b8c2a4a138898d11ccdf77c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markerId: 
+  markerData:
+    id: 
+    name: 
+    dropItemID: 0
+    acquireStep: 0
+    removeStep: 0
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
+    markerSpawnType: 0
+    markerType: 0

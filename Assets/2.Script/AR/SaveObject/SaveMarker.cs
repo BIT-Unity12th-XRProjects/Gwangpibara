@@ -26,12 +26,14 @@ public class SaveMarker : MonoBehaviour
 
             if (existing != null)
             {
-                existing.name = marker.name;
+                existing.prefabID = marker.prefabID;
                 existing.dropItemID = marker.dropItemID;
                 existing.acquireStep = marker.acquireStep;
                 existing.removeStep = marker.removeStep;
                 existing.markerSpawnType = marker.markerSpawnType;
                 existing.markerType = marker.markerType;
+                existing.position = marker.position;
+                existing.rotation = marker.rotation;
             }
             else
             {
@@ -46,15 +48,6 @@ public class SaveMarker : MonoBehaviour
     // 수정된 마크 데이터 업데이트
     public void UpdateMarkerDataInList(MarkerData updatedData)
     {
-        for (int i = 0; i < markerDatas.Count; i++)
-        {
-            if (markerDatas[i].id == updatedData.id)
-            {
-                markerDatas[i] = updatedData;
-                return;
-            }
-        }
-        
         Transform trackedImageTransform = _searchPosition.GetTrackedImageTransform();
         if (trackedImageTransform == null)
         {
@@ -66,7 +59,18 @@ public class SaveMarker : MonoBehaviour
         
         updatedData.position = localPos;
         updatedData.rotation = localRot;
+
+        Debug.Log(localPos);
+        Debug.Log(localRot);
         
+        for (int i = 0; i < markerDatas.Count; i++)
+        {
+            if (markerDatas[i].id == updatedData.id)
+            {
+                markerDatas[i] = updatedData;
+                return;
+            }
+        }
         markerDatas.Add(updatedData);
     }
     

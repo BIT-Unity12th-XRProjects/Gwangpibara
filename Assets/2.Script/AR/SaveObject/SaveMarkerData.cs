@@ -34,4 +34,23 @@ public class SaveMarkerData
         
         return wrapper.markerDatas;
     }
+
+    public List<MarkerData> LoadResourceJson(string fileName)
+    {
+        TextAsset jsonFile = Resources.Load<TextAsset>(fileName); // 확장자 제외
+        if (jsonFile == null)
+        {
+            return new List<MarkerData>();
+        }
+
+        string json = jsonFile.text;
+        MarkerListWrapper wrapper = JsonUtility.FromJson<MarkerListWrapper>(json);
+
+        if (wrapper == null || wrapper.markerDatas == null)
+        {
+            return new List<MarkerData>();
+        }
+
+        return wrapper.markerDatas;
+    }
 }
