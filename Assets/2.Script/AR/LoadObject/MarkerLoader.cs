@@ -37,11 +37,11 @@ public class MarkerLoader : MonoBehaviour
         
         foreach (var data in markerDatas)
         {
-            Vector3 worldPos = imageTransform.TransformPoint(data.position);
-            Quaternion worldRot = imageTransform.rotation * data.rotation;
+            Vector3 worldPos = imageTransform.TransformPoint(data.Position);
+            Quaternion worldRot = imageTransform.rotation * data.Rotation;
             
             GameObject marker = Instantiate(markerPrefab, worldPos, worldRot, imageTransform);
-            marker.name = data.prefabID.ToString();
+            marker.name = data.PrefabID.ToString();
 
             var markerDataComponent = marker.GetComponent<MarkerDataComponent>();
             if (markerDataComponent != null)

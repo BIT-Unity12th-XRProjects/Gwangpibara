@@ -1,6 +1,4 @@
-﻿
-
-using System;
+﻿using System;
 using UnityEngine;
 public enum MarkerType
 {
@@ -16,14 +14,14 @@ public enum MarkerSpawnType
 public class GameMarkerData
 {
     public int markId;
-    public int dropItemId;
-    public MarkerSpawnType markerSpawnType = MarkerSpawnType.Base;
-    public MarkerType markerType = MarkerType.DropItem;
     public string name;
+    public int dropItemId;
     public int spawnStep;
     public int deleteStep;
     public Vector3 position;
     public Quaternion rotation;
+    public MarkerSpawnType markerSpawnType = MarkerSpawnType.Base;
+    public MarkerType markerType = MarkerType.DropItem;
     public GameObject markerGameObject;
 
     public GameMarkerData(int id, Vector3 spawnPosition)
@@ -38,16 +36,16 @@ public class GameMarkerData
     public GameMarkerData(MarkerData markerData)
     {
         //MarkderData의 name은 GamMarkerData에서 ID
-        markId = markerData.prefabID; // 프리팹 껍데기 ID
+        markId = markerData.PrefabID; // 프리팹 껍데기 ID
        
-        dropItemId = markerData.dropItemID;
-        markerSpawnType = markerData.markerSpawnType;
-        markerType = markerData.markerType;
+        dropItemId = markerData.DropItemID;
+        markerSpawnType = markerData.MarkerSpawnType;
+        markerType = markerData.MarkerType;
         name = "테스트 이름"; //이건 마커 오브젝트의 이름 - 
-        spawnStep = markerData.acquireStep;
-        deleteStep = markerData.removeStep;
-        position = markerData.position;
-        rotation = markerData.rotation;
+        spawnStep = markerData.AcquireStep;
+        deleteStep = markerData.RemoveStep;
+        position = markerData.Position;
+        rotation = markerData.Rotation;
     }
 
     public GameMarkerData(GameMarkerData origin)
