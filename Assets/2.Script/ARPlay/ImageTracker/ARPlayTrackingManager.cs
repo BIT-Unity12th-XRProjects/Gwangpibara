@@ -73,6 +73,7 @@ public class ARPlayTrackingManager : MonoBehaviour
         Quaternion avgRot =GetAverageRotation();
 
         _trackedImageTransform = FixImageTransform(_imagePrefab, avgPos, avgRot);
+        Debug.Log(_trackedImageTransform);
         
     }
 

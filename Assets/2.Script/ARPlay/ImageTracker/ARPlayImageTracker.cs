@@ -60,15 +60,17 @@ public class ARPlayImageTracker : MonoBehaviour
                 _trackingCounts[image.trackableId] = 0;
             }
             
-            _trackingCounts[image.trackableId]++;
-
-            if (image.referenceImage.name == "ARPlayImage" && _trackingCounts[image.trackableId] == 3)
+            if (_trackingCounts[image.trackableId] < 3)
             {
-                OnTrackingStarted?.Invoke(image, _placeMarkers[image.trackableId]);
+                _trackingCounts[image.trackableId]++;
             }
             
-            
-            
+            if (image.referenceImage.name == "ARPlayImage" && _trackingCounts[image.trackableId] == 3)
+            {
+                
+                OnTrackingStarted?.Invoke(image, _placeMarkers[image.trackableId]);
+            }
+
             
         }
 

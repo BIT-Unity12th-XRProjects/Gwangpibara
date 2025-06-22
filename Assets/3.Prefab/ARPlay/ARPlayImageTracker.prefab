@@ -45,8 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8704d42bfb8d654ab28b418b5657ad2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _arTrackedImageManager: {fileID: 0}
-  _imagePrefab: {fileID: 1934569588295450, guid: 595750b459af4cd488f353b3ba0d550c,
+  _imagePrefab: {fileID: 1934569588295450, guid: 194ee953648a5974a928128c236ec0fb,
     type: 3}
 --- !u!114 &2700171893366942023
 MonoBehaviour:
