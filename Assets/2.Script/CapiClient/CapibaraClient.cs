@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 
 public enum HeadType
 {
-    MapData,
+    MapData, RoomMake
 }
 
 
@@ -24,7 +24,7 @@ public class CapibaraClient : MonoBehaviour
     private void Start()
     {
         networkManager = new NetworkManager();
-        networkManager.Connect();
+        networkManager.Connect(IPAddress.Parse(ParseCurIP.GetLocalIP()), 5000);
         networkManager.OnDataReceived += OnCallBackRecieve;
     }
 
@@ -32,7 +32,7 @@ public class CapibaraClient : MonoBehaviour
     {
         if (Keyboard.current.f3Key.wasPressedThisFrame)
         {
-            SendMapDate();
+            ReqRoomMake();
         }
     }
 
@@ -48,6 +48,11 @@ public class CapibaraClient : MonoBehaviour
         if (_reqType == HeadType.MapData)
         {
           
+        }
+        else if(_reqType == HeadType.RoomMake)
+        {
+            Debug.Log("룸메이커 헤더");
+            ResRoomData(_validData);
         }
     }
 
@@ -90,6 +95,21 @@ public class CapibaraClient : MonoBehaviour
             mapReqData.AddRange(BitConverter.GetBytes(marker.rotation.z));
         }
         SendMessege(mapReqData.ToArray());
+    }
+
+    private void ReqRoomMake()
+    {
+        byte[] reqData = { (byte)HeadType.RoomMake };
+        SendMessege(reqData);
+    }
+
+    private void ResRoomData(byte[] recevData)
+    {
+        int portNum = BitConverter.ToInt32(recevData, 1);
+        Debug.Log("기존 연결 끊기");
+        networkManager.Disconnect();
+        Debug.Log("방서버로 연결" +portNum);
+        networkManager.Connect(IPAddress.Parse(ParseCurIP.GetLocalIP()), portNum);
     }
 
     private void SendMessege(byte[] _sendData)
