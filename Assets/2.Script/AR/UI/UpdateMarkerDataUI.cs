@@ -35,12 +35,12 @@ public class UpdateMarkerDataUI : MonoBehaviour
         
         MarkerData targetMarkerData = targetObject.GetComponentInParent<MarkerDataComponent>().markerData;
         
-        _markerName.text = targetMarkerData.prefabID.ToString();
-        _changeDropId.text = targetMarkerData.dropItemID.ToString();
-        _changeAcquireStep.text = targetMarkerData.acquireStep.ToString();
-        _changeremoveStep.text = targetMarkerData.removeStep.ToString();
-        _changeMarkerSpawnType.value = (int)targetMarkerData.markerSpawnType;
-        _changeMarkerType.value = (int)targetMarkerData.markerType;
+        _markerName.text = targetMarkerData.PrefabID.ToString();
+        _changeDropId.text = targetMarkerData.DropItemID.ToString();
+        _changeAcquireStep.text = targetMarkerData.AcquireStep.ToString();
+        _changeremoveStep.text = targetMarkerData.RemoveStep.ToString();
+        _changeMarkerSpawnType.value = (int)targetMarkerData.MarkerSpawnType;
+        _changeMarkerType.value = (int)targetMarkerData.MarkerType;
     }
 
     public void ChangeMarkerData()
@@ -48,28 +48,28 @@ public class UpdateMarkerDataUI : MonoBehaviour
         var targetMarkerData = targetObject.GetComponentInParent<MarkerDataComponent>();
         MarkerData data = targetMarkerData.markerData;
 
-        data.prefabID = Convert.ToInt32(_markerName.text);
+        data.PrefabID = Convert.ToInt32(_markerName.text);
 
         if (int.TryParse(_changeDropId.text, out var dropId))
         {
-            data.dropItemID = dropId;
+            data.DropItemID = dropId;
         }
 
         if (int.TryParse(_changeAcquireStep.text, out var acquireStep))
         {
-            data.acquireStep = acquireStep;
+            data.AcquireStep = acquireStep;
         }
 
         if (int.TryParse(_changeremoveStep.text, out var removeStep))
         {
-            data.removeStep = removeStep;
+            data.RemoveStep = removeStep;
         }
 
-        data.markerSpawnType = (MarkerSpawnType)_changeMarkerSpawnType.value;
-        data.markerType = (MarkerType)_changeMarkerType.value;
+        data.MarkerSpawnType = (MarkerSpawnType)_changeMarkerSpawnType.value;
+        data.MarkerType = (MarkerType)_changeMarkerType.value;
         
-        data.position = targetObject.transform.position;
-        data.rotation = targetObject.transform.rotation;
+        data.Position = targetObject.transform.position;
+        data.Rotation = targetObject.transform.rotation;
 
         
         _saveMarker.UpdateMarkerDataInList(data);
