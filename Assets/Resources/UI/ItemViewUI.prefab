@@ -193,6 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_isAnimPlay: 0
+  UIType: 5
   _exitButton: {fileID: 7157027086056663850}
   _itemViewer: {fileID: 5160672692552089685}
 --- !u!1 &8240367859030316606

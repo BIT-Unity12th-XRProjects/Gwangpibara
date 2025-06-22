@@ -2460,6 +2460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_isAnimPlay: 0
+  UIType: 2
   QuestText: {fileID: 4988414480582062477}
   AnswerInputField: {fileID: 1379692181599206547}
   _inventoryButton: {fileID: 3257540798076077823}
