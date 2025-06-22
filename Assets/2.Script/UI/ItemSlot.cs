@@ -35,7 +35,7 @@ public class ItemSlot : MonoBehaviour
 
     private void OnClickSlot()
     {
-        UIManager.Instance.OpenUI<ItemViewUI>(_itemViewData);
+        UIManager.Instance.RequestOpenUI<ItemViewUI>(_itemViewData);
     }
 
 }

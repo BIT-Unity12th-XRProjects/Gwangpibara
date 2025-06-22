@@ -57,7 +57,7 @@ public class GameUI : BaseUI
 
     private void OnClickedInventoryButton()
     {
-        UIManager.Instance.OpenUI<InventoryUI>();
+        UIManager.Instance.RequestOpenUI<InventoryUI>();
     }
 
     private void OnClickedARButton()
