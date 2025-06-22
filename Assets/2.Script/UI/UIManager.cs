@@ -139,16 +139,12 @@ public class UIManager : Singleton<UIManager>
                 //선택화면 돌아가기 팝업
                 break;
             case UIType.ArMode:
-       
-                RequestOpenUI<GameUI>();
-                break;
             case UIType.Inventory:
-          
+            case UIType.ItemViewer:
                 RequestOpenUI<GameUI>();
                 break;
-            case UIType.ItemViewer:
-          
-                RequestOpenUI<GameUI>();
+            case UIType.OriginSet:
+                RequestOpenUI<StartUI>();
                 break;
         }
 

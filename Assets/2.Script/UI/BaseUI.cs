@@ -12,7 +12,7 @@ public class BaseUIData
 
 public enum UIType
 {
-    None, GameStart, Play, ArMode, Inventory, ItemViewer
+    None, GameStart, Play, ArMode, Inventory, ItemViewer, OriginSet
 }
 
 public class BaseUI : MonoBehaviour

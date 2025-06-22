@@ -46,6 +46,9 @@ public class GameStartManager : MonoBehaviour
     IEnumerator CoLoadGame()
     {
         Debug.Log("맵 만들기 시작");
+        UIManager.Instance.RequestOpenUI<OriginSetUI>(); // 원점 잡기용 UI 켜고
+
+        yield return new WaitForSeconds(1f);// 여기서 프리팹 생성하고 그 원점 잡거나 타임 아웃까지 대기
         yield return StartCoroutine(MapGenerator.Instance.C_CallGenerator(1)); //맵 만드는 작업을 호출하고 맵 완성을 기다릴것
         _mainController.StartGame(10101); //로드할 단계로 게임 시작 호출, 테스트값  10101
         UIManager.Instance.RequestOpenUI<GameUI>();
