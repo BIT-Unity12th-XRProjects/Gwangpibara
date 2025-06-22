@@ -62,7 +62,10 @@ public class TrackedImageHandler : MonoBehaviour
                 _trackingCounts[image.trackableId] = 0;
             }
             
-            _trackingCounts[image.trackableId]++;
+            if (_trackingCounts[image.trackableId] < 3)
+            {
+                _trackingCounts[image.trackableId]++;
+            }
 
             if (image.referenceImage.name == "ImageTracker" && _trackingCounts[image.trackableId] == 3)
             {
