@@ -12,7 +12,7 @@ public class NetworkManager
     public event Action<byte[]> OnDataReceived;
     public event Action OnConnected;
 
-    public void Connect()
+    public void Connect(IPAddress ipAdress, int portNumber)
     {
         // UnityEngine.Debug.Log("넷웟 연결시도해보기");
 
@@ -20,8 +20,8 @@ public class NetworkManager
         // IPAddress ipAddress = new IPAddress(ip);
 
         //임시 로컬
-        IPAddress ipAddress = IPAddress.Parse(ParseCurIP.GetLocalIP());
-        port = 5000;
+        IPAddress ipAddress = ipAdress;
+        port = portNumber;
 
 
         IPEndPoint endPoint = new IPEndPoint(ipAddress, port);
@@ -39,7 +39,7 @@ public class NetworkManager
         }
         catch
         {
-            Connect(); // retry
+           // Connect(); // retry
         }
     }
 
