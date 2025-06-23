@@ -58,18 +58,19 @@ public class ARMarkerSpawner : MonoBehaviour
 
             GameObject marker = Instantiate(markerPrefab, hitPose.position, hitPose.rotation);
 
-            MarkerData data = new MarkerData(
-                Guid.NewGuid().ToString(),
-                10001,
-                1,
-                0,
-                0,
-                hitPose.position,
-                hitPose.rotation,
-                new Vector3(1,1,1),
-                MarkerSpawnType.Base,
-                MarkerType.DropItem
-            );
+            MarkerData data = new MarkerData
+            {
+                id = Guid.NewGuid().ToString(),
+                prefabID = 10001,
+                dropItemID = 1,
+                acquireStep = 0,
+                removeStep = 0,
+                position = hitPose.position,
+                rotation = hitPose.rotation,
+                scale = new Vector3(1,1,1),
+                markerSpawnType = MarkerSpawnType.Base,
+                markerType = MarkerType.DropItem
+            };
 
             var newMarker = marker.GetComponent<MarkerDataComponent>();
             if (newMarker != null)

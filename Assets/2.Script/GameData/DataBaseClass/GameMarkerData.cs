@@ -36,16 +36,16 @@ public class GameMarkerData
     public GameMarkerData(MarkerData markerData)
     {
         //MarkderData의 name은 GamMarkerData에서 ID
-        markId = markerData.PrefabID; // 프리팹 껍데기 ID
+        markId = markerData.prefabID; // 프리팹 껍데기 ID
        
-        dropItemId = markerData.DropItemID;
-        markerSpawnType = markerData.MarkerSpawnType;
-        markerType = markerData.MarkerType;
+        dropItemId = markerData.dropItemID;
+        markerSpawnType = markerData.markerSpawnType;
+        markerType = markerData.markerType;
         name = "테스트 이름"; //이건 마커 오브젝트의 이름 - 
-        spawnStep = markerData.AcquireStep;
-        deleteStep = markerData.RemoveStep;
-        position = markerData.Position;
-        rotation = markerData.Rotation;
+        spawnStep = markerData.acquireStep;
+        deleteStep = markerData.removeStep;
+        position = markerData.position;
+        rotation = markerData.rotation;
     }
 
     public GameMarkerData(GameMarkerData origin)

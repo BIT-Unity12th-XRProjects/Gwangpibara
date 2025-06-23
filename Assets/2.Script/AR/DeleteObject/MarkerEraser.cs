@@ -64,7 +64,7 @@ namespace AREditor.DeleteObject
                     var markerDataComponent = hitObj.GetComponentInParent<MarkerDataComponent>();
                     if (markerDataComponent != null)
                     {
-                        string markerId = markerDataComponent.markerData.ID;
+                        string markerId = markerDataComponent.markerData.id;
                         saveMarker.RemoveMarkerData(markerId);
                         Destroy(hitObj);
                         Debug.Log($"오브젝트 {markerId} 삭제됨");
