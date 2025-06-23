@@ -12,6 +12,9 @@ public class NetworkManager
     public event Action<byte[]> OnDataReceived;
     public event Action OnConnected;
 
+    private IPAddress connectIp;
+    private int connectPort;
+
     public void Connect(IPAddress ipAdress, int portNumber)
     {
         // UnityEngine.Debug.Log("넷웟 연결시도해보기");
@@ -20,11 +23,11 @@ public class NetworkManager
         // IPAddress ipAddress = new IPAddress(ip);
 
         //임시 로컬
-        IPAddress ipAddress = ipAdress;
-        port = portNumber;
+        connectIp = ipAdress;
+        connectPort = portNumber;
 
 
-        IPEndPoint endPoint = new IPEndPoint(ipAddress, port);
+        IPEndPoint endPoint = new IPEndPoint(connectIp, connectPort);
         clientSocket.BeginConnect(endPoint, ConnectCallback, null);
     }
 
@@ -39,7 +42,8 @@ public class NetworkManager
         }
         catch
         {
-           // Connect(); // retry
+            UnityEngine.Debug.Log("연결 재시도");
+            Connect(connectIp, connectPort); // retry
         }
     }
 
