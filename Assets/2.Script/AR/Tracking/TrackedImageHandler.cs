@@ -18,7 +18,7 @@ public class TrackedImageHandler : MonoBehaviour
     [SerializeField] private TMP_Text _debugText;
     
     private Dictionary<TrackableId, int> _trackingCounts = new();
-
+    private int trackingCount = 3;
     private bool isSampling;
 
     private void Awake()
@@ -62,9 +62,12 @@ public class TrackedImageHandler : MonoBehaviour
                 _trackingCounts[image.trackableId] = 0;
             }
             
-            _trackingCounts[image.trackableId]++;
+            if (_trackingCounts[image.trackableId] < trackingCount + 1)
+            {
+                _trackingCounts[image.trackableId]++;
+            }
 
-            if (image.referenceImage.name == "ImageTracker" && _trackingCounts[image.trackableId] == 3)
+            if (image.referenceImage.name == "ImageTracker" && _trackingCounts[image.trackableId] == trackingCount)
             {
                 _debugText.text = $"[AR] 상태: {image.trackingState}, 이름: {image.referenceImage.name}, 위치: {image.transform.position}";
                 if (isSampling)

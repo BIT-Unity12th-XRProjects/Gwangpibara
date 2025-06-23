@@ -1,6 +1,4 @@
-﻿
-
-using System;
+﻿using System;
 using UnityEngine;
 public enum MarkerType
 {
@@ -16,14 +14,14 @@ public enum MarkerSpawnType
 public class GameMarkerData
 {
     public int markId;
-    public int dropItemId;
-    public MarkerSpawnType markerSpawnType = MarkerSpawnType.Base;
-    public MarkerType markerType = MarkerType.DropItem;
     public string name;
+    public int dropItemId;
     public int spawnStep;
     public int deleteStep;
     public Vector3 position;
     public Quaternion rotation;
+    public MarkerSpawnType markerSpawnType = MarkerSpawnType.Base;
+    public MarkerType markerType = MarkerType.DropItem;
     public GameObject markerGameObject;
 
     public GameMarkerData(int id, Vector3 spawnPosition)

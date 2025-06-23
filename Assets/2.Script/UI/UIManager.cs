@@ -29,10 +29,24 @@ public class UIManager : Singleton<UIManager>
         }
 
 
-        OpenUI<StartUI>();
+        RequestOpenUI<StartUI>();
     }
 
-    public void OpenUI<T>(BaseUIData uiData = null)
+    private void Update()
+    {
+        //임시 키보드로 취소키 입력받기
+        if (Keyboard.current.f2Key.wasPressedThisFrame)
+        {
+            OnClickCancle();
+        }
+    }
+
+    /// <summary>
+    /// UI 열기요청
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="uiData"></param>
+    public void RequestOpenUI<T>(BaseUIData uiData = null)
     {
         Type uiType = typeof(T);
         bool isAlreadyOpen = false;
@@ -49,23 +63,21 @@ public class UIManager : Singleton<UIManager>
             return;
         }
 
-        var siblingIndex = UICanvasTrs.childCount;
-        ui.Init(UICanvasTrs);
-        ui.transform.SetSiblingIndex(siblingIndex);
-        ui.gameObject.SetActive(true);
-
-        ui.SetInfo(uiData);
-
-
-        ui.ShowUI();
-
-        if (_openUI != null)
+        if(_openUI != null)
         {
             CloseUI(_openUI);
         }
+        OpenUI(ui, uiData);
 
+    }
+
+    private void OpenUI(BaseUI ui, BaseUIData uiData = null)
+    {
+        ui.Init(UICanvasTrs);
+        ui.gameObject.SetActive(true);
+        ui.SetInfo(uiData);
+        ui.ShowUI();
         _openUI = ui;
-
     }
 
     private BaseUI GetUI<T>(out bool isAlreadyOpen)
@@ -94,14 +106,58 @@ public class UIManager : Singleton<UIManager>
         return ui;
     }
 
-    public void CloseUI(BaseUI ui)
+
+    /// <summary>
+    /// 휴대폰 취소 버튼 눌렸을 때
+    /// </summary>
+    public void OnClickCancle()
+    {
+        if (_openUI == null)
+        {
+            return;
+        }
+
+        RequestCloseUI(_openUI);
+
+
+    }
+
+    /// <summary>
+    /// ui 닫으라고 호출 받았을 떄
+    /// </summary>
+    /// <param name="ui"></param>
+    public void RequestCloseUI(BaseUI ui)
     {
         if (ui == null) return;
-        Type uiType = ui.GetType();
+     
+        switch (_openUI.UIType)
+        {
+            case UIType.GameStart:
+                //게임종료하기 팝업
+                break;
+            case UIType.Play:
+                //선택화면 돌아가기 팝업
+                break;
+            case UIType.ArMode:
+            case UIType.Inventory:
+            case UIType.ItemViewer:
+                RequestOpenUI<GameUI>();
+                break;
+            case UIType.OriginSet:
+                RequestOpenUI<StartUI>();
+                break;
+        }
 
+
+    }
+
+    private void CloseUI(BaseUI ui)
+    {
+        Type uiType = ui.GetType();
         ui.gameObject.SetActive(false);
         _closedUIPool[uiType] = ui.gameObject;
         ui.transform.SetParent(CloseUITrs);
     }
 
+  
 }

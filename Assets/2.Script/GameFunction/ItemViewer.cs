@@ -3,11 +3,10 @@ using UnityEngine.InputSystem;
 
 public class ItemViewer : MonoBehaviour
 {
-    [Header("Prefab & Spawn")]
-    [SerializeField] private GameObject _testPrefab;
-    [SerializeField] private string _name;
-
     private GameObject _itemObject;
+    private Camera _cam;
+    private GameObject _mapParent;
+    [SerializeField] private GameObject _testPrefab;
 
     [Header("Rotation Settings")]
     [SerializeField] private float _rotationSpeed = 0.2f;
@@ -17,17 +16,22 @@ public class ItemViewer : MonoBehaviour
 
     [Header("Zoom Settings")]
     [SerializeField] private float _zoomSpeed = 0.01f;
-    [SerializeField] private float _minZoom = 0.5f;
-    [SerializeField] private float _maxZoom = 2f;
+    [SerializeField] private float _minZoom = 0.1f;
+    [SerializeField] private float _maxZoom = 0.2f;
     private float _prevPinchDistance = 0f;
 
     private void Awake()
     {
         _inputActions = new PlayerInputActions();
+
+        UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport.Enable();
     }
 
     private void OnEnable()
     {
+        _cam = Camera.main;
+        _mapParent = GameObject.Find("MapParent");
+
         _inputActions.Player.Enable();
 
         _inputActions.Player.Look.performed += OnLookPerformed;
@@ -53,6 +57,30 @@ public class ItemViewer : MonoBehaviour
     {
         RotateObject();
         Zoom();
+    }
+
+    public void ViewItem(ItemViewData itemViewData)
+    {
+        //_name = itemData.Name;
+        GameObject targetObject = itemViewData.itemPrefab;
+
+        if (targetObject == null)
+        {
+            Debug.Log("아이템 데이터가 이상한듯");
+            return;
+        }
+
+        _mapParent.gameObject.SetActive(false);
+        _itemObject = Instantiate(targetObject, new Vector3(0, 0, 0), Quaternion.identity, _cam.transform);
+
+        _itemObject.transform.localScale = new Vector3(_minZoom, _minZoom, _minZoom);
+        _itemObject.transform.localPosition = Vector3.forward;
+    }
+
+    public void DestroyItem()
+    {
+        _mapParent.gameObject.SetActive(true);
+        Destroy(_itemObject);
     }
 
     private void Zoom()
@@ -131,18 +159,6 @@ public class ItemViewer : MonoBehaviour
             // 상하 회전 
             _itemObject.transform.Rotate(Vector3.right, dy * _rotationSpeed, Space.World);
         }
-    }
-
-    public void ViewItem(ItemViewData itemViewData)
-    {
-        //_name = itemData.Name;
-        GameObject targetObject = itemViewData.itemPrefab;
-        if (targetObject == null)
-        {
-            targetObject = _testPrefab;
-        }
-
-        _itemObject = Instantiate(targetObject, new Vector3(0, 0, 0), Quaternion.identity);
     }
 
     private void OnLookPerformed(InputAction.CallbackContext context)

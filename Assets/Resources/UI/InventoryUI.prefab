@@ -408,7 +408,7 @@ Canvas:
   m_GameObject: {fileID: 5689993543198857285}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -475,9 +475,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_isAnimPlay: 0
+  UIType: 4
   itemSlotPrefab: {fileID: 3245491883654734972, guid: f32694ef61fdfc741be09b1e112a4238,
     type: 3}
   slotTransform: {fileID: 1997725234625301819}
+  _exitButton: {fileID: 8941457485064486879}
 --- !u!1 &7175633239507842301
 GameObject:
   m_ObjectHideFlags: 0

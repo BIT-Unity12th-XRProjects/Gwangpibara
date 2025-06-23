@@ -10,9 +10,15 @@ public class BaseUIData
     public bool isAnimPlay = false;
 }
 
+public enum UIType
+{
+    None, GameStart, Play, ArMode, Inventory, ItemViewer, OriginSet
+}
+
 public class BaseUI : MonoBehaviour
 {
     public bool m_isAnimPlay;
+    public UIType UIType;
 
     private Action m_OnShow;
     private Action m_OnClose;
@@ -69,7 +75,7 @@ public class BaseUI : MonoBehaviour
             m_OnClose?.Invoke();
         }
         m_OnClose = null;
-        UIManager.Instance.CloseUI(this);
+        UIManager.Instance.RequestCloseUI(this);
     }
 
     //닫기버튼 눌렀을 때 함수 

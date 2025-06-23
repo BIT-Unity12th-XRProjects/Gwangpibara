@@ -193,6 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_isAnimPlay: 0
+  UIType: 5
   _exitButton: {fileID: 7157027086056663850}
   _itemViewer: {fileID: 5160672692552089685}
 --- !u!1 &8240367859030316606
@@ -545,12 +546,12 @@ PrefabInstance:
     - target: {fileID: 4953185303028164947, guid: a3b4163a32c1f9f478655b88638bf7d2,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000061035156
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4953185303028164947, guid: a3b4163a32c1f9f478655b88638bf7d2,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 893.9035
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4953185303028164947, guid: a3b4163a32c1f9f478655b88638bf7d2,
         type: 3}
@@ -566,6 +567,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585717157493112923, guid: a3b4163a32c1f9f478655b88638bf7d2,
+        type: 3}
+      propertyPath: _maxZoom
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585717157493112923, guid: a3b4163a32c1f9f478655b88638bf7d2,
+        type: 3}
+      propertyPath: _minZoom
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5585717157493112923, guid: a3b4163a32c1f9f478655b88638bf7d2,
         type: 3}

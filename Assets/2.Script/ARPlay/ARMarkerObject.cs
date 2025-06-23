@@ -30,11 +30,14 @@ public class ARMarkerObject : MonoBehaviour, IDetect
 
         if (_markerData.markerSpawnType == MarkerSpawnType.OnClose)
         {
-            gameObject.GetComponent<Renderer>().enabled = false;
+            Color color = gameObject.GetComponent<Renderer>().material.color;
+            color = new Color(255f, 255f, 0f);
+            gameObject.GetComponent<Renderer>().material.color = color;
         }
     }
     public void TakeRayHit()
     {
+        Debug.Log("Ray Hit");
         CheckTypes();
     }
 
@@ -47,6 +50,7 @@ public class ARMarkerObject : MonoBehaviour, IDetect
             // 존재하지 않는 아이템 ID를 받으면 NULL 반환되어서 함수 스킵
             if (item == null)
             {
+                Debug.Log("아이템이 없음");
                 return;
             }
 
@@ -80,7 +84,9 @@ public class ARMarkerObject : MonoBehaviour, IDetect
     {
         if (_isRenderOn == false)
         {
-            gameObject.GetComponent<Renderer>().enabled = true;
+            Color color = gameObject.GetComponent<Renderer>().material.color;
+            color = new Color(255f, 0f, 255f);
+            gameObject.GetComponent<Renderer>().material.color = color;
 
             _isRenderOn = true;
         }

@@ -5,7 +5,8 @@ using UnityEngine.EventSystems;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 public class ARMarkerSpawner : MonoBehaviour
 {
@@ -57,17 +58,19 @@ public class ARMarkerSpawner : MonoBehaviour
 
             GameObject marker = Instantiate(markerPrefab, hitPose.position, hitPose.rotation);
 
-            MarkerData data = new MarkerData(
-                Guid.NewGuid().ToString(),
-                10001,
-                1,
-                0,
-                0,
-                hitPose.position,
-                hitPose.rotation,
-                MarkerSpawnType.Base,
-                MarkerType.DropItem
-            );
+            MarkerData data = new MarkerData
+            {
+                id = Guid.NewGuid().ToString(),
+                prefabID = 10001,
+                dropItemID = 1,
+                acquireStep = 0,
+                removeStep = 0,
+                position = hitPose.position,
+                rotation = hitPose.rotation,
+                scale = new Vector3(1,1,1),
+                markerSpawnType = MarkerSpawnType.Base,
+                markerType = MarkerType.DropItem
+            };
 
             var newMarker = marker.GetComponent<MarkerDataComponent>();
             if (newMarker != null)

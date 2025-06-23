@@ -46,3 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _themeList: []
   _mainController: {fileID: 0}
+  _trackingPrefab: {fileID: 2700171893366942023, guid: 3c80a1a8cbe78da4d82a78bee64e435c,
+    type: 3}
+  mapParent: {fileID: 0}

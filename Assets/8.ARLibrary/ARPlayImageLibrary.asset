@@ -16,4 +16,14 @@ MonoBehaviour:
   m_GuidHigh: 4590172961904569992
   m_DataStore:
     m_Storage: []
-  m_Images: []
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5375239216283684467
+      m_GuidHigh: 6678119778200862349
+    m_SerializedTextureGuid:
+      m_GuidLow: 15583763031012798758
+      m_GuidHigh: 13402183031980739755
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: ARPlayImage
+    m_Texture: {fileID: 0}

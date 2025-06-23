@@ -34,6 +34,7 @@ public class SaveMarker : MonoBehaviour
                 existing.markerType = marker.markerType;
                 existing.position = marker.position;
                 existing.rotation = marker.rotation;
+                existing.scale = marker.scale;
             }
             else
             {
@@ -59,6 +60,7 @@ public class SaveMarker : MonoBehaviour
         
         updatedData.position = localPos;
         updatedData.rotation = localRot;
+        
 
         Debug.Log(localPos);
         Debug.Log(localRot);

@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class StartUIData : BaseUIData
@@ -33,5 +34,10 @@ public class StartUI : BaseUI
     public void OnClickedStartBtn()
     {
         _startManager.StartGame();
+    }
+
+    public void OnClickEnterEditor()
+    {
+        SceneManager.LoadScene("AREditorScene");
     }
 }
