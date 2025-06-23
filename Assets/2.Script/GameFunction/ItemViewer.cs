@@ -30,7 +30,7 @@ public class ItemViewer : MonoBehaviour
     private void OnEnable()
     {
         _cam = Camera.main;
-        _mapParent = transform.Find("MapParent").gameObject;
+        _mapParent = GameObject.Find("MapParent");
 
         _inputActions.Player.Enable();
 
