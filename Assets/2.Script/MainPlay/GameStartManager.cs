@@ -15,6 +15,7 @@ public class GameStartManager : MonoBehaviour
 
     [SerializeField] private List<ThemeData> _themeList;
     [SerializeField] private MainController _mainController;
+    [SerializeField] private ARPlayTrackingManager _trackingPrefab;
     private int _selectThemNumber;
     private const int INVALID_NUMBER = -1;
     private void Start()
@@ -47,11 +48,31 @@ public class GameStartManager : MonoBehaviour
     {
         Debug.Log("맵 만들기 시작");
         UIManager.Instance.RequestOpenUI<OriginSetUI>(); // 원점 잡기용 UI 켜고
-
-        yield return new WaitForSeconds(1f);// 여기서 프리팹 생성하고 그 원점 잡거나 타임 아웃까지 대기
+        ARPlayTrackingManager trackingManager = Instantiate(_trackingPrefab);
+        trackingManager.OnTrackingEnd += SetOriginPos;
+        while (true)
+        {
+            Debug.Log("원점 잡기 대기중");
+            yield return null;
+            //트래킹 잡힐떄까지
+            if(isFind == true)
+            {
+                Debug.Log("원점 잡아서 나가기");
+                break;
+            }
+        }
         yield return StartCoroutine(MapGenerator.Instance.C_CallGenerator(1)); //맵 만드는 작업을 호출하고 맵 완성을 기다릴것
         _mainController.StartGame(10101); //로드할 단계로 게임 시작 호출, 테스트값  10101
         UIManager.Instance.RequestOpenUI<GameUI>();
+    }
+
+    private Vector3 originPosition;
+    private bool isFind = false;
+    private void SetOriginPos(Vector3 position)
+    {
+        Debug.Log(position + "원점으로 잡혔다.");
+        originPosition = position;
+        isFind = true;
     }
 
     private void SetThemeList()

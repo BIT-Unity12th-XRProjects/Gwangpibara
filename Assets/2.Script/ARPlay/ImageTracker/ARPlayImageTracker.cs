@@ -14,7 +14,7 @@ public class ARPlayImageTracker : MonoBehaviour
     public event TrackingStartedHandler OnTrackingStarted;    
     
     private Dictionary<TrackableId, int> _trackingCounts = new();
-    
+    private int trackingCount = 3;
     private void Awake()
     {
         if (_arTrackedImageManager == null)
@@ -60,12 +60,12 @@ public class ARPlayImageTracker : MonoBehaviour
                 _trackingCounts[image.trackableId] = 0;
             }
             
-            if (_trackingCounts[image.trackableId] < 3)
+            if (_trackingCounts[image.trackableId] < trackingCount + 1)
             {
                 _trackingCounts[image.trackableId]++;
             }
             
-            if (image.referenceImage.name == "ARPlayImage" && _trackingCounts[image.trackableId] == 3)
+            if (image.referenceImage.name == "ARPlayImage" && _trackingCounts[image.trackableId] == trackingCount)
             {
                 
                 OnTrackingStarted?.Invoke(image, _placeMarkers[image.trackableId]);
