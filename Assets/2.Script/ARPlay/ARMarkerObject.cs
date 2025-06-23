@@ -35,6 +35,7 @@ public class ARMarkerObject : MonoBehaviour, IDetect
     }
     public void TakeRayHit()
     {
+        Debug.Log("Ray Hit");
         CheckTypes();
     }
 
@@ -47,6 +48,7 @@ public class ARMarkerObject : MonoBehaviour, IDetect
             // 존재하지 않는 아이템 ID를 받으면 NULL 반환되어서 함수 스킵
             if (item == null)
             {
+                Debug.Log("아이템이 없음");
                 return;
             }
 

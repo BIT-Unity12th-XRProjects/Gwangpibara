@@ -38,16 +38,16 @@ public class MarkerLoader : MonoBehaviour
         
         foreach (var data in markerDatas)
         {
-            Vector3 worldPos = imageTransform.TransformPoint(data.Position);
-            Quaternion worldRot = imageTransform.rotation * data.Rotation;
+            Vector3 worldPos = imageTransform.TransformPoint(data.position);
+            Quaternion worldRot = imageTransform.rotation * data.rotation;
             
             GameObject marker = Instantiate(markerPrefab, worldPos, worldRot, imageTransform);
-            marker.name = data.PrefabID.ToString();
+            marker.name = data.prefabID.ToString();
             
             Transform child = marker.transform.Find("MarkerRenderer");
             if (child != null)
             {
-                child.localScale = data.Scale;
+                child.localScale = data.scale;
             }
 
             var markerDataComponent = marker.GetComponent<MarkerDataComponent>();

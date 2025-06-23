@@ -16,25 +16,25 @@ public class SaveMarker : MonoBehaviour
         SaveMarkerData markerDataHandler = new SaveMarkerData();
         List<MarkerData> loadMarkerList = markerDataHandler.LoadMarkerList(fileName);
 
-        var currentIds = new HashSet<string>(markerDatas.Select(m => m.ID));
+        var currentIds = new HashSet<string>(markerDatas.Select(m => m.id));
 
-        loadMarkerList.RemoveAll(m => !currentIds.Contains(m.ID));
+        loadMarkerList.RemoveAll(m => !currentIds.Contains(m.id));
         
         foreach (var marker in markerDatas)
         {
-            var existing = loadMarkerList.FirstOrDefault(m => m.ID == marker.ID);
+            var existing = loadMarkerList.FirstOrDefault(m => m.id == marker.id);
 
             if (existing != null)
             {
-                existing.PrefabID = marker.PrefabID;
-                existing.DropItemID = marker.DropItemID;
-                existing.AcquireStep = marker.AcquireStep;
-                existing.RemoveStep = marker.RemoveStep;
-                existing.MarkerSpawnType = marker.MarkerSpawnType;
-                existing.MarkerType = marker.MarkerType;
-                existing.Position = marker.Position;
-                existing.Rotation = marker.Rotation;
-                existing.Scale = marker.Scale;
+                existing.prefabID = marker.prefabID;
+                existing.dropItemID = marker.dropItemID;
+                existing.acquireStep = marker.acquireStep;
+                existing.removeStep = marker.removeStep;
+                existing.markerSpawnType = marker.markerSpawnType;
+                existing.markerType = marker.markerType;
+                existing.position = marker.position;
+                existing.rotation = marker.rotation;
+                existing.scale = marker.scale;
             }
             else
             {
@@ -55,11 +55,11 @@ public class SaveMarker : MonoBehaviour
             return;
         }
         
-        Vector3 localPos = trackedImageTransform.InverseTransformPoint(updatedData.Position);
-        Quaternion localRot = Quaternion.Inverse(trackedImageTransform.rotation) * updatedData.Rotation;
+        Vector3 localPos = trackedImageTransform.InverseTransformPoint(updatedData.position);
+        Quaternion localRot = Quaternion.Inverse(trackedImageTransform.rotation) * updatedData.rotation;
         
-        updatedData.Position = localPos;
-        updatedData.Rotation = localRot;
+        updatedData.position = localPos;
+        updatedData.rotation = localRot;
         
 
         Debug.Log(localPos);
@@ -67,7 +67,7 @@ public class SaveMarker : MonoBehaviour
         
         for (int i = 0; i < markerDatas.Count; i++)
         {
-            if (markerDatas[i].ID == updatedData.ID)
+            if (markerDatas[i].id == updatedData.id)
             {
                 markerDatas[i] = updatedData;
                 return;
@@ -79,6 +79,6 @@ public class SaveMarker : MonoBehaviour
     // 마커 데이터 삭제(Eraser 버튼)
     public void RemoveMarkerData(string markerId)
     {
-        markerDatas.RemoveAll(m => m.ID == markerId);
+        markerDatas.RemoveAll(m => m.id == markerId);
     }
 }

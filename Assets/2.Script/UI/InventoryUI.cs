@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryUI : BaseUI
 {
@@ -8,6 +9,13 @@ public class InventoryUI : BaseUI
     private List<ItemSlot> itemSlotList = new();
     [SerializeField] private ItemSlot itemSlotPrefab;
     [SerializeField] private Transform slotTransform;
+    [SerializeField] private Button _exitButton;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        _exitButton.onClick.AddListener(OnClickedExitButton);
+    }
 
     public override void SetInfo(BaseUIData uiData)
     {

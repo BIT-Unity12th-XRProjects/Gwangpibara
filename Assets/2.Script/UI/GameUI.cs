@@ -26,7 +26,6 @@ public class GameUI : BaseUI
     [SerializeField] private Button _submitButton;
 
     private MainController _mainController;
-    private GameUIData m_gameUIData;
 
     protected override void Awake()
     {
@@ -62,7 +61,7 @@ public class GameUI : BaseUI
 
     private void OnClickedARButton()
     {
-
+        UIManager.Instance.RequestOpenUI<ARPlayUI>();
     }
 
     private void OnClickedBeforeButton()
