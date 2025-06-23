@@ -5,6 +5,7 @@ public class ItemViewer : MonoBehaviour
 {
     private GameObject _itemObject;
     private Camera _cam;
+    private MapGenerator _mapGenerator;
     [SerializeField] private GameObject _testPrefab;
 
     [Header("Rotation Settings")]
@@ -29,6 +30,7 @@ public class ItemViewer : MonoBehaviour
     private void OnEnable()
     {
         _cam = Camera.main;
+        _mapGenerator = FindAnyObjectByType<MapGenerator>();
 
         _inputActions.Player.Enable();
 
@@ -68,6 +70,7 @@ public class ItemViewer : MonoBehaviour
             return;
         }
 
+        _mapGenerator.gameObject.SetActive(false);
         _itemObject = Instantiate(targetObject, new Vector3(0, 0, 0), Quaternion.identity, _cam.transform);
 
         _itemObject.transform.localScale = new Vector3(_minZoom, _minZoom, _minZoom);
@@ -76,6 +79,7 @@ public class ItemViewer : MonoBehaviour
 
     public void DestroyItem()
     {
+        _mapGenerator.gameObject.SetActive(true);
         Destroy(_itemObject);
     }
 
