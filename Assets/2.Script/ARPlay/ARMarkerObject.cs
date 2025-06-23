@@ -30,7 +30,9 @@ public class ARMarkerObject : MonoBehaviour, IDetect
 
         if (_markerData.markerSpawnType == MarkerSpawnType.OnClose)
         {
-            gameObject.GetComponent<Renderer>().enabled = false;
+            Color color = gameObject.GetComponent<Renderer>().material.color;
+            color = new Color(255f, 255f, 0f);
+            gameObject.GetComponent<Renderer>().material.color = color;
         }
     }
     public void TakeRayHit()
@@ -82,7 +84,9 @@ public class ARMarkerObject : MonoBehaviour, IDetect
     {
         if (_isRenderOn == false)
         {
-            gameObject.GetComponent<Renderer>().enabled = true;
+            Color color = gameObject.GetComponent<Renderer>().material.color;
+            color = new Color(255f, 0f, 255f);
+            gameObject.GetComponent<Renderer>().material.color = color;
 
             _isRenderOn = true;
         }
