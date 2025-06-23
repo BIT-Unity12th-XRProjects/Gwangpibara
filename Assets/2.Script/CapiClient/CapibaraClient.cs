@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 
 public enum HeadType
 {
-    MapData, RoomMake
+    MapDataUpload, MapDataDownload, RoomMake, 
 }
 
 
@@ -45,7 +45,7 @@ public class CapibaraClient : MonoBehaviour
 
     private void HandleReceiveData(HeadType _reqType, byte[] _validData)
     {
-        if (_reqType == HeadType.MapData)
+        if (_reqType == HeadType.MapDataUpload)
         {
           
         }
@@ -59,7 +59,7 @@ public class CapibaraClient : MonoBehaviour
     private void SendMapDate()
     {
         List<byte> mapReqData = new List<byte>();
-        mapReqData.Add((byte)HeadType.MapData); //헤드 
+        mapReqData.Add((byte)HeadType.MapDataUpload); //헤드 
         MapData mapData = MasterDataManager.Instance.GetMasterMapData(1);
         List<GameMarkerData> gameMakerList = mapData.markerList;
         mapReqData.Add((byte)gameMakerList.Count); //마커들 정보 수
