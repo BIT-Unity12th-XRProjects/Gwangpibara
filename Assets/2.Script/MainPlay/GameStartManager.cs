@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class GameStartManager : MonoBehaviour
@@ -62,9 +63,12 @@ public class GameStartManager : MonoBehaviour
             }
         }
         mapParent = new GameObject("MapParent").transform;
+        
         mapParent.position = Vector3.zero; //원점 0,0,0 
         yield return StartCoroutine(MapGenerator.Instance.C_CallGenerator(1, mapParent)); //맵 만드는 작업을 호출하고 맵 완성을 기다릴것
         mapParent.position = originPosition; //맵 부모 좌표를 이미지트래킹으로 잡은 원점으로 이동
+        mapParent.rotation = Quaternion.Euler(-90f, 0f, 0f);
+        mapParent.rotation = originQuaternion;
         Debug.Log("이동한 맵 좌표 " + mapParent.position);
         _mainController.StartGame(10101); //로드할 단계로 게임 시작 호출, 테스트값  10101
         UIManager.Instance.RequestOpenUI<GameUI>();
@@ -72,11 +76,13 @@ public class GameStartManager : MonoBehaviour
 
     private Transform mapParent;
     private Vector3 originPosition;
+    private Quaternion originQuaternion;
     private bool isFind = false;
-    private void SetOriginPos(Vector3 position)
+    private void SetOriginPos(Vector3 position, Quaternion quaternion)
     {
         Debug.Log(position + "원점으로 잡혔다.");
         originPosition = position;
+        originQuaternion = quaternion;
         isFind = true;
     }
 
