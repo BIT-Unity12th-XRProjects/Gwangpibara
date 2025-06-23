@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23914862008890870}
   - component: {fileID: 65768120757988866}
   m_Layer: 30
-  m_Name: Cube
+  m_Name: MarkerRenderer
   m_TagString: ObjectPosition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,12 +154,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   markerData:
-    id: 
-    prefabID: 0
-    dropItemID: 0
-    acquireStep: 0
-    removeStep: 0
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 0}
-    markerSpawnType: 0
-    markerType: 0
+    ID: 
+    PrefabID: 0
+    DropItemID: 0
+    AcquireStep: 0
+    RemoveStep: 0
+    Position: {x: 0, y: 0, z: 0}
+    Rotation: {x: 0, y: 0, z: 0, w: 0}
+    Scale: {x: 0, y: 0, z: 0}
+    MarkerSpawnType: 0
+    MarkerType: 0

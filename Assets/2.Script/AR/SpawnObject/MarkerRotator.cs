@@ -31,7 +31,7 @@ public class MarkerRotator : MonoBehaviour
         HideRotateUI();
     }
 
-    // 선택한 오브젝트  회전 UI 보여주기
+    // 선택한 오브젝트 회전 UI 보여주기
     public void ShowRotateUI(GameObject target)
     {
         selectedMarker = target;

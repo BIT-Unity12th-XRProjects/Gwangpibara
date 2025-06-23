@@ -70,7 +70,7 @@ public class UpdateMarkerDataUI : MonoBehaviour
         
         data.Position = targetObject.transform.position;
         data.Rotation = targetObject.transform.rotation;
-
+        data.Scale = targetObject.transform.localScale;
         
         _saveMarker.UpdateMarkerDataInList(data);
     }
