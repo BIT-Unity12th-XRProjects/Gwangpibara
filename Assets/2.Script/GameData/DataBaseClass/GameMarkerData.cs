@@ -20,8 +20,9 @@ public class GameMarkerData
     public int deleteStep;
     public Vector3 position;
     public Quaternion rotation;
-    public MarkerSpawnType markerSpawnType = MarkerSpawnType.Base;
-    public MarkerType markerType = MarkerType.DropItem;
+    public MarkerSpawnType markerSpawnType;
+    public MarkerType markerType;
+    public Vector3 scale;
     public GameObject markerGameObject;
 
     public GameMarkerData(int id, Vector3 spawnPosition)
@@ -46,6 +47,7 @@ public class GameMarkerData
         deleteStep = markerData.removeStep;
         position = markerData.position;
         rotation = markerData.rotation;
+        scale = markerData.scale;
     }
 
     public GameMarkerData(GameMarkerData origin)
@@ -59,6 +61,7 @@ public class GameMarkerData
         deleteStep = origin.deleteStep;
         position = origin.position;
         rotation = origin.rotation;
+        scale = origin.scale;
         markerGameObject = origin.markerGameObject; //GameObject는 참조 복사입니다.
     }
 }
