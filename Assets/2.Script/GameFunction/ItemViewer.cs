@@ -70,7 +70,7 @@ public class ItemViewer : MonoBehaviour
 
         _itemObject = Instantiate(targetObject, new Vector3(0, 0, 0), Quaternion.identity, _cam.transform);
 
-        _itemObject.transform.localScale = new Vector3(_maxZoom, _maxZoom, _maxZoom);
+        _itemObject.transform.localScale = new Vector3(_minZoom, _minZoom, _minZoom);
         _itemObject.transform.localPosition = Vector3.forward;
     }
 
@@ -150,10 +150,10 @@ public class ItemViewer : MonoBehaviour
             float dy = _rotationInput.y;
 
             // 좌우 회전 
-            _itemObject.transform.Rotate(Vector3.up, -dx * _rotationSpeed, Space.Self);
+            _itemObject.transform.Rotate(Vector3.up, -dx * _rotationSpeed, Space.World);
 
             // 상하 회전 
-            _itemObject.transform.Rotate(Vector3.right, dy * _rotationSpeed, Space.Self);
+            _itemObject.transform.Rotate(Vector3.right, dy * _rotationSpeed, Space.World);
         }
     }
 
