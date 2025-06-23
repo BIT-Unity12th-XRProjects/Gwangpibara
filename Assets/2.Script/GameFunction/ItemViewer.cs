@@ -22,6 +22,8 @@ public class ItemViewer : MonoBehaviour
     private void Awake()
     {
         _inputActions = new PlayerInputActions();
+
+        UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport.Enable();
     }
 
     private void OnEnable()
@@ -148,10 +150,10 @@ public class ItemViewer : MonoBehaviour
             float dy = _rotationInput.y;
 
             // 좌우 회전 
-            _itemObject.transform.Rotate(Vector3.up, -dx * _rotationSpeed, Space.World);
+            _itemObject.transform.Rotate(Vector3.up, -dx * _rotationSpeed, Space.Self);
 
             // 상하 회전 
-            _itemObject.transform.Rotate(Vector3.right, dy * _rotationSpeed, Space.World);
+            _itemObject.transform.Rotate(Vector3.right, dy * _rotationSpeed, Space.Self);
         }
     }
 
