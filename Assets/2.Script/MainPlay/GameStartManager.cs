@@ -61,11 +61,16 @@ public class GameStartManager : MonoBehaviour
                 break;
             }
         }
-        yield return StartCoroutine(MapGenerator.Instance.C_CallGenerator(1)); //맵 만드는 작업을 호출하고 맵 완성을 기다릴것
+        mapParent = new GameObject("MapParent").transform;
+        mapParent.position = Vector3.zero; //원점 0,0,0 
+        yield return StartCoroutine(MapGenerator.Instance.C_CallGenerator(1, mapParent)); //맵 만드는 작업을 호출하고 맵 완성을 기다릴것
+        mapParent.position = originPosition; //맵 부모 좌표를 이미지트래킹으로 잡은 원점으로 이동
+        Debug.Log("이동한 맵 좌표 " + mapParent.position);
         _mainController.StartGame(10101); //로드할 단계로 게임 시작 호출, 테스트값  10101
         UIManager.Instance.RequestOpenUI<GameUI>();
     }
 
+    private Transform mapParent;
     private Vector3 originPosition;
     private bool isFind = false;
     private void SetOriginPos(Vector3 position)
