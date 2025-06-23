@@ -24,6 +24,11 @@ public class GameMarkerData
     public MarkerType markerType = MarkerType.DropItem;
     public GameObject markerGameObject;
 
+    public GameMarkerData()
+    {
+
+    }
+
     public GameMarkerData(int id, Vector3 spawnPosition)
     {
         markId = id;
