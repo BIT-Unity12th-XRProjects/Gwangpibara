@@ -1,13 +1,12 @@
-﻿using UnityEngine;
+﻿using Unity.XR.CoreUtils;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class ItemViewer : MonoBehaviour
 {
-    [Header("Prefab & Spawn")]
-    [SerializeField] private GameObject _testPrefab;
-    [SerializeField] private string _name;
-
     private GameObject _itemObject;
+    private GameObject _XROriginObject;
+    [SerializeField] private GameObject _testPrefab;
 
     [Header("Rotation Settings")]
     [SerializeField] private float _rotationSpeed = 0.2f;
@@ -24,6 +23,11 @@ public class ItemViewer : MonoBehaviour
     private void Awake()
     {
         _inputActions = new PlayerInputActions();
+    }
+
+    private void Start()
+    {
+        _XROriginObject = FindAnyObjectByType<XROrigin>().gameObject;
     }
 
     private void OnEnable()
@@ -53,6 +57,23 @@ public class ItemViewer : MonoBehaviour
     {
         RotateObject();
         Zoom();
+    }
+
+    public void ViewItem(ItemViewData itemViewData)
+    {
+        //_name = itemData.Name;
+        GameObject targetObject = itemViewData.itemPrefab;
+        if (targetObject == null)
+        {
+            targetObject = _testPrefab;
+        }
+
+        _itemObject = Instantiate(targetObject, _XROriginObject.transform.forward , Quaternion.identity, _XROriginObject.transform);
+    }
+
+    public void DestroyItem()
+    {
+        Destroy(_itemObject);
     }
 
     private void Zoom()
@@ -131,18 +152,6 @@ public class ItemViewer : MonoBehaviour
             // 상하 회전 
             _itemObject.transform.Rotate(Vector3.right, dy * _rotationSpeed, Space.World);
         }
-    }
-
-    public void ViewItem(ItemViewData itemViewData)
-    {
-        //_name = itemData.Name;
-        GameObject targetObject = itemViewData.itemPrefab;
-        if (targetObject == null)
-        {
-            targetObject = _testPrefab;
-        }
-
-        _itemObject = Instantiate(targetObject, new Vector3(0, 0, 0), Quaternion.identity);
     }
 
     private void OnLookPerformed(InputAction.CallbackContext context)
