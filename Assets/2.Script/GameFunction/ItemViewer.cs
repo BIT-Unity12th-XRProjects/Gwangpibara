@@ -1,11 +1,10 @@
-﻿using Unity.XR.CoreUtils;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class ItemViewer : MonoBehaviour
 {
     private GameObject _itemObject;
-    private GameObject _XROriginObject;
+    private Camera _cam;
     [SerializeField] private GameObject _testPrefab;
 
     [Header("Rotation Settings")]
@@ -16,8 +15,8 @@ public class ItemViewer : MonoBehaviour
 
     [Header("Zoom Settings")]
     [SerializeField] private float _zoomSpeed = 0.01f;
-    [SerializeField] private float _minZoom = 0.5f;
-    [SerializeField] private float _maxZoom = 2f;
+    [SerializeField] private float _minZoom = 0.1f;
+    [SerializeField] private float _maxZoom = 0.2f;
     private float _prevPinchDistance = 0f;
 
     private void Awake()
@@ -25,13 +24,10 @@ public class ItemViewer : MonoBehaviour
         _inputActions = new PlayerInputActions();
     }
 
-    private void Start()
-    {
-        _XROriginObject = FindAnyObjectByType<XROrigin>().gameObject;
-    }
-
     private void OnEnable()
     {
+        _cam = Camera.main;
+
         _inputActions.Player.Enable();
 
         _inputActions.Player.Look.performed += OnLookPerformed;
@@ -63,12 +59,17 @@ public class ItemViewer : MonoBehaviour
     {
         //_name = itemData.Name;
         GameObject targetObject = itemViewData.itemPrefab;
+
         if (targetObject == null)
         {
-            targetObject = _testPrefab;
+            Debug.Log("아이템 데이터가 이상한듯");
+            return;
         }
 
-        _itemObject = Instantiate(targetObject, _XROriginObject.transform.forward , Quaternion.identity, _XROriginObject.transform);
+        _itemObject = Instantiate(targetObject, new Vector3(0, 0, 0), Quaternion.identity, _cam.transform);
+
+        _itemObject.transform.localScale = new Vector3(_maxZoom, _maxZoom, _maxZoom);
+        _itemObject.transform.localPosition = Vector3.forward;
     }
 
     public void DestroyItem()
