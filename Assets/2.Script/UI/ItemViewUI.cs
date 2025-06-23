@@ -25,6 +25,6 @@ public class ItemViewUI : BaseUI
 
     public void OnClickedExitButton()
     {
-
+        CloseUI(true);
     }
 }

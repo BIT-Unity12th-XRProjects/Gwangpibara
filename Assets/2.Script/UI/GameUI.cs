@@ -62,7 +62,7 @@ public class GameUI : BaseUI
 
     private void OnClickedARButton()
     {
-
+        UIManager.Instance.RequestOpenUI<ARPlayUI>();
     }
 
     private void OnClickedBeforeButton()
