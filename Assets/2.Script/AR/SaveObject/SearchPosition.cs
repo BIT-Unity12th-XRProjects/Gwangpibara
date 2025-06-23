@@ -25,6 +25,7 @@ public class SearchPosition : MonoBehaviour
     [SerializeField] private MarkerEraser _markerEraser;
     [SerializeField] private MarkerMover _markerMover;
     [SerializeField] private MarkerRotator _markerRotator;
+    [SerializeField] private MarkerScaler _markerScaler;
     
     
     private Transform _trackedImageTransform;
@@ -101,6 +102,11 @@ public class SearchPosition : MonoBehaviour
                     return;
                 }
 
+                if (_markerScaler.isScaleMode)
+                {
+                    return;
+                }
+
                 if (_arMarkerSpawner.isSpawning)
                 {
                     return;
@@ -132,7 +138,9 @@ public class SearchPosition : MonoBehaviour
         _selectedObject = newSelected;
     }
     
-    // 마커 업데이트에서 위치변경 버튼
+    /// <summary>
+    /// 마커 업데이트 UI에서 포지션 변경
+    /// </summary>
     public void EnableMoveMode()
     {
         _markerMover.OnMoveModeButtonPressed();
@@ -143,7 +151,9 @@ public class SearchPosition : MonoBehaviour
         }
     }
 
-    // 마커 업데이트에서 각도변경 버튼
+    /// <summary>
+    /// 마커 업데이트 UI에서 각도변경 버튼
+    /// </summary>
     public void EnableRotateMode()
     {
         _markerRotator.OnRotateModeButtonPressed();
@@ -151,6 +161,19 @@ public class SearchPosition : MonoBehaviour
         if (_selectedObject != null)
         {
             _markerRotator.SetSelectedMarker(_selectedObject);
+        }
+    }
+
+    /// <summary>
+    /// 마커 업데이트 UI에서 Scale 조절
+    /// </summary>
+    public void EnableScaleMode()
+    {
+        _markerScaler.OnScaleModeButtonPressed();
+
+        if (_selectedObject != null)
+        {
+            _markerScaler.SetSelectedMarker(_selectedObject);
         }
     }
 

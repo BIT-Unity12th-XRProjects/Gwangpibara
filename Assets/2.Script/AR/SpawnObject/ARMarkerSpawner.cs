@@ -5,7 +5,8 @@ using UnityEngine.EventSystems;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 public class ARMarkerSpawner : MonoBehaviour
 {
@@ -65,6 +66,7 @@ public class ARMarkerSpawner : MonoBehaviour
                 0,
                 hitPose.position,
                 hitPose.rotation,
+                new Vector3(1,1,1),
                 MarkerSpawnType.Base,
                 MarkerType.DropItem
             );

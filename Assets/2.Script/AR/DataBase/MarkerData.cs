@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using UnityEngine.UIElements;
 
 
 [Serializable]
@@ -12,6 +13,7 @@ public class MarkerData
     public int RemoveStep;
     public Vector3 Position;
     public Quaternion Rotation;
+    public Vector3 Scale;
     public MarkerSpawnType MarkerSpawnType = MarkerSpawnType.Base;
     public MarkerType MarkerType = MarkerType.DropItem; 
     
@@ -23,6 +25,7 @@ public class MarkerData
         int removeStep,
         Vector3 position,
         Quaternion rotation,
+        Vector3 scale,
         MarkerSpawnType markerSpawnType = MarkerSpawnType.Base,
         MarkerType markerType = MarkerType.DropItem)
     {
@@ -35,6 +38,7 @@ public class MarkerData
         this.RemoveStep = removeStep;
         this.Position = position;
         this.Rotation = rotation;
+        this.Scale = scale;
     }
 
 }
