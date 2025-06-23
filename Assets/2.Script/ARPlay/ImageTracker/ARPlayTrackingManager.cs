@@ -1,12 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 
 public class ARPlayTrackingManager : MonoBehaviour
 {
-    public Action<Vector3> OnTrackingEnd;
+    public Action<Vector3, Quaternion> OnTrackingEnd;
     [SerializeField] ARPlayImageTracker _arPlayImageTracker;
     
     private ARTrackedImage _currentTrackedImage;
@@ -76,7 +77,7 @@ public class ARPlayTrackingManager : MonoBehaviour
 
         _trackedImageTransform = FixImageTransform(_imagePrefab, avgPos, avgRot);
         Debug.Log(_trackedImageTransform);
-        OnTrackingEnd?.Invoke(_trackedImageTransform.position);
+        OnTrackingEnd?.Invoke(_trackedImageTransform.position, _trackedImageTransform.rotation);
     }
 
     public void AddSample(Vector3 position, Quaternion rotation)
