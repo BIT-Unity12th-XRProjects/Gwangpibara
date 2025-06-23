@@ -15,7 +15,7 @@ public class ItemViewUI : BaseUI
         base.Awake();
         _exitButton.onClick.AddListener(OnClickedExitButton);
         _canvas = GetComponent<Canvas>();
-        _canvas.planeDistance = 1;
+        _canvas.planeDistance = 2;
     }
 
     public override void SetInfo(BaseUIData uiData)
