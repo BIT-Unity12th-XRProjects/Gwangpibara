@@ -66,6 +66,7 @@ public class MapDownload
             marker.rotation.x = BitConverter.ToSingle(data, index); index += 4;
             marker.rotation.y = BitConverter.ToSingle(data, index); index += 4;
             marker.rotation.z = BitConverter.ToSingle(data, index); index += 4;
+            marker.rotation.w = BitConverter.ToSingle(data, index); index += 4;
 
             // vector3 Scale
             marker.scale.x = BitConverter.ToSingle(data, index); index += 4;
