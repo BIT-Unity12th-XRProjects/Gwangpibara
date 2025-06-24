@@ -21,7 +21,11 @@ public class MapSaver
 
             int mapNumber = 1234;
             int.TryParse(mapName, out mapNumber);
-           
+            if(mapNumber == 0)
+            {
+                mapNumber = 1234;
+            }
+            
             mapReqData.AddRange(BitConverter.GetBytes(mapNumber)); //맵 이름
 
             List<MarkerData> gameMakerList = mapData;
