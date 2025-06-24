@@ -68,8 +68,8 @@ public class MarkerScaler : MonoBehaviour
 
         Vector3 newScale = selectedMarker.transform.localScale + delta;
 
-        // 최소 스케일 제한 (0.1 이상)
-        if (newScale.x < 0.05f || newScale.y < 0.1f || newScale.z < 0.05f)
+        // 최소 스케일 제한
+        if (newScale.x < 0.15f || newScale.y < 0.3f || newScale.z < 0.15f)
             return;
 
         selectedMarker.transform.localScale = newScale;

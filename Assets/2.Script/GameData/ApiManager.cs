@@ -26,10 +26,6 @@ public class ApiManager : MonoBehaviour
 
             string json = www.downloadHandler.text;
 
-            TempMarkerData[] markers = JsonHelper.FromJson<TempMarkerData>(json);
-
-            foreach (var p in markers)
-                Debug.Log($"Player {p.id}: {p.prefabID}");
         }
     }
 }
