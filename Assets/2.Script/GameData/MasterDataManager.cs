@@ -182,4 +182,31 @@ public class MasterDataManager : MonoBehaviour
         }
     }
 
+    public IEnumerator DownLoadMap(List<GameMarkerData> markList, int mapName)
+    {
+        MapData map = new MapData();
+        map.markerList = markList;
+        for (int i = 0; i < markList.Count; i++)
+        {
+            GameMarkerData markerData = markList[i];
+            var handle = Addressables.LoadAssetAsync<GameObject>("MarkPrefab"
+                                                + markerData.markId.ToString());
+            yield return handle;
+            if (handle.Status == AsyncOperationStatus.Succeeded)
+            {
+                //  Debug.Log(item.ID + " 프리팹 로드");
+                markerData.markerGameObject = handle.Result;
+            }
+            else
+            {
+                Debug.LogError($"게임오브젝트: 디펄트");
+                markerData.markerGameObject = Resources.Load<GameObject>("TestItemPrefab");
+            }
+        }
+        if(_masterMapDataDictionary.ContainsKey(mapName) == false)
+        {
+            _masterMapDataDictionary.Add(mapName, null);
+        }
+        _masterMapDataDictionary[mapName] = map;
+    }
 }
