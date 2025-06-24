@@ -13,7 +13,7 @@ public class MapSaver
     public void UpLoadMapDate(List<MarkerData> mapData, string ip, int mapName)
     {
         networkManager = new NetworkManager();
-        networkManager.Connect(IPAddress.Parse(ip), 5000);
+        networkManager.Connect(IPAddress.Parse("192.168.0.44"), 5000);
         networkManager.OnConnected += () => {
 
             List<byte> mapReqData = new List<byte>();
