@@ -33,7 +33,7 @@ public class UpdateMarkerDataUI : MonoBehaviour
         _panel.SetActive(true);
         targetObject = obj;
         
-        MarkerData targetMarkerData = targetObject.GetComponentInParent<MarkerDataComponent>().markerData;
+        MarkerData targetMarkerData = targetObject.GetComponent<MarkerDataComponent>().markerData;
         
         _markerName.text = targetMarkerData.prefabID.ToString();
         _changeDropId.text = targetMarkerData.dropItemID.ToString();
@@ -45,7 +45,7 @@ public class UpdateMarkerDataUI : MonoBehaviour
 
     public void ChangeMarkerData()
     {
-        var targetMarkerData = targetObject.GetComponentInParent<MarkerDataComponent>();
+        var targetMarkerData = targetObject.GetComponent<MarkerDataComponent>();
         MarkerData data = targetMarkerData.markerData;
 
         data.prefabID = Convert.ToInt32(_markerName.text);

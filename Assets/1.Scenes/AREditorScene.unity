@@ -18963,7 +18963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd8f6360df88b040a1ce15548ff8542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markerPrefab: {fileID: 1934569588295450, guid: 194ee953648a5974a928128c236ec0fb,
+  markerPrefab: {fileID: 1642443851960826533, guid: 0cf59f8cc1295c646a7b27bb13f0dae8,
     type: 3}
   saveMarker: {fileID: 2072806181}
 --- !u!4 &1802878229
@@ -21882,6 +21882,12 @@ PrefabInstance:
       propertyPath: _markerImage
       value: 
       objectReference: {fileID: 1060942957}
+    - target: {fileID: 300963516661314746, guid: cff11f6f56fcdb44dabbc7abae56fc67,
+        type: 3}
+      propertyPath: markerPrefab
+      value: 
+      objectReference: {fileID: 1642443851960826533, guid: 0cf59f8cc1295c646a7b27bb13f0dae8,
+        type: 3}
     - target: {fileID: 3374516738758219237, guid: cff11f6f56fcdb44dabbc7abae56fc67,
         type: 3}
       propertyPath: m_LocalPosition.x

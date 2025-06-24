@@ -43,6 +43,8 @@ public class SaveMarker : MonoBehaviour
         }
 
         markerDataHandler.SaveMarkerList(loadMarkerList, fileName);
+        MapSaver saver = new();
+        saver.UpLoadMapDate(loadMarkerList, "테스트","1234");
         Debug.Log(loadMarkerList.Count);
     }
     
