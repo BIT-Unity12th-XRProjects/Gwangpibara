@@ -9,6 +9,7 @@ public class SaveMarker : MonoBehaviour
     public List<MarkerData> markerDatas;
     [SerializeField] private ARMarkerSpawner _arMarkerSpawner;
     [SerializeField] private SearchPosition _searchPosition;
+    [SerializeField] private MarkersApiClient _markersApiClient;
     
     // 마커 데이터 저장 (저장버튼)
     public void SaveMarkerPosition(string fileName)
@@ -41,8 +42,18 @@ public class SaveMarker : MonoBehaviour
                 loadMarkerList.Add(marker);
             }
         }
-
+        
         markerDataHandler.SaveMarkerList(loadMarkerList, fileName);
+
+        List<ServerMarkerData> serverMarkerDatas = new List<ServerMarkerData>();
+
+        foreach (var marker in loadMarkerList)
+        {
+            serverMarkerDatas.Add(new ServerMarkerData(marker));
+        }
+
+        StartCoroutine(_markersApiClient.UpdateMarkersBulk(serverMarkerDatas.ToArray()));
+        
         MapSaver saver = new();
         saver.UpLoadMapDate(loadMarkerList, "테스트","1234");
         Debug.Log(loadMarkerList.Count);

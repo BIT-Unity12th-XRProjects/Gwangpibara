@@ -18,9 +18,6 @@ public class ARPlayTrackingManager : MonoBehaviour
     private List<Quaternion> _rotationSamples = new List<Quaternion>();
     public bool isSampling = false;
     
-    // 트래킹 후 원점 좌표값
-    public Transform GetTrackedImageTransform() => _trackedImageTransform;
-    
     private void OnEnable()
     {
         _arPlayImageTracker.OnTrackingStarted += HandleTrackingStarted;
