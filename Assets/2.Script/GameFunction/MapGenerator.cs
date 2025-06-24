@@ -28,6 +28,7 @@ public class MapGenerator : Singleton<MapGenerator>
         foreach (GameMarkerData markerData in mapData.markerList)
         {
             GameObject newARMarkerObject = Instantiate(markerData.markerGameObject, markerData.position, markerData.rotation, mapParent);
+            newARMarkerObject.transform.localScale = markerData.scale;
             newARMarkerObject.AddComponent<ARMarkerObject>().Setting(markerData);
         }
     }
