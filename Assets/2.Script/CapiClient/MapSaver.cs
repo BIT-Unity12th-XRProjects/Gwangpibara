@@ -10,7 +10,7 @@ public class MapSaver
     private NetworkManager networkManager;
 
 
-    public void UpLoadMapDate(List<MarkerData> mapData, string ip, int mapName)
+    public void UpLoadMapDate(List<MarkerData> mapData, string ip, string mapName)
     {
         networkManager = new NetworkManager();
         networkManager.Connect(IPAddress.Parse("192.168.0.44"), 5000);
@@ -19,7 +19,10 @@ public class MapSaver
             List<byte> mapReqData = new List<byte>();
             mapReqData.Add((byte)HeadType.MapDataUpload); //헤드 
 
-            mapReqData.AddRange(BitConverter.GetBytes(mapName)); //맵 이름
+            int mapNumber = 1234;
+            int.TryParse(mapName, out mapNumber);
+           
+            mapReqData.AddRange(BitConverter.GetBytes(mapNumber)); //맵 이름
 
             List<MarkerData> gameMakerList = mapData;
             mapReqData.AddRange(BitConverter.GetBytes(gameMakerList.Count)); //마커들 정보 수

@@ -13,7 +13,7 @@ public class MapUploader : MonoBehaviour
             MapSaver saver = new();
             SaveMarkerData loadMarkerData = new();
             List<MarkerData> loadData = loadMarkerData.LoadResourceJson("markerdatas");
-            saver.UpLoadMapDate(loadData, ParseCurIP.GetLocalIP(), 1234);
+            saver.UpLoadMapDate(loadData, ParseCurIP.GetLocalIP(), "무지막지");
         }
     }
 }
