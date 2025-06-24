@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 public class MarkersApiClient : MonoBehaviour
 {
 
-    private string _baseUrl = "http://localhost:5000";
+    private string _baseUrl = "http://localhost:32774";
 
     public IEnumerator GetMarkerById(int id, Action<ServerMarkerData> onSuccess, Action<string> onError)
     {

@@ -25,6 +25,11 @@ public class GameMarkerData
     public Vector3 scale;
     public GameObject markerGameObject;
 
+    public GameMarkerData()
+    {
+        
+    }
+
     public GameMarkerData(int id, Vector3 spawnPosition)
     {
         markId = id;

@@ -1604,6 +1604,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122368269}
   m_CullTransparentMesh: 1
+--- !u!1 &141077788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 141077790}
+  - component: {fileID: 141077789}
+  m_Layer: 0
+  m_Name: API
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &141077789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141077788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d47c122975cf7409b38ccaf3e125cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &141077790
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141077788}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.2440004, y: 0.41647452, z: 0.36281335}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &144603042
 GameObject:
   m_ObjectHideFlags: 0
@@ -18963,7 +19007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd8f6360df88b040a1ce15548ff8542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markerPrefab: {fileID: 1934569588295450, guid: 194ee953648a5974a928128c236ec0fb,
+  markerPrefab: {fileID: 1642443851960826533, guid: 0cf59f8cc1295c646a7b27bb13f0dae8,
     type: 3}
   saveMarker: {fileID: 2072806181}
 --- !u!4 &1802878229
@@ -21251,6 +21295,7 @@ MonoBehaviour:
   markerDatas: []
   _arMarkerSpawner: {fileID: 5783872363381660802}
   _searchPosition: {fileID: 1047073162}
+  _markersApiClient: {fileID: 141077789}
 --- !u!4 &2072806182
 Transform:
   m_ObjectHideFlags: 0
@@ -21882,6 +21927,12 @@ PrefabInstance:
       propertyPath: _markerImage
       value: 
       objectReference: {fileID: 1060942957}
+    - target: {fileID: 300963516661314746, guid: cff11f6f56fcdb44dabbc7abae56fc67,
+        type: 3}
+      propertyPath: markerPrefab
+      value: 
+      objectReference: {fileID: 1642443851960826533, guid: 0cf59f8cc1295c646a7b27bb13f0dae8,
+        type: 3}
     - target: {fileID: 3374516738758219237, guid: cff11f6f56fcdb44dabbc7abae56fc67,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21985,3 +22036,4 @@ SceneRoots:
   - {fileID: 1328131356}
   - {fileID: 1757742146}
   - {fileID: 633230299}
+  - {fileID: 141077790}
