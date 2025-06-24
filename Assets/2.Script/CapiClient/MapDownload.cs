@@ -67,6 +67,12 @@ public class MapDownload
             marker.rotation.y = BitConverter.ToSingle(data, index); index += 4;
             marker.rotation.z = BitConverter.ToSingle(data, index); index += 4;
 
+            // vector3 Scale
+            marker.scale.x = BitConverter.ToSingle(data, index); index += 4;
+            marker.scale.y = BitConverter.ToSingle(data, index); index += 4;
+            marker.scale.z = BitConverter.ToSingle(data, index); index += 4;
+
+
             markers.Add(marker);
         }
         GameMakerList = markers;

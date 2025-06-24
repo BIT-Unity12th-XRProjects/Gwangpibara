@@ -60,6 +60,11 @@ public class MapSaver
                 mapReqData.AddRange(BitConverter.GetBytes(marker.rotation.x));
                 mapReqData.AddRange(BitConverter.GetBytes(marker.rotation.y));
                 mapReqData.AddRange(BitConverter.GetBytes(marker.rotation.z));
+
+                // Vector3 scale (float 3개 = 12바이트)
+                mapReqData.AddRange(BitConverter.GetBytes(marker.scale.x));
+                mapReqData.AddRange(BitConverter.GetBytes(marker.scale.y));
+                mapReqData.AddRange(BitConverter.GetBytes(marker.scale.z));
             }
 
             networkManager.Send(mapReqData.ToArray());
