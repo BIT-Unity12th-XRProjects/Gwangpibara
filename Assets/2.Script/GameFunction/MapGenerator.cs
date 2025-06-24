@@ -9,7 +9,7 @@ public class MapGenerator : Singleton<MapGenerator>
     }
 
     /// <summary>
-    /// ¸Ê »ý¼º È£Ãâ ÇÔ¼ö
+    /// ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½ ï¿½Ô¼ï¿½
     /// </summary>
     /// <param name="themeNum"></param>
     public IEnumerator C_CallGenerator(int themeNum, Transform mapParent)
@@ -20,14 +20,14 @@ public class MapGenerator : Singleton<MapGenerator>
     }
 
     /// <summary>
-    /// ¸¶Ä¿¸¦ »ý¼ºÇÑ´Ù
+    /// ï¿½ï¿½Ä¿ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½
     /// </summary>
     /// <param name="mapData"></param>
     private void Generate(MapData mapData, Transform mapParent)
     {
         foreach (GameMarkerData markerData in mapData.markerList)
         {
-            GameObject newARMarkerObject = Instantiate(markerData.markerGameObject, markerData.position, markerData.rotation, mapParent);
+            GameObject newARMarkerObject = Instantiate(markerData.markerGameObject, markerData.position, mapParent.rotation * markerData.rotation, mapParent);
             newARMarkerObject.transform.localScale = markerData.scale;
             newARMarkerObject.AddComponent<ARMarkerObject>().Setting(markerData);
         }

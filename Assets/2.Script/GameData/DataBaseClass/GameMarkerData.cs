@@ -27,7 +27,7 @@ public class GameMarkerData
 
     public GameMarkerData()
     {
-
+        
     }
 
     public GameMarkerData(int id, Vector3 spawnPosition)
