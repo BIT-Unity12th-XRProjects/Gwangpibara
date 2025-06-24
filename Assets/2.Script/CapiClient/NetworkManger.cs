@@ -15,10 +15,12 @@ public class NetworkManager
     private IPAddress connectIp;
     private int connectPort;
 
+    private int tryCount = 0;
+
     public void Connect(IPAddress ipAdress, int portNumber)
     {
         // UnityEngine.Debug.Log("넷웟 연결시도해보기");
-
+        tryCount += 1;
         clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         // IPAddress ipAddress = new IPAddress(ip);
 
@@ -42,8 +44,17 @@ public class NetworkManager
         }
         catch
         {
-            UnityEngine.Debug.Log("연결 재시도");
-            Connect(connectIp, connectPort); // retry
+            
+            if(tryCount <= 5)
+            {
+                UnityEngine.Debug.Log("연결 재시도 " + tryCount);
+                Connect(connectIp, connectPort); // retry
+            }
+            else
+            {
+                UnityEngine.Debug.Log("횟수 초과 연결포기");
+            }
+            
         }
     }
 
