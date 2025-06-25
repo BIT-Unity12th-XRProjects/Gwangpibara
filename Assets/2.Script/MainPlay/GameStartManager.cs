@@ -65,24 +65,20 @@ public class GameStartManager : MonoBehaviour
             }
         }
 
-        MapDownload downloader = new();
-        downloader.DownloadMapDate("테스트로컬", 1234);
-        float escapeTime = 2f;
-        float curTime = 0f;
-        while (curTime < escapeTime)
-        {
-            if(downloader.GameMakerList != null)
+        //
+        List<GameMarkerData> gameDataList = new();
+        yield return StartCoroutine(_markersApiClient.GetAllMarkers(
+            markers =>
             {
-                //다운 받았으면 와일문알아서 나감
-                break;
-            }
-            curTime += Time.deltaTime;
-            yield return null;
-        }
+                Debug.Log("다운 성공");
+                DownloadGameMarkData(markers, gameDataList);
+            },
+            err => { }
+        ));
 
-        if(downloader.GameMakerList != null && downloader.GameMakerList.Count > 0)
+        if (gameDataList.Count > 0)
         {
-            yield return MasterDataManager.Instance.DownLoadMap(downloader.GameMakerList, 1234);
+            yield return MasterDataManager.Instance.DownLoadMap(gameDataList, 1234);
             _selectThemNumber = 1234;
             Debug.Log("다운받은게 있어서 1234 맵으로");
         }
@@ -90,6 +86,8 @@ public class GameStartManager : MonoBehaviour
         {
             Debug.Log("다운 받은게 없음");
         }
+
+        //
 
         //맵 생성
         mapParent = new GameObject("MapParent").transform;
@@ -105,6 +103,16 @@ public class GameStartManager : MonoBehaviour
         _mainController.StartGame(10101); //로드할 단계로 게임 시작 호출, 테스트값  10101
         UIManager.Instance.RequestOpenUI<GameUI>();
     }
+
+    private void DownloadGameMarkData(ServerMarkerData[] serverData, List<GameMarkerData> gameDataList)
+    {
+        for (int i = 0; i < serverData.Length; i++)
+        {
+            gameDataList.Add(new GameMarkerData(serverData[i]));
+        }
+    }
+
+    [SerializeField] private MarkersApiClient _markersApiClient;
 
     private Transform mapParent;
     private Vector3 originPosition;
