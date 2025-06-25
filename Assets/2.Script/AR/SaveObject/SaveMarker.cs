@@ -28,6 +28,7 @@ public class SaveMarker : MonoBehaviour
             if (existing != null)
             {
                 existing.prefabID = marker.prefabID;
+                existing.needItemID = marker.needItemID;
                 existing.dropItemID = marker.dropItemID;
                 existing.acquireStep = marker.acquireStep;
                 existing.removeStep = marker.removeStep;

@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class UpdateMarkerDataUI : MonoBehaviour
 {
     [SerializeField] private TMP_InputField _markerName;
+    [SerializeField] private TMP_InputField _changeNeedItemId;
     [SerializeField] private TMP_InputField _changeDropId;
     [SerializeField] private TMP_InputField _changeAcquireStep;
     [SerializeField] private TMP_InputField _changeremoveStep;
@@ -36,6 +37,7 @@ public class UpdateMarkerDataUI : MonoBehaviour
         MarkerData targetMarkerData = targetObject.GetComponent<MarkerDataComponent>().markerData;
         
         _markerName.text = targetMarkerData.prefabID.ToString();
+        _changeNeedItemId.text = targetMarkerData.needItemID.ToString();
         _changeDropId.text = targetMarkerData.dropItemID.ToString();
         _changeAcquireStep.text = targetMarkerData.acquireStep.ToString();
         _changeremoveStep.text = targetMarkerData.removeStep.ToString();
@@ -49,6 +51,11 @@ public class UpdateMarkerDataUI : MonoBehaviour
         MarkerData data = targetMarkerData.markerData;
 
         data.prefabID = Convert.ToInt32(_markerName.text);
+
+        if (int.TryParse(_changeNeedItemId.text, out int needItemID))
+        {
+            data.needItemID = needItemID;
+        }
 
         if (int.TryParse(_changeDropId.text, out var dropId))
         {
