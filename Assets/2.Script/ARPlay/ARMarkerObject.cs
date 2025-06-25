@@ -4,6 +4,7 @@ using UnityEngine;
 public class ARMarkerObject : MonoBehaviour, IDetect
 {
     private GameMarkerData _markerData;
+    private Renderer _renderer;
 
     // 초기화를 단속하기 위한 변수
     private bool _initialized = false;
@@ -11,6 +12,11 @@ public class ARMarkerObject : MonoBehaviour, IDetect
     // 아이템이 한번 생성되면 이후에 생성 되지 않게 하기위한 변수
     private bool _isCreate = false;
     private bool _isRenderOn = false;
+
+    private void Awake()
+    {
+        _renderer = GetComponent<Renderer>();
+    }
 
     void Start()
     {
@@ -22,6 +28,7 @@ public class ARMarkerObject : MonoBehaviour, IDetect
         Debug.Log($"_markId : {_markerData.markId}, _markerType : {_markerData.markerType}");
 
         OnCloseTypeSetting();
+        _renderer.enabled = false;
     }
 
     private void OnCloseTypeSetting()
@@ -77,6 +84,7 @@ public class ARMarkerObject : MonoBehaviour, IDetect
     public void TakeCloseOverlap()
     {
         Debug.Log("OverLap");
+        _renderer.enabled = true;
         CheckTypes();
     }
 
@@ -125,5 +133,10 @@ public class ARMarkerObject : MonoBehaviour, IDetect
             default:
                 break;
         }
+    }
+
+    public void NotTakeDetect()
+    {
+        _renderer.enabled = false;
     }
 }

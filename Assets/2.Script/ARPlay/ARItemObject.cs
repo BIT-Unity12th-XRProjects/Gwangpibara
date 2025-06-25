@@ -10,6 +10,13 @@ public class ARItemObject : MonoBehaviour, IDetect
     // 초기화를 단속하기 위한 변수
     private bool _initialized = false;
 
+    private Renderer _renderer;
+
+    private void Awake()
+    {
+        _renderer = GetComponent<Renderer>();
+    }
+
     void Start()
     {
         if (!_initialized)
@@ -18,6 +25,8 @@ public class ARItemObject : MonoBehaviour, IDetect
         }
 
         Debug.Log($"_itemData.ID : {_itemData.ID}, _itemData.Name : {_itemData.Name}");
+
+        _renderer.enabled = false;
     }
 
     public void TakeRayHit()
@@ -63,5 +72,12 @@ public class ARItemObject : MonoBehaviour, IDetect
     public void TakeCloseOverlap()
     {
         Debug.Log("OverLap");
+
+        _renderer.enabled = true;
+    }
+
+    public void NotTakeDetect()
+    {
+        _renderer.enabled = false;
     }
 }
