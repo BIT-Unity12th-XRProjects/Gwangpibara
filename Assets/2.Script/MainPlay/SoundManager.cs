@@ -6,12 +6,12 @@ using System.Collections;
 
 public enum BGMType
 { 
-
+    None,
 }
 
 public enum SFXType
 { 
-
+    None,
 }
 
 /// <summary>
