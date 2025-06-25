@@ -5,27 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf5360e8-5d80-45b7-889c-c49109de8a28" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/1.Scenes/AREditorScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Scenes/AREditorScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Script/AR/DataBase/MarkerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Script/AR/DataBase/MarkerData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Script/AR/LoadObject/MarkerLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Script/AR/LoadObject/MarkerLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Script/AR/SaveObject/SaveMarker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Script/AR/SaveObject/SaveMarker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Script/AR/SaveObject/SearchPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Script/AR/SaveObject/SearchPosition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Script/AR/SpawnObject/ARMarkerSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Script/AR/SpawnObject/ARMarkerSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Script/AR/Tracking/TrackedImageHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Script/AR/Tracking/TrackedImageHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Script/AR/UI/UpdateMarkerDataUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Script/AR/UI/UpdateMarkerDataUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Script/ARPlay/ARMarkerObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Script/ARPlay/ARMarkerObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3.Prefab/AR/AR Marker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3.Prefab/AR/AR Marker.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MobileARTemplateAssets/Prefabs/ARFeatheredPlane.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MobileARTemplateAssets/Prefabs/ARFeatheredPlane.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Gwangpibara/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gwangpibara/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8.ARLibrary/ARPlayImageLibrary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8.ARLibrary/ARPlayImageLibrary.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8.ARLibrary/ReferenceImageLibrary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8.ARLibrary/ReferenceImageLibrary.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Performant.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-Performant.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.learn.iet-framework/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.learn.iet-framework/Settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -33,27 +31,28 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/2.Script/AR/SpawnObject/MarkerMover.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2yl5PFyoSxzXO1LLfxvV6sTLh6E" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "90-ar-editor-마커이동-기능-구현",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Unity 에디터에 연결.Unity 에디터에 연결.executor&quot;: &quot;Debug&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;132-어드레서블-안드로이드-빌드에-어드레서블-포함시키기&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.34f1\Editor\Unity.exe" />
@@ -114,6 +113,9 @@
       <option name="presentableId" value="Default" />
       <updated>1750396297974</updated>
       <workItem from="1750396303544" duration="10690000" />
+      <workItem from="1750810054114" duration="5047000" />
+      <workItem from="1750819040801" duration="7357000" />
+      <workItem from="1750835509919" duration="2910000" />
     </task>
     <servers />
   </component>

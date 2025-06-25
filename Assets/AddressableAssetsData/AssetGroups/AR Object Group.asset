@@ -16,7 +16,7 @@ MonoBehaviour:
   m_GUID: 52931c1c20ac4ff409a308a97c392552
   m_SerializeEntries:
   - m_GUID: 07f6cdcbf39d482439995d3833894562
-    m_Address: MarkerPrefab10101
+    m_Address: MarkPrefab10101
     m_ReadOnly: 0
     m_SerializedLabels:
     - AR
