@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 public class MarkersApiClient : MonoBehaviour
 {
 
-    private string _baseUrl = "http://192.168.0.10:5000";
+    private string _baseUrl = "http://192.168.0.28:5000";
 
 /*    private void Start() //테스트용
     {

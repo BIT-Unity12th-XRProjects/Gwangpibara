@@ -2,7 +2,7 @@
 using UnityEngine;
 public enum MarkerType
 {
-    DropItem, Clue, SelfClue, Decoration, Wall
+    DropItem, Clue, SelfClue, Wall, Decoration
 }
 
 public enum MarkerSpawnType

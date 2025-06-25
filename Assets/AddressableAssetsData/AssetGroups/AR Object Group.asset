@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: AR Object Group
   m_GUID: 52931c1c20ac4ff409a308a97c392552
   m_SerializeEntries:
+  - m_GUID: 07f6cdcbf39d482439995d3833894562
+    m_Address: MarkerPrefab10101
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AR
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 432a9114aad134344a0e5b1f0e8887fd
     m_Address: Assets/4.Data/GameObjectData.asset
     m_ReadOnly: 0
