@@ -40,6 +40,38 @@ public class GameMarkerData
         position = spawnPosition;
     }
 
+    public GameMarkerData(ServerMarkerData serverData)
+    {
+        markId = serverData.prefabID;
+        name = $"Marker_테스트 이름"; // 또는 필요시 다른 방식으로 이름 지정
+        needItemId = serverData.needItemID;
+        dropItemId = serverData.dropItemID;
+        spawnStep = serverData.acquireStep;
+        deleteStep = serverData.removeStep;
+
+        position = new Vector3(
+            serverData.position.X,
+            serverData.position.Y,
+            serverData.position.Z
+        );
+
+        rotation = new Quaternion(
+            serverData.rotation.X,
+            serverData.rotation.Y,
+            serverData.rotation.Z,
+            serverData.rotation.W
+        );
+
+        scale = new Vector3(
+            serverData.scale.X,
+            serverData.scale.Y,
+            serverData.scale.Z
+        );
+
+        markerSpawnType = serverData.markerSpawnType;
+        markerType = serverData.markerType;
+    }
+
     public GameMarkerData(MarkerData markerData)
     {
         //MarkderData의 name은 GamMarkerData에서 ID
