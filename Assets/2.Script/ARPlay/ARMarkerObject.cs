@@ -1,18 +1,17 @@
 using System;
 using UnityEngine;
 
-public class ARMarkerObject : MonoBehaviour, IDetect
+public class ARMarkerObject : ARObject
 {
     private GameMarkerData _markerData;
-
-    // 초기화를 단속하기 위한 변수
-    private bool _initialized = false;
 
     // 아이템이 한번 생성되면 이후에 생성 되지 않게 하기위한 변수
     private bool _isCreate = false;
     private bool _isRenderOn = false;
 
-    void Start()
+    private int _WallLayerNum = 6;
+
+    protected override void Start()
     {
         if (!_initialized)
         {
@@ -21,7 +20,15 @@ public class ARMarkerObject : MonoBehaviour, IDetect
 
         Debug.Log($"_markId : {_markerData.markId}, _markerType : {_markerData.markerType}");
 
+        if (CheckWallType())
+        {
+            return;
+        }
+
         OnCloseTypeSetting();
+
+        _renderer.enabled = false;
+        _collider.enabled = false;
     }
 
     private void OnCloseTypeSetting()
@@ -30,12 +37,10 @@ public class ARMarkerObject : MonoBehaviour, IDetect
 
         if (_markerData.markerSpawnType == MarkerSpawnType.OnClose)
         {
-            Color color = gameObject.GetComponent<Renderer>().material.color;
-            color = new Color(255f, 255f, 0f);
-            gameObject.GetComponent<Renderer>().material.color = color;
+            _renderer.material.color = Color.yellow;
         }
     }
-    public void TakeRayHit()
+    public override void TakeRayHit()
     {
         Debug.Log("Ray Hit");
         CheckTypes();
@@ -62,11 +67,6 @@ public class ARMarkerObject : MonoBehaviour, IDetect
         }
     }
 
-    public void TakeClick()
-    {
-        Debug.Log("Click Obj");
-    }
-
     public void Setting(GameMarkerData markerData)
     {
         _markerData = markerData;
@@ -74,9 +74,15 @@ public class ARMarkerObject : MonoBehaviour, IDetect
         _initialized = true;
     }
 
-    public void TakeCloseOverlap()
+    public override void TakeCloseOverlap()
     {
-        Debug.Log("OverLap");
+        if (CheckWallType())
+        {
+            return;
+        }
+
+        base.TakeCloseOverlap();
+
         CheckTypes();
     }
 
@@ -84,9 +90,7 @@ public class ARMarkerObject : MonoBehaviour, IDetect
     {
         if (_isRenderOn == false)
         {
-            Color color = gameObject.GetComponent<Renderer>().material.color;
-            color = new Color(255f, 0f, 255f);
-            gameObject.GetComponent<Renderer>().material.color = color;
+            _renderer.material.color = Color.blue;
 
             _isRenderOn = true;
         }
@@ -107,7 +111,7 @@ public class ARMarkerObject : MonoBehaviour, IDetect
                 break;
             case MarkerType.Decoration:
                 break;
-            case MarkerType.Trap:
+            case MarkerType.Wall:
                 break;
             default:
                 break;
@@ -125,5 +129,30 @@ public class ARMarkerObject : MonoBehaviour, IDetect
             default:
                 break;
         }
+    }
+
+    public override void NotTakeDetect()
+    {
+        if (CheckWallType())
+        {
+            return;
+        }
+
+        base.NotTakeDetect();
+    }
+
+    public override void TakeClick()
+    {
+        Debug.Log("Click");
+    }
+
+    private bool CheckWallType()
+    {
+        if (_markerData.markerType == MarkerType.Wall)
+        {
+            gameObject.layer = _WallLayerNum;
+            return true;
+        }
+        return false;
     }
 }
