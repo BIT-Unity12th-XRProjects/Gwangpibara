@@ -12,6 +12,8 @@ public class MarkerLoader : MonoBehaviour
     private SaveMarkerData _saveMarkerData;
     private List<GameObject> spawnedMarkers = new List<GameObject>();
     private string _lastLoadedFileName = null;
+    
+    [SerializeField] private MarkersApiClient _markersApiClient;
 
     private void Awake()
     {
@@ -33,28 +35,19 @@ public class MarkerLoader : MonoBehaviour
         }
         spawnedMarkers.Clear();
         saveMarker.markerDatas.Clear();
-    
-        List<MarkerData> markerDatas = _saveMarkerData.LoadMarkerList(fileName);
         
-        foreach (var data in markerDatas)
-        {
-            Vector3 worldPos = imageTransform.TransformPoint(data.position);
-            Quaternion worldRot = imageTransform.rotation * data.rotation;
-            
-            GameObject marker = Instantiate(markerPrefab, worldPos, worldRot, imageTransform);
-            marker.name = data.prefabID.ToString();
-            marker.transform.localScale = data.scale;
+        List<MarkerData> markerDatas = _saveMarkerData.LoadMarkerList(fileName);
 
-            var markerDataComponent = marker.GetComponent<MarkerDataComponent>();
-            if (markerDataComponent != null)
+        MarkerData[] markerDatasArray;
+
+        StartCoroutine(_markersApiClient.GetAllMarkers(
+            markers =>
             {
-                markerDataComponent.markerData = data;
-
-            }
-            
-            saveMarker.markerDatas.Add(data);
-            spawnedMarkers.Add(marker);
-        }
+                markerDatasArray = ChangeServerDataToMarkerData(markers);
+                RePositionMarker(markerDatasArray, imageTransform);
+            },
+            err => { }
+        ));
         _lastLoadedFileName = fileName;
     }
     
@@ -70,5 +63,67 @@ public class MarkerLoader : MonoBehaviour
     
         _lastLoadedFileName = null;
     }
+
+    private void RePositionMarker(MarkerData[] markerDatasArray, Transform imageTransform)
+    {
+        foreach (var data in markerDatasArray)
+        {
+            Vector3 worldPos = imageTransform.TransformPoint(data.position);
+            Quaternion worldRot = imageTransform.rotation * data.rotation;
+
+            GameObject marker = Instantiate(markerPrefab, worldPos, worldRot, imageTransform);
+            marker.name = data.prefabID.ToString();
+            marker.transform.localScale = data.scale;
+
+            var markerDataComponent = marker.GetComponent<MarkerDataComponent>();
+            if (markerDataComponent != null)
+            {
+                markerDataComponent.markerData = data;
+            }
+        }
+    }
+
+    private MarkerData[] ChangeServerDataToMarkerData(ServerMarkerData[] loadServerMarkerList)
+    {
+        List<MarkerData> markerDataList = new();
+        
+        foreach (var marker in loadServerMarkerList)
+        {
+            MarkerData markerData = new MarkerData();
+            markerData.prefabID = marker.prefabID;
+            markerData.needItemID = marker.needItemID;
+            markerData.dropItemID = marker.dropItemID;
+            markerData.acquireStep = marker.acquireStep;
+            markerData.removeStep = marker.removeStep;
+            
+            Vector3 positionValue = new Vector3();
+            positionValue.x = marker.position.X;
+            positionValue.y = marker.position.Y;
+            positionValue.z = marker.position.Z;
+         
+            Quaternion rotationValue = new Quaternion();
+            rotationValue.x = marker.rotation.X;
+            rotationValue.y = marker.rotation.Y;
+            rotationValue.z = marker.rotation.Z;
+            rotationValue.w = marker.rotation.W;
+         
+            Vector3 scaleValue = new Vector3();
+            scaleValue.y = marker.scale.Y;
+            scaleValue.z = marker.scale.Z;
+            scaleValue.x = marker.scale.X;
+            
+            markerData.position = positionValue;
+            markerData.rotation = rotationValue;
+            markerData.scale = scaleValue;
+         
+            markerData.markerSpawnType = marker.markerSpawnType;
+            markerData.markerType = marker.markerType;
+            
+            markerDataList.Add(markerData);
+        }
+        
+        return markerDataList.ToArray();
+    }
+    
     
 } 
