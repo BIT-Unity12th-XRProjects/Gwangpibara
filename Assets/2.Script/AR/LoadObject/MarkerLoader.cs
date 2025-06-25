@@ -80,7 +80,9 @@ public class MarkerLoader : MonoBehaviour
             {
                 markerDataComponent.markerData = data;
             }
+            spawnedMarkers.Add(marker);
         }
+        
     }
 
     private MarkerData[] ChangeServerDataToMarkerData(ServerMarkerData[] loadServerMarkerList)
