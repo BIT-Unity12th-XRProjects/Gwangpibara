@@ -50,12 +50,22 @@ public class ARMarkerObject : ARObject
         {
             ItemData item = MasterDataManager.Instance.GetMasterItemData(_markerData.dropItemId);
 
-            int amount = MainController.Instance.GetItemInventory().GetItemAmount(_markerData.needItemId);
-
             // 존재하지 않는 아이템 ID를 받으면 NULL 반환되어서 함수 스킵
-            if (item == null || 0 < amount)
+            if (item == null)
             {
                 return;
+            }
+            
+            ItemData needItem = MasterDataManager.Instance.GetMasterItemData(_markerData.needItemId);
+
+            if (needItem != null)
+            {
+                int amount = MainController.Instance.GetItemInventory().GetItemAmount(_markerData.needItemId);
+
+                if (amount < 1)
+                {
+                    return;
+                }
             }
 
             GameObject gameObject = Instantiate(item.cachedObject, transform.position + Vector3.up, Quaternion.identity);
