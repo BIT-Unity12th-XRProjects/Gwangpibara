@@ -50,7 +50,7 @@ public class SaveMarker : MonoBehaviour
 
         foreach (var marker in loadMarkerList)
         {
-            serverMarkerDatas.Add(new ServerMarkerData(marker));
+           // serverMarkerDatas.Add(new ServerMarkerData(marker));
         }
 
         StartCoroutine(_markersApiClient.UpdateMarkersBulk(serverMarkerDatas.ToArray()));
