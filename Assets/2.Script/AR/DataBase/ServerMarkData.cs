@@ -22,6 +22,7 @@ public class ServerMarkerData
 {
     public int id { get; set; }
     public int prefabID { get; set; }
+    public int needItemID { get; set; }
     public int dropItemID { get; set; }
     public int acquireStep { get; set; }
     public int removeStep { get; set; }
@@ -31,7 +32,7 @@ public class ServerMarkerData
     public MarkerSpawnType markerSpawnType { get; set; }
     public MarkerType markerType { get; set; }
 
-    public ServerMarkerData(MarkerData markerData)
+/*    public ServerMarkerData(MarkerData markerData)
     {
          this.prefabID = markerData.prefabID;
          this.dropItemID = markerData.dropItemID;
@@ -62,6 +63,6 @@ public class ServerMarkerData
          
          
     }
-
+*/
 
 }
