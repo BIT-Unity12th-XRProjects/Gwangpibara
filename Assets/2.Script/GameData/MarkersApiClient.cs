@@ -7,9 +7,15 @@ using Newtonsoft.Json;
 public class MarkersApiClient : MonoBehaviour
 {
 
-    private string _baseUrl = "http://localhost:32774";
+    private string _baseUrl = "http://192.168.0.10:5000";
 
-    public IEnumerator GetMarkerById(int id, Action<ServerMarkerData> onSuccess, Action<string> onError)
+/*    private void Start() //테스트용
+    {
+        StartCoroutine(GetAllMarkers(
+            (arr) => Debug.Log(arr[0]),
+            (err) => { Debug.Log(err); }));
+    }
+*/    public IEnumerator GetMarkerById(int id, Action<ServerMarkerData> onSuccess, Action<string> onError)
     {
         var url = $"{_baseUrl}/api/markers/{id}";
         using (UnityWebRequest req = UnityWebRequest.Get(url))

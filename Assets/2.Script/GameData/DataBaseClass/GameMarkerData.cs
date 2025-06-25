@@ -15,6 +15,7 @@ public class GameMarkerData
 {
     public int markId;
     public string name;
+    public int needItemId;
     public int dropItemId;
     public int spawnStep;
     public int deleteStep;
@@ -43,8 +44,8 @@ public class GameMarkerData
     {
         //MarkderData의 name은 GamMarkerData에서 ID
         markId = markerData.prefabID; // 프리팹 껍데기 ID
-       
-        dropItemId = markerData.dropItemID;
+        needItemId = markerData.needItemID;
+         dropItemId = markerData.dropItemID;
         markerSpawnType = markerData.markerSpawnType;
         markerType = markerData.markerType;
         name = "테스트 이름"; //이건 마커 오브젝트의 이름 - 
@@ -60,6 +61,7 @@ public class GameMarkerData
         markId = origin.markId;
         markerSpawnType = origin.markerSpawnType;
         markerType = origin.markerType;
+        needItemId = origin.needItemId;
         dropItemId = origin.dropItemId;
         name = origin.name;
         spawnStep = origin.spawnStep;

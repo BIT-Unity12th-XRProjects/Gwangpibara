@@ -6,6 +6,7 @@ public class MarkerData
 {
     public string id;
     public int prefabID;
+    public int needItemID;
     public int dropItemID;
     public int acquireStep;
     public int removeStep;

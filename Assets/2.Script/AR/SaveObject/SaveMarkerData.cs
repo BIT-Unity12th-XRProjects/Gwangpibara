@@ -8,19 +8,6 @@ public class SaveMarkerData
     {
         return Path.Combine(Application.persistentDataPath, fileName + ".json");
     }
-    /*
-    // 기본 저장 (기존 방식 유지)
-    public void SaveMarkerList(List<MarkerData> markerDatas)
-    {
-        SaveMarkerList(markerDatas, "markerdatas");
-    }
-
-    // 기본 불러오기 (기존 방식 유지)
-    public List<MarkerData> LoadMarkerList()
-    {
-        return LoadMarkerList("markerdatas");
-    }
-    */
     
     public void SaveMarkerList(List<MarkerData> markerDatas, string fileName)
     {
