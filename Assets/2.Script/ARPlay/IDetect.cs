@@ -3,5 +3,5 @@ public interface IDetect
     public void TakeCloseOverlap();
     public void TakeRayHit();
     public void TakeClick();
-    void NotTakeDetect();
+    public void NotTakeDetect();
 }
