@@ -62,6 +62,7 @@ public class ARMarkerSpawner : MonoBehaviour
             {
                 id = Guid.NewGuid().ToString(),
                 prefabID = 10001,
+                needItemID = 1,
                 dropItemID = 1,
                 acquireStep = 0,
                 removeStep = 0,
