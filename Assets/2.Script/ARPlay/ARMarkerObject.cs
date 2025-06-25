@@ -41,8 +41,7 @@ public class ARMarkerObject : ARObject
     }
     public override void TakeRayHit()
     {
-        Debug.Log("Ray Hit");
-        CheckTypes();
+        // TODO : 카메라 정면 레일 맞았을때 할일
     }
 
     private void CreateItemPefab()
@@ -51,10 +50,11 @@ public class ARMarkerObject : ARObject
         {
             ItemData item = MasterDataManager.Instance.GetMasterItemData(_markerData.dropItemId);
 
+            int amount = MainController.Instance.GetItemInventory().GetItemAmount(_markerData.needItemId);
+
             // 존재하지 않는 아이템 ID를 받으면 NULL 반환되어서 함수 스킵
-            if (item == null)
+            if (item == null || 0 < amount)
             {
-                Debug.Log("아이템이 없음");
                 return;
             }
 
@@ -142,7 +142,7 @@ public class ARMarkerObject : ARObject
 
     public override void TakeClick()
     {
-        Debug.Log("Click");
+        CheckTypes();
     }
 
     private bool CheckWallType()
