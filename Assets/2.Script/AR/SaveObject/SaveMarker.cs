@@ -45,19 +45,14 @@ public class SaveMarker : MonoBehaviour
         }
         
         markerDataHandler.SaveMarkerList(loadMarkerList, fileName);
-
-        List<ServerMarkerData> serverMarkerDatas = new List<ServerMarkerData>();
-
-        foreach (var marker in loadMarkerList)
-        {
-           // serverMarkerDatas.Add(new ServerMarkerData(marker));
-        }
+        
+        List<ServerMarkerData> serverMarkerDatas = ChangeMarkerDataToServerData(loadMarkerList);
 
         StartCoroutine(_markersApiClient.UpdateMarkersBulk(serverMarkerDatas.ToArray()));
         
         MapSaver saver = new();
         saver.UpLoadMapDate(loadMarkerList, "테스트","1234");
-        Debug.Log(loadMarkerList.Count);
+        Debug.Log("저장된 마커의 수" + loadMarkerList.Count);
     }
     
     // 수정된 마크 데이터 업데이트
@@ -94,5 +89,46 @@ public class SaveMarker : MonoBehaviour
     public void RemoveMarkerData(string markerId)
     {
         markerDatas.RemoveAll(m => m.id == markerId);
+    }
+
+    private List<ServerMarkerData> ChangeMarkerDataToServerData(List<MarkerData> loadMarkerList)
+    {
+        List<ServerMarkerData> serverMarkerDataList = new();
+        foreach (var marker in loadMarkerList)
+        {
+            ServerMarkerData serverMarkerData = new ServerMarkerData();
+            serverMarkerData.prefabID = marker.prefabID;
+            serverMarkerData.needItemID = marker.needItemID;
+            serverMarkerData.dropItemID = marker.dropItemID;
+            serverMarkerData.acquireStep = marker.acquireStep;
+            serverMarkerData.removeStep = marker.removeStep;
+            
+            Vector3Value positionValue = new Vector3Value();
+            positionValue.X = marker.position.x;
+            positionValue.Y = marker.position.y;
+            positionValue.Z = marker.position.z;
+         
+            QuaternionValue rotationValue = new QuaternionValue();
+            rotationValue.X = marker.rotation.x;
+            rotationValue.Y = marker.rotation.y;
+            rotationValue.Z = marker.rotation.z;
+            rotationValue.W = marker.rotation.w;
+         
+            Vector3Value scaleValue = new Vector3Value();
+            scaleValue.X = marker.scale.x;
+            scaleValue.Y = marker.scale.y;
+            scaleValue.Z = marker.scale.z;
+            
+            serverMarkerData.position = positionValue;
+            serverMarkerData.rotation = rotationValue;
+            serverMarkerData.scale = scaleValue;
+         
+            serverMarkerData.markerSpawnType = marker.markerSpawnType;
+            serverMarkerData.markerType = marker.markerType;
+            
+            serverMarkerDataList.Add(serverMarkerData);
+        }
+        
+        return serverMarkerDataList;
     }
 }

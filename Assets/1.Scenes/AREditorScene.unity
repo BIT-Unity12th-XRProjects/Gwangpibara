@@ -19738,6 +19738,7 @@ MonoBehaviour:
   markerPrefab: {fileID: 1642443851960826533, guid: 0cf59f8cc1295c646a7b27bb13f0dae8,
     type: 3}
   saveMarker: {fileID: 2072806181}
+  _markersApiClient: {fileID: 141077789}
 --- !u!4 &1802878229
 Transform:
   m_ObjectHideFlags: 0
