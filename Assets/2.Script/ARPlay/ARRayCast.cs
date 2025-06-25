@@ -1,5 +1,6 @@
-using UnityEngine;
+using System.Collections.Generic;
 using UnityEngine.InputSystem;
+using UnityEngine;
 
 public class ARRayCast : MonoBehaviour
 {
@@ -10,8 +11,12 @@ public class ARRayCast : MonoBehaviour
     [SerializeField] private float _viewRadius = 1f;
     [SerializeField, Range(0, 360)] private float viewAngle = 20f;
     [SerializeField] private LayerMask _targetLayer;
+    [SerializeField] private LayerMask _obstacleLayer;
 
     private PlayerInputActions _inputActions;
+    private HashSet<GameObject> _currentlyDetected = new HashSet<GameObject>();
+    private HashSet<GameObject> _previouslyDetected = new HashSet<GameObject>();
+
     private GameObject _lastCheckObject = null;
     private bool _hasFinding = false;
 
@@ -40,30 +45,50 @@ public class ARRayCast : MonoBehaviour
 
     private void CheckCloseOverlap()
     {
-        if (_arCamera == null)
-        {
-            return;
-        }
+        if (_arCamera == null) return;
 
         Vector3 origin = _arCamera.transform.position;
         Vector3 forward = _arCamera.transform.forward;
 
+        _currentlyDetected.Clear();
         Collider[] hits = Physics.OverlapSphere(origin, _viewRadius, _targetLayer);
 
         foreach (Collider hit in hits)
         {
-            IDetect ARObject = hit.GetComponent<IDetect>();
+            GameObject targetObj = hit.gameObject;
+            Vector3 dirToTarget = (targetObj.transform.position - origin).normalized;
+            float angle = Vector3.Angle(forward, dirToTarget);
 
-            if (ARObject != null)
+            if (angle < viewAngle * 0.5f)
             {
-                Vector3 dirToTarget = (hit.transform.position - origin).normalized;
-                float angle = Vector3.Angle(forward, dirToTarget);
+                float distance = Vector3.Distance(origin, targetObj.transform.position);
 
-                if(angle < viewAngle * 0.5f)
+                if (Physics.Raycast(origin, dirToTarget, out RaycastHit rayHit, distance, _targetLayer | _obstacleLayer))
                 {
-                    ARObject.TakeCloseOverlap();
+                    if (rayHit.transform == targetObj.transform)
+                    {
+                        if (!_previouslyDetected.Contains(targetObj))
+                        {
+                            targetObj.GetComponent<IDetect>()?.TakeCloseOverlap();
+                        }
+                        _currentlyDetected.Add(targetObj);
+                    }
                 }
             }
+        }
+
+        foreach (var prev in _previouslyDetected)
+        {
+            if (!_currentlyDetected.Contains(prev))
+            {
+                prev.GetComponent<IDetect>()?.NotTakeDetect();
+            }
+        }
+
+        _previouslyDetected.Clear();
+        foreach (var obj in _currentlyDetected)
+        {
+            _previouslyDetected.Add(obj);
         }
     }
 
@@ -83,7 +108,7 @@ public class ARRayCast : MonoBehaviour
 
                 if (ARObject != null)
                 {
-                    ARObject.TakeRayHit(); // 한 번만 실행됨
+                    ARObject.TakeRayHit();
                     _hasFinding = true;
                 }
             }
@@ -98,11 +123,7 @@ public class ARRayCast : MonoBehaviour
     private void OnClick(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
-
-        if(Touchscreen.current == null)
-        {
-            return;
-        }
+        if (Touchscreen.current == null) return;
 
         Vector2 screenPos = Touchscreen.current.primaryTouch.position.ReadValue();
         Ray ray = _arCamera.ScreenPointToRay(screenPos);
@@ -110,7 +131,6 @@ public class ARRayCast : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
             IDetect ARObject = hit.collider.gameObject.GetComponent<IDetect>();
-
             if (ARObject != null)
             {
                 ARObject.TakeClick();
