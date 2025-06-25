@@ -92,7 +92,7 @@ public class ARMarkerObject : ARObject
 
         base.TakeCloseOverlap();
 
-        CheckTypes();
+        CheckSpawnTypes();
     }
 
     private void OnSurprize()
@@ -100,6 +100,8 @@ public class ARMarkerObject : ARObject
         if (_isRenderOn == false)
         {
             _renderer.material.color = Color.blue;
+
+            CheckTypes();
 
             _isRenderOn = true;
         }
@@ -125,7 +127,10 @@ public class ARMarkerObject : ARObject
             default:
                 break;
         }
+    }
 
+    private void CheckSpawnTypes()
+    {
         MarkerSpawnType thisMarkerSpawnType = _markerData.markerSpawnType;
 
         switch (thisMarkerSpawnType)
