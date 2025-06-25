@@ -130,7 +130,7 @@ public class ARRayCast : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
-            if (Vector3.Distance(hit.transform.position, _arCamera.transform.position) <= _rayDistance)
+            if (Vector3.Distance(hit.point, _arCamera.transform.position) <= _rayDistance)
             {
                 IDetect ARObject = hit.collider.gameObject.GetComponent<IDetect>();
                 if (ARObject != null)
