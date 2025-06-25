@@ -10,8 +10,8 @@ public class ARRayCast : MonoBehaviour
     [Header("OverlapSpere")]
     [SerializeField] private float _viewRadius = 1f;
     [SerializeField, Range(0, 360)] private float viewAngle = 20f;
-    [SerializeField] private LayerMask _targetLayer;
-    [SerializeField] private LayerMask _obstacleLayer;
+    [SerializeField] private LayerMask _arObjectLayer;
+    [SerializeField] private LayerMask _wallLayer;
 
     private PlayerInputActions _inputActions;
     private HashSet<GameObject> _currentlyDetected = new HashSet<GameObject>();
@@ -51,7 +51,7 @@ public class ARRayCast : MonoBehaviour
         Vector3 forward = _arCamera.transform.forward;
 
         _currentlyDetected.Clear();
-        Collider[] hits = Physics.OverlapSphere(origin, _viewRadius, _targetLayer);
+        Collider[] hits = Physics.OverlapSphere(origin, _viewRadius, _arObjectLayer);
 
         foreach (Collider hit in hits)
         {
@@ -63,9 +63,9 @@ public class ARRayCast : MonoBehaviour
             {
                 float distance = Vector3.Distance(origin, targetObj.transform.position);
 
-                if (Physics.Raycast(origin, dirToTarget, out RaycastHit rayHit, distance, _targetLayer | _obstacleLayer))
+                if (Physics.Raycast(origin, dirToTarget, out RaycastHit rayHit, distance, _arObjectLayer | _wallLayer))
                 {
-                    if (rayHit.transform == targetObj.transform)
+                    if (rayHit.collider.gameObject.layer == 0)
                     {
                         if (!_previouslyDetected.Contains(targetObj))
                         {

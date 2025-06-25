@@ -28,7 +28,6 @@ public class ARMarkerObject : ARObject
         OnCloseTypeSetting();
 
         _renderer.enabled = false;
-        _collider.enabled = false;
     }
 
     private void OnCloseTypeSetting()

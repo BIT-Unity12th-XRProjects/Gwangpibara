@@ -257,6 +257,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3042518192985693497, guid: 6be2c997bbaf0fd40814fa7e65fc54b7,
         type: 3}
+      propertyPath: _wallLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042518192985693497, guid: 6be2c997bbaf0fd40814fa7e65fc54b7,
+        type: 3}
+      propertyPath: _arObjectLayer.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042518192985693497, guid: 6be2c997bbaf0fd40814fa7e65fc54b7,
+        type: 3}
       propertyPath: _obstacleLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
