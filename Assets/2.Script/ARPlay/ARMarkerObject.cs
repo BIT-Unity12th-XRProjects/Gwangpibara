@@ -13,6 +13,8 @@ public class ARMarkerObject : MonoBehaviour, IDetect
     private bool _isCreate = false;
     private bool _isRenderOn = false;
 
+    private int _WallLayerNum = 6;
+
     private void Awake()
     {
         _renderer = GetComponent<Renderer>();
@@ -29,6 +31,11 @@ public class ARMarkerObject : MonoBehaviour, IDetect
 
         OnCloseTypeSetting();
         _renderer.enabled = false;
+
+        if(_markerData.markerType == MarkerType.Wall)
+        {
+            gameObject.layer = _WallLayerNum;
+        }
     }
 
     private void OnCloseTypeSetting()
@@ -115,7 +122,7 @@ public class ARMarkerObject : MonoBehaviour, IDetect
                 break;
             case MarkerType.Decoration:
                 break;
-            case MarkerType.Trap:
+            case MarkerType.Wall:
                 break;
             default:
                 break;

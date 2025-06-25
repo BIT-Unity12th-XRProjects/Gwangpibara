@@ -258,7 +258,7 @@ PrefabInstance:
     - target: {fileID: 3042518192985693497, guid: 6be2c997bbaf0fd40814fa7e65fc54b7,
         type: 3}
       propertyPath: _obstacleLayer.m_Bits
-      value: 16
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 5403574035106700997, guid: 6be2c997bbaf0fd40814fa7e65fc54b7,
         type: 3}
@@ -702,8 +702,8 @@ GameObject:
   - component: {fileID: 1906680463}
   - component: {fileID: 1906680462}
   - component: {fileID: 1906680461}
-  m_Layer: 0
-  m_Name: Cube
+  m_Layer: 6
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
