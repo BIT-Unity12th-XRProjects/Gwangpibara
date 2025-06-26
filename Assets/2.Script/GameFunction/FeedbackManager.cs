@@ -8,11 +8,22 @@ public enum GameEventCode
 public class FeedbackManager : Singleton<FeedbackManager>
 {
 
-    public void PlayEffect(bool isBibration, SFXType sfxType)
+    public void PlayEffect(bool isVibration, SFXType sfxType)
     {
-        if (isBibration)
+        if (isVibration)
         {
-            Handheld.Vibrate();
+#if UNITY_ANDROID && !UNITY_EDITOR
+            using (var unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
+            {
+                AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+                AndroidJavaObject vibrator = activity.Call<AndroidJavaObject>("getSystemService", "vibrator");
+
+                if (vibrator != null)
+                {
+                    vibrator.Call("vibrate", 100); // 100ms 진동
+                }
+            }
+#endif
         }
     }
 
