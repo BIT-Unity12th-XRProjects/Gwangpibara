@@ -153,11 +153,13 @@ public class ItemViewer : MonoBehaviour
             float dx = _rotationInput.x;
             float dy = _rotationInput.y;
 
-            // 좌우 회전 
-            _itemObject.transform.Rotate(Vector3.up, -dx * _rotationSpeed, Space.World);
+            Vector3 pivot = _itemObject.transform.position;
 
-            // 상하 회전 
-            _itemObject.transform.Rotate(Vector3.right, dy * _rotationSpeed, Space.World);
+            // 좌우 회전 (카메라 위쪽 축 기준으로)
+            _itemObject.transform.RotateAround(pivot, _cam.transform.up, -dx * _rotationSpeed);
+
+            // 상하 회전 (카메라 오른쪽 축 기준으로)
+            _itemObject.transform.RotateAround(pivot, _cam.transform.right, dy * _rotationSpeed);
         }
     }
 

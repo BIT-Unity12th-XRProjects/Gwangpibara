@@ -79,9 +79,15 @@ public class ARRayCast : MonoBehaviour
 
         foreach (var prev in _previouslyDetected)
         {
+            if (prev == null) continue;
+
             if (!_currentlyDetected.Contains(prev))
             {
-                prev.GetComponent<IDetect>()?.NotTakeDetect();
+                var detect = prev.GetComponent<IDetect>();
+                if (detect != null)
+                {
+                    detect.NotTakeDetect();
+                }
             }
         }
 
@@ -130,7 +136,7 @@ public class ARRayCast : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
-            if (Vector3.Distance(hit.transform.position, _arCamera.transform.position) <= _rayDistance)
+            if (Vector3.Distance(hit.point, _arCamera.transform.position) <= _rayDistance)
             {
                 IDetect ARObject = hit.collider.gameObject.GetComponent<IDetect>();
                 if (ARObject != null)
