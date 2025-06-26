@@ -19,6 +19,8 @@ public class GameStartManager : MonoBehaviour
     [SerializeField] private ARPlayTrackingManager _trackingPrefab;
     [SerializeField] private MarkersApiClient _markersApiClient;
 
+    private StartUIData _startUIData;
+    public Action<StartUIData> OnChangeTheme;
     private int _selectThemNumber;
     private const int INVALID_NUMBER = -1;
 
@@ -30,18 +32,22 @@ public class GameStartManager : MonoBehaviour
         yield return new GameObject("masterDataManager").AddComponent<MasterDataManager>().SetData();
         //서버 맵 데이터 받기 위한 clientapi 생성
         yield return _markersApiClient = new GameObject("MarkersApi").AddComponent<MarkersApiClient>();
-
+        _startUIData = new();
         _selectThemNumber = INVALID_NUMBER;
         _mainController = FindAnyObjectByType<MainController>();
         SetThemeList();
         SelectTheme(1); //테스트로 1번 문제 지정
 
-        UIManager.Instance.RequestOpenUI<StartUI>();
+        UIManager.Instance.RequestOpenUI<StartUI>(_startUIData);
     }
 
     public void SelectTheme(int themeNumber)
     {
         _selectThemNumber = themeNumber;
+
+        ThemeData themeData = MasterDataManager.Instance.GetMasterThemeData(_selectThemNumber);
+        _startUIData.SetData(themeData);
+        OnChangeTheme?.Invoke(_startUIData);
     }
 
     public void StartGame()
@@ -90,8 +96,8 @@ public class GameStartManager : MonoBehaviour
 
         if (gameDataList.Count > 0)
         {
-            yield return MasterDataManager.Instance.DownLoadMap(gameDataList, 1234);
-            _selectThemNumber = 1234;
+            yield return MasterDataManager.Instance.DownLoadMap(gameDataList, 1);
+            _selectThemNumber = 1;
             Debug.Log("다운받은게 있어서 1234 맵으로");
         }
         else

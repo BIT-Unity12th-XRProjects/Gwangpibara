@@ -21,7 +21,7 @@ public class MainController : Singleton<MainController>
         if (Keyboard.current.f5Key.wasPressedThisFrame)
         {
                  SubmitAnswer("박광호"); //정답 텍스트 입력하기
-            AcquireItem(MasterDataManager.Instance.GetMasterItemData(10101)); //10101 아이템 전달받기
+            AcquireItem(MasterDataManager.Instance.GetMasterItemData(10102)); //10101 아이템 전달받기
         }
     }
 
