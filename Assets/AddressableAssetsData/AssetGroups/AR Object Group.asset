@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: AR Object Group
   m_GUID: 52931c1c20ac4ff409a308a97c392552
   m_SerializeEntries:
+  - m_GUID: 31321ba15b8f8eb4c954353edc038b1d
+    m_Address: Packages/com.unity.render-pipelines.universal/Runtime/Materials/Lit.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 432a9114aad134344a0e5b1f0e8887fd
     m_Address: Assets/4.Data/GameObjectData.asset
     m_ReadOnly: 0
