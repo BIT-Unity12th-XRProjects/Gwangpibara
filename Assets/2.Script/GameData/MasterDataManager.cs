@@ -6,34 +6,19 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
-public class MasterDataManager : MonoBehaviour
+public class MasterDataManager : Singleton<MasterDataManager>
 {
-    public static MasterDataManager Instance;
 
-    private string _stepDataPath = "StepData";
     private Dictionary<int, StepData> _masterStepDataDictionary;
-
-    private string _itemDataPath = "ItemDataTable";
     private Dictionary<int, ItemData> _masterItemDataDictionary;
-
-    private string _themeDataPath = "ThemeData";
     private Dictionary<int, ThemeData> _masterThemeDataDictionary;
-
     private Dictionary<int, MapData> _masterMapDataDictionary;
 
-    private void Awake()
+    public IEnumerator SetData()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            MakeMasterData(); //단계, 주제, 아이템
-            MakeMapData();
-            StartCoroutine(LoadAllPrefabs());
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        Debug.Log("데이터");
+       MakeMasterData(); //단계, 주제, 아이템
+       yield return StartCoroutine(LoadAllPrefabs());
     }
 
     public StepData GetMasterStepData(int stepID)
@@ -70,60 +55,41 @@ public class MasterDataManager : MonoBehaviour
 
     private void MakeMasterData()
     {
-        _masterStepDataDictionary = MakeMasterData<StepData>(_stepDataPath,
-                                value => new StepData(value),
-                                dataClass => dataClass.ID);
+      
+        _masterStepDataDictionary = MakeMasterData<StepData>(EMasterData.StepData,
+                        value => new StepData(value),
+                        dataClass => dataClass.ID);
 
-        _masterItemDataDictionary = MakeMasterData<ItemData>(_itemDataPath,
+        _masterItemDataDictionary = MakeMasterData<ItemData>(EMasterData.ItemData,
                                 stringValues => new ItemData(stringValues),
                                 dataClass => dataClass.ID);
 
-        _masterThemeDataDictionary = MakeMasterData<ThemeData>(_themeDataPath,
+        _masterThemeDataDictionary = MakeMasterData<ThemeData>(EMasterData.ThemeData,
                                 parseValues => new ThemeData(parseValues),
                                 dataclss => dataclss.themeNumber);
-    }
 
-    private void MakeMapData()
-    {
         _masterMapDataDictionary = new();
-
-        SaveMarkerData loadMarkerData = new();
-        List<MarkerData> loadData = loadMarkerData.LoadResourceJson("markerdatas");
-
-        //임시로 1단계 맵 데이터 만들어넣기
-        MapData map = new MapData();
-        if(loadData.Count != 0)
-        {
-            map = new(loadData);
-        }
-        Debug.Log(map.ToString());
-        _masterMapDataDictionary.Add(1, map);
     }
 
-  
-    private Dictionary<int, T> MakeMasterData<T>(string fileName, Func<string[], T> constructor, Func<T, int> getKey)
-        where T : class
+     private Dictionary<int, T> MakeMasterData<T>(EMasterData masterDataType, Func<string[], T> constructor, Func<T, int> getKey)
+          where T : class
     {
         Dictionary<int, T> dictionary = new();
-        TextAsset csvFile = Resources.Load<TextAsset>("DataTable/"+ fileName);
-        if (csvFile != null)
+        List<string[]> parsings = ParsingManager.Instance.GetMasterData(masterDataType).DbValueList;
+
+        for (int i = 0; i < parsings.Count; i++)
         {
-            string[] lines = csvFile.text.Split(new[] { '\r', '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
-
-            foreach (string line in lines)
+            string[] values = parsings[i];
+            if (values[0][0] == '#')
             {
-                string[] values = line.Split(',');
-                if (values[0][0] == '#')
-                {
-                    continue;
-                }
-
-                T f = constructor(values);
-                dictionary.Add(getKey(f), f);
-               // Debug.Log(getKey(f) + " 데이터 생성");
+                continue;
             }
+
+            T f = constructor(values);
+            dictionary.Add(getKey(f), f);
+            // Debug.Log(getKey(f) + " 데이터 생성");
         }
-       
+
         return dictionary;
     }
 
@@ -160,26 +126,6 @@ public class MasterDataManager : MonoBehaviour
 
         }
 
-        foreach(var item in _masterMapDataDictionary)
-        {
-            for (int i = 0; i < item.Value.markerList.Count; i++)
-            {
-                GameMarkerData markerData = item.Value.markerList[i];
-                var handle = Addressables.LoadAssetAsync<GameObject>("MarkPrefab" 
-                                                    + markerData.markId.ToString());
-                yield return handle;
-                if (handle.Status == AsyncOperationStatus.Succeeded)
-                {
-                    //  Debug.Log(item.ID + " 프리팹 로드");
-                    markerData.markerGameObject = handle.Result;
-                }
-                else
-                {
-                    Debug.LogError($"스프라이트: 디펄트");
-                    markerData.markerGameObject = Resources.Load<GameObject>("TestItemPrefab");
-                }
-            }
-        }
     }
 
     public IEnumerator DownLoadMap(List<GameMarkerData> markList, int mapName)

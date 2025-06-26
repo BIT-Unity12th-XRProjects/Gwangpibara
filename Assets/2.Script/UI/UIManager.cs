@@ -12,8 +12,9 @@ public class UIManager : Singleton<UIManager>
     private BaseUI _openUI;
     private Dictionary<Type, GameObject> _closedUIPool = new Dictionary<Type, GameObject>();
 
-    private void Start()
+    public override void Awake()
     {
+        base.Awake();
         // UICanvas용 빈 오브젝트 생성
         if (UICanvasTrs == null)
         {
@@ -29,8 +30,8 @@ public class UIManager : Singleton<UIManager>
         }
 
 
-        RequestOpenUI<StartUI>();
     }
+
 
     private void Update()
     {

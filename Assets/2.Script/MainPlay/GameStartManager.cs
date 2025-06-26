@@ -17,14 +17,26 @@ public class GameStartManager : MonoBehaviour
     [SerializeField] private List<ThemeData> _themeList;
     [SerializeField] private MainController _mainController;
     [SerializeField] private ARPlayTrackingManager _trackingPrefab;
+    [SerializeField] private MarkersApiClient _markersApiClient;
+
     private int _selectThemNumber;
     private const int INVALID_NUMBER = -1;
-    private void Start()
+
+    private IEnumerator Start()
     {
+        //파싱매니저로 구글스프레드에서 파싱
+        yield return new GameObject("ParsingManager").AddComponent<ParsingManager>().ParseSheetData();
+        //파싱한 데이터로 마스터 데이터 생성
+        yield return new GameObject("masterDataManager").AddComponent<MasterDataManager>().SetData();
+        //서버 맵 데이터 받기 위한 clientapi 생성
+        yield return _markersApiClient = new GameObject("MarkersApi").AddComponent<MarkersApiClient>();
+
         _selectThemNumber = INVALID_NUMBER;
         _mainController = FindAnyObjectByType<MainController>();
         SetThemeList();
         SelectTheme(1); //테스트로 1번 문제 지정
+
+        UIManager.Instance.RequestOpenUI<StartUI>();
     }
 
     public void SelectTheme(int themeNumber)
@@ -112,7 +124,6 @@ public class GameStartManager : MonoBehaviour
         }
     }
 
-    [SerializeField] private MarkersApiClient _markersApiClient;
 
     private Transform mapParent;
     private Vector3 originPosition;
