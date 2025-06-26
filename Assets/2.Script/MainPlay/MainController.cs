@@ -14,6 +14,7 @@ public class MainController : Singleton<MainController>
     private GameUIData _gameUIData;
     [SerializeField] private ItemInventory _itemInventory;
     public Action<GameUIData> onChangeStepData;
+    public Action<GameUIData> onShowHint;
 
     private void Update()
     {
@@ -66,6 +67,11 @@ public class MainController : Singleton<MainController>
                 GoNextStep();
             }
         }
+    }
+
+    public void PleaseHint()
+    {
+        onShowHint?.Invoke(_gameUIData);
     }
 
     public bool AcquireItem(ItemData itemData)
