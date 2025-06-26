@@ -31,6 +31,11 @@ public class MasterDataManager : Singleton<MasterDataManager>
         return GetCopyData(_masterItemDataDictionary, itemID, origin => new ItemData(origin));
     }
 
+    public ThemeData GetMasterThemeData(int themeNumber)
+    {
+        return GetCopyData(_masterThemeDataDictionary, themeNumber, origin => new ThemeData(origin));
+    }
+
     public Dictionary<int, ThemeData> GetMasterThemeDataDic()
     {
         return _masterThemeDataDictionary;

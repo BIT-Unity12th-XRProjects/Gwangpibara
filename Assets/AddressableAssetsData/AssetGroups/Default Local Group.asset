@@ -40,7 +40,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4d02dc71ecdcbfd488032e92751fae0b
+  - m_GUID: 36f7b23adc5fb8741956e9e74e1172cd
     m_Address: ItemPrefab10102
     m_ReadOnly: 0
     m_SerializedLabels: []
@@ -60,7 +60,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a70a267b5c7e520409c1f3a88b9d0832
+  - m_GUID: 8f19a53ceaf40114c878b099e6ae6aec
     m_Address: ItemPrefab10101
     m_ReadOnly: 0
     m_SerializedLabels: []
