@@ -33,6 +33,7 @@ public class GameStartManager : MonoBehaviour
         yield return new GameObject("masterDataManager").AddComponent<MasterDataManager>().SetData();
         //서버 맵 데이터 받기 위한 clientapi 생성
         yield return _markersApiClient = new GameObject("MarkersApi").AddComponent<MarkersApiClient>();
+        
         _startUIData = new();
         _selectThemNumber = INVALID_NUMBER;
         _mainController = FindAnyObjectByType<MainController>();
@@ -50,7 +51,6 @@ public class GameStartManager : MonoBehaviour
         _startUIData.SetData(themeData);
         OnChangeTheme?.Invoke(_startUIData);
     }
-
     public void StartGame()
     {
         if(_selectThemNumber == INVALID_NUMBER)
@@ -68,23 +68,37 @@ public class GameStartManager : MonoBehaviour
     {
         Debug.Log("맵 만들기 시작");
 
+        PopUpManager.Instance.PopMessege("원점을 잡으세요");
         //원점 잡기
         UIManager.Instance.RequestOpenUI<OriginSetUI>(); // 원점 잡기용 UI 켜고
         ARPlayTrackingManager trackingManager = Instantiate(_trackingPrefab);
         trackingManager.OnTrackingEnd += SetOriginPos;
+
+        //원점 잡기 대기
+        float messageTimer = 0f;
+
         while (true)
         {
             Debug.Log("원점 잡기 대기중");
-            yield return null;
-            //트래킹 잡힐떄까지
-            if(isFind == true)
+
+            messageTimer += Time.deltaTime;
+            if (messageTimer >= 2f)
+            {
+                PopUpManager.Instance.PopMessege("원점을 잡으세요");
+                messageTimer = 0f;
+            }
+
+            if (isFind == true)
             {
                 Debug.Log("원점 잡아서 나가기");
                 break;
             }
-        }
 
+            yield return null;
+
+        }
         //
+
         List<GameMarkerData> gameDataList = new();
         yield return StartCoroutine(_markersApiClient.GetAllMarkers(
             markers =>
