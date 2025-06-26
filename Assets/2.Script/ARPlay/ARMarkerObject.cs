@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class ARMarkerObject : ARObject
+public class ARMarkerObject : MonoBehaviour, IDetect
 {
     private GameMarkerData _markerData;
 
@@ -9,14 +9,8 @@ public class ARMarkerObject : ARObject
     private bool _isCreate = false;
     private bool _isRenderOn = false;
 
-    private int _WallLayerNum = 6;
-
-    protected override void Start()
+    private void Start()
     {
-        if (!_initialized)
-        {
-            Debug.LogError($"[{name}] ARMarkerObject 가 초기화되지 않았습니다. 반드시 Setting(marker) 를 호출하세요.", this);
-        }
 
         Debug.Log($"_markId : {_markerData.markId}, _markerType : {_markerData.markerType}");
 
@@ -26,26 +20,13 @@ public class ARMarkerObject : ARObject
         }
 
         OnCloseTypeSetting();
-
-        foreach (Renderer renderer in _renderer)
-        {
-            renderer.enabled = false;
-        }
     }
 
     private void OnCloseTypeSetting()
     {
         MarkerType thisMarkerType = _markerData.markerType;
-
-        if (_markerData.markerSpawnType == MarkerSpawnType.OnClose)
-        {
-            foreach (Renderer renderer in _renderer)
-            {
-                renderer.material.color = Color.yellow;
-            }
-        }
     }
-    public override void TakeRayHit()
+    public  void TakeRayHit()
     {
         // TODO : 카메라 정면 레일 맞았을때 할일
     }
@@ -85,18 +66,14 @@ public class ARMarkerObject : ARObject
     public void Setting(GameMarkerData markerData)
     {
         _markerData = markerData;
-
-        _initialized = true;
     }
 
-    public override void TakeCloseOverlap()
+    public void TakeCloseOverlap()
     {
         if (CheckWallType())
         {
             return;
         }
-
-        base.TakeCloseOverlap();
 
         CheckSpawnTypes();
     }
@@ -105,10 +82,6 @@ public class ARMarkerObject : ARObject
     {
         if (_isRenderOn == false)
         {
-            foreach (Renderer renderer in _renderer)
-            {
-                renderer.material.color = Color.blue;
-            }
 
             CheckTypes();
 
@@ -154,17 +127,15 @@ public class ARMarkerObject : ARObject
         }
     }
 
-    public override void NotTakeDetect()
+    public void NotTakeDetect()
     {
         if (CheckWallType())
         {
             return;
         }
-
-        base.NotTakeDetect();
     }
 
-    public override void TakeClick()
+    public void TakeClick()
     {
         CheckTypes();
     }
@@ -173,7 +144,9 @@ public class ARMarkerObject : ARObject
     {
         if (_markerData.markerType == MarkerType.Wall)
         {
-            gameObject.layer = _WallLayerNum;
+            Material occlusionMat = Resources.Load<Material>("OcclusionMaterial1");
+            Renderer renderer = gameObject.GetComponent<Renderer>();
+            renderer.material = occlusionMat;
             return true;
         }
         return false;
