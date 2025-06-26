@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 585252089387664495}
   - component: {fileID: 8113014763632453184}
   - component: {fileID: 1368095716227743554}
-  - component: {fileID: 8727252613788891782}
   m_Layer: 0
   m_Name: clock_hour
   m_TagString: Untagged
@@ -87,27 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8727252613788891782
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 84367944765553831}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.014999857, y: 0.23992698, z: 0.001000036}
-  m_Center: {x: 0.0008954902, y: 0.05758644, z: -0.000477788}
 --- !u!1 &1508450740215905476
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,7 +97,6 @@ GameObject:
   - component: {fileID: 5855101482561378082}
   - component: {fileID: 4311047226403846526}
   - component: {fileID: 5863150705042740110}
-  - component: {fileID: 6486540037660910587}
   m_Layer: 0
   m_Name: clock_minute
   m_TagString: Untagged
@@ -195,27 +172,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6486540037660910587
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508450740215905476}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.019999998, y: 0.21161853, z: 0.0010000067}
-  m_Center: {x: -0.00028958078, y: 0.046130575, z: -0.00051318086}
 --- !u!1 &2060351173339900445
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +218,6 @@ GameObject:
   - component: {fileID: 8140453374041006821}
   - component: {fileID: 7170363812321486774}
   - component: {fileID: 1326470019362641622}
-  - component: {fileID: 1684258911061697668}
   m_Layer: 0
   m_Name: clock_body
   m_TagString: Untagged
@@ -339,27 +294,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1684258911061697668
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2227448721741334029}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.57698464, y: 0.57698464, z: 0.050000094}
-  m_Center: {x: 0.0000019520521, y: 0, z: 0.024999022}
 --- !u!1 &3430371444614512121
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,7 +305,6 @@ GameObject:
   - component: {fileID: 1662404372705201562}
   - component: {fileID: 7660280612704431076}
   - component: {fileID: 2865901066826902057}
-  - component: {fileID: 1528585579262896437}
   m_Layer: 0
   m_Name: clock_seconds
   m_TagString: Untagged
@@ -447,27 +380,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1528585579262896437
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3430371444614512121}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.022286719, y: 0.28598312, z: 0.0010000581}
-  m_Center: {x: -0.0000008545122, y: 0.07878654, z: -0.00050092273}
 --- !u!1 &8801064671942834302
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,8 +389,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5883590615414771347}
+  - component: {fileID: 8632567033316382091}
   m_Layer: 0
-  m_Name: Clock
+  m_Name: MarkPrefab10104
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -493,10 +406,31 @@ Transform:
   m_GameObject: {fileID: 8801064671942834302}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.182499, y: 9.48, z: -11.97}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3677958555193790773}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8632567033316382091
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8801064671942834302}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

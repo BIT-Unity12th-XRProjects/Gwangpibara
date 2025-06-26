@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1918597418543777187}
   - component: {fileID: 2851584600725872454}
   - component: {fileID: 2222364289768458088}
-  - component: {fileID: 3774738552727420435}
   m_Layer: 0
   m_Name: vendingMachine_can13
   m_TagString: Untagged
@@ -88,27 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3774738552727420435
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67283226797036345}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.01774073, y: -0.009000659, z: 3.3094923}
 --- !u!1 &95651330830823657
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,7 +98,6 @@ GameObject:
   - component: {fileID: 3987997349202788652}
   - component: {fileID: 3148443935187917108}
   - component: {fileID: 470259870245921985}
-  - component: {fileID: 7034525909506002805}
   m_Layer: 0
   m_Name: vendingMachine_bar28
   m_TagString: Untagged
@@ -199,27 +176,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7034525909506002805
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 95651330830823657}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.00063656765, y: 0.06170796, z: -0.029372219}
 --- !u!1 &120007945910047862
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +187,6 @@ GameObject:
   - component: {fileID: 7187061952737814495}
   - component: {fileID: 4360670125093177181}
   - component: {fileID: 8318924429032097631}
-  - component: {fileID: 5543075678335713177}
   m_Layer: 0
   m_Name: vendingMachine_chips18
   m_TagString: Untagged
@@ -308,27 +263,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5543075678335713177
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120007945910047862}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.024386434, y: 0.41651598, z: -0.39335075}
 --- !u!1 &158620194168760666
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +274,6 @@ GameObject:
   - component: {fileID: 5523544115877800296}
   - component: {fileID: 6806138682365938367}
   - component: {fileID: 5057807502442267559}
-  - component: {fileID: 4138866102758826793}
   m_Layer: 0
   m_Name: vendingMachine_chips7
   m_TagString: Untagged
@@ -417,27 +350,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4138866102758826793
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 158620194168760666}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.025066404, y: 0.41655412, z: -0.39330497}
 --- !u!1 &212366845929517178
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,7 +361,6 @@ GameObject:
   - component: {fileID: 8208225214597239643}
   - component: {fileID: 7624163725687481568}
   - component: {fileID: 2962405479693658533}
-  - component: {fileID: 279170946794096256}
   m_Layer: 0
   m_Name: vendingMachine_bar11
   m_TagString: Untagged
@@ -528,27 +439,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &279170946794096256
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 212366845929517178}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0011286635, y: 0.061593518, z: -0.02939463}
 --- !u!1 &265009506330821415
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,7 +450,6 @@ GameObject:
   - component: {fileID: 2263270654930208004}
   - component: {fileID: 3956850860787960165}
   - component: {fileID: 2000693452025496577}
-  - component: {fileID: 5335131987760657987}
   m_Layer: 0
   m_Name: vendingMachine_bar6
   m_TagString: Untagged
@@ -639,27 +528,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5335131987760657987
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 265009506330821415}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0012202163, y: 0.061608776, z: -0.029425625}
 --- !u!1 &284558950000031722
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,7 +539,6 @@ GameObject:
   - component: {fileID: 2795180622793075670}
   - component: {fileID: 2081369144746238436}
   - component: {fileID: 5980271453757349089}
-  - component: {fileID: 5036814721546163412}
   m_Layer: 0
   m_Name: vendingMachine_bar3
   m_TagString: Untagged
@@ -750,27 +617,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5036814721546163412
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284558950000031722}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.00062893826, y: 0.061624035, z: -0.02941418}
 --- !u!1 &437508589505220838
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,7 +628,6 @@ GameObject:
   - component: {fileID: 5354658475266146127}
   - component: {fileID: 4899632371017639447}
   - component: {fileID: 3096153882539065883}
-  - component: {fileID: 7392542716530161397}
   m_Layer: 0
   m_Name: vendingMachine_can35
   m_TagString: Untagged
@@ -859,27 +704,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7392542716530161397
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 437508589505220838}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017738823, y: -0.009036899, z: 3.3094618}
 --- !u!1 &535810773216928142
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,7 +715,6 @@ GameObject:
   - component: {fileID: 7087203646357193704}
   - component: {fileID: 6072397066459436962}
   - component: {fileID: 3886591327125377390}
-  - component: {fileID: 3400619326779159105}
   m_Layer: 0
   m_Name: vendingMachine_block6_base
   m_TagString: Untagged
@@ -967,27 +790,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3400619326779159105
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 535810773216928142}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 402.45258, y: 487.44705, z: 5.0000877}
-  m_Center: {x: 0.005584717, y: -0.00620988, z: -2.5154727}
 --- !u!1 &543338880960240669
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,7 +801,6 @@ GameObject:
   - component: {fileID: 3806214727958061415}
   - component: {fileID: 3102155028830243608}
   - component: {fileID: 3768068334597490200}
-  - component: {fileID: 7986786197381944306}
   m_Layer: 0
   m_Name: vendingMachine_block4_holder1
   m_TagString: Untagged
@@ -1075,27 +876,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7986786197381944306
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 543338880960240669}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: 0.0060881376, y: 257.99542, z: -15.192852}
 --- !u!1 &606309275491234870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,7 +887,6 @@ GameObject:
   - component: {fileID: 5155090741294019230}
   - component: {fileID: 4311800134131832936}
   - component: {fileID: 1912914683844030664}
-  - component: {fileID: 1712503908802242611}
   m_Layer: 0
   m_Name: vendingMachine_block5_holder4
   m_TagString: Untagged
@@ -1183,27 +962,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1712503908802242611
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 606309275491234870}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 115.80669, y: 516.00024, z: 60.20956}
-  m_Center: {x: -28.43137, y: 257.99445, z: -15.194866}
 --- !u!1 &645314242868132316
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,7 +973,6 @@ GameObject:
   - component: {fileID: 8203465106374948415}
   - component: {fileID: 4971408055795176787}
   - component: {fileID: 5386993768337677987}
-  - component: {fileID: 6502690434550788390}
   m_Layer: 0
   m_Name: vendingMachine_chips6
   m_TagString: Untagged
@@ -1292,27 +1049,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6502690434550788390
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 645314242868132316}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.024384527, y: 0.4165198, z: -0.39330497}
 --- !u!1 &648759480197155932
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,7 +1060,6 @@ GameObject:
   - component: {fileID: 2114912715805311489}
   - component: {fileID: 7772411948640761143}
   - component: {fileID: 7988604970958321269}
-  - component: {fileID: 5370506077072038136}
   m_Layer: 0
   m_Name: vendingMachine_bar48
   m_TagString: Untagged
@@ -1403,27 +1138,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5370506077072038136
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 648759480197155932}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.001242866, y: 0.06168507, z: -0.02936459}
 --- !u!1 &687405013842689600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,7 +1149,6 @@ GameObject:
   - component: {fileID: 6288985964370062386}
   - component: {fileID: 6618814723733568937}
   - component: {fileID: 4206058776639461161}
-  - component: {fileID: 4310556882612482179}
   m_Layer: 0
   m_Name: vendingMachine_block2_holder2
   m_TagString: Untagged
@@ -1511,27 +1224,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4310556882612482179
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 687405013842689600}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: -0.003708005, y: 257.9972, z: -15.188763}
 --- !u!1 &692791391994367252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1543,7 +1235,6 @@ GameObject:
   - component: {fileID: 5299397963764500969}
   - component: {fileID: 194457709238983278}
   - component: {fileID: 823946107552349659}
-  - component: {fileID: 1895345426970157650}
   m_Layer: 0
   m_Name: vendingMachine_bar33
   m_TagString: Untagged
@@ -1622,27 +1313,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1895345426970157650
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 692791391994367252}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.001224031, y: 0.06170033, z: -0.029416088}
 --- !u!1 &739739416084583501
 GameObject:
   m_ObjectHideFlags: 0
@@ -1654,7 +1324,6 @@ GameObject:
   - component: {fileID: 4053093417890342920}
   - component: {fileID: 7824363831514818896}
   - component: {fileID: 5904660445288706298}
-  - component: {fileID: 5306593583047982770}
   m_Layer: 0
   m_Name: vendingMachine_bar53
   m_TagString: Untagged
@@ -1733,27 +1402,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5306593583047982770
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 739739416084583501}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0008501907, y: 0.06166981, z: -0.029408459}
 --- !u!1 &806988341653839105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1765,7 +1413,6 @@ GameObject:
   - component: {fileID: 1917690953502479135}
   - component: {fileID: 1489595849060797577}
   - component: {fileID: 2363206828085675323}
-  - component: {fileID: 3086994561312582373}
   m_Layer: 0
   m_Name: vendingMachine_bar1
   m_TagString: Untagged
@@ -1844,27 +1491,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3086994561312582373
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806988341653839105}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.00063275296, y: 0.061624035, z: -0.029383663}
 --- !u!1 &897324330804959940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1876,7 +1502,6 @@ GameObject:
   - component: {fileID: 4600863496983624328}
   - component: {fileID: 5645289271757691995}
   - component: {fileID: 3656147504545153901}
-  - component: {fileID: 5209449192453185830}
   m_Layer: 0
   m_Name: vendingMachine_chips3
   m_TagString: Untagged
@@ -1953,27 +1578,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5209449192453185830
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 897324330804959940}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.024449853, y: 0.41653505, z: -0.39330497}
 --- !u!1 &944410153663587010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1985,7 +1589,6 @@ GameObject:
   - component: {fileID: 4566434857635406435}
   - component: {fileID: 5719072409211348181}
   - component: {fileID: 7294804069991509400}
-  - component: {fileID: 5717944119924736979}
   m_Layer: 0
   m_Name: vendingMachine_can40
   m_TagString: Untagged
@@ -2062,27 +1665,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5717944119924736979
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 944410153663587010}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.018151287, y: -0.009004474, z: 3.3094618}
 --- !u!1 &956056276197227880
 GameObject:
   m_ObjectHideFlags: 0
@@ -2094,7 +1676,6 @@ GameObject:
   - component: {fileID: 1593357540057713618}
   - component: {fileID: 3961325228744470532}
   - component: {fileID: 5189796091644921029}
-  - component: {fileID: 1014037695932489599}
   m_Layer: 0
   m_Name: vendingMachine_block5_holder3
   m_TagString: Untagged
@@ -2170,27 +1751,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1014037695932489599
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 956056276197227880}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 115.80669, y: 516.00024, z: 60.20956}
-  m_Center: {x: -28.427952, y: 257.99445, z: -15.194866}
 --- !u!1 &1132583436776640771
 GameObject:
   m_ObjectHideFlags: 0
@@ -2202,7 +1762,6 @@ GameObject:
   - component: {fileID: 1044854465335554929}
   - component: {fileID: 161717770377332793}
   - component: {fileID: 2285382609055867427}
-  - component: {fileID: 3072059585321436359}
   m_Layer: 0
   m_Name: vendingMachine_chips22
   m_TagString: Untagged
@@ -2279,27 +1838,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3072059585321436359
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1132583436776640771}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.02445176, y: 0.41650072, z: -0.39335075}
 --- !u!1 &1171324204634377197
 GameObject:
   m_ObjectHideFlags: 0
@@ -2311,7 +1849,6 @@ GameObject:
   - component: {fileID: 8400959605345075182}
   - component: {fileID: 2534631556495275411}
   - component: {fileID: 8976908584383259256}
-  - component: {fileID: 8950631288162495555}
   m_Layer: 0
   m_Name: vendingMachine_bar37
   m_TagString: Untagged
@@ -2390,27 +1927,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8950631288162495555
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1171324204634377197}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0011362929, y: 0.0616927, z: -0.02941418}
 --- !u!1 &1220505872770598168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2422,7 +1938,6 @@ GameObject:
   - component: {fileID: 3982106432805423596}
   - component: {fileID: 5302599014433406042}
   - component: {fileID: 4325839442404586313}
-  - component: {fileID: 5359401435281575759}
   m_Layer: 0
   m_Name: vendingMachine_block3_base
   m_TagString: Untagged
@@ -2498,27 +2013,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5359401435281575759
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1220505872770598168}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 402.45258, y: 487.44705, z: 5.0000877}
-  m_Center: {x: 0.00067138684, y: -0.003539592, z: -2.5095522}
 --- !u!1 &1227559373719534246
 GameObject:
   m_ObjectHideFlags: 0
@@ -2530,7 +2024,6 @@ GameObject:
   - component: {fileID: 553243540993396000}
   - component: {fileID: 7472690777198233393}
   - component: {fileID: 1214715480422162365}
-  - component: {fileID: 7813471770513019166}
   m_Layer: 0
   m_Name: vendingMachine_chips11
   m_TagString: Untagged
@@ -2607,27 +2100,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7813471770513019166
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1227559373719534246}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.024448423, y: 0.41648355, z: -0.39330497}
 --- !u!1 &1342385398091765861
 GameObject:
   m_ObjectHideFlags: 0
@@ -2639,7 +2111,6 @@ GameObject:
   - component: {fileID: 8813549790366017819}
   - component: {fileID: 766778727815145841}
   - component: {fileID: 5094622881685889464}
-  - component: {fileID: 2040376661352106457}
   m_Layer: 0
   m_Name: vendingMachine_can12
   m_TagString: Untagged
@@ -2716,27 +2187,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2040376661352106457
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1342385398091765861}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017701153, y: -0.009088397, z: 3.3094923}
 --- !u!1 &1527796430487595727
 GameObject:
   m_ObjectHideFlags: 0
@@ -2748,7 +2198,6 @@ GameObject:
   - component: {fileID: 6130262874349699320}
   - component: {fileID: 5066407007667789952}
   - component: {fileID: 6252383495275364681}
-  - component: {fileID: 3379723575695710035}
   m_Layer: 0
   m_Name: vendingMachine_can5
   m_TagString: Untagged
@@ -2825,27 +2274,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3379723575695710035
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1527796430487595727}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.016757969, y: -0.009033084, z: 3.3094923}
 --- !u!1 &1529926357265211827
 GameObject:
   m_ObjectHideFlags: 0
@@ -2857,7 +2285,6 @@ GameObject:
   - component: {fileID: 1509101613143065659}
   - component: {fileID: 2573400684578845429}
   - component: {fileID: 6539327280692617660}
-  - component: {fileID: 4965070451663039798}
   m_Layer: 0
   m_Name: vendingMachine_block1_holder5
   m_TagString: Untagged
@@ -2933,27 +2360,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4965070451663039798
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1529926357265211827}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: -0.0054513216, y: 257.99817, z: -15.187939}
 --- !u!1 &1533660826736755981
 GameObject:
   m_ObjectHideFlags: 0
@@ -3004,7 +2410,6 @@ GameObject:
   - component: {fileID: 2967369472532645124}
   - component: {fileID: 3731288859323920613}
   - component: {fileID: 2206700357340495162}
-  - component: {fileID: 9160352753854251922}
   m_Layer: 0
   m_Name: vendingMachine_can30
   m_TagString: Untagged
@@ -3081,27 +2486,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &9160352753854251922
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613203813300760393}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017580036, y: -0.009042621, z: 3.3094618}
 --- !u!1 &1765498089066535300
 GameObject:
   m_ObjectHideFlags: 0
@@ -3113,7 +2497,6 @@ GameObject:
   - component: {fileID: 5094373538187905304}
   - component: {fileID: 8265479866971023566}
   - component: {fileID: 6403053640773499542}
-  - component: {fileID: 6729227195870716417}
   m_Layer: 0
   m_Name: vendingMachine_can20
   m_TagString: Untagged
@@ -3190,27 +2573,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6729227195870716417
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1765498089066535300}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.018154148, y: -0.009033084, z: 3.3094923}
 --- !u!1 &1830398123389091244
 GameObject:
   m_ObjectHideFlags: 0
@@ -3261,7 +2623,6 @@ GameObject:
   - component: {fileID: 3374789210534029737}
   - component: {fileID: 4722320699926552252}
   - component: {fileID: 1840256936742742934}
-  - component: {fileID: 1770548299848302748}
   m_Layer: 0
   m_Name: vendingMachine_bar36
   m_TagString: Untagged
@@ -3340,27 +2701,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1770548299848302748
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1831189336268300644}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0011362929, y: 0.06170033, z: -0.029368404}
 --- !u!1 &1840340631820390640
 GameObject:
   m_ObjectHideFlags: 0
@@ -3411,7 +2751,6 @@ GameObject:
   - component: {fileID: 3293466678007111477}
   - component: {fileID: 875477405344222816}
   - component: {fileID: 4765756309940157403}
-  - component: {fileID: 1875647536529727761}
   m_Layer: 0
   m_Name: vendingMachine_bar50
   m_TagString: Untagged
@@ -3490,27 +2829,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1875647536529727761
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1841248053236027882}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0012407203, y: 0.06166981, z: -0.029397015}
 --- !u!1 &1924086220623090017
 GameObject:
   m_ObjectHideFlags: 0
@@ -3522,7 +2840,6 @@ GameObject:
   - component: {fileID: 4412520530832550855}
   - component: {fileID: 5981186028536930200}
   - component: {fileID: 647231267044460003}
-  - component: {fileID: 2839504602363899087}
   m_Layer: 0
   m_Name: vendingMachine_chips15
   m_TagString: Untagged
@@ -3599,27 +2916,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2839504602363899087
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1924086220623090017}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.024452237, y: 0.41653123, z: -0.39335075}
 --- !u!1 &2080715698902428315
 GameObject:
   m_ObjectHideFlags: 0
@@ -3631,7 +2927,6 @@ GameObject:
   - component: {fileID: 219264005683554578}
   - component: {fileID: 1139045372100803691}
   - component: {fileID: 8618563781073336640}
-  - component: {fileID: 9134796536187459354}
   m_Layer: 0
   m_Name: vendingMachine_block4_base
   m_TagString: Untagged
@@ -3707,27 +3002,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &9134796536187459354
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2080715698902428315}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 402.45258, y: 487.44705, z: 5.0000877}
-  m_Center: {x: 0.008712769, y: -0.0044551194, z: -2.5102236}
 --- !u!1 &2152530283283924112
 GameObject:
   m_ObjectHideFlags: 0
@@ -3739,7 +3013,6 @@ GameObject:
   - component: {fileID: 2552945557587800441}
   - component: {fileID: 414823253351905249}
   - component: {fileID: 6390187090337633880}
-  - component: {fileID: 5181802561631150426}
   m_Layer: 0
   m_Name: vendingMachine_chips14
   m_TagString: Untagged
@@ -3816,27 +3089,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5181802561631150426
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2152530283283924112}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.025068311, y: 0.41653123, z: -0.39335075}
 --- !u!1 &2304144714112838219
 GameObject:
   m_ObjectHideFlags: 0
@@ -3848,7 +3100,6 @@ GameObject:
   - component: {fileID: 5463490295627991719}
   - component: {fileID: 8115974088825200451}
   - component: {fileID: 2342098890194177613}
-  - component: {fileID: 7483853051668921932}
   m_Layer: 0
   m_Name: vendingMachine_block2_holder4
   m_TagString: Untagged
@@ -3924,27 +3175,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7483853051668921932
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2304144714112838219}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: -0.005317807, y: 257.9972, z: -15.188763}
 --- !u!1 &2336527111182195944
 GameObject:
   m_ObjectHideFlags: 0
@@ -3956,7 +3186,6 @@ GameObject:
   - component: {fileID: 2811154133259778563}
   - component: {fileID: 715153172980863756}
   - component: {fileID: 3276128895316317072}
-  - component: {fileID: 1141741080764721522}
   m_Layer: 0
   m_Name: vendingMachine_can38
   m_TagString: Untagged
@@ -4033,27 +3262,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1141741080764721522
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2336527111182195944}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.01734877, y: -0.009036899, z: 3.3094618}
 --- !u!1 &2379383014892784462
 GameObject:
   m_ObjectHideFlags: 0
@@ -4065,7 +3273,6 @@ GameObject:
   - component: {fileID: 8375760675815643045}
   - component: {fileID: 3891884796456599343}
   - component: {fileID: 4524899565963101229}
-  - component: {fileID: 5272272151967838491}
   m_Layer: 0
   m_Name: vendingMachine_bar21
   m_TagString: Untagged
@@ -4144,27 +3351,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5272272151967838491
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2379383014892784462}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0012366672, y: 0.061593518, z: -0.029419903}
 --- !u!1 &2423082509663607019
 GameObject:
   m_ObjectHideFlags: 0
@@ -4176,7 +3362,6 @@ GameObject:
   - component: {fileID: 7021192093919923198}
   - component: {fileID: 6106991399089475425}
   - component: {fileID: 6792388769552787092}
-  - component: {fileID: 9133006487640116914}
   m_Layer: 0
   m_Name: vendingMachine_block2_holder5
   m_TagString: Untagged
@@ -4252,27 +3437,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &9133006487640116914
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2423082509663607019}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: -0.0049363375, y: 257.9972, z: -15.188763}
 --- !u!1 &2433699851648251349
 GameObject:
   m_ObjectHideFlags: 0
@@ -4284,7 +3448,6 @@ GameObject:
   - component: {fileID: 5692108942545747904}
   - component: {fileID: 5151421963474028380}
   - component: {fileID: 4627254132620039591}
-  - component: {fileID: 2821365022913829397}
   m_Layer: 0
   m_Name: vendingMachine_block1_holder2
   m_TagString: Untagged
@@ -4360,27 +3523,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2821365022913829397
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2433699851648251349}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: -0.0034638643, y: 257.99817, z: -15.187878}
 --- !u!1 &2471403825000995869
 GameObject:
   m_ObjectHideFlags: 0
@@ -4392,7 +3534,6 @@ GameObject:
   - component: {fileID: 4379057719148618231}
   - component: {fileID: 1964601920166937928}
   - component: {fileID: 577177915638530607}
-  - component: {fileID: 2290126589086469323}
   m_Layer: 0
   m_Name: vendingMachine_can25
   m_TagString: Untagged
@@ -4469,27 +3610,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2290126589086469323
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2471403825000995869}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.016756061, y: -0.009004474, z: 3.3094618}
 --- !u!1 &2492954339867870440
 GameObject:
   m_ObjectHideFlags: 0
@@ -4537,7 +3657,6 @@ GameObject:
   - component: {fileID: 7695947326579288081}
   - component: {fileID: 5500515616328120286}
   - component: {fileID: 7029902895348463599}
-  - component: {fileID: 1190581763193035015}
   m_Layer: 0
   m_Name: vendingMachine_block4_holder4
   m_TagString: Untagged
@@ -4613,27 +3732,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1190581763193035015
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2517372082656890868}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: 0.007720828, y: 257.99536, z: -15.192913}
 --- !u!1 &2614278175350225685
 GameObject:
   m_ObjectHideFlags: 0
@@ -4645,7 +3743,6 @@ GameObject:
   - component: {fileID: 389349536084749477}
   - component: {fileID: 961395936699041006}
   - component: {fileID: 239334889243059035}
-  - component: {fileID: 9102612328412845759}
   m_Layer: 0
   m_Name: vendingMachine_bar44
   m_TagString: Untagged
@@ -4724,27 +3821,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &9102612328412845759
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2614278175350225685}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.00035332638, y: 0.0616927, z: -0.02936459}
 --- !u!1 &2643072170175663863
 GameObject:
   m_ObjectHideFlags: 0
@@ -4756,7 +3832,6 @@ GameObject:
   - component: {fileID: 6622718432394297507}
   - component: {fileID: 1049409959187585759}
   - component: {fileID: 6786651613254720145}
-  - component: {fileID: 5979557308972055507}
   m_Layer: 0
   m_Name: vendingMachine_chips1
   m_TagString: Untagged
@@ -4833,27 +3908,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5979557308972055507
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2643072170175663863}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.025131254, y: 0.41653505, z: -0.39330497}
 --- !u!1 &2696203071038027206
 GameObject:
   m_ObjectHideFlags: 0
@@ -4865,7 +3919,6 @@ GameObject:
   - component: {fileID: 8989204823714213441}
   - component: {fileID: 8727097470427270601}
   - component: {fileID: 4155149111149034440}
-  - component: {fileID: 1753246417608046549}
   m_Layer: 0
   m_Name: vendingMachine_chips2
   m_TagString: Untagged
@@ -4942,27 +3995,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1753246417608046549
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2696203071038027206}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.025066404, y: 0.41653505, z: -0.39330497}
 --- !u!1 &2714591662247298970
 GameObject:
   m_ObjectHideFlags: 0
@@ -4974,7 +4006,6 @@ GameObject:
   - component: {fileID: 2685169606278113651}
   - component: {fileID: 8925278794030296368}
   - component: {fileID: 6874575353642067250}
-  - component: {fileID: 8328035176715699633}
   m_Layer: 0
   m_Name: vendingMachine_bar31
   m_TagString: Untagged
@@ -5053,27 +4084,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8328035176715699633
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2714591662247298970}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.00063275296, y: 0.06168507, z: -0.029387478}
 --- !u!1 &2718105293312521612
 GameObject:
   m_ObjectHideFlags: 0
@@ -5085,7 +4095,6 @@ GameObject:
   - component: {fileID: 3067477024103968510}
   - component: {fileID: 723249578984392560}
   - component: {fileID: 6563345087201738327}
-  - component: {fileID: 7873189754199675329}
   m_Layer: 0
   m_Name: vendingMachine_can8
   m_TagString: Untagged
@@ -5162,27 +4171,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7873189754199675329
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2718105293312521612}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017581943, y: -0.009033084, z: 3.3094923}
 --- !u!1 &2726083296866274304
 GameObject:
   m_ObjectHideFlags: 0
@@ -5194,7 +4182,6 @@ GameObject:
   - component: {fileID: 4892123578225916559}
   - component: {fileID: 1140452008171735545}
   - component: {fileID: 9183954365917092661}
-  - component: {fileID: 6862168949668688530}
   m_Layer: 0
   m_Name: vendingMachine_block2_holder1
   m_TagString: Untagged
@@ -5270,27 +4257,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6862168949668688530
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2726083296866274304}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: -0.008773923, y: 257.9972, z: -15.188702}
 --- !u!1 &2741619617266327890
 GameObject:
   m_ObjectHideFlags: 0
@@ -5302,7 +4268,6 @@ GameObject:
   - component: {fileID: 6582965029988480699}
   - component: {fileID: 5910882730718571493}
   - component: {fileID: 4700946505183532674}
-  - component: {fileID: 8798058031993278479}
   m_Layer: 0
   m_Name: vendingMachine_can31
   m_TagString: Untagged
@@ -5379,27 +4344,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8798058031993278479
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2741619617266327890}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017698292, y: -0.009004474, z: 3.3094618}
 --- !u!1 &2745050018892091655
 GameObject:
   m_ObjectHideFlags: 0
@@ -5411,7 +4355,6 @@ GameObject:
   - component: {fileID: 1783082770186801729}
   - component: {fileID: 8603136979034466882}
   - component: {fileID: 3166873708534753662}
-  - component: {fileID: 4129861550467213344}
   m_Layer: 0
   m_Name: vendingMachine_block3_holder4
   m_TagString: Untagged
@@ -5487,27 +4430,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4129861550467213344
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2745050018892091655}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: -0.00022900105, y: 257.99628, z: -15.1919365}
 --- !u!1 &2777839045314252323
 GameObject:
   m_ObjectHideFlags: 0
@@ -5519,7 +4441,6 @@ GameObject:
   - component: {fileID: 4551582307863659546}
   - component: {fileID: 2488544759361425314}
   - component: {fileID: 8763124678486167050}
-  - component: {fileID: 2698107657823340877}
   m_Layer: 0
   m_Name: vendingMachine_chips17
   m_TagString: Untagged
@@ -5596,27 +4517,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2698107657823340877
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2777839045314252323}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.024387388, y: 0.41641298, z: -0.39335075}
 --- !u!1 &2812501372195340990
 GameObject:
   m_ObjectHideFlags: 0
@@ -5670,7 +4570,6 @@ GameObject:
   - component: {fileID: 726459950475309789}
   - component: {fileID: 8261431159165259161}
   - component: {fileID: 7449380959969584296}
-  - component: {fileID: 8796203558229451030}
   m_Layer: 0
   m_Name: vendingMachine_block4_holder5
   m_TagString: Untagged
@@ -5746,27 +4645,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8796203558229451030
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2837771127700423042}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: -0.0023614168, y: 257.99536, z: -15.192913}
 --- !u!1 &2905246582368812519
 GameObject:
   m_ObjectHideFlags: 0
@@ -5778,7 +4656,6 @@ GameObject:
   - component: {fileID: 8201673143402985221}
   - component: {fileID: 2306492462128243406}
   - component: {fileID: 7702679119575115487}
-  - component: {fileID: 8598136948015675529}
   m_Layer: 0
   m_Name: vendingMachine_block3_holder7
   m_TagString: Untagged
@@ -5854,27 +4731,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8598136948015675529
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2905246582368812519}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: 0.0010985136, y: 257.99628, z: -15.1919365}
 --- !u!1 &3188049899228715066
 GameObject:
   m_ObjectHideFlags: 0
@@ -5886,7 +4742,6 @@ GameObject:
   - component: {fileID: 4940815533676975189}
   - component: {fileID: 4340467081359232741}
   - component: {fileID: 72716968199685435}
-  - component: {fileID: 6751520712440628132}
   m_Layer: 0
   m_Name: vendingMachine_can39
   m_TagString: Untagged
@@ -5963,27 +4818,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6751520712440628132
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3188049899228715066}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017349247, y: -0.009042621, z: 3.3094618}
 --- !u!1 &3234022631932335557
 GameObject:
   m_ObjectHideFlags: 0
@@ -5995,7 +4829,6 @@ GameObject:
   - component: {fileID: 1108929103787974505}
   - component: {fileID: 2336615103147455099}
   - component: {fileID: 9021528358766826598}
-  - component: {fileID: 5284712644091316253}
   m_Layer: 0
   m_Name: vendingMachine_bar49
   m_TagString: Untagged
@@ -6074,27 +4907,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5284712644091316253
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3234022631932335557}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.001241674, y: 0.06167744, z: -0.029410366}
 --- !u!1 &3322865279995334162
 GameObject:
   m_ObjectHideFlags: 0
@@ -6106,7 +4918,6 @@ GameObject:
   - component: {fileID: 798357713160348846}
   - component: {fileID: 9207015946072902796}
   - component: {fileID: 8216049269260953469}
-  - component: {fileID: 8601017174995877319}
   m_Layer: 0
   m_Name: vendingMachine_bar13
   m_TagString: Untagged
@@ -6185,27 +4996,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8601017174995877319
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3322865279995334162}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.00043343502, y: 0.061608776, z: -0.02942181}
 --- !u!1 &3343526406595565893
 GameObject:
   m_ObjectHideFlags: 0
@@ -6217,7 +5007,6 @@ GameObject:
   - component: {fileID: 3147949170031557577}
   - component: {fileID: 7563603080580281031}
   - component: {fileID: 5614701937431359213}
-  - component: {fileID: 6226620872411806001}
   m_Layer: 0
   m_Name: vendingMachine_can4
   m_TagString: Untagged
@@ -6294,27 +5083,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6226620872411806001
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3343526406595565893}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.016757969, y: -0.009000659, z: 3.3094923}
 --- !u!1 &3453473695521155016
 GameObject:
   m_ObjectHideFlags: 0
@@ -6326,7 +5094,6 @@ GameObject:
   - component: {fileID: 8746739381067277625}
   - component: {fileID: 3595063135804347596}
   - component: {fileID: 1044329155710474638}
-  - component: {fileID: 1339321460457996655}
   m_Layer: 0
   m_Name: vendingMachine_console2
   m_TagString: Untagged
@@ -6406,27 +5173,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1339321460457996655
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3453473695521155016}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.09916797, y: 0.44243973, z: 0.0331133}
-  m_Center: {x: -0.00000088103116, y: 0.000000029802322, z: 0.01655668}
 --- !u!1 &3537249362389862503
 GameObject:
   m_ObjectHideFlags: 0
@@ -6438,7 +5184,6 @@ GameObject:
   - component: {fileID: 182984819520635936}
   - component: {fileID: 5290615526196103472}
   - component: {fileID: 1760951524395507518}
-  - component: {fileID: 8598959821861793781}
   m_Layer: 0
   m_Name: vendingMachine_bar52
   m_TagString: Untagged
@@ -6517,27 +5262,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8598959821861793781
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3537249362389862503}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0008511444, y: 0.06167744, z: -0.029360775}
 --- !u!1 &3544765560359726915
 GameObject:
   m_ObjectHideFlags: 0
@@ -6549,7 +5273,6 @@ GameObject:
   - component: {fileID: 4722440440182757577}
   - component: {fileID: 8344987619776188043}
   - component: {fileID: 4692056467138633349}
-  - component: {fileID: 4920501804961764038}
   m_Layer: 0
   m_Name: vendingMachine_bar38
   m_TagString: Untagged
@@ -6628,27 +5351,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4920501804961764038
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3544765560359726915}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0011343856, y: 0.06168507, z: -0.02940083}
 --- !u!1 &3551594786271424187
 GameObject:
   m_ObjectHideFlags: 0
@@ -6660,7 +5362,6 @@ GameObject:
   - component: {fileID: 4597013723365973938}
   - component: {fileID: 7458203840803095837}
   - component: {fileID: 2328981486796837221}
-  - component: {fileID: 4754180827795465801}
   m_Layer: 0
   m_Name: vendingMachine_block2_holder3
   m_TagString: Untagged
@@ -6736,27 +5437,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4754180827795465801
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3551594786271424187}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: -0.006469846, y: 257.9972, z: -15.188763}
 --- !u!1 &3639872576901390555
 GameObject:
   m_ObjectHideFlags: 0
@@ -6768,7 +5448,6 @@ GameObject:
   - component: {fileID: 6832599419063418585}
   - component: {fileID: 4043306459562129517}
   - component: {fileID: 3749042277800280121}
-  - component: {fileID: 9068696243415206313}
   m_Layer: 0
   m_Name: vendingMachine_chips23
   m_TagString: Untagged
@@ -6845,27 +5524,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &9068696243415206313
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3639872576901390555}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.024451284, y: 0.41647974, z: -0.39335075}
 --- !u!1 &3721625288062433605
 GameObject:
   m_ObjectHideFlags: 0
@@ -6877,7 +5535,6 @@ GameObject:
   - component: {fileID: 6255579345438065632}
   - component: {fileID: 8129030579608455472}
   - component: {fileID: 8439604065526887982}
-  - component: {fileID: 3674340997162102477}
   m_Layer: 0
   m_Name: vendingMachine_chips12
   m_TagString: Untagged
@@ -6954,27 +5611,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3674340997162102477
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3721625288062433605}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.024447946, y: 0.41641203, z: -0.39324394}
 --- !u!1 &3782688066821443321
 GameObject:
   m_ObjectHideFlags: 0
@@ -6986,7 +5622,6 @@ GameObject:
   - component: {fileID: 2752143656054803701}
   - component: {fileID: 2249294358640978900}
   - component: {fileID: 6966637066621256964}
-  - component: {fileID: 8384861758026882380}
   m_Layer: 0
   m_Name: vendingMachine_bar10
   m_TagString: Untagged
@@ -7065,27 +5700,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8384861758026882380
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3782688066821443321}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0011305709, y: 0.061608776, z: -0.029410366}
 --- !u!1 &3794738691393950097
 GameObject:
   m_ObjectHideFlags: 0
@@ -7097,7 +5711,6 @@ GameObject:
   - component: {fileID: 394348666527384972}
   - component: {fileID: 2461142490198297282}
   - component: {fileID: 5784744327258200624}
-  - component: {fileID: 717852619900464385}
   m_Layer: 0
   m_Name: vendingMachine_bar26
   m_TagString: Untagged
@@ -7176,27 +5789,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &717852619900464385
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3794738691393950097}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.000843515, y: 0.061593518, z: -0.029404644}
 --- !u!1 &3795381609086432238
 GameObject:
   m_ObjectHideFlags: 0
@@ -7208,7 +5800,6 @@ GameObject:
   - component: {fileID: 8045178526968179367}
   - component: {fileID: 6193076585274395076}
   - component: {fileID: 5931241530181096576}
-  - component: {fileID: 7465193823375988964}
   m_Layer: 0
   m_Name: vendingMachine_bar7
   m_TagString: Untagged
@@ -7287,27 +5878,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7465193823375988964
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3795381609086432238}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0012164016, y: 0.061608776, z: -0.029412273}
 --- !u!1 &3953863777839708225
 GameObject:
   m_ObjectHideFlags: 0
@@ -7319,7 +5889,6 @@ GameObject:
   - component: {fileID: 4628329684094941974}
   - component: {fileID: 2508798524090734492}
   - component: {fileID: 3484478073603100686}
-  - component: {fileID: 498828444018461093}
   m_Layer: 0
   m_Name: vendingMachine_bar14
   m_TagString: Untagged
@@ -7398,27 +5967,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &498828444018461093
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3953863777839708225}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.00043248135, y: 0.061608776, z: -0.029408459}
 --- !u!1 &3955102651615064129
 GameObject:
   m_ObjectHideFlags: 0
@@ -7430,7 +5978,6 @@ GameObject:
   - component: {fileID: 6974812274715470646}
   - component: {fileID: 7312472404827279550}
   - component: {fileID: 824899224360976826}
-  - component: {fileID: 7402185497390658164}
   m_Layer: 0
   m_Name: vendingMachine_bar4
   m_TagString: Untagged
@@ -7509,27 +6056,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7402185497390658164
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3955102651615064129}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.00062893826, y: 0.061608776, z: -0.029397968}
 --- !u!1 &3957229932465296893
 GameObject:
   m_ObjectHideFlags: 0
@@ -7541,7 +6067,6 @@ GameObject:
   - component: {fileID: 5235951326123328349}
   - component: {fileID: 533535304514014820}
   - component: {fileID: 6534791446813545938}
-  - component: {fileID: 590719181849975739}
   m_Layer: 0
   m_Name: vendingMachine_chips21
   m_TagString: Untagged
@@ -7618,27 +6143,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &590719181849975739
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3957229932465296893}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.025131254, y: 0.4165236, z: -0.39335075}
 --- !u!1 &3969248533210758005
 GameObject:
   m_ObjectHideFlags: 0
@@ -7650,7 +6154,6 @@ GameObject:
   - component: {fileID: 9006178136396057977}
   - component: {fileID: 4619722390462515628}
   - component: {fileID: 3672656163091467120}
-  - component: {fileID: 8928370155824047395}
   m_Layer: 0
   m_Name: vendingMachine_bar43
   m_TagString: Untagged
@@ -7729,27 +6232,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8928370155824047395
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3969248533210758005}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.00043629605, y: 0.06166981, z: -0.02938271}
 --- !u!1 &3993957133502865022
 GameObject:
   m_ObjectHideFlags: 0
@@ -7761,7 +6243,6 @@ GameObject:
   - component: {fileID: 4043205611362515340}
   - component: {fileID: 3965188025572652464}
   - component: {fileID: 7599196698316225817}
-  - component: {fileID: 833424428635443629}
   m_Layer: 0
   m_Name: vendingMachine_block3_holder2
   m_TagString: Untagged
@@ -7837,27 +6318,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &833424428635443629
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3993957133502865022}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: -0.00276196, y: 257.99628, z: -15.1919365}
 --- !u!1 &4014893085679248419
 GameObject:
   m_ObjectHideFlags: 0
@@ -7869,7 +6329,6 @@ GameObject:
   - component: {fileID: 8046949624919356509}
   - component: {fileID: 1722174219106529008}
   - component: {fileID: 6924686280359745593}
-  - component: {fileID: 7295049289237975892}
   m_Layer: 0
   m_Name: vendingMachine_can23
   m_TagString: Untagged
@@ -7946,27 +6405,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7295049289237975892
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4014893085679248419}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017320637, y: -0.009042621, z: 3.3094695}
 --- !u!1 &4018241228067926647
 GameObject:
   m_ObjectHideFlags: 0
@@ -7978,7 +6416,6 @@ GameObject:
   - component: {fileID: 6265377575228745399}
   - component: {fileID: 4113139665716986148}
   - component: {fileID: 9475566413232087}
-  - component: {fileID: 2730667060845189824}
   m_Layer: 0
   m_Name: vendingMachine_bar8
   m_TagString: Untagged
@@ -8057,27 +6494,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2730667060845189824
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4018241228067926647}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0011324782, y: 0.061608776, z: -0.029379848}
 --- !u!1 &4087295911870247624
 GameObject:
   m_ObjectHideFlags: 0
@@ -8089,7 +6505,6 @@ GameObject:
   - component: {fileID: 468097454924733472}
   - component: {fileID: 5090732023801080611}
   - component: {fileID: 4286883220211332672}
-  - component: {fileID: 559873263026857324}
   m_Layer: 0
   m_Name: vendingMachine_bar40
   m_TagString: Untagged
@@ -8168,27 +6583,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &559873263026857324
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4087295911870247624}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.00044011074, y: 0.0616927, z: -0.029368404}
 --- !u!1 &4114759020611411862
 GameObject:
   m_ObjectHideFlags: 0
@@ -8200,7 +6594,6 @@ GameObject:
   - component: {fileID: 8543436918949121078}
   - component: {fileID: 4026295425887068958}
   - component: {fileID: 8770325524824903076}
-  - component: {fileID: 5394642299998559040}
   m_Layer: 0
   m_Name: vendingMachine_block3_holder1
   m_TagString: Untagged
@@ -8276,27 +6669,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5394642299998559040
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4114759020611411862}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: 0.0027922392, y: 257.99628, z: -15.191875}
 --- !u!1 &4153386029811622592
 GameObject:
   m_ObjectHideFlags: 0
@@ -8308,7 +6680,6 @@ GameObject:
   - component: {fileID: 675900994486962729}
   - component: {fileID: 3524652964847753741}
   - component: {fileID: 8459879040416718957}
-  - component: {fileID: 6263486748172849057}
   m_Layer: 0
   m_Name: vendingMachine_block5_base
   m_TagString: Untagged
@@ -8384,27 +6755,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6263486748172849057
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4153386029811622592}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 402.45258, y: 487.44705, z: 5.0000877}
-  m_Center: {x: 0.0054473877, y: -0.0053248703, z: -2.5122988}
 --- !u!1 &4154415517365095170
 GameObject:
   m_ObjectHideFlags: 0
@@ -8416,7 +6766,6 @@ GameObject:
   - component: {fileID: 5614959325720716046}
   - component: {fileID: 7488304279823235125}
   - component: {fileID: 8618692006693216921}
-  - component: {fileID: 7370262988638536911}
   m_Layer: 0
   m_Name: vendingMachine_block1_holder1
   m_TagString: Untagged
@@ -8492,27 +6841,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7370262988638536911
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4154415517365095170}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: -0.0046235323, y: 257.99817, z: -15.187908}
 --- !u!1 &4237638527987908950
 GameObject:
   m_ObjectHideFlags: 0
@@ -8524,7 +6852,6 @@ GameObject:
   - component: {fileID: 6321278656443833903}
   - component: {fileID: 681375990070094739}
   - component: {fileID: 5490928166335703836}
-  - component: {fileID: 1524096399210863517}
   m_Layer: 0
   m_Name: vendingMachine_block6_holder3
   m_TagString: Untagged
@@ -8600,27 +6927,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1524096399210863517
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4237638527987908950}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 115.80669, y: 516.00024, z: 60.20956}
-  m_Center: {x: -28.432758, y: 257.99365, z: -15.198162}
 --- !u!1 &4245690656399133468
 GameObject:
   m_ObjectHideFlags: 0
@@ -8632,7 +6938,6 @@ GameObject:
   - component: {fileID: 3473106086734465355}
   - component: {fileID: 4633014874948644869}
   - component: {fileID: 4855946126071743536}
-  - component: {fileID: 726945186823357332}
   m_Layer: 0
   m_Name: vendingMachine_bar23
   m_TagString: Untagged
@@ -8711,27 +7016,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &726945186823357332
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4245690656399133468}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0012345214, y: 0.06157826, z: -0.029389862}
 --- !u!1 &4477530050435493729
 GameObject:
   m_ObjectHideFlags: 0
@@ -8743,7 +7027,6 @@ GameObject:
   - component: {fileID: 2267047695061203812}
   - component: {fileID: 3311603787848232929}
   - component: {fileID: 6741557232704251099}
-  - component: {fileID: 4344865526209169250}
   m_Layer: 0
   m_Name: vendingMachine_can7
   m_TagString: Untagged
@@ -8820,27 +7103,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4344865526209169250
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4477530050435493729}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017581943, y: -0.009000659, z: 3.3094923}
 --- !u!1 &4487945034328122360
 GameObject:
   m_ObjectHideFlags: 0
@@ -8852,7 +7114,6 @@ GameObject:
   - component: {fileID: 2135779835101203682}
   - component: {fileID: 5224942851172452316}
   - component: {fileID: 1511728495241994799}
-  - component: {fileID: 5633296760283837616}
   m_Layer: 0
   m_Name: vendingMachine_block1_holder3
   m_TagString: Untagged
@@ -8928,27 +7189,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5633296760283837616
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4487945034328122360}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: -0.006225705, y: 257.99817, z: -15.187908}
 --- !u!1 &4717199167314838143
 GameObject:
   m_ObjectHideFlags: 0
@@ -8960,7 +7200,6 @@ GameObject:
   - component: {fileID: 4444973002224595191}
   - component: {fileID: 6201514426387039748}
   - component: {fileID: 5050256152124688075}
-  - component: {fileID: 6015699590808653866}
   m_Layer: 0
   m_Name: vendingMachine_bar42
   m_TagString: Untagged
@@ -9039,27 +7278,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6015699590808653866
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4717199167314838143}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.00043724972, y: 0.06167744, z: -0.029398922}
 --- !u!1 &4797562032852311678
 GameObject:
   m_ObjectHideFlags: 0
@@ -9071,7 +7289,6 @@ GameObject:
   - component: {fileID: 3243195030484576302}
   - component: {fileID: 1280787113510525616}
   - component: {fileID: 4155354610372038403}
-  - component: {fileID: 2903895965086191261}
   m_Layer: 0
   m_Name: vendingMachine_can33
   m_TagString: Untagged
@@ -9148,27 +7365,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2903895965086191261
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4797562032852311678}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017699245, y: -0.009042621, z: 3.3094618}
 --- !u!1 &4837649108608948133
 GameObject:
   m_ObjectHideFlags: 0
@@ -9180,7 +7376,6 @@ GameObject:
   - component: {fileID: 5823609579363221860}
   - component: {fileID: 1528877924979553635}
   - component: {fileID: 804579083025259145}
-  - component: {fileID: 7900216623824726355}
   m_Layer: 0
   m_Name: vendingMachine_can2
   m_TagString: Untagged
@@ -9257,27 +7452,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7900216623824726355
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4837649108608948133}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017324451, y: -0.009033084, z: 3.3094923}
 --- !u!1 &4871862601440670509
 GameObject:
   m_ObjectHideFlags: 0
@@ -9289,7 +7463,6 @@ GameObject:
   - component: {fileID: 8192316641582381034}
   - component: {fileID: 908965091366496394}
   - component: {fileID: 4522495071254685659}
-  - component: {fileID: 4232210011152817777}
   m_Layer: 0
   m_Name: vendingMachine_block3_holder5
   m_TagString: Untagged
@@ -9365,27 +7538,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4232210011152817777
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4871862601440670509}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: 0.0021628141, y: 257.99628, z: -15.1919365}
 --- !u!1 &4910344292242931830
 GameObject:
   m_ObjectHideFlags: 0
@@ -9397,7 +7549,6 @@ GameObject:
   - component: {fileID: 6098751846778770774}
   - component: {fileID: 1488496459442836279}
   - component: {fileID: 8545829796213944908}
-  - component: {fileID: 6316250869002287259}
   m_Layer: 0
   m_Name: vendingMachine_can16
   m_TagString: Untagged
@@ -9474,27 +7625,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6316250869002287259
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4910344292242931830}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017350439, y: -0.009000659, z: 3.3094923}
 --- !u!1 &5073904137576632817
 GameObject:
   m_ObjectHideFlags: 0
@@ -9506,7 +7636,6 @@ GameObject:
   - component: {fileID: 4160248582595567760}
   - component: {fileID: 2996119651959057001}
   - component: {fileID: 6886710698420048742}
-  - component: {fileID: 1872653096015799333}
   m_Layer: 0
   m_Name: vendingMachine_block2_holder6
   m_TagString: Untagged
@@ -9582,27 +7711,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1872653096015799333
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5073904137576632817}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: -0.008453488, y: 257.9972, z: -15.188763}
 --- !u!1 &5142795918999706481
 GameObject:
   m_ObjectHideFlags: 0
@@ -9614,7 +7722,6 @@ GameObject:
   - component: {fileID: 8539252060182060337}
   - component: {fileID: 5642729415334453226}
   - component: {fileID: 5077634250831309208}
-  - component: {fileID: 7698184021019993131}
   m_Layer: 0
   m_Name: vendingMachine_bar34
   m_TagString: Untagged
@@ -9693,27 +7800,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7698184021019993131
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5142795918999706481}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.001224031, y: 0.0616927, z: -0.029402737}
 --- !u!1 &5144796878242430752
 GameObject:
   m_ObjectHideFlags: 0
@@ -9725,7 +7811,6 @@ GameObject:
   - component: {fileID: 5256467851631682096}
   - component: {fileID: 6135329813897769166}
   - component: {fileID: 4962876291617690360}
-  - component: {fileID: 2865286578531087808}
   m_Layer: 0
   m_Name: vendingMachine_block4_holder6
   m_TagString: Untagged
@@ -9801,27 +7886,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2865286578531087808
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5144796878242430752}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: 0.0067499876, y: 257.99536, z: -15.192913}
 --- !u!1 &5193138254015171823
 GameObject:
   m_ObjectHideFlags: 0
@@ -9833,7 +7897,6 @@ GameObject:
   - component: {fileID: 6176886539203150911}
   - component: {fileID: 8507640053918022100}
   - component: {fileID: 3039699952111546118}
-  - component: {fileID: 2459955482096659571}
   m_Layer: 0
   m_Name: vendingMachine_can11
   m_TagString: Untagged
@@ -9910,27 +7973,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2459955482096659571
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5193138254015171823}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017701153, y: -0.009033084, z: 3.3094923}
 --- !u!1 &5200023284323092081
 GameObject:
   m_ObjectHideFlags: 0
@@ -9942,7 +7984,6 @@ GameObject:
   - component: {fileID: 33822560889347076}
   - component: {fileID: 435329037474624205}
   - component: {fileID: 4532019760993343506}
-  - component: {fileID: 6024928175724710117}
   m_Layer: 0
   m_Name: vendingMachine_can34
   m_TagString: Untagged
@@ -10019,27 +8060,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6024928175724710117
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5200023284323092081}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017738346, y: -0.009004474, z: 3.3094618}
 --- !u!1 &5239722639139839082
 GameObject:
   m_ObjectHideFlags: 0
@@ -10051,7 +8071,6 @@ GameObject:
   - component: {fileID: 2379325689579440449}
   - component: {fileID: 3837509827102583765}
   - component: {fileID: 1948198634866570359}
-  - component: {fileID: 2770252555648870045}
   m_Layer: 0
   m_Name: vendingMachine_can18
   m_TagString: Untagged
@@ -10128,27 +8147,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2770252555648870045
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5239722639139839082}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017351631, y: -0.009088397, z: 3.3094923}
 --- !u!1 &5262536564985998552
 GameObject:
   m_ObjectHideFlags: 0
@@ -10160,7 +8158,6 @@ GameObject:
   - component: {fileID: 6429762560357040648}
   - component: {fileID: 8321522501347411579}
   - component: {fileID: 3050816173400578597}
-  - component: {fileID: 9132370029424409562}
   m_Layer: 0
   m_Name: vendingMachine_can29
   m_TagString: Untagged
@@ -10237,27 +8234,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &9132370029424409562
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5262536564985998552}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017580036, y: -0.009036899, z: 3.3094618}
 --- !u!1 &5355696303566950340
 GameObject:
   m_ObjectHideFlags: 0
@@ -10269,7 +8245,6 @@ GameObject:
   - component: {fileID: 9138793029774838965}
   - component: {fileID: 541512931130244415}
   - component: {fileID: 3450745200597945623}
-  - component: {fileID: 4406073238374753114}
   m_Layer: 0
   m_Name: vendingMachine_can37
   m_TagString: Untagged
@@ -10346,27 +8321,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4406073238374753114
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5355696303566950340}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017348055, y: -0.009004474, z: 3.3094618}
 --- !u!1 &5381318602828710071
 GameObject:
   m_ObjectHideFlags: 0
@@ -10378,7 +8332,6 @@ GameObject:
   - component: {fileID: 7618013045216344934}
   - component: {fileID: 1601555446194646905}
   - component: {fileID: 5757835870005625318}
-  - component: {fileID: 8259754373174697501}
   m_Layer: 0
   m_Name: vendingMachine_bar45
   m_TagString: Untagged
@@ -10457,27 +8410,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8259754373174697501
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5381318602828710071}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.00035189587, y: 0.06168507, z: -0.029412273}
 --- !u!1 &5399432986332378809
 GameObject:
   m_ObjectHideFlags: 0
@@ -10487,8 +8419,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6587628844831004810}
+  - component: {fileID: 4619644962153329890}
   m_Layer: 0
-  m_Name: VendingMachine
+  m_Name: MarkPrefab10103
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10504,12 +8437,33 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.182499, y: 0, z: -25.47}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4666828742738180121}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4619644962153329890
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5399432986332378809}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.5643839, y: 2.9938457, z: 1.9783459}
+  m_Center: {x: 0.03296272, y: 0.99692154, z: -0.015337309}
 --- !u!1 &5400751426174536209
 GameObject:
   m_ObjectHideFlags: 0
@@ -10521,7 +8475,6 @@ GameObject:
   - component: {fileID: 6492197532139174899}
   - component: {fileID: 8279859416214877642}
   - component: {fileID: 2339210739384627480}
-  - component: {fileID: 6531422824410066831}
   m_Layer: 0
   m_Name: vendingMachine_bar22
   m_TagString: Untagged
@@ -10600,27 +8553,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6531422824410066831
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5400751426174536209}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0012357135, y: 0.061593518, z: -0.029406551}
 --- !u!1 &5407970415343890415
 GameObject:
   m_ObjectHideFlags: 0
@@ -10632,7 +8564,6 @@ GameObject:
   - component: {fileID: 7995620050728861628}
   - component: {fileID: 9136839243175956800}
   - component: {fileID: 3225562010405758836}
-  - component: {fileID: 2124334428158747670}
   m_Layer: 0
   m_Name: vendingMachine_bar47
   m_TagString: Untagged
@@ -10711,27 +8642,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2124334428158747670
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5407970415343890415}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.00034951168, y: 0.06166981, z: -0.029381279}
 --- !u!1 &5518151103056660816
 GameObject:
   m_ObjectHideFlags: 0
@@ -10782,7 +8692,6 @@ GameObject:
   - component: {fileID: 2104953857714656486}
   - component: {fileID: 952442193140542282}
   - component: {fileID: 8126289817083037650}
-  - component: {fileID: 1303277592325677859}
   m_Layer: 0
   m_Name: vendingMachine_chips9
   m_TagString: Untagged
@@ -10859,27 +8768,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1303277592325677859
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5519584290629259822}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.025131254, y: 0.41652742, z: -0.39330497}
 --- !u!1 &5600063908907562213
 GameObject:
   m_ObjectHideFlags: 0
@@ -10891,7 +8779,6 @@ GameObject:
   - component: {fileID: 5373058292882940744}
   - component: {fileID: 5684436531672773965}
   - component: {fileID: 3983005619323720769}
-  - component: {fileID: 5908507210931739375}
   m_Layer: 0
   m_Name: vendingMachine_flap
   m_TagString: Untagged
@@ -10967,27 +8854,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5908507210931739375
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5600063908907562213}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.2644824, y: 0.10003314, z: 0.00018922516}
-  m_Center: {x: 0.0000022351742, y: -0.05001663, z: 0.00000023605025}
 --- !u!1 &5614381993060082603
 GameObject:
   m_ObjectHideFlags: 0
@@ -10999,7 +8865,6 @@ GameObject:
   - component: {fileID: 52571336275340958}
   - component: {fileID: 1094287917678359589}
   - component: {fileID: 7025324655995801314}
-  - component: {fileID: 8807292435288032240}
   m_Layer: 0
   m_Name: vendingMachine_can19
   m_TagString: Untagged
@@ -11076,27 +8941,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8807292435288032240
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5614381993060082603}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.018153194, y: -0.009000659, z: 3.3094923}
 --- !u!1 &5636832290822842066
 GameObject:
   m_ObjectHideFlags: 0
@@ -11108,7 +8952,6 @@ GameObject:
   - component: {fileID: 4290484624434937429}
   - component: {fileID: 3455571142500384895}
   - component: {fileID: 2403926528030588568}
-  - component: {fileID: 6603933597036794349}
   m_Layer: 0
   m_Name: vendingMachine_can28
   m_TagString: Untagged
@@ -11185,27 +9028,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6603933597036794349
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5636832290822842066}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017580036, y: -0.009004474, z: 3.3094618}
 --- !u!1 &5735546786288413453
 GameObject:
   m_ObjectHideFlags: 0
@@ -11217,7 +9039,6 @@ GameObject:
   - component: {fileID: 6138576003868034514}
   - component: {fileID: 1211639940361904079}
   - component: {fileID: 7008148307141233710}
-  - component: {fileID: 4092925420589203725}
   m_Layer: 0
   m_Name: vendingMachine_block6_holder4
   m_TagString: Untagged
@@ -11293,27 +9114,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4092925420589203725
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5735546786288413453}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 115.80669, y: 516.00024, z: 60.20956}
-  m_Center: {x: -28.439217, y: 257.9936, z: -15.198162}
 --- !u!1 &5841376809937353143
 GameObject:
   m_ObjectHideFlags: 0
@@ -11325,7 +9125,6 @@ GameObject:
   - component: {fileID: 938422326707256297}
   - component: {fileID: 900762891766661045}
   - component: {fileID: 8947687804955447289}
-  - component: {fileID: 6504273988849363217}
   m_Layer: 0
   m_Name: vendingMachine_bar46
   m_TagString: Untagged
@@ -11404,27 +9203,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6504273988849363217
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5841376809937353143}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0003509422, y: 0.06167744, z: -0.029398922}
 --- !u!1 &5846241150832544731
 GameObject:
   m_ObjectHideFlags: 0
@@ -11436,7 +9214,6 @@ GameObject:
   - component: {fileID: 3421782391289566781}
   - component: {fileID: 6541927896615791507}
   - component: {fileID: 2544552875140881074}
-  - component: {fileID: 3197848926037237899}
   m_Layer: 0
   m_Name: vendingMachine_block5_holder1
   m_TagString: Untagged
@@ -11512,27 +9289,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3197848926037237899
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5846241150832544731}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 115.80669, y: 516.00024, z: 60.20956}
-  m_Center: {x: -28.430653, y: 257.99448, z: -15.194866}
 --- !u!1 &5897152520257512025
 GameObject:
   m_ObjectHideFlags: 0
@@ -11544,7 +9300,6 @@ GameObject:
   - component: {fileID: 7746549075872375355}
   - component: {fileID: 582989922693248015}
   - component: {fileID: 1155521428598130077}
-  - component: {fileID: 5244123318445914180}
   m_Layer: 0
   m_Name: vendingMachine_bar54
   m_TagString: Untagged
@@ -11623,27 +9378,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5244123318445914180
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5897152520257512025}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.00084828335, y: 0.061662182, z: -0.029395107}
 --- !u!1 &5899861313819920349
 GameObject:
   m_ObjectHideFlags: 0
@@ -11655,7 +9389,6 @@ GameObject:
   - component: {fileID: 6141401807332047434}
   - component: {fileID: 7630915343926339421}
   - component: {fileID: 3555350699144494421}
-  - component: {fileID: 7522428535132499707}
   m_Layer: 0
   m_Name: vendingMachine_can42
   m_TagString: Untagged
@@ -11732,27 +9465,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7522428535132499707
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5899861313819920349}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.01815224, y: -0.009042621, z: 3.3094618}
 --- !u!1 &5902121365474299209
 GameObject:
   m_ObjectHideFlags: 0
@@ -11764,7 +9476,6 @@ GameObject:
   - component: {fileID: 3457508946490785573}
   - component: {fileID: 7371430788496371770}
   - component: {fileID: 5903266381062502448}
-  - component: {fileID: 3160389309629806068}
   m_Layer: 0
   m_Name: vendingMachine_chips13
   m_TagString: Untagged
@@ -11841,27 +9552,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3160389309629806068
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5902121365474299209}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.025135068, y: 0.41653123, z: -0.39335075}
 --- !u!1 &6011707523487688979
 GameObject:
   m_ObjectHideFlags: 0
@@ -11909,7 +9599,6 @@ GameObject:
   - component: {fileID: 6930941424675373026}
   - component: {fileID: 5054050572619464413}
   - component: {fileID: 8957967285636798479}
-  - component: {fileID: 3155690895911040724}
   m_Layer: 0
   m_Name: vendingMachine_bar5
   m_TagString: Untagged
@@ -11988,27 +9677,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3155690895911040724
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6044881647432496579}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0012202163, y: 0.061608776, z: -0.029383663}
 --- !u!1 &6063845548129176840
 GameObject:
   m_ObjectHideFlags: 0
@@ -12020,7 +9688,6 @@ GameObject:
   - component: {fileID: 8207381887024067404}
   - component: {fileID: 1448948637954102813}
   - component: {fileID: 4466655388645603977}
-  - component: {fileID: 6306395386518167395}
   m_Layer: 0
   m_Name: vendingMachine_can24
   m_TagString: Untagged
@@ -12097,27 +9764,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6306395386518167395
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6063845548129176840}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017320637, y: -0.009036899, z: 3.3094695}
 --- !u!1 &6074415662727468467
 GameObject:
   m_ObjectHideFlags: 0
@@ -12129,7 +9775,6 @@ GameObject:
   - component: {fileID: 116350848198689006}
   - component: {fileID: 5875401445498602739}
   - component: {fileID: 3231120515528965689}
-  - component: {fileID: 5184682660937007160}
   m_Layer: 0
   m_Name: vendingMachine_bar2
   m_TagString: Untagged
@@ -12208,27 +9853,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5184682660937007160
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6074415662727468467}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.00063275296, y: 0.061624035, z: -0.029427532}
 --- !u!1 &6092813272133269428
 GameObject:
   m_ObjectHideFlags: 0
@@ -12240,7 +9864,6 @@ GameObject:
   - component: {fileID: 5036427236673942888}
   - component: {fileID: 2237385727352994421}
   - component: {fileID: 7079274305699724643}
-  - component: {fileID: 5435306264162822645}
   m_Layer: 0
   m_Name: vendingMachine_chips4
   m_TagString: Untagged
@@ -12317,27 +9940,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5435306264162822645
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6092813272133269428}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.02438548, y: 0.41653505, z: -0.39330497}
 --- !u!1 &6119744777922843091
 GameObject:
   m_ObjectHideFlags: 0
@@ -12349,7 +9951,6 @@ GameObject:
   - component: {fileID: 6590729173419294534}
   - component: {fileID: 2430449633907971837}
   - component: {fileID: 5566554065396565580}
-  - component: {fileID: 1026286567929987830}
   m_Layer: 0
   m_Name: vendingMachine_block1_holder6
   m_TagString: Untagged
@@ -12425,27 +10026,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1026286567929987830
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6119744777922843091}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: -0.0050622225, y: 257.99817, z: -15.187939}
 --- !u!1 &6133476921239797215
 GameObject:
   m_ObjectHideFlags: 0
@@ -12457,7 +10037,6 @@ GameObject:
   - component: {fileID: 6969140108298928269}
   - component: {fileID: 561639369932226091}
   - component: {fileID: 6494821143830896394}
-  - component: {fileID: 642473976350490621}
   m_Layer: 0
   m_Name: vendingMachine_block6_holder2
   m_TagString: Untagged
@@ -12533,27 +10112,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &642473976350490621
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6133476921239797215}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 115.80669, y: 516.00024, z: 60.20956}
-  m_Center: {x: -28.435642, y: 257.99365, z: -15.198162}
 --- !u!1 &6183988931988718852
 GameObject:
   m_ObjectHideFlags: 0
@@ -12565,7 +10123,6 @@ GameObject:
   - component: {fileID: 4358322728446580606}
   - component: {fileID: 5121478221164941837}
   - component: {fileID: 6020657260797410505}
-  - component: {fileID: 2185328652795895529}
   m_Layer: 0
   m_Name: vendingMachine_can26
   m_TagString: Untagged
@@ -12642,27 +10199,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2185328652795895529
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6183988931988718852}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.016756061, y: -0.009036899, z: 3.3094618}
 --- !u!1 &6205212473017234452
 GameObject:
   m_ObjectHideFlags: 0
@@ -12674,7 +10210,6 @@ GameObject:
   - component: {fileID: 7107428718579661704}
   - component: {fileID: 8738873728376528690}
   - component: {fileID: 861054895392713680}
-  - component: {fileID: 5750780694840819606}
   m_Layer: 0
   m_Name: vendingMachine_block4_holder3
   m_TagString: Untagged
@@ -12750,27 +10285,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5750780694840819606
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6205212473017234452}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: 0.0044401884, y: 257.99536, z: -15.192913}
 --- !u!1 &6224643915561083688
 GameObject:
   m_ObjectHideFlags: 0
@@ -12782,7 +10296,6 @@ GameObject:
   - component: {fileID: 2368441709462415776}
   - component: {fileID: 7934132352835851358}
   - component: {fileID: 6382707992869206337}
-  - component: {fileID: 1094793162680409288}
   m_Layer: 0
   m_Name: vendingMachine_bar56
   m_TagString: Untagged
@@ -12861,27 +10374,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1094793162680409288
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6224643915561083688}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0008473297, y: 0.061654553, z: -0.029377941}
 --- !u!1 &6251129947073512508
 GameObject:
   m_ObjectHideFlags: 0
@@ -12893,7 +10385,6 @@ GameObject:
   - component: {fileID: 142791633963306631}
   - component: {fileID: 6781913680892683028}
   - component: {fileID: 6753505375120493469}
-  - component: {fileID: 5159513630407884139}
   m_Layer: 0
   m_Name: vendingMachine_block1_holder4
   m_TagString: Untagged
@@ -12969,27 +10460,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5159513630407884139
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6251129947073512508}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: -0.0019379854, y: 257.99817, z: -15.187939}
 --- !u!1 &6256415951444762695
 GameObject:
   m_ObjectHideFlags: 0
@@ -13001,7 +10471,6 @@ GameObject:
   - component: {fileID: 7928627306515192270}
   - component: {fileID: 6726689881193722618}
   - component: {fileID: 2109677187282124022}
-  - component: {fileID: 7485859024402096378}
   m_Layer: 0
   m_Name: vendingMachine_can41
   m_TagString: Untagged
@@ -13078,27 +10547,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7485859024402096378
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6256415951444762695}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.018151287, y: -0.009036899, z: 3.3094618}
 --- !u!1 &6323072179341966553
 GameObject:
   m_ObjectHideFlags: 0
@@ -13110,7 +10558,6 @@ GameObject:
   - component: {fileID: 6893139671379268304}
   - component: {fileID: 3216872212994482818}
   - component: {fileID: 8264190123564675573}
-  - component: {fileID: 3959221927284692851}
   m_Layer: 0
   m_Name: vendingMachine_can32
   m_TagString: Untagged
@@ -13187,27 +10634,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3959221927284692851
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6323072179341966553}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017698292, y: -0.009036899, z: 3.3094618}
 --- !u!1 &6626990046289061701
 GameObject:
   m_ObjectHideFlags: 0
@@ -13219,7 +10645,6 @@ GameObject:
   - component: {fileID: 1161421676660922523}
   - component: {fileID: 7106954335235939214}
   - component: {fileID: 3116571022549293542}
-  - component: {fileID: 5286257590402783371}
   m_Layer: 0
   m_Name: vendingMachine_bar15
   m_TagString: Untagged
@@ -13298,27 +10723,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5286257590402783371
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6626990046289061701}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.00043152767, y: 0.061593518, z: -0.0293932}
 --- !u!1 &6841840149278442663
 GameObject:
   m_ObjectHideFlags: 0
@@ -13330,7 +10734,6 @@ GameObject:
   - component: {fileID: 6900702311249566639}
   - component: {fileID: 882857621648534791}
   - component: {fileID: 3702197747620941532}
-  - component: {fileID: 804075894721024499}
   m_Layer: 0
   m_Name: vendingMachine_block3_holder6
   m_TagString: Untagged
@@ -13406,27 +10809,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &804075894721024499
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6841840149278442663}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: -0.0012055635, y: 257.99628, z: -15.1919365}
 --- !u!1 &6864867868472449991
 GameObject:
   m_ObjectHideFlags: 0
@@ -13438,7 +10820,6 @@ GameObject:
   - component: {fileID: 2176753584688229566}
   - component: {fileID: 5340461424914894585}
   - component: {fileID: 5563101699041004801}
-  - component: {fileID: 8035198094647968855}
   m_Layer: 0
   m_Name: vendingMachine_can3
   m_TagString: Untagged
@@ -13515,27 +10896,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8035198094647968855
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6864867868472449991}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017324451, y: -0.009088397, z: 3.3094923}
 --- !u!1 &6903386445448659644
 GameObject:
   m_ObjectHideFlags: 0
@@ -13547,7 +10907,6 @@ GameObject:
   - component: {fileID: 7199979726591543147}
   - component: {fileID: 4068977902050275143}
   - component: {fileID: 5401652523197185011}
-  - component: {fileID: 4826957051875684370}
   m_Layer: 0
   m_Name: vendingMachine_block1_base
   m_TagString: Untagged
@@ -13623,27 +10982,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4826957051875684370
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6903386445448659644}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 402.45258, y: 487.44705, z: 5.0000877}
-  m_Center: {x: -0.0055160522, y: -0.001685649, z: -2.5045168}
 --- !u!1 &6939003915035540328
 GameObject:
   m_ObjectHideFlags: 0
@@ -13655,7 +10993,6 @@ GameObject:
   - component: {fileID: 2642915374649826454}
   - component: {fileID: 5764537581415241039}
   - component: {fileID: 4209782777214714774}
-  - component: {fileID: 1746818326302593830}
   m_Layer: 0
   m_Name: vendingMachine_block1_holder7
   m_TagString: Untagged
@@ -13731,27 +11068,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1746818326302593830
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6939003915035540328}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: -0.004676938, y: 257.99817, z: -15.187939}
 --- !u!1 &6947185763009996997
 GameObject:
   m_ObjectHideFlags: 0
@@ -13763,7 +11079,6 @@ GameObject:
   - component: {fileID: 4942774258139303032}
   - component: {fileID: 6877104428009616289}
   - component: {fileID: 8416744728941965073}
-  - component: {fileID: 7567854550729967460}
   m_Layer: 0
   m_Name: vendingMachine_block3_holder3
   m_TagString: Untagged
@@ -13839,27 +11154,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7567854550729967460
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6947185763009996997}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: 0.00114429, y: 257.99628, z: -15.1919365}
 --- !u!1 &7038281039337097842
 GameObject:
   m_ObjectHideFlags: 0
@@ -13871,7 +11165,6 @@ GameObject:
   - component: {fileID: 1744977280557632993}
   - component: {fileID: 7067247696501093372}
   - component: {fileID: 3030331565224467173}
-  - component: {fileID: 3312267717220595041}
   m_Layer: 0
   m_Name: vendingMachine_can10
   m_TagString: Untagged
@@ -13948,27 +11241,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3312267717220595041
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7038281039337097842}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017700199, y: -0.009000659, z: 3.3094923}
 --- !u!1 &7062901901631180500
 GameObject:
   m_ObjectHideFlags: 0
@@ -13980,7 +11252,6 @@ GameObject:
   - component: {fileID: 9197429555669497292}
   - component: {fileID: 2999658707994695869}
   - component: {fileID: 6343050344482042359}
-  - component: {fileID: 4730684897214519264}
   m_Layer: 0
   m_Name: vendingMachine_bar16
   m_TagString: Untagged
@@ -14059,27 +11330,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4730684897214519264
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7062901901631180500}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.00034808117, y: 0.061593518, z: -0.029376034}
 --- !u!1 &7078960230809083361
 GameObject:
   m_ObjectHideFlags: 0
@@ -14091,7 +11341,6 @@ GameObject:
   - component: {fileID: 5715608737510704192}
   - component: {fileID: 3811396347055398560}
   - component: {fileID: 8375082255719976435}
-  - component: {fileID: 5966649024358584075}
   m_Layer: 0
   m_Name: vendingMachine_bar24
   m_TagString: Untagged
@@ -14170,27 +11419,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5966649024358584075
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7078960230809083361}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.000846376, y: 0.061593518, z: -0.029372219}
 --- !u!1 &7083737639052981121
 GameObject:
   m_ObjectHideFlags: 0
@@ -14202,7 +11430,6 @@ GameObject:
   - component: {fileID: 964945857389001297}
   - component: {fileID: 42481940026858417}
   - component: {fileID: 6632286595591504166}
-  - component: {fileID: 5014973966008363345}
   m_Layer: 0
   m_Name: vendingMachine_can9
   m_TagString: Untagged
@@ -14279,27 +11506,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5014973966008363345
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7083737639052981121}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.01758385, y: -0.009088397, z: 3.3094923}
 --- !u!1 &7109331285335228622
 GameObject:
   m_ObjectHideFlags: 0
@@ -14311,7 +11517,6 @@ GameObject:
   - component: {fileID: 4101167120845155946}
   - component: {fileID: 6027261564855772415}
   - component: {fileID: 8590993337554155935}
-  - component: {fileID: 1325615702244533978}
   m_Layer: 0
   m_Name: vendingMachine_block5_holder2
   m_TagString: Untagged
@@ -14387,27 +11592,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1325615702244533978
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7109331285335228622}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 115.80669, y: 516.00024, z: 60.20956}
-  m_Center: {x: -28.430836, y: 257.99445, z: -15.194866}
 --- !u!1 &7223939359782766559
 GameObject:
   m_ObjectHideFlags: 0
@@ -14419,7 +11603,6 @@ GameObject:
   - component: {fileID: 3160657349030039502}
   - component: {fileID: 1278216830217728248}
   - component: {fileID: 240137790103051287}
-  - component: {fileID: 4927965644450383008}
   m_Layer: 0
   m_Name: vendingMachine_block2_holder7
   m_TagString: Untagged
@@ -14495,27 +11678,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4927965644450383008
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7223939359782766559}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: -0.0033951998, y: 257.99713, z: -15.188763}
 --- !u!1 &7344102804464007143
 GameObject:
   m_ObjectHideFlags: 0
@@ -14527,7 +11689,6 @@ GameObject:
   - component: {fileID: 4995633563562523044}
   - component: {fileID: 3353038708176584969}
   - component: {fileID: 8809932255762467008}
-  - component: {fileID: 5370579036372166972}
   m_Layer: 0
   m_Name: vendingMachine_chips20
   m_TagString: Untagged
@@ -14604,27 +11765,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5370579036372166972
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7344102804464007143}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.025135068, y: 0.416474, z: -0.39335075}
 --- !u!1 &7401994853273469479
 GameObject:
   m_ObjectHideFlags: 0
@@ -14636,7 +11776,6 @@ GameObject:
   - component: {fileID: 4176673312565726245}
   - component: {fileID: 2097411399041845936}
   - component: {fileID: 501081012216705753}
-  - component: {fileID: 6413212441522775078}
   m_Layer: 0
   m_Name: vendingMachine_bar27
   m_TagString: Untagged
@@ -14715,27 +11854,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6413212441522775078
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7401994853273469479}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0008425613, y: 0.06157826, z: -0.029388431}
 --- !u!1 &7407202942754500866
 GameObject:
   m_ObjectHideFlags: 0
@@ -14747,7 +11865,6 @@ GameObject:
   - component: {fileID: 8242447130298254345}
   - component: {fileID: 1905883547866019984}
   - component: {fileID: 5131372566728336650}
-  - component: {fileID: 612514089158851561}
   m_Layer: 0
   m_Name: vendingMachine_block6_holder1
   m_TagString: Untagged
@@ -14823,27 +11940,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &612514089158851561
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7407202942754500866}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 115.80669, y: 516.00024, z: 60.20956}
-  m_Center: {x: -28.427662, y: 257.99365, z: -15.198162}
 --- !u!1 &7447600259423484503
 GameObject:
   m_ObjectHideFlags: 0
@@ -14855,7 +11951,6 @@ GameObject:
   - component: {fileID: 3417960569280033758}
   - component: {fileID: 7662950922851189725}
   - component: {fileID: 8087340211817621576}
-  - component: {fileID: 6864921472583875435}
   m_Layer: 0
   m_Name: vendingMachine_chips5
   m_TagString: Untagged
@@ -14932,27 +12027,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6864921472583875435
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7447600259423484503}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.024384527, y: 0.4164168, z: -0.39330497}
 --- !u!1 &7481755688247531378
 GameObject:
   m_ObjectHideFlags: 0
@@ -14964,7 +12038,6 @@ GameObject:
   - component: {fileID: 2677530758153589058}
   - component: {fileID: 1239369498696544685}
   - component: {fileID: 8830171303891970902}
-  - component: {fileID: 5445133481498795851}
   m_Layer: 0
   m_Name: vendingMachine_chips19
   m_TagString: Untagged
@@ -15041,27 +12114,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5445133481498795851
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7481755688247531378}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.025068311, y: 0.4165503, z: -0.39335075}
 --- !u!1 &7498403572395603399
 GameObject:
   m_ObjectHideFlags: 0
@@ -15073,7 +12125,6 @@ GameObject:
   - component: {fileID: 2169121897611238780}
   - component: {fileID: 21335629688833959}
   - component: {fileID: 2943396276686306123}
-  - component: {fileID: 9180848565710543317}
   m_Layer: 0
   m_Name: vendingMachine_can22
   m_TagString: Untagged
@@ -15150,27 +12201,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &9180848565710543317
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7498403572395603399}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017320637, y: -0.009004474, z: 3.3094695}
 --- !u!1 &7601437524204202873
 GameObject:
   m_ObjectHideFlags: 0
@@ -15182,7 +12212,6 @@ GameObject:
   - component: {fileID: 3827124740828731992}
   - component: {fileID: 4941757186727379442}
   - component: {fileID: 4701528971739499413}
-  - component: {fileID: 4928998123353885122}
   m_Layer: 0
   m_Name: vendingMachine_bar35
   m_TagString: Untagged
@@ -15261,27 +12290,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4928998123353885122
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7601437524204202873}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0012202163, y: 0.06168507, z: -0.029386047}
 --- !u!1 &7623268668949529214
 GameObject:
   m_ObjectHideFlags: 0
@@ -15293,7 +12301,6 @@ GameObject:
   - component: {fileID: 5529632303086878042}
   - component: {fileID: 9164779435319505471}
   - component: {fileID: 8792290793214960019}
-  - component: {fileID: 1341800920553772917}
   m_Layer: 0
   m_Name: vendingMachine_block2_base
   m_TagString: Untagged
@@ -15369,27 +12376,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1341800920553772917
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7623268668949529214}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 402.45258, y: 487.44705, z: 5.0000877}
-  m_Center: {x: -0.003768921, y: -0.0026240647, z: -2.5063174}
 --- !u!1 &7667606743042766174
 GameObject:
   m_ObjectHideFlags: 0
@@ -15401,7 +12387,6 @@ GameObject:
   - component: {fileID: 8671688605877888384}
   - component: {fileID: 44476168319342942}
   - component: {fileID: 6769989424734249176}
-  - component: {fileID: 4185977043968918020}
   m_Layer: 0
   m_Name: vendingMachine_bar25
   m_TagString: Untagged
@@ -15480,27 +12465,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4185977043968918020
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7667606743042766174}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.00084446865, y: 0.061593518, z: -0.029417995}
 --- !u!1 &7671018213730869276
 GameObject:
   m_ObjectHideFlags: 0
@@ -15512,7 +12476,6 @@ GameObject:
   - component: {fileID: 6416900591138163712}
   - component: {fileID: 2882964962353980999}
   - component: {fileID: 7166951764015273994}
-  - component: {fileID: 8831305842656590679}
   m_Layer: 0
   m_Name: vendingMachine_bar17
   m_TagString: Untagged
@@ -15591,27 +12554,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8831305842656590679
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7671018213730869276}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0003471275, y: 0.061593518, z: -0.02942181}
 --- !u!1 &7690884741863026051
 GameObject:
   m_ObjectHideFlags: 0
@@ -15623,7 +12565,6 @@ GameObject:
   - component: {fileID: 1192605360226119464}
   - component: {fileID: 1376823400769161667}
   - component: {fileID: 7949698176368741074}
-  - component: {fileID: 790646449664779468}
   m_Layer: 0
   m_Name: vendingMachine_bar51
   m_TagString: Untagged
@@ -15702,27 +12643,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &790646449664779468
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7690884741863026051}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0012395282, y: 0.061662182, z: -0.029379372}
 --- !u!1 &7691891655853051676
 GameObject:
   m_ObjectHideFlags: 0
@@ -15734,7 +12654,6 @@ GameObject:
   - component: {fileID: 4397110929272333484}
   - component: {fileID: 8312321716900834455}
   - component: {fileID: 783283018902418610}
-  - component: {fileID: 6723928677443234216}
   m_Layer: 0
   m_Name: vendingMachine_chips16
   m_TagString: Untagged
@@ -15811,27 +12730,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6723928677443234216
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7691891655853051676}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.024388341, y: 0.41653123, z: -0.39335075}
 --- !u!1 &7782687401603523807
 GameObject:
   m_ObjectHideFlags: 0
@@ -15843,7 +12741,6 @@ GameObject:
   - component: {fileID: 3013972873866075283}
   - component: {fileID: 5536084786830884881}
   - component: {fileID: 745766620386376918}
-  - component: {fileID: 5854484827172205456}
   m_Layer: 0
   m_Name: vendingMachine_block4_holder7
   m_TagString: Untagged
@@ -15919,27 +12816,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5854484827172205456
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7782687401603523807}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: 0.009048343, y: 257.99536, z: -15.192913}
 --- !u!1 &7842029056986505141
 GameObject:
   m_ObjectHideFlags: 0
@@ -15951,7 +12827,6 @@ GameObject:
   - component: {fileID: 7409358596296026582}
   - component: {fileID: 5112245813997871719}
   - component: {fileID: 2296292868775374982}
-  - component: {fileID: 8321479544528175260}
   m_Layer: 0
   m_Name: vendingMachine_bar19
   m_TagString: Untagged
@@ -16030,27 +12905,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8321479544528175260
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7842029056986505141}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0003447433, y: 0.06157826, z: -0.02939177}
 --- !u!1 &7848227629683222199
 GameObject:
   m_ObjectHideFlags: 0
@@ -16062,7 +12916,6 @@ GameObject:
   - component: {fileID: 72027856448594353}
   - component: {fileID: 1537086898787799392}
   - component: {fileID: 231121933892396}
-  - component: {fileID: 8611102506676202458}
   m_Layer: 0
   m_Name: vendingMachine_bar9
   m_TagString: Untagged
@@ -16141,27 +12994,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8611102506676202458
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7848227629683222199}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0011305709, y: 0.061608776, z: -0.029423717}
 --- !u!1 &7858136793420045915
 GameObject:
   m_ObjectHideFlags: 0
@@ -16173,7 +13005,6 @@ GameObject:
   - component: {fileID: 589798862720623498}
   - component: {fileID: 6181005137261347785}
   - component: {fileID: 8797791703459585035}
-  - component: {fileID: 7135134211217804512}
   m_Layer: 0
   m_Name: vendingMachine_can27
   m_TagString: Untagged
@@ -16250,27 +13081,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7135134211217804512
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7858136793420045915}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.016756061, y: -0.009042621, z: 3.3094618}
 --- !u!1 &7865694552307769406
 GameObject:
   m_ObjectHideFlags: 0
@@ -16282,7 +13092,6 @@ GameObject:
   - component: {fileID: 4509365873252308605}
   - component: {fileID: 1442544896750237214}
   - component: {fileID: 5958918883611864050}
-  - component: {fileID: 1453975010661512012}
   m_Layer: 0
   m_Name: vendingMachine_block4_holder2
   m_TagString: Untagged
@@ -16358,27 +13167,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1453975010661512012
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7865694552307769406}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 58.941444, y: 516.00024, z: 60.20956}
-  m_Center: {x: 0.005187869, y: 257.99536, z: -15.192913}
 --- !u!1 &7909901234094469758
 GameObject:
   m_ObjectHideFlags: 0
@@ -16390,7 +13178,6 @@ GameObject:
   - component: {fileID: 3587744449684439792}
   - component: {fileID: 4448614961335090807}
   - component: {fileID: 3468625277100935481}
-  - component: {fileID: 311615149041527976}
   m_Layer: 0
   m_Name: vendingMachine_chips10
   m_TagString: Untagged
@@ -16467,27 +13254,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &311615149041527976
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7909901234094469758}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.0244489, y: 0.41650453, z: -0.39330497}
 --- !u!1 &7991880553297512990
 GameObject:
   m_ObjectHideFlags: 0
@@ -16499,7 +13265,6 @@ GameObject:
   - component: {fileID: 1719529951273763302}
   - component: {fileID: 9113525174950509943}
   - component: {fileID: 60486272939248764}
-  - component: {fileID: 8027673431451100267}
   m_Layer: 0
   m_Name: vendingMachine_bar20
   m_TagString: Untagged
@@ -16578,27 +13343,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8027673431451100267
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7991880553297512990}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0012378593, y: 0.061593518, z: -0.029376034}
 --- !u!1 &8065229036527773933
 GameObject:
   m_ObjectHideFlags: 0
@@ -16610,7 +13354,6 @@ GameObject:
   - component: {fileID: 812482043313297488}
   - component: {fileID: 2189600350434109131}
   - component: {fileID: 5830808346637493017}
-  - component: {fileID: 6413109858375368922}
   m_Layer: 0
   m_Name: vendingMachine_console1
   m_TagString: Untagged
@@ -16688,27 +13431,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6413109858375368922
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8065229036527773933}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.036897898, y: 0.094153166, z: 0.02524048}
-  m_Center: {x: 0.0000009536743, y: -0.00000006146729, z: 0.012620419}
 --- !u!1 &8105771836762169368
 GameObject:
   m_ObjectHideFlags: 0
@@ -16873,7 +13595,6 @@ GameObject:
   - component: {fileID: 5742741310193477601}
   - component: {fileID: 9095943033443505997}
   - component: {fileID: 4683717484267043821}
-  - component: {fileID: 3072951851510056907}
   m_Layer: 0
   m_Name: vendingMachine_can6
   m_TagString: Untagged
@@ -16950,27 +13671,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3072951851510056907
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8179393805121188132}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.016759876, y: -0.009088397, z: 3.3094923}
 --- !u!1 &8259669350313424331
 GameObject:
   m_ObjectHideFlags: 0
@@ -16982,7 +13682,6 @@ GameObject:
   - component: {fileID: 860822045741791850}
   - component: {fileID: 611588655715861197}
   - component: {fileID: 5006105825871081622}
-  - component: {fileID: 5582442357526785783}
   m_Layer: 0
   m_Name: vendingMachine_chips8
   m_TagString: Untagged
@@ -17059,27 +13758,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5582442357526785783
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8259669350313424331}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.025131254, y: 0.41647783, z: -0.39330497}
 --- !u!1 &8362715575031745412
 GameObject:
   m_ObjectHideFlags: 0
@@ -17091,7 +13769,6 @@ GameObject:
   - component: {fileID: 8089773132138533213}
   - component: {fileID: 6393208533959111985}
   - component: {fileID: 3179344548446365410}
-  - component: {fileID: 1007209041598691002}
   m_Layer: 0
   m_Name: vendingMachine_bar30
   m_TagString: Untagged
@@ -17170,27 +13847,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1007209041598691002
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362715575031745412}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.00063656765, y: 0.0616927, z: -0.029404644}
 --- !u!1 &8377183848136841177
 GameObject:
   m_ObjectHideFlags: 0
@@ -17202,7 +13858,6 @@ GameObject:
   - component: {fileID: 6635416531738824443}
   - component: {fileID: 456717811017884065}
   - component: {fileID: 1825537102229615189}
-  - component: {fileID: 3811796877005212548}
   m_Layer: 0
   m_Name: vendingMachine_bar18
   m_TagString: Untagged
@@ -17281,27 +13936,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3811796877005212548
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8377183848136841177}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.000345697, y: 0.061593518, z: -0.029408459}
 --- !u!1 &8401808033352873092
 GameObject:
   m_ObjectHideFlags: 0
@@ -17313,7 +13947,6 @@ GameObject:
   - component: {fileID: 5680047402797912634}
   - component: {fileID: 8808331881875804602}
   - component: {fileID: 4673977016647639286}
-  - component: {fileID: 2624069690668199181}
   m_Layer: 0
   m_Name: vendingMachine_bar39
   m_TagString: Untagged
@@ -17392,27 +14025,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2624069690668199181
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8401808033352873092}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0011343856, y: 0.06167744, z: -0.02938414}
 --- !u!1 &8413837329866821427
 GameObject:
   m_ObjectHideFlags: 0
@@ -17424,7 +14036,6 @@ GameObject:
   - component: {fileID: 4854372728057686409}
   - component: {fileID: 2608617912694797321}
   - component: {fileID: 1880867821775677754}
-  - component: {fileID: 3102238699375997053}
   m_Layer: 0
   m_Name: vendingMachine_body
   m_TagString: Untagged
@@ -17501,27 +14112,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3102238699375997053
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8413837329866821427}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.83675396, y: 1.3469698, z: 0.68910414}
-  m_Center: {x: 0, y: 0.6734849, z: 0.02045834}
 --- !u!1 &8481716036064998522
 GameObject:
   m_ObjectHideFlags: 0
@@ -17533,7 +14123,6 @@ GameObject:
   - component: {fileID: 2046297413073208279}
   - component: {fileID: 1635284127569531959}
   - component: {fileID: 5264209970435461342}
-  - component: {fileID: 2691865560982174087}
   m_Layer: 0
   m_Name: vendingMachine_bar32
   m_TagString: Untagged
@@ -17612,27 +14201,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2691865560982174087
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8481716036064998522}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.001224031, y: 0.06170796, z: -0.029372219}
 --- !u!1 &8553490018840220712
 GameObject:
   m_ObjectHideFlags: 0
@@ -17644,7 +14212,6 @@ GameObject:
   - component: {fileID: 8066916864960600285}
   - component: {fileID: 3330751519657563751}
   - component: {fileID: 6367574825125872439}
-  - component: {fileID: 7719532276009566617}
   m_Layer: 0
   m_Name: vendingMachine_bar12
   m_TagString: Untagged
@@ -17723,27 +14290,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7719532276009566617
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8553490018840220712}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.00043534237, y: 0.061608776, z: -0.029379848}
 --- !u!1 &8618229778099345917
 GameObject:
   m_ObjectHideFlags: 0
@@ -17755,7 +14301,6 @@ GameObject:
   - component: {fileID: 2399162766959964753}
   - component: {fileID: 7282946043237848184}
   - component: {fileID: 936571194872519230}
-  - component: {fileID: 6169089571191699480}
   m_Layer: 0
   m_Name: vendingMachine_can21
   m_TagString: Untagged
@@ -17832,27 +14377,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6169089571191699480
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8618229778099345917}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.018154148, y: -0.009088397, z: 3.3094923}
 --- !u!1 &8797507943117088111
 GameObject:
   m_ObjectHideFlags: 0
@@ -17864,7 +14388,6 @@ GameObject:
   - component: {fileID: 6631263508277723822}
   - component: {fileID: 2054870994143268906}
   - component: {fileID: 6493280001692850397}
-  - component: {fileID: 487716467175034872}
   m_Layer: 0
   m_Name: vendingMachine_chips24
   m_TagString: Untagged
@@ -17941,27 +14464,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &487716467175034872
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8797507943117088111}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16.631798, y: 4.5448637, z: 16.63842}
-  m_Center: {x: -0.02445033, y: 0.41640726, z: -0.39335075}
 --- !u!1 &8805301546582590109
 GameObject:
   m_ObjectHideFlags: 0
@@ -17973,7 +14475,6 @@ GameObject:
   - component: {fileID: 8268069184160259169}
   - component: {fileID: 242117527116075591}
   - component: {fileID: 3400969866453886784}
-  - component: {fileID: 8003013732206324057}
   m_Layer: 0
   m_Name: vendingMachine_can36
   m_TagString: Untagged
@@ -18050,27 +14551,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8003013732206324057
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8805301546582590109}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017739777, y: -0.009042621, z: 3.3094618}
 --- !u!1 &8812726744154739767
 GameObject:
   m_ObjectHideFlags: 0
@@ -18082,7 +14562,6 @@ GameObject:
   - component: {fileID: 38820730087158087}
   - component: {fileID: 25319621466162207}
   - component: {fileID: 921372435691080078}
-  - component: {fileID: 8107178528593903512}
   m_Layer: 0
   m_Name: vendingMachine_bar41
   m_TagString: Untagged
@@ -18161,27 +14640,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8107178528593903512
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8812726744154739767}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.00043915707, y: 0.06168507, z: -0.029412273}
 --- !u!1 &8879796022127192248
 GameObject:
   m_ObjectHideFlags: 0
@@ -18193,7 +14651,6 @@ GameObject:
   - component: {fileID: 6629416206303579262}
   - component: {fileID: 9047908295588152074}
   - component: {fileID: 8205535434136865785}
-  - component: {fileID: 6878872682594282869}
   m_Layer: 0
   m_Name: vendingMachine_can1
   m_TagString: Untagged
@@ -18270,27 +14727,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6878872682594282869
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8879796022127192248}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017324451, y: -0.009000659, z: 3.3094923}
 --- !u!1 &8897869608339581659
 GameObject:
   m_ObjectHideFlags: 0
@@ -18302,7 +14738,6 @@ GameObject:
   - component: {fileID: 8113579394192843447}
   - component: {fileID: 629751605384652161}
   - component: {fileID: 2757502550946929936}
-  - component: {fileID: 3651939952952599792}
   m_Layer: 0
   m_Name: vendingMachine_bar55
   m_TagString: Untagged
@@ -18381,27 +14816,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3651939952952599792
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8897869608339581659}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.0012164016, y: 0.061593518, z: -0.029396538}
 --- !u!1 &8989259724818509922
 GameObject:
   m_ObjectHideFlags: 0
@@ -18413,7 +14827,6 @@ GameObject:
   - component: {fileID: 3443927602858095555}
   - component: {fileID: 475939243749907433}
   - component: {fileID: 256732410410297758}
-  - component: {fileID: 945572425575904645}
   m_Layer: 0
   m_Name: vendingMachine_bar29
   m_TagString: Untagged
@@ -18492,27 +14905,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &945572425575904645
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8989259724818509922}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.6486554, y: 19.659998, z: 1.2891408}
-  m_Center: {x: -0.00063656765, y: 0.06170033, z: -0.029417995}
 --- !u!1 &9123232989989598236
 GameObject:
   m_ObjectHideFlags: 0
@@ -18524,7 +14916,6 @@ GameObject:
   - component: {fileID: 3071229056157950373}
   - component: {fileID: 7765603806149130868}
   - component: {fileID: 6388631898877313636}
-  - component: {fileID: 6447870017371790815}
   m_Layer: 0
   m_Name: vendingMachine_can17
   m_TagString: Untagged
@@ -18601,27 +14992,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6447870017371790815
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9123232989989598236}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017350916, y: -0.009033084, z: 3.3094923}
 --- !u!1 &9141351745266864270
 GameObject:
   m_ObjectHideFlags: 0
@@ -18633,7 +15003,6 @@ GameObject:
   - component: {fileID: 1675481895308136373}
   - component: {fileID: 531932367660510953}
   - component: {fileID: 1815919996042696745}
-  - component: {fileID: 694347105477590648}
   m_Layer: 0
   m_Name: vendingMachine_can14
   m_TagString: Untagged
@@ -18710,27 +15079,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &694347105477590648
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9141351745266864270}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017741207, y: -0.009033084, z: 3.3094923}
 --- !u!1 &9147611172834295298
 GameObject:
   m_ObjectHideFlags: 0
@@ -18742,7 +15090,6 @@ GameObject:
   - component: {fileID: 6600963471677082744}
   - component: {fileID: 3495327082956620746}
   - component: {fileID: 26634120753038440}
-  - component: {fileID: 5005245241359568816}
   m_Layer: 0
   m_Name: vendingMachine_can15
   m_TagString: Untagged
@@ -18819,24 +15166,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5005245241359568816
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9147611172834295298}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.325749, y: 6.3257494, z: 12.065228}
-  m_Center: {x: 0.017741684, y: -0.009088397, z: 3.3094923}
