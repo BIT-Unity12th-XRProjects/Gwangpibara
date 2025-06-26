@@ -78,6 +78,12 @@ public class MarkerScaler : MonoBehaviour
     /// <summary>
     /// 각각의 버튼
     /// </summary>
-    public void ScaleUp() => ScaleSelectedMarker(scaleDelta);
-    public void ScaleDown() => ScaleSelectedMarker(-scaleDelta);
+    public void ScaleUpX() => ScaleSelectedMarker(new Vector3(scaleDelta.x, 0f, 0f));
+    public void ScaleDownX() => ScaleSelectedMarker(new Vector3(-scaleDelta.x, 0f, 0f));
+
+    public void ScaleUpY() => ScaleSelectedMarker(new Vector3(0f, scaleDelta.y, 0f));
+    public void ScaleDownY() => ScaleSelectedMarker(new Vector3(0f, -scaleDelta.y, 0f));
+
+    public void ScaleUpZ() => ScaleSelectedMarker(new Vector3(0f, 0f, scaleDelta.z));
+    public void ScaleDownZ() => ScaleSelectedMarker(new Vector3(0f, 0f, -scaleDelta.z));
 }

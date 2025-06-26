@@ -11,7 +11,6 @@ public class ARRayCast : MonoBehaviour
     [SerializeField] private float _viewRadius = 1f;
     [SerializeField, Range(0, 360)] private float viewAngle = 20f;
     [SerializeField] private LayerMask _arObjectLayer;
-    [SerializeField] private LayerMask _wallLayer;
 
     private PlayerInputActions _inputActions;
     private HashSet<GameObject> _currentlyDetected = new HashSet<GameObject>();
@@ -63,16 +62,13 @@ public class ARRayCast : MonoBehaviour
             {
                 float distance = Vector3.Distance(origin, targetObj.transform.position);
 
-                if (Physics.Raycast(origin, dirToTarget, out RaycastHit rayHit, distance, _arObjectLayer | _wallLayer))
+                if (Physics.Raycast(origin, dirToTarget, out RaycastHit rayHit, distance, _arObjectLayer))
                 {
-                    if (rayHit.collider.gameObject.layer == 0)
+                    if (!_previouslyDetected.Contains(targetObj))
                     {
-                        if (!_previouslyDetected.Contains(targetObj))
-                        {
-                            targetObj.GetComponent<IDetect>()?.TakeCloseOverlap();
-                        }
-                        _currentlyDetected.Add(targetObj);
+                        targetObj.GetComponent<IDetect>()?.TakeCloseOverlap();
                     }
+                    _currentlyDetected.Add(targetObj);
                 }
             }
         }
