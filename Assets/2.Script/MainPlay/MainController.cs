@@ -69,6 +69,7 @@ public class MainController : Singleton<MainController>
             else
             {
                 FeedbackManager.Instance.PlayEffect(false, SFXType.InCorrect);
+                PopUpManager.Instance.PopMessege("틀렸쥬");
             }
         }
     }
