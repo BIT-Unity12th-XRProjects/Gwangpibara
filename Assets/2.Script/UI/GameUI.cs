@@ -6,23 +6,27 @@ using UnityEngine.UI;
 public class GameUIData : BaseUIData
 {
     public string QuestText;
+    public string HintText;
     public string AnswerText;
 
     public void SetData(StepData stepData)
     {
         QuestText = stepData.PrintText;
+        HintText = stepData.Hint;
     }
 }
 
 public class GameUI : BaseUI
 {
     public TextMeshProUGUI QuestText;
+    public TextMeshProUGUI HintText;
     public TMP_InputField AnswerInputField;
 
     [SerializeField] private Button _inventoryButton;
     [SerializeField] private Button _aRButton;
     [SerializeField] private Button _beforeButton;
     [SerializeField] private Button _nextButton;
+    [SerializeField] private Button _hintButton;
     [SerializeField] private Button _submitButton;
 
     private MainController _mainController;
@@ -35,6 +39,7 @@ public class GameUI : BaseUI
         _beforeButton.onClick.AddListener(OnClickedBeforeButton);
         _nextButton.onClick.AddListener(OnClickedNextButton);
         _submitButton.onClick.AddListener(OnClickSubmitButton);
+        _hintButton.onClick.AddListener(OnClickHintButton);
     }
 
     private void Start()
@@ -42,6 +47,7 @@ public class GameUI : BaseUI
         _mainController = FindAnyObjectByType<MainController>();
         SetInfo(_mainController.GetGameUIData()); //처음 세팅할땐 가져와서
         _mainController.onChangeStepData += SetInfo; //이후 변화에 따라서
+        _mainController.onShowHint += ShowHint;
     }
 
     public override void SetInfo(BaseUIData uiData)
@@ -52,6 +58,12 @@ public class GameUI : BaseUI
         }
         //게임 컨틀로러의 게임데이터 가져와서 세팅하기, 구독하기
         QuestText.text = ((GameUIData)uiData).QuestText;
+        HintText.text = "";
+    }
+
+    private void ShowHint(GameUIData uiData)
+    {
+        HintText.text = uiData.HintText;
     }
 
     private void OnClickedInventoryButton()
@@ -77,5 +89,10 @@ public class GameUI : BaseUI
     private void OnClickSubmitButton()
     {
         _mainController.SubmitAnswer(AnswerInputField.text);
+    }
+
+    private void OnClickHintButton()
+    {
+        _mainController.PleaseHint();
     }
 }
