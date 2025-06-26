@@ -1,18 +1,18 @@
 using System;
 using UnityEngine;
 
-public class ARItemObject : ARObject
+public class ARItemObject : MonoBehaviour, IDetect
 {
     private ItemData _itemData;
     private bool _canGetting = false;
     private bool _isCallGet = false;
 
-    public override void TakeRayHit()
+    public void TakeRayHit()
     {
         Debug.Log("Camera Hit");
     }
 
-    public override void TakeClick()
+    public void TakeClick()
     {
         Debug.Log("Click!");
 
@@ -43,7 +43,15 @@ public class ARItemObject : ARObject
     public void Setting(ItemData itemData)
     {
         _itemData = itemData;
+    }
 
-        _initialized = true;
+    public void TakeCloseOverlap()
+    {
+        //TODO : 오버랩에 탐지 되었을때 할일
+    }
+
+    public void NotTakeDetect()
+    {
+        //TODO : 오버랩에 탐지 범위에 벗어났을때 할일
     }
 }
