@@ -2,12 +2,12 @@ using UnityEngine;
 
 public abstract class ARObject : MonoBehaviour, IDetect
 {
-    protected Renderer _renderer;
+    protected Renderer[] _renderer;
     protected bool _initialized = false;
 
     protected virtual void Awake()
     {
-        _renderer = GetComponent<Renderer>();
+        _renderer = GetComponentsInChildren<Renderer>(includeInactive: true);
     }
 
     protected virtual void Start()
@@ -17,17 +17,26 @@ public abstract class ARObject : MonoBehaviour, IDetect
             Debug.LogError($"[{name}] 초기화되지 않았습니다. 반드시 Setting() 호출 필요", this);
         }
 
-        _renderer.enabled = false;
+        foreach(Renderer renderer in _renderer)
+        {
+            renderer.enabled = false;
+        }
     }
 
     public virtual void TakeCloseOverlap()
     {
-        _renderer.enabled = true;
+        foreach (Renderer renderer in _renderer)
+        {
+            renderer.enabled = true;
+        }
     }
 
     public virtual void NotTakeDetect()
     {
-        _renderer.enabled = false;
+        foreach (Renderer renderer in _renderer)
+        {
+            renderer.enabled = false;
+        }
     }
 
     public abstract void TakeRayHit();
