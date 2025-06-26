@@ -3,7 +3,7 @@
     {
       "id": "05dcdd01-ca24-4f5c-9df8-11e05447b500",
       "prefabID": 10001,
-      "dropItemID": 1,
+      "dropItemID": 10101,
       "acquireStep": 4,
       "removeStep": 5,
       "position": {
@@ -28,7 +28,7 @@
     {
       "id": "48c25092-20dd-4f2b-bc8f-69729511b64f",
       "prefabID": 10002,
-      "dropItemID": 3,
+      "dropItemID": 10101,
       "acquireStep": 3,
       "removeStep": 5,
       "position": {
@@ -53,7 +53,7 @@
     {
       "id": "122f83c7-80bb-4de1-93cb-d6d7129403b5",
       "prefabID": 10006,
-      "dropItemID": 1,
+      "dropItemID": 10101,
       "acquireStep": 6,
       "removeStep": 5,
       "position": {

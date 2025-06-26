@@ -79,9 +79,15 @@ public class ARRayCast : MonoBehaviour
 
         foreach (var prev in _previouslyDetected)
         {
+            if (prev == null) continue;
+
             if (!_currentlyDetected.Contains(prev))
             {
-                prev.GetComponent<IDetect>()?.NotTakeDetect();
+                var detect = prev.GetComponent<IDetect>();
+                if (detect != null)
+                {
+                    detect.NotTakeDetect();
+                }
             }
         }
 
