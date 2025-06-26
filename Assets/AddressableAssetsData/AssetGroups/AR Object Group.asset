@@ -15,8 +15,38 @@ MonoBehaviour:
   m_GroupName: AR Object Group
   m_GUID: 52931c1c20ac4ff409a308a97c392552
   m_SerializeEntries:
+  - m_GUID: 0b069d46b55d61040b9d7855f6a01693
+    m_Address: MarkPrefab10104
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0efc21ff559d1b9438596ae35cc7dbcd
+    m_Address: MarkPrefab10101
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 16311b84aed1a0c4399400b3667683ee
+    m_Address: ItemPrefab10103
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 181fa94bba7ac0e46893f2a5c5184c61
+    m_Address: ItemImage10103
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 31321ba15b8f8eb4c954353edc038b1d
     m_Address: Packages/com.unity.render-pipelines.universal/Runtime/Materials/Lit.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 33606f595fb8e484ea4629ae08d9ede5
+    m_Address: ItemImage10101
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 36f7b23adc5fb8741956e9e74e1172cd
+    m_Address: ItemPrefab10102
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -26,8 +56,43 @@ MonoBehaviour:
     m_SerializedLabels:
     - AR
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5eff2d9607881954ba88578770ebd41a
+    m_Address: MarkPrefab10105
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 62a2d1ca71589b54fb784a7bd5439a3b
+    m_Address: MarkPrefab10106
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 706bd4a3eb87fec4aa565cc5a4631432
     m_Address: Assets/3.Prefab/ThemeObject/Theme1/02.Tool_Assets/materials/locks.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7277d246aeb683543aab6ecb36880fe8
+    m_Address: MarkPrefab10102
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e56cc804cecb084b84bf8a6b95ff7c0
+    m_Address: MarkPrefab9999
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8f19a53ceaf40114c878b099e6ae6aec
+    m_Address: ItemPrefab10101
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c95d417151ec43a498a3a4f9bdf35f99
+    m_Address: MarkPrefab10103
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d1c80cd523a8be24e9e0f129c18c54cf
+    m_Address: ItemImage10102
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
