@@ -32,37 +32,4 @@ public class ServerMarkerData
     public MarkerSpawnType markerSpawnType { get; set; }
     public MarkerType markerType { get; set; }
 
-/*    public ServerMarkerData(MarkerData markerData)
-    {
-         this.prefabID = markerData.prefabID;
-         this.dropItemID = markerData.dropItemID;
-         this.acquireStep = markerData.acquireStep;
-         this.removeStep = markerData.removeStep;
-         
-         Vector3Value positionValue = new Vector3Value();
-         positionValue.X = markerData.position.x;
-         positionValue.Y = markerData.position.y;
-         positionValue.Z = markerData.position.z;
-         
-         QuaternionValue rotationValue = new QuaternionValue();
-         rotationValue.X = markerData.rotation.x;
-         rotationValue.Y = markerData.rotation.y;
-         rotationValue.Z = markerData.rotation.z;
-         
-         Vector3Value scaleValue = new Vector3Value();
-         scaleValue.X = markerData.scale.x;
-         scaleValue.Y = markerData.scale.y;
-         scaleValue.Z = markerData.scale.z;
-         
-         this.position = positionValue;
-         this.rotation = rotationValue;
-         this.scale = scaleValue;
-         
-         this.markerSpawnType = markerData.markerSpawnType;
-         this.markerType = markerData.markerType;
-         
-         
-    }
-*/
-
 }
