@@ -63,8 +63,12 @@ public class MainController : Singleton<MainController>
             bool isCorrect = CheckAnswer(answer);
             if (isCorrect)
             {
-                FeedbackManager.Instance.PlayEffect(true, SFXType.None);
+                FeedbackManager.Instance.PlayEffect(true, SFXType.Correct);
                 GoNextStep();
+            }
+            else
+            {
+                FeedbackManager.Instance.PlayEffect(false, SFXType.InCorrect);
             }
         }
     }

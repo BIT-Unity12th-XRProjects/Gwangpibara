@@ -10,8 +10,12 @@ public class FeedbackManager : Singleton<FeedbackManager>
 
     public void PlayEffect(bool isVibration, SFXType sfxType)
     {
+        SoundManager.instance.PlaySFX(sfxType);
+
         if (isVibration)
         {
+           
+
 #if UNITY_ANDROID && !UNITY_EDITOR
             using (var unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
             {
