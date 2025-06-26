@@ -26,6 +26,7 @@ public class GameStartManager : MonoBehaviour
 
     private IEnumerator Start()
     {
+        UIManager.Instance.RequestOpenUI<LoadingUI>();
         //파싱매니저로 구글스프레드에서 파싱
         yield return new GameObject("ParsingManager").AddComponent<ParsingManager>().ParseSheetData();
         //파싱한 데이터로 마스터 데이터 생성
