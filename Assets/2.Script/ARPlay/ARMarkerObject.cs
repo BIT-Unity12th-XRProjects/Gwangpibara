@@ -27,7 +27,10 @@ public class ARMarkerObject : ARObject
 
         OnCloseTypeSetting();
 
-        _renderer.enabled = false;
+        foreach (Renderer renderer in _renderer)
+        {
+            renderer.enabled = false;
+        }
     }
 
     private void OnCloseTypeSetting()
@@ -36,7 +39,10 @@ public class ARMarkerObject : ARObject
 
         if (_markerData.markerSpawnType == MarkerSpawnType.OnClose)
         {
-            _renderer.material.color = Color.yellow;
+            foreach (Renderer renderer in _renderer)
+            {
+                renderer.material.color = Color.yellow;
+            }
         }
     }
     public override void TakeRayHit()
@@ -99,7 +105,10 @@ public class ARMarkerObject : ARObject
     {
         if (_isRenderOn == false)
         {
-            _renderer.material.color = Color.blue;
+            foreach (Renderer renderer in _renderer)
+            {
+                renderer.material.color = Color.blue;
+            }
 
             CheckTypes();
 
