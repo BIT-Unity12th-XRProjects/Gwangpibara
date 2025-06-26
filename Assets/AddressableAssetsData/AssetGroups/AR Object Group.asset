@@ -21,6 +21,16 @@ MonoBehaviour:
     m_SerializedLabels:
     - AR
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 706bd4a3eb87fec4aa565cc5a4631432
+    m_Address: Assets/3.Prefab/ThemeObject/Theme1/02.Tool_Assets/materials/locks.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fadb677f6f5d20d42bca9b48bdd2b41f
+    m_Address: Assets/3.Prefab/ThemeObject/Theme1/02.Tool_Assets/materials/modernaxe.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 7e9a53ae6723c824ea21acc297407c53, type: 2}
   m_SchemaSet:
