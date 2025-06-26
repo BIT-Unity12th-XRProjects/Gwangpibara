@@ -33,6 +33,7 @@ public class GameStartManager : MonoBehaviour
         yield return new GameObject("masterDataManager").AddComponent<MasterDataManager>().SetData();
         //서버 맵 데이터 받기 위한 clientapi 생성
         yield return _markersApiClient = new GameObject("MarkersApi").AddComponent<MarkersApiClient>();
+        
         _startUIData = new();
         _selectThemNumber = INVALID_NUMBER;
         _mainController = FindAnyObjectByType<MainController>();
@@ -50,7 +51,6 @@ public class GameStartManager : MonoBehaviour
         _startUIData.SetData(themeData);
         OnChangeTheme?.Invoke(_startUIData);
     }
-
     public void StartGame()
     {
         if(_selectThemNumber == INVALID_NUMBER)
@@ -68,31 +68,64 @@ public class GameStartManager : MonoBehaviour
     {
         Debug.Log("맵 만들기 시작");
 
+        PopUpManager.Instance.PopMessege("카피바라를 찍으세요");
         //원점 잡기
         UIManager.Instance.RequestOpenUI<OriginSetUI>(); // 원점 잡기용 UI 켜고
         ARPlayTrackingManager trackingManager = Instantiate(_trackingPrefab);
         trackingManager.OnTrackingEnd += SetOriginPos;
+        trackingManager.OnTrackingStart += SetTrackingStart;
+
+        //원점 잡기 대기
+        float messageTimer = 0f;
+
         while (true)
         {
             Debug.Log("원점 잡기 대기중");
-            yield return null;
-            //트래킹 잡힐떄까지
-            if(isFind == true)
+
+            messageTimer += Time.deltaTime;
+            if (messageTimer >= 3f)
+            {
+                if(isTrackingStart == false)
+                {
+                    PopUpManager.Instance.PopMessege("카피바라를 찍으세요");
+                }
+                else
+                {
+                    PopUpManager.Instance.PopMessege("원점을 잡는 중입니다.");
+                }
+
+                messageTimer = 0f;
+            }
+
+            if (isOriginPosFind == true)
             {
                 Debug.Log("원점 잡아서 나가기");
                 break;
             }
-        }
 
+            yield return null;
+
+        }
         //
+
+        bool isDownloadDone = false;
+        //다운로드 팝업을 위한 병렬 코루틴
+        StartCoroutine(CoDownloadMessageRoutine(() => isDownloadDone));
+
+        // ▼ 실제 다운로드
         List<GameMarkerData> gameDataList = new();
         yield return StartCoroutine(_markersApiClient.GetAllMarkers(
             markers =>
             {
                 Debug.Log("다운 성공");
                 DownloadGameMarkData(markers, gameDataList);
+                isDownloadDone = true; // 메시지 코루틴을 멈춤
             },
-            err => { }
+            err =>
+            {
+                Debug.LogError("다운로드 실패");
+                isDownloadDone = true; // 실패 시에도 메시지 코루틴 멈춤
+            }
         ));
 
         if (gameDataList.Count > 0)
@@ -131,17 +164,33 @@ public class GameStartManager : MonoBehaviour
         }
     }
 
+    private IEnumerator CoDownloadMessageRoutine(System.Func<bool> isDoneCheck)
+    {
+        while (!isDoneCheck())
+        {
+            PopUpManager.Instance.PopMessege("다운로드 중입니다...");
+            yield return new WaitForSeconds(3f);
+        }
+    }
+
 
     private Transform mapParent;
     private Vector3 originPosition;
     private Quaternion originQuaternion;
-    private bool isFind = false;
+    private bool isOriginPosFind = false;
+    private bool isTrackingStart = false;
     private void SetOriginPos(Vector3 position, Quaternion quaternion)
     {
-        Debug.Log(position + "원점으로 잡혔다.");
+        PopUpManager.Instance.PopMessege("원점을 잡았습니다.");
         originPosition = position;
         originQuaternion = quaternion;
-        isFind = true;
+        isOriginPosFind = true;
+    }
+
+    private void SetTrackingStart()
+    {
+        isTrackingStart = true;
+        PopUpManager.Instance.PopMessege("원점을 잡는 중입니다.");
     }
 
     private void SetThemeList()

@@ -8,6 +8,7 @@ using UnityEngine.XR.ARFoundation;
 public class ARPlayTrackingManager : MonoBehaviour
 {
     public Action<Vector3, Quaternion> OnTrackingEnd;
+    public Action OnTrackingStart;
     [SerializeField] ARPlayImageTracker _arPlayImageTracker;
     
     private ARTrackedImage _currentTrackedImage;
@@ -50,6 +51,7 @@ public class ARPlayTrackingManager : MonoBehaviour
     // 샘플링하는 코드
     private void StartSampling()
     {
+        OnTrackingStart?.Invoke();
         isSampling = true;
 
         _positionSamples.Clear();
