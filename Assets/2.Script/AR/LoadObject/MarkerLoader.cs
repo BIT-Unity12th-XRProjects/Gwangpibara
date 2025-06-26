@@ -64,6 +64,7 @@ public class MarkerLoader : MonoBehaviour
         _lastLoadedFileName = null;
     }
 
+    private int primaryKey = 1;
     private void RePositionMarker(MarkerData[] markerDatasArray, Transform imageTransform)
     {
         foreach (var data in markerDatasArray)
@@ -79,8 +80,16 @@ public class MarkerLoader : MonoBehaviour
             if (markerDataComponent != null)
             {
                 markerDataComponent.markerData = data;
+                data.id = primaryKey.ToString();
+                primaryKey++;
+                spawnedMarkers.Add(marker);
+                saveMarker.markerDatas.Add(data);
             }
-            spawnedMarkers.Add(marker);
+            else
+            {
+                Destroy(marker);
+            }
+       
         }
         
     }

@@ -44,15 +44,13 @@ public class SaveMarker : MonoBehaviour
             }
         }
         
+        //로컬 저장
         markerDataHandler.SaveMarkerList(loadMarkerList, fileName);
         
-        List<ServerMarkerData> serverMarkerDatas = ChangeMarkerDataToServerData(loadMarkerList);
-
+        //db 저장
+        List<ServerMarkerData> serverMarkerDatas = ChangeMarkerDataToServerData(markerDatas);
         StartCoroutine(_markersApiClient.UpdateMarkersBulk(serverMarkerDatas.ToArray()));
-        
-        MapSaver saver = new();
-        saver.UpLoadMapDate(loadMarkerList, "테스트","1234");
-        Debug.Log("저장된 마커의 수" + loadMarkerList.Count);
+
     }
     
     // 수정된 마크 데이터 업데이트
