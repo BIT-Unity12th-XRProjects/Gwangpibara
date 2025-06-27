@@ -66,11 +66,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 706bd4a3eb87fec4aa565cc5a4631432
-    m_Address: Assets/3.Prefab/ThemeObject/Theme1/02.Tool_Assets/materials/locks.mat
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7277d246aeb683543aab6ecb36880fe8
     m_Address: MarkPrefab10102
     m_ReadOnly: 0
@@ -93,11 +88,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d1c80cd523a8be24e9e0f129c18c54cf
     m_Address: ItemImage10102
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fadb677f6f5d20d42bca9b48bdd2b41f
-    m_Address: Assets/3.Prefab/ThemeObject/Theme1/02.Tool_Assets/materials/modernaxe.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

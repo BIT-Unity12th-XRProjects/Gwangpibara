@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
-  m_DefaultGroup: d97db972bf1baac46bec257b8c3f41ae
+  m_DefaultGroup: 52931c1c20ac4ff409a308a97c392552
   m_currentHash:
     serializedVersion: 2
-    Hash: 0ebf07cee52ea87119b058b65cddeeac
+    Hash: 365805fd9f696852774a8a3304665dac
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 1
   m_CatalogRequestsTimeout: 0
@@ -53,9 +53,9 @@ MonoBehaviour:
   m_BuildAndReleaseBinFileOption: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
-    m_Id: ad2ace2c0db31ef42be888302901334f
+    m_Id: 85f8f9028bc94944ba8a1d730caed1eb
   m_RemoteCatalogLoadPath:
-    m_Id: be96dabfd2b7a5c43adaf6640f24e34f
+    m_Id: e36d2754b00ba7c44b5a6efb103a8794
   m_ContentStateBuildPathProfileVariableName: <default settings path>
   m_CustomContentStateBuildPath: 
   m_ContentStateBuildPath: 
