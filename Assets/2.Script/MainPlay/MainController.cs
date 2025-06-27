@@ -63,8 +63,13 @@ public class MainController : Singleton<MainController>
             bool isCorrect = CheckAnswer(answer);
             if (isCorrect)
             {
-                FeedbackManager.Instance.PlayEffect(true, SFXType.None);
+                FeedbackManager.Instance.PlayEffect(true, SFXType.Correct);
                 GoNextStep();
+            }
+            else
+            {
+                FeedbackManager.Instance.PlayEffect(false, SFXType.InCorrect);
+                PopUpManager.Instance.PopMessege("틀렸쥬");
             }
         }
     }
@@ -91,6 +96,7 @@ public class MainController : Singleton<MainController>
             bool isCorrect = CheckAnswer(itemData.ID.ToString());//수집한 단서 ID를 습득했다고 전달 
             if (isCorrect)
             {
+                FeedbackManager.Instance.PlayEffect(true, SFXType.Correct);
                 GoNextStep();
             }
         }
@@ -171,6 +177,7 @@ public class MainController : Singleton<MainController>
         if (haveAmount >= 1)
         {
             Debug.Log("이미 보유한 아이템 조건 다음 스텝으로");
+            FeedbackManager.Instance.PlayEffect(true, SFXType.Correct);
             GoNextStep();
         }
     }

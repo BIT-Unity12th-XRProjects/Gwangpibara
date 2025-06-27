@@ -11,7 +11,7 @@ public enum BGMType
 
 public enum SFXType
 { 
-    None,
+    None, Correct, InCorrect, UIClick
 }
 
 /// <summary>

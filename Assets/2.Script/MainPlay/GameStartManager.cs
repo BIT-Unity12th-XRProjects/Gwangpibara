@@ -33,7 +33,9 @@ public class GameStartManager : MonoBehaviour
         yield return new GameObject("masterDataManager").AddComponent<MasterDataManager>().SetData();
         //서버 맵 데이터 받기 위한 clientapi 생성
         yield return _markersApiClient = new GameObject("MarkersApi").AddComponent<MarkersApiClient>();
-        
+
+        SoundManager.InitSoundManager();
+
         _startUIData = new();
         _selectThemNumber = INVALID_NUMBER;
         _mainController = FindAnyObjectByType<MainController>();
