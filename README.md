@@ -8,7 +8,7 @@ Unity6 12th TeamProject Team Gwangpibara
 - **이정균**: wjdrbsdl@gmail.com / 010-2933-1655 / [GitHub](https://github.com/wjdrbsdl)
 - **박광호**: pkh2956@naver.com / 010-6237-2956 / [GitHub](https://github.com/doncici77)
 - **김현진**: hwlsjin@gmail.com / 010-0000-0000 / [GitHub](https://github.com/hyunjin0915)
-- **표명찬**: vyaudcks@gmail.com / 010-0000-0000 / [GitHub](https://github.com/PyoMyeongchan)
+- **표명찬**: vyaudcks@gmail.com / 010-8532-2306 / [GitHub](https://github.com/PyoMyeongchan)
 
 ---
 
